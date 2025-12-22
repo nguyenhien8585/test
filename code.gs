@@ -740,11 +740,9 @@ function __mistralOCR(base64Image, prompt) {
             throw new Error('No content in Mistral response');
           }
           
-          // Apply LaTeX wrapping to OCR result
-          const wrappedContent = wrapAllMathInDollarSigns(content.trim());
-          
+          // Return plain text without LaTeX wrapping
           console.log(`✅ Mistral OCR success (${responseTime}ms, attempt ${attempt + 1})`);
-          return wrappedContent;
+          return content.trim();
           
         } catch (parseError) {
           throw new Error(`Mistral response parse error: ${parseError.message}`);
@@ -1136,7 +1134,7 @@ Generated: ${new Date().toLocaleString('vi-VN')}
 Pages: ${totalPages}
 OCR Engine: Mistral AI (${MISTRAL_CONFIG.OCR_MODEL})
 Similar Generator: Gemini AI (${GEMINI_CONFIG.MODELS.SIMILAR})
-Format: Text with math formulas ($…$)
+Format: Plain text (no LaTeX formatting)
 
 ========================================
 
@@ -1286,9 +1284,10 @@ function getWordOCRPrompt() {
 QUY TẮC QUAN TRỌNG:
 - Giữ NGUYÊN tất cả xuống dòng và định dạng đoạn văn
 - Với bảng biểu: sử dụng định dạng markdown nếu có thể
-- Với công thức toán học: Viết dưới dạng văn bản thuần túy (VD: x^2, sqrt(x), f(x) = 2x + 1)
-- KHÔNG thêm bất kỳ giải thích hay bình luận nào
-- Chỉ trả về văn bản đã trích xuất
+- Với công thức toán học: Viết dưới dạng văn bản thuần túy đơn giản (VD: x^2, sqrt(x), f(x) = 2x + 1, 1/2, a + b = c)
+- KHÔNG sử dụng LaTeX ($...$, $$...$$, \\frac, \\sqrt, v.v.)
+- KHÔNG thêm bất kỳ ký hiệu đặc biệt hay format LaTeX
+- Chỉ trả về văn bản thuần túy, dễ đọc
 
 Bắt đầu trích xuất:`;
 }
@@ -1298,8 +1297,9 @@ function getRawOCRPrompt() {
 
 QUY TẮC:
 - Giữ nguyên xuống dòng và cấu trúc
-- Công thức toán: viết dưới dạng văn bản (x^2, f(x), sqrt, etc)
-- Không có bình luận
+- Công thức toán: viết dưới dạng văn bản thuần túy đơn giản (x^2, f(x), sqrt, 1/2, a + b, etc)
+- KHÔNG dùng LaTeX hay ký hiệu đặc biệt
+- Chỉ văn bản thuần túy
 
 Văn bản:`;
 }
