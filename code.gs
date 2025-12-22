@@ -9,49 +9,53 @@
  * - Optimized: Performance and reliability
  */
 
-/* ========================= SIMPLIFIED GEMINI CONFIG ========================= */
+/* ========================= SEPARATED GEMINI CONFIG ========================= */
 const GEMINI_CONFIG = {
-  // Single array of API keys - Just update this one place!
-  API_KEYS: [
-"AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
-      "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
-      "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
-      "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
-      "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
-      "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
-      "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
-      "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
-      "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
-      "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE",
-      "AIzaSyBrjb43nQTzQoRQd35hw8dtam4gWu6Dbfs",
-      "AIzaSyDfVeYlNOrrvpuEzJ9GJgctJEcABrF1U_0",
-      "AIzaSyDWn6DwNcimrOetCYvQHR3IE5LFLWLFLNE",
-      "AIzaSyAfUdBJGiq1XkrYPrWsdj4lGhtR_H-f5rk",
-      "AIzaSyAVQjuf0haGsLEYRY-rUGl8zFfx-EDzHUs",
-      "AIzaSyCgpc8xsReNC3LXYfSwmLPqsMZOHhFnFOU",
-      "AIzaSyBYarkjC4_zBgzn0eh3m_d3COWOaeAB_ok",
-      "AIzaSyA_y1NS86T263turtvGI1MGf05SMSsCE5M",
-      "AIzaSyDUIhn3PvydKJxXbZn3NtjowHD6KYtm6cI",
-      "AIzaSyCR8lxCX3VOS3uzughEdD_EV_s9DwD7jMw",
-      "AIzaSyD2skUF0Aeua0fgxgGlDdHfrtsfA0XrTbg",
-      "AIzaSyDaYQ-ClvjBo5cNMfICdFkOojKwfyaMco8",
-      "AIzaSyDIG4_v8Et4OHdGbKzKHSmgq5hpJc7-dfU",
-      "AIzaSyAVI13vJFora3sOPA1x-b2SWNIt_ujEXZI",
-      "AIzaSyBhwQ6QAv3mXxivzwB_sQ3552waeEWSvto",
-      "AIzaSyDtsmDqVsYotAh8ggh0ZMWzE651CKw8hUk",
-      "AIzaSyBqSl_4UYXDZgWmC0_fxOw9UOPcKHt795g",
-      "AIzaSyDFKmhBRK4FM2gA9wClKBnxGPzyVRStrF4",
-      "AIzaSyALIjwOKZ-vmyD3arpsN-BeUFrYKi2Cjhk",
-      "AIzaSyDU-V2vrkAnzGfvtBdVXT74FyTdpDG2ojg",
-      "AIzaSyCn44XdE8Vi1O3xWvQiRKsuBaCPexSoDYo",
-      "AIzaSyBLBC9nWH6JQERlgnR1fez3GNhqFXN6yeI",
-      "AIzaSyDTm0FhL5k_1tIMBTO-KFX4kAvWfmji5LM",
-      "AIzaSyDtavNqPc5BG8Bi_YrtYuohOMYW4LAZpK0",
-      "AIzaSyDNzMZXkVrX8bBJB07FU7j18fMNWdNB-kM",
-      "AIzaSyAdX1hJbDFlA5nwSjLJGovlLdQ9IQ_PNFY",
-      "AIzaSyCddxcJFWjSSpXCn77OKt0G6fNxhZEvB_g",
-      "AIzaSyCO2JgRieXQMUrI7r5lNN8PxraJ5aLTwxI",
-      "AIzaSyBD7fPXZ93nIOTRW3HvD6RzVP8HfO_xNmc"
+  // API Keys for OCR (PDF/Image to Text)
+  API_KEYS_OCR: [
+    "AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
+    "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
+    "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
+    "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
+    "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
+    "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
+    "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
+    "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
+    "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
+    "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE"
+  ],
+  
+  // API Keys for SIMILAR (Similar Problem Generation)
+  API_KEYS_SIMILAR: [
+    "AIzaSyBrjb43nQTzQoRQd35hw8dtam4gWu6Dbfs",
+    "AIzaSyDfVeYlNOrrvpuEzJ9GJgctJEcABrF1U_0",
+    "AIzaSyDWn6DwNcimrOetCYvQHR3IE5LFLWLFLNE",
+    "AIzaSyAfUdBJGiq1XkrYPrWsdj4lGhtR_H-f5rk",
+    "AIzaSyAVQjuf0haGsLEYRY-rUGl8zFfx-EDzHUs",
+    "AIzaSyCgpc8xsReNC3LXYfSwmLPqsMZOHhFnFOU",
+    "AIzaSyBYarkjC4_zBgzn0eh3m_d3COWOaeAB_ok",
+    "AIzaSyA_y1NS86T263turtvGI1MGf05SMSsCE5M",
+    "AIzaSyDUIhn3PvydKJxXbZn3NtjowHD6KYtm6cI",
+    "AIzaSyCR8lxCX3VOS3uzughEdD_EV_s9DwD7jMw",
+    "AIzaSyD2skUF0Aeua0fgxgGlDdHfrtsfA0XrTbg",
+    "AIzaSyDaYQ-ClvjBo5cNMfICdFkOojKwfyaMco8",
+    "AIzaSyDIG4_v8Et4OHdGbKzKHSmgq5hpJc7-dfU",
+    "AIzaSyAVI13vJFora3sOPA1x-b2SWNIt_ujEXZI",
+    "AIzaSyBhwQ6QAv3mXxivzwB_sQ3552waeEWSvto",
+    "AIzaSyDtsmDqVsYotAh8ggh0ZMWzE651CKw8hUk",
+    "AIzaSyBqSl_4UYXDZgWmC0_fxOw9UOPcKHt795g",
+    "AIzaSyDFKmhBRK4FM2gA9wClKBnxGPzyVRStrF4",
+    "AIzaSyALIjwOKZ-vmyD3arpsN-BeUFrYKi2Cjhk",
+    "AIzaSyDU-V2vrkAnzGfvtBdVXT74FyTdpDG2ojg",
+    "AIzaSyCn44XdE8Vi1O3xWvQiRKsuBaCPexSoDYo",
+    "AIzaSyBLBC9nWH6JQERlgnR1fez3GNhqFXN6yeI",
+    "AIzaSyDTm0FhL5k_1tIMBTO-KFX4kAvWfmji5LM",
+    "AIzaSyDtavNqPc5BG8Bi_YrtYuohOMYW4LAZpK0",
+    "AIzaSyDNzMZXkVrX8bBJB07FU7j18fMNWdNB-kM",
+    "AIzaSyAdX1hJbDFlA5nwSjLJGovlLdQ9IQ_PNFY",
+    "AIzaSyCddxcJFWjSSpXCn77OKt0G6fNxhZEvB_g",
+    "AIzaSyCO2JgRieXQMUrI7r5lNN8PxraJ5aLTwxI",
+    "AIzaSyBD7fPXZ93nIOTRW3HvD6RzVP8HfO_xNmc"
   ],
   
   // Models configuration
@@ -65,7 +69,7 @@ const GEMINI_CONFIG = {
   GENERATION: {
     OCR: { temperature: 0.1, topK: 32, topP: 0.95, maxOutputTokens: 8192 },
     TRANSFORM: { temperature: 0.3, topK: 40, topP: 0.95, maxOutputTokens: 16384 },
-    SIMILAR: { temperature: 0.6, topK: 40, topP: 0.95, maxOutputTokens: 66536 }
+    SIMILAR: { temperature: 0.7, topK: 64, topP: 0.95, maxOutputTokens: 65536 }
   },
   
   // API configuration
@@ -82,18 +86,24 @@ const GEMINI_CONFIG = {
     RESET_BLACKLIST_INTERVAL: 300000
   },
   
-  // Script Properties keys - SIMPLIFIED
+  // Script Properties keys - SEPARATED
   PROPERTIES: {
-    API_KEYS: 'GEMINI_API_KEYS',
-    CURRENT_INDEX: 'GEMINI_KEY_IDX',
-    KEY_PERFORMANCE: 'GEMINI_KEY_PERF',
-    KEY_BLACKLIST: 'GEMINI_KEY_BLACKLIST'
+    API_KEYS_OCR: 'GEMINI_API_KEYS_OCR',
+    API_KEYS_SIMILAR: 'GEMINI_API_KEYS_SIMILAR',
+    CURRENT_INDEX_OCR: 'GEMINI_KEY_IDX_OCR',
+    CURRENT_INDEX_SIMILAR: 'GEMINI_KEY_IDX_SIMILAR',
+    KEY_PERFORMANCE_OCR: 'GEMINI_KEY_PERF_OCR',
+    KEY_PERFORMANCE_SIMILAR: 'GEMINI_KEY_PERF_SIMILAR',
+    KEY_BLACKLIST_OCR: 'GEMINI_KEY_BLACKLIST_OCR',
+    KEY_BLACKLIST_SIMILAR: 'GEMINI_KEY_BLACKLIST_SIMILAR'
   }
 };
 
-// Global variables for key management
-let __keyPerformanceCache = null;
-let __keyBlacklistCache = null;
+// Global variables for key management (separated by type)
+let __keyPerformanceCacheOCR = null;
+let __keyPerformanceCacheSimilar = null;
+let __keyBlacklistCacheOCR = null;
+let __keyBlacklistCacheSimilar = null;
 
 /* ========================= WEB APP ========================= */
 function doGet() {
@@ -115,13 +125,15 @@ function include(filename) {
 /* ========================= SIMPLIFIED KEY MANAGEMENT ========================= */
 
 /**
- * Get all available API keys - SIMPLIFIED VERSION
+ * Get all available API keys by type (OCR or SIMILAR)
  */
-function __getAllApiKeys() {
+function __getAllApiKeys(keyType = 'OCR') {
   const keys = [];
+  const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.API_KEYS_SIMILAR : GEMINI_CONFIG.PROPERTIES.API_KEYS_OCR;
+  const defaultKeys = keyType === 'SIMILAR' ? GEMINI_CONFIG.API_KEYS_SIMILAR : GEMINI_CONFIG.API_KEYS_OCR;
   
   try {
-    const propsKeys = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.API_KEYS);
+    const propsKeys = PropertiesService.getScriptProperties().getProperty(propKey);
     if (propsKeys) {
       propsKeys.split(',').forEach(key => {
         const cleanKey = (key || '').trim();
@@ -131,12 +143,12 @@ function __getAllApiKeys() {
       });
     }
   } catch (e) {
-    console.warn('Cannot read API keys from properties:', e.message);
+    console.warn(`Cannot read ${keyType} API keys from properties:`, e.message);
   }
   
   // Fallback to hardcoded keys
   if (keys.length === 0) {
-    GEMINI_CONFIG.API_KEYS.forEach(key => {
+    defaultKeys.forEach(key => {
       const cleanKey = (key || '').trim();
       if (cleanKey && cleanKey.startsWith('AIzaSy') && !cleanKey.includes('ReplaceWithRealKey')) {
         keys.push(cleanKey);
@@ -144,33 +156,35 @@ function __getAllApiKeys() {
     });
   }
   
+  console.log(`📊 Loaded ${keys.length} ${keyType} API keys`);
   return keys;
 }
 
 /**
- * Get next API key with smart rotation
+ * Get next API key with smart rotation (by type)
  */
-function __getNextApiKey() {
-  const allKeys = __getAllApiKeys();
+function __getNextApiKey(keyType = 'OCR') {
+  const allKeys = __getAllApiKeys(keyType);
   
   if (!allKeys.length) {
-    throw new Error('🚨 No valid API keys available. Please configure keys in Script Properties.');
+    throw new Error(`🚨 No valid ${keyType} API keys available. Please configure keys in Script Properties.`);
   }
   
   if (!GEMINI_CONFIG.ROTATION.ENABLE_SMART_ROTATION) {
-    return __getSimpleRotationKey(allKeys);
+    return __getSimpleRotationKey(allKeys, keyType);
   }
   
-  return __getSmartRotationKey(allKeys);
+  return __getSmartRotationKey(allKeys, keyType);
 }
 
 /**
- * Simple round-robin key rotation
+ * Simple round-robin key rotation (by type)
  */
-function __getSimpleRotationKey(keys) {
+function __getSimpleRotationKey(keys, keyType = 'OCR') {
   try {
     const props = PropertiesService.getScriptProperties();
-    let currentIndex = parseInt(props.getProperty(GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX) || '0', 10);
+    const indexProp = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX_SIMILAR : GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX_OCR;
+    let currentIndex = parseInt(props.getProperty(indexProp) || '0', 10);
     
     if (isNaN(currentIndex) || currentIndex < 0 || currentIndex >= keys.length) {
       currentIndex = 0;
@@ -179,24 +193,24 @@ function __getSimpleRotationKey(keys) {
     const selectedKey = keys[currentIndex];
     const nextIndex = (currentIndex + 1) % keys.length;
     
-    props.setProperty(GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX, nextIndex.toString());
+    props.setProperty(indexProp, nextIndex.toString());
     
-    console.log(`🔄 Key rotation: ${currentIndex} → ${nextIndex} (${keys.length} total)`);
+    console.log(`🔄 ${keyType} key rotation: ${currentIndex} → ${nextIndex} (${keys.length} total)`);
     return selectedKey;
     
   } catch (e) {
-    console.warn('Simple rotation failed, using first key:', e.message);
+    console.warn(`Simple ${keyType} rotation failed, using first key:`, e.message);
     return keys[0];
   }
 }
 
 /**
- * Smart key rotation with performance tracking
+ * Smart key rotation with performance tracking (by type)
  */
-function __getSmartRotationKey(keys) {
+function __getSmartRotationKey(keys, keyType = 'OCR') {
   try {
-    const performance = __getKeyPerformance();
-    const blacklist = __getKeyBlacklist();
+    const performance = __getKeyPerformance(keyType);
+    const blacklist = __getKeyBlacklist(keyType);
     const now = Date.now();
     
     const availableKeys = keys.filter(key => {
@@ -215,8 +229,8 @@ function __getSmartRotationKey(keys) {
     const keysToUse = availableKeys.length > 0 ? availableKeys : keys;
     
     if (availableKeys.length === 0) {
-      console.warn('🔄 All keys blacklisted, resetting blacklist');
-      __saveKeyBlacklist({});
+      console.warn(`🔄 All ${keyType} keys blacklisted, resetting blacklist`);
+      __saveKeyBlacklist({}, keyType);
     }
     
     const sortedKeys = keysToUse.sort((a, b) => {
@@ -235,23 +249,23 @@ function __getSmartRotationKey(keys) {
       return scoreB - scoreA;
     });
     
-    console.log(`🧠 Smart rotation selected key with highest score (${sortedKeys.length} available)`);
+    console.log(`🧠 Smart ${keyType} rotation selected key with highest score (${sortedKeys.length} available)`);
     return sortedKeys[0];
     
   } catch (e) {
-    console.warn('Smart rotation failed, falling back to simple:', e.message);
-    return __getSimpleRotationKey(keys);
+    console.warn(`Smart ${keyType} rotation failed, falling back to simple:`, e.message);
+    return __getSimpleRotationKey(keys, keyType);
   }
 }
 
 /**
- * Track API key performance
+ * Track API key performance (by type)
  */
-function __trackKeyPerformance(apiKey, success, responseTime = 0) {
+function __trackKeyPerformance(apiKey, success, responseTime = 0, keyType = 'OCR') {
   if (!GEMINI_CONFIG.ROTATION.TRACK_KEY_PERFORMANCE) return;
   
   try {
-    const performance = __getKeyPerformance();
+    const performance = __getKeyPerformance(keyType);
     const now = Date.now();
     
     if (!performance[apiKey]) {
@@ -274,86 +288,114 @@ function __trackKeyPerformance(apiKey, success, responseTime = 0) {
     } else if (GEMINI_CONFIG.ROTATION.BLACKLIST_FAILED_KEYS) {
       const recentFailures = keyPerf.total - keyPerf.success;
       if (recentFailures >= 3) {
-        __addToBlacklist(apiKey, 'Multiple consecutive failures');
+        __addToBlacklist(apiKey, 'Multiple consecutive failures', keyType);
       }
     }
     
-    __saveKeyPerformance(performance);
+    __saveKeyPerformance(performance, keyType);
     
   } catch (e) {
-    console.warn('Failed to track key performance:', e.message);
+    console.warn(`Failed to track ${keyType} key performance:`, e.message);
   }
 }
 
-function __getKeyPerformance() {
-  if (__keyPerformanceCache) return __keyPerformanceCache;
+function __getKeyPerformance(keyType = 'OCR') {
+  const cache = keyType === 'SIMILAR' ? __keyPerformanceCacheSimilar : __keyPerformanceCacheOCR;
+  if (cache) return cache;
   
   try {
-    const stored = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE);
-    __keyPerformanceCache = stored ? JSON.parse(stored) : {};
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_OCR;
+    const stored = PropertiesService.getScriptProperties().getProperty(propKey);
+    const result = stored ? JSON.parse(stored) : {};
+    
+    if (keyType === 'SIMILAR') {
+      __keyPerformanceCacheSimilar = result;
+    } else {
+      __keyPerformanceCacheOCR = result;
+    }
+    
+    return result;
   } catch (e) {
-    __keyPerformanceCache = {};
+    return {};
   }
-  
-  return __keyPerformanceCache;
 }
 
-function __saveKeyPerformance(performance) {
+function __saveKeyPerformance(performance, keyType = 'OCR') {
   try {
-    __keyPerformanceCache = performance;
+    if (keyType === 'SIMILAR') {
+      __keyPerformanceCacheSimilar = performance;
+    } else {
+      __keyPerformanceCacheOCR = performance;
+    }
+    
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_OCR;
     const serialized = JSON.stringify(performance);
-    PropertiesService.getScriptProperties().setProperty(GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE, serialized);
+    PropertiesService.getScriptProperties().setProperty(propKey, serialized);
   } catch (e) {
-    console.warn('Failed to save key performance:', e.message);
+    console.warn(`Failed to save ${keyType} key performance:`, e.message);
   }
 }
 
-function __getKeyBlacklist() {
-  if (__keyBlacklistCache) return __keyBlacklistCache;
+function __getKeyBlacklist(keyType = 'OCR') {
+  const cache = keyType === 'SIMILAR' ? __keyBlacklistCacheSimilar : __keyBlacklistCacheOCR;
+  if (cache) return cache;
   
   try {
-    const stored = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST);
-    __keyBlacklistCache = stored ? JSON.parse(stored) : {};
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_OCR;
+    const stored = PropertiesService.getScriptProperties().getProperty(propKey);
+    const result = stored ? JSON.parse(stored) : {};
+    
+    if (keyType === 'SIMILAR') {
+      __keyBlacklistCacheSimilar = result;
+    } else {
+      __keyBlacklistCacheOCR = result;
+    }
+    
+    return result;
   } catch (e) {
-    __keyBlacklistCache = {};
+    return {};
   }
-  
-  return __keyBlacklistCache;
 }
 
-function __saveKeyBlacklist(blacklist) {
+function __saveKeyBlacklist(blacklist, keyType = 'OCR') {
   try {
-    __keyBlacklistCache = blacklist;
+    if (keyType === 'SIMILAR') {
+      __keyBlacklistCacheSimilar = blacklist;
+    } else {
+      __keyBlacklistCacheOCR = blacklist;
+    }
+    
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_OCR;
     const serialized = JSON.stringify(blacklist);
-    PropertiesService.getScriptProperties().setProperty(GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST, serialized);
+    PropertiesService.getScriptProperties().setProperty(propKey, serialized);
   } catch (e) {
-    console.warn('Failed to save key blacklist:', e.message);
+    console.warn(`Failed to save ${keyType} key blacklist:`, e.message);
   }
 }
 
-function __addToBlacklist(apiKey, reason) {
-  const blacklist = __getKeyBlacklist();
+function __addToBlacklist(apiKey, reason, keyType = 'OCR') {
+  const blacklist = __getKeyBlacklist(keyType);
   blacklist[apiKey] = {
     reason: reason,
     timestamp: Date.now()
   };
-  __saveKeyBlacklist(blacklist);
-  console.warn(`⚫ Blacklisted API key: ${reason}`);
+  __saveKeyBlacklist(blacklist, keyType);
+  console.warn(`⚫ Blacklisted ${keyType} API key: ${reason}`);
 }
 
 /* ========================= GEMINI API CALL ========================= */
-function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'image/png', temperature = 0.2, topK = 40, topP = 0.95, maxOutputTokens = 2048 }) {
-  const allKeys = __getAllApiKeys();
+function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'image/png', temperature = 0.2, topK = 40, topP = 0.95, maxOutputTokens = 2048, keyType = 'OCR' }) {
+  const allKeys = __getAllApiKeys(keyType);
   
   if (!allKeys.length) {
-    throw new Error('🚨 No Gemini API keys configured. Please set up keys in Script Properties.');
+    throw new Error(`🚨 No ${keyType} Gemini API keys configured. Please set up keys in Script Properties.`);
   }
   
   const maxAttempts = Math.min(allKeys.length * 2, 10);
   let lastError = null;
   
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const apiKey = __getNextApiKey();
+    const apiKey = __getNextApiKey(keyType);
     const startTime = Date.now();
     
     try {
@@ -407,9 +449,9 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
             throw new Error('Empty response text');
           }
           
-          __trackKeyPerformance(apiKey, true, responseTime);
+          __trackKeyPerformance(apiKey, true, responseTime, keyType);
           
-          console.log(`✅ Gemini API success (${responseTime}ms, attempt ${attempt + 1})`);
+          console.log(`✅ ${keyType} Gemini API success (${responseTime}ms, attempt ${attempt + 1})`);
           return text;
           
         } catch (parseError) {
@@ -425,7 +467,7 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
           errorMessage = responseBody.substring(0, 200);
         }
         
-        __trackKeyPerformance(apiKey, false, responseTime);
+        __trackKeyPerformance(apiKey, false, responseTime, keyType);
         
         const shouldRetry = statusCode === 429 || statusCode === 503 || statusCode === 500 || statusCode === 403;
         
@@ -443,10 +485,10 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
       
     } catch (error) {
       const responseTime = Date.now() - startTime;
-      __trackKeyPerformance(apiKey, false, responseTime);
+      __trackKeyPerformance(apiKey, false, responseTime, keyType);
       
       lastError = error;
-      console.warn(`🔴 API key attempt ${attempt + 1} failed: ${error.message}`);
+      console.warn(`🔴 ${keyType} API key attempt ${attempt + 1} failed: ${error.message}`);
       
       if (attempt < maxAttempts - 1) {
         Utilities.sleep(GEMINI_CONFIG.RETRY_DELAY);
@@ -454,7 +496,7 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
     }
   }
   
-  throw new Error(`🚨 All API attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
+  throw new Error(`🚨 All ${keyType} API attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
 }
 
 /* ========================= ADMIN FUNCTIONS - SIMPLIFIED ========================= */
@@ -567,12 +609,7 @@ function processPdfToText(pages, mode = 'word') {
     for (let i = 0; i < pages.length; i++) {
       const { data, mime } = __splitDataUrl(pages[i]);
       try {
-        if (mode === 'word') {
-          combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
-        } else {
-          const raw = __ocrImageRaw(data, mime);
-          combined += `\n% ====== TRANG ${i + 1} ======\n` + __transformTextToExTest(raw, { includeSolutions: false }) + '\n';
-        }
+        combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
       } catch (e) {
         combined += `\n=== TRANG ${i + 1} - LỖI: ${e && e.message} ===\n`;
       }
@@ -583,11 +620,10 @@ function processPdfToText(pages, mode = 'word') {
     
     return {
       success: true,
-      result: formatTextOutput(combined, pages.length, mode),
+      result: formatTextOutput(combined, pages.length),
       metadata: {
         total_pages: pages.length,
         model_ocr: GEMINI_CONFIG.MODELS.OCR,
-        ...(mode === 'latex' ? { model_transform: GEMINI_CONFIG.MODELS.TRANSFORM } : {}),
         timestamp: new Date().toISOString(),
         theme: 'ocean'
       }
@@ -597,39 +633,24 @@ function processPdfToText(pages, mode = 'word') {
   }
 }
 
-function processImageToText(dataUrlOrBase64, mode = 'word') {
-  try {
-    const { data, mime } = __splitDataUrl(dataUrlOrBase64);
-    const out = (mode === 'word')
-      ? __ocrImageToWordText(data, mime)
-      : __transformTextToExTest(__ocrImageRaw(data, mime), { includeSolutions: false });
-    
-    return {
-      success: true,
-      result: out,
-      metadata: {
-        mode,
-        model_ocr: GEMINI_CONFIG.MODELS.OCR,
-        theme: 'ocean',
-        ts: new Date().toISOString()
-      }
-    };
-  } catch (e) {
-    return { success: false, error: e.message || 'Image→Text lỗi.' };
-  }
-}
 
 /* ========================= SIMILAR GENERATION ========================= */
 function generateSimilarProblems(originalContent, mode = 'word', options = {}) {
   const preferSingleShot = options.singleShot !== false;
   if (preferSingleShot) {
     try {
+      console.log('🎯 Attempting single-shot generation...');
       const single = generateSimilarSingleShot(originalContent, mode, options);
-      if (single?.success) return single;
+      if (single?.success) {
+        console.log('✅ Single-shot generation successful!');
+        return single;
+      }
     } catch (e) {
-      console.warn('Single-shot failed → fallback batch. Reason:', e && e.message);
+      console.warn('⚠️ Single-shot failed, falling back to batch mode');
+      console.warn('Reason:', e && e.message);
     }
   }
+  console.log('🔄 Using batch generation mode...');
   return generateSimilarProblems_Batch(originalContent, mode, options);
 }
 
@@ -646,54 +667,138 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
       if (sliced) working = sliced;
     }
 
+    console.log(`📄 Processing content length: ${working.length} chars`);
+    
     const parsed = __parseQuestions(working, mode, options);
-    if (!parsed.length) throw new Error('Không tìm thấy câu hỏi.');
+    console.log(`✅ Found ${parsed.length} questions`);
+    
+    if (!parsed.length) {
+      console.error('❌ No questions parsed from content');
+      throw new Error('Không tìm thấy câu hỏi.');
+    }
     
     const sanitizedList = parsed.map(q => __sanitizeQuestion(q, mode));
     const targetCount = sanitizedList.length;
+    console.log(`🎯 Target count: ${targetCount} questions`);
 
     const compactBody = sanitizedList
       .map((q, idx) => `<<Q${idx + 1}>>\n${__tightenText(q.content, mode)}`)
       .join('\n\n');
 
+    const questionList = sanitizedList.map((q, i) => `Q${i+1}`).join(', ');
+    
     const instructions =
-`Ocean AI Assistant - Chuyên gia biên soạn đề ${mode === 'latex' ? 'LaTeX (ex_test)' : 'Word'}.
-Hãy TẠO BÀI TƯƠNG TỰ cho toàn bộ câu sau, giữ nguyên số lượng (${targetCount} câu), dạng toán, độ khó, nhưng THAY số liệu/ngữ cảnh.
+`BẠN LÀ CHUYÊN GIA BIÊN SOẠN ĐỀ THI - OCEAN AI
 
-QUY TẮC:
-- Không thêm lời giải.
-- ${mode === 'latex'
-  ? 'Mỗi câu bọc đầy đủ \\begin{ex} ... \\end{ex}; dùng \\choice/\\choiceTF/\\shortans khi phù hợp.'
-  : 'Giữ công thức trong $...$; mỗi câu bắt đầu bằng "Câu i:"; xuống dòng gọn.'}
-- Trả về CHỈ NỘI DUNG đề tương tự, KHÔNG kèm chú thích, KHÔNG giải thích.
-- Phải sinh đủ ${targetCount} câu, theo đúng thứ tự Q1→Q${targetCount}.
-- Dùng các marker sau để phân tách:
+🎯 NHIỆM VỤ CỐT LÕI:
+Tạo CHÍNH XÁC ${targetCount} câu hỏi tương tự (${questionList})
+⚠️ QUAN TRỌNG: PHẢI ĐỦ ${targetCount} CÂU, THIẾU 1 CÂU LÀ THẤT BẠI!
+
+📋 YÊU CẦU CHI TIẾT:
+1. SỐ LƯỢNG: Bắt buộc ${targetCount} câu (Câu 1 → Câu ${targetCount})
+2. GIỐNG: Dạng toán, độ khó, cấu trúc, loại câu hỏi
+3. KHÁC: Số liệu, ngữ cảnh, tình huống cụ thể
+4. CÔNG THỨC: Dùng $...$ cho toán (VD: $2x+3$, $\\sqrt{5}$, $\\frac{a}{b}$)
+5. KHÔNG: Lời giải, đáp án đúng, chú thích thêm
+
+✅ ĐỊNH DẠNG BẮT BUỘC (COPY CHÍNH XÁC):
 ===BEGIN_SIMILAR===
-... (Câu 1 tương ứng Q1) ...
+Câu 1: [Đề bài tương tự Q1]
+A. [Đáp án]
+B. [Đáp án]
+C. [Đáp án]
+D. [Đáp án]
+
 ---END_QUESTION---
-... (Câu 2 tương ứng Q2) ...
+Câu 2: [Đề bài tương tự Q2]
+A. [Đáp án]
+B. [Đáp án]
+C. [Đáp án]
+D. [Đáp án]
+
 ---END_QUESTION---
-... (tiếp tục cho đến Q${targetCount}) ...
+Câu 3: [Đề bài tương tự Q3]
+[...]
+
+---END_QUESTION---
+[... TIẾP TỤC CHO ĐẾN ...]
+
+---END_QUESTION---
+Câu ${targetCount}: [Đề bài tương tự Q${targetCount}]
+[Đáp án nếu có]
+
 ===END_SIMILAR===
 
-DỮ LIỆU GỐC:
+📚 DỮ LIỆU GỐC (${targetCount} CÂU):
 ${compactBody}
 
-BẮT ĐẦU SINH:`;
+🚀 BẮT ĐẦU TẠO ${targetCount} CÂU (NHỚ: PHẢI ĐỦ ${targetCount} CÂU!):`;
 
-    const resp = __geminiGenerate({
+    console.log(`🚀 Sending to AI: ${targetCount} questions to generate`);
+    
+    let resp = __geminiGenerate({
       model: GEMINI_CONFIG.MODELS.SIMILAR,
       prompt: instructions,
       temperature: GEMINI_CONFIG.GENERATION.SIMILAR.temperature,
       topK: GEMINI_CONFIG.GENERATION.SIMILAR.topK,
       topP: GEMINI_CONFIG.GENERATION.SIMILAR.topP,
-      maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens
+      maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens,
+      keyType: 'SIMILAR'
     });
 
-    const blocks = __extractSimilarBlocks(resp, targetCount);
-    const similarCombined = (mode === 'latex')
-      ? '% Ocean Similar Generator\n' + blocks.join('\n\n')
-      : 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
+    console.log(`📥 Received response: ${resp.length} chars`);
+    console.log(`📄 Response preview: ${resp.substring(0, 500)}...`);
+    
+    let blocks = __extractSimilarBlocks(resp, targetCount);
+    console.log(`✅ First attempt extracted: ${blocks.length}/${targetCount} questions`);
+    
+    // RETRY nếu thiếu câu (tối đa 2 lần retry)
+    let retryCount = 0;
+    const maxRetries = 2;
+    
+    while (blocks.length < targetCount && retryCount < maxRetries) {
+      retryCount++;
+      console.warn(`⚠️ Retry ${retryCount}/${maxRetries}: Only got ${blocks.length}/${targetCount} questions`);
+      
+      const missingCount = targetCount - blocks.length;
+      const retryPrompt = `BẠN ĐANG BỊ THIẾU ${missingCount} CÂU!
+
+YÊU CẦU: Tạo lại CHÍNH XÁC ${targetCount} câu (từ Câu 1 đến Câu ${targetCount}).
+Format: Mỗi câu phải có "---END_QUESTION---" ở cuối.
+
+${targetCount} CÂU GỐC:
+${compactBody}
+
+TẠO LẠI NGAY ${targetCount} CÂU (KHÔNG ĐƯỢC THIẾU):`;
+      
+      resp = __geminiGenerate({
+        model: GEMINI_CONFIG.MODELS.SIMILAR,
+        prompt: retryPrompt,
+        temperature: 0.8,
+        topK: 64,
+        topP: 0.95,
+        maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens,
+        keyType: 'SIMILAR'
+      });
+      
+      blocks = __extractSimilarBlocks(resp, targetCount);
+      console.log(`🔄 Retry ${retryCount} result: ${blocks.length}/${targetCount} questions`);
+    }
+    
+    // Kiểm tra kết quả cuối cùng
+    if (blocks.length < targetCount) {
+      console.error(`❌ FAILED: Only generated ${blocks.length}/${targetCount} questions after ${retryCount} retries`);
+      console.warn(`⚠️ Falling back to batch mode...`);
+      // Throw error để fallback sang batch mode
+      throw new Error(`Single-shot failed: ${blocks.length}/${targetCount} questions generated`);
+    } else if (blocks.length > targetCount) {
+      console.log(`✅ Generated ${blocks.length} questions (expected ${targetCount}) - will trim`);
+      blocks = blocks.slice(0, targetCount);
+    } else {
+      console.log(`✅✅✅ PERFECT! Generated exactly ${targetCount} questions!`);
+    }
+    
+    const similarCombined = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
 
     return {
       success: true,
@@ -762,7 +867,8 @@ function generateSimilarProblems_Batch(originalContent, mode = 'word', options =
           temperature: GEMINI_CONFIG.GENERATION.SIMILAR.temperature,
           topK: GEMINI_CONFIG.GENERATION.SIMILAR.topK,
           topP: GEMINI_CONFIG.GENERATION.SIMILAR.topP,
-          maxOutputTokens: Math.min(GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens, 4096)
+          maxOutputTokens: Math.min(GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens, 4096),
+          keyType: 'SIMILAR'
         });
         out.push(__postProcessSimilar(text, mode, idx));
         ok++; produced++;
@@ -804,12 +910,12 @@ function generateSimilarProblems_Batch(originalContent, mode = 'word', options =
 }
 
 /* ========================= HELPER FUNCTIONS ========================= */
-function formatTextOutput(textContent, totalPages, mode) {
+function formatTextOutput(textContent, totalPages) {
   const hdr =
-`Ocean PDF/Image → ${mode === 'latex' ? 'LaTeX (ex_test)' : 'Text (with $…$)'} — Enhanced Gemini
+`Ocean PDF/Image → Word Format (with $…$) — Enhanced Gemini
 Generated: ${new Date().toLocaleString('vi-VN')}
 Pages: ${totalPages}
-OCR Model: ${GEMINI_CONFIG.MODELS.OCR}${mode === 'latex' ? ` | Transform: ${GEMINI_CONFIG.MODELS.TRANSFORM}` : ''}
+OCR Model: ${GEMINI_CONFIG.MODELS.OCR}
 Theme: Ocean Blue
 
 ========================================
@@ -821,37 +927,28 @@ Theme: Ocean Blue
 function __parseQuestions(content, mode, options = {}) {
   const a = [];
   try {
-    if (mode === 'latex') {
-      const re = /\\begin\{(?:ex\*?|bt\*?|vd\*?)\}(?:\[[^\]]*\])?([\s\S]*?)\\end\{(?:ex\*?|bt\*?|vd\*?)\}/g;
-      let m;
-      while ((m = re.exec(content)) !== null) {
-        const inner = (m[1] || '').trim();
-        const full = m[0].trim();
-        if (inner) {
-          const envMatch = /\\begin\{(ex\*?|bt\*?|vd\*?)\}/.exec(full);
-          const env = envMatch ? envMatch[1] : 'ex';
-          a.push({ type: env.replace('*',''), content: full, inner });
-        }
-      }
-      if (!a.length) {
-        const parts = content.split(/(?=\\begin\{ex)/);
-        if (parts.length > 1) parts.forEach(p => { const seg = p.trim(); if (seg) a.push({ type: 'ex', content: seg, inner: seg }); });
-      }
-    } else {
-      const kind = (options.granularity || __detectGranularity(content));
-      __parseWordTopLevel(content, kind).forEach(it => a.push(it));
-    }
+    const kind = (options.granularity || __detectGranularity(content));
+    __parseWordTopLevel(content, kind).forEach(it => a.push(it));
     return a;
   } catch {
-    return [{ type: mode === 'latex' ? 'ex' : 'question', content: content.trim() }];
+    return [{ type: 'question', content: content.trim() }];
   }
 }
 
 function __detectGranularity(content) {
   const cau = (content.match(/^\s*(?:Câu|CÂU)\s*\d+/gmi) || []).length;
   const bai = (content.match(/^\s*(?:Bài|BÀI)\s*\d+/gmi) || []).length;
-  if (cau === 0 && bai === 0) return 'cau';
-  return (cau >= bai) ? 'cau' : 'bai';
+  
+  console.log(`🔍 Detected: ${cau} câu, ${bai} bài`);
+  
+  if (cau === 0 && bai === 0) {
+    console.log('⚠️ No structured questions found, defaulting to "cau" mode');
+    return 'cau';
+  }
+  
+  const result = (cau >= bai) ? 'cau' : 'bai';
+  console.log(`📊 Granularity selected: ${result}`);
+  return result;
 }
 
 function __parseWordTopLevel(content, kind) {
@@ -861,12 +958,38 @@ function __parseWordTopLevel(content, kind) {
   const reStart = kind === 'bai'
     ? /^\s*(?:Bài|BÀI)\s*(\d+)\s*([\.\-:–—\)])?/i
     : /^\s*(?:Câu|CÂU)\s*(\d+)\s*([\.\-:–—\)])?/i;
+  
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i], m = reStart.exec(line);
-    if (m) { if (cur.trim()) items.push({ type: kind === 'bai' ? 'problem' : 'question', index: num, content: cur.trim() }); cur = line.trim(); num = Number(m[1]); continue; }
-    cur += (cur ? '\n' : '') + line;
+    const line = lines[i];
+    const m = reStart.exec(line);
+    
+    if (m) {
+      // Tìm thấy câu mới, lưu câu trước
+      if (cur.trim()) {
+        items.push({ 
+          type: kind === 'bai' ? 'problem' : 'question', 
+          index: num, 
+          content: cur.trim() 
+        });
+      }
+      cur = line.trim();
+      num = Number(m[1]);
+    } else {
+      // Nối dòng vào câu hiện tại
+      cur += (cur ? '\n' : '') + line;
+    }
   }
-  if (cur.trim()) items.push({ type: kind === 'bai' ? 'problem' : 'question', index: num, content: cur.trim() });
+  
+  // Lưu câu cuối cùng
+  if (cur.trim()) {
+    items.push({ 
+      type: kind === 'bai' ? 'problem' : 'question', 
+      index: num, 
+      content: cur.trim() 
+    });
+  }
+  
+  console.log(`📋 Parsed ${items.length} items in ${kind} mode`);
   return items;
 }
 
@@ -880,15 +1003,7 @@ function __sanitizeQuestion(q, mode) {
   const cleaned = { ...q };
   try {
     let s = q.content || '';
-    if (mode === 'latex') {
-      s = s.replace(/\\loigiai\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g, '');
-      s = s.replace(/\\includegraphics[^{}]*\{[^}]*\}/g, '');
-      s = s.replace(/\\begin\{figure\}[\s\S]*?\\end\{figure\}/g, '');
-      s = s.replace(/^%.*$/gm, '');
-      s = s.replace(/\n\s*\n\s*\n/g, '\n\n');
-    } else {
-      s = s.replace(/\[Hình.*?\]/g, '').replace(/\(Hình.*?\)/g, '').replace(/\s+/g, ' ').trim();
-    }
+    s = s.replace(/\[Hình.*?\]/g, '').replace(/\(Hình.*?\)/g, '').replace(/\s+/g, ' ').trim();
     cleaned.content = s;
     return cleaned;
   } catch { return q; }
@@ -896,45 +1011,79 @@ function __sanitizeQuestion(q, mode) {
 
 function __tightenText(s, mode) {
   if (!s) return '';
-  if (mode === 'latex') {
-    return s
-      .replace(/^\s*%.*$/gm, '')
-      .replace(/\\loigiai\{[\s\S]*?\}/g, '')
-      .replace(/\\begin\{figure\}[\s\S]*?\\end\{figure\}/g, '')
-      .replace(/\\includegraphics[^{}]*\{[^}]*\}/g, '')
-      .replace(/[ \t]+\n/g, '\n')
-      .replace(/\n{3,}/g, '\n\n')
-      .trim();
-  }
   return s.replace(/\s+/g, ' ').trim();
 }
 
 function __buildPerQuestionPrompt(q, mode, idx) {
   const oceanPrefix = 'Ocean AI Assistant - ';
-  if (mode === 'latex') {
-    return `${oceanPrefix}Sinh 1 câu tương tự theo ex_test (không \\loigiai), CHỈ in LaTeX hoàn chỉnh:\n\nCÂU GỐC:\n${q.content}\n\nBẮT ĐẦU:`;
-  }
   return `${oceanPrefix}Sinh 1 câu tương tự giữ định dạng Word (công thức $...$), CHỈ in câu, bắt đầu bằng "Câu ${idx}:", không lời giải:\n\nCÂU GỐC:\n${q.content}\n\nBẮT ĐẦU:`;
 }
 
 function __extractSimilarBlocks(resp, targetCount) {
   if (!resp) return [];
+  
+  // Bước 1: Tìm và trích xuất phần nội dung giữa markers
   const start = resp.indexOf('===BEGIN_SIMILAR===');
   const end = resp.lastIndexOf('===END_SIMILAR===');
-  const body = (start !== -1 && end !== -1 && end > start)
+  let body = (start !== -1 && end !== -1 && end > start)
     ? resp.substring(start + '===BEGIN_SIMILAR==='.length, end).trim()
     : resp.trim();
-  const rawBlocks = body.split(/^\s*---END_QUESTION---\s*$/gmi).map(s => s.trim()).filter(Boolean);
   
-  if (!rawBlocks.length) {
-    const approx = body.split(/\n(?=Câu\s+\d+\s*[:\.\-])/i);
-    if (approx.length > 1) return approx.map(s => s.trim()).filter(Boolean);
-    const exsplit = body.split(/(?=\\begin\{ex)/);
-    if (exsplit.length > 1) return exsplit.map(s => s.trim()).filter(Boolean);
-    return [body];
+  // Bước 2: Thử tách theo marker ---END_QUESTION---
+  let rawBlocks = body.split(/---END_QUESTION---/gi).map(s => s.trim()).filter(Boolean);
+  console.log(`📝 Step 2 - Split by marker: ${rawBlocks.length} blocks`);
+  
+  // Bước 3: Nếu không có marker, thử tách theo "Câu X:"
+  if (rawBlocks.length < 2) {
+    // Thử tách theo pattern "Câu [số]:" hoặc "Câu [số]."
+    const byQuestion = body.split(/(?=(?:^|\n)\s*(?:Câu|CÂU)\s+\d+\s*[:\.\-])/i);
+    rawBlocks = byQuestion.map(s => s.trim()).filter(Boolean);
+    console.log(`📝 Step 3 - Split by 'Câu X:': ${rawBlocks.length} blocks`);
   }
   
-  return rawBlocks.slice(0, Math.max(targetCount, rawBlocks.length));
+  // Bước 4: Nếu vẫn chỉ có 1 block, thử tách theo xuống dòng 2 lần
+  if (rawBlocks.length < 2) {
+    const byParagraph = body.split(/\n\s*\n+/);
+    console.log(`📝 Step 4 - Split by double newline: ${byParagraph.length} paragraphs`);
+    
+    if (byParagraph.length > 1) {
+      // Gộp lại các đoạn nhỏ thành câu hỏi hoàn chỉnh
+      rawBlocks = [];
+      let current = '';
+      for (let para of byParagraph) {
+        para = para.trim();
+        if (!para) continue;
+        
+        // Nếu đoạn bắt đầu bằng "Câu X:", bắt đầu câu hỏi mới
+        if (/^(?:Câu|CÂU)\s+\d+\s*[:\.\-]/i.test(para)) {
+          if (current) rawBlocks.push(current.trim());
+          current = para;
+        } else {
+          current += (current ? '\n\n' : '') + para;
+        }
+      }
+      if (current) rawBlocks.push(current.trim());
+      console.log(`📝 Step 4 - Regrouped into: ${rawBlocks.length} questions`);
+    }
+  }
+  
+  // Bước 5: Nếu không tách được, trả về toàn bộ
+  if (rawBlocks.length < 1) {
+    console.warn('⚠️ Could not split response, returning as single block');
+    rawBlocks = [body];
+  }
+  
+  // Bước 6: Lọc và giới hạn số lượng
+  const filtered = rawBlocks.filter(s => s && s.length > 10);
+  
+  console.log(`📊 Extracted ${filtered.length} blocks from response (target: ${targetCount})`);
+  
+  if (filtered.length < targetCount) {
+    console.warn(`⚠️ WARNING: Only found ${filtered.length} questions, expected ${targetCount}`);
+  }
+  
+  // Trả về tất cả câu tìm được (không giới hạn)
+  return filtered;
 }
 
 function __postProcessSimilar(text, mode, idx) {
@@ -942,15 +1091,11 @@ function __postProcessSimilar(text, mode, idx) {
 }
 
 function __createFallbackSimilar(q, mode, idx) {
-  const fallbackPrefix = mode === 'latex' ? '% Ocean Fallback' : 'Ocean Fallback';
-  return `${fallbackPrefix}\n${q.content}`;
+  return `Ocean Fallback\n${q.content}`;
 }
 
 function __combineSimilarQuestions(questions, mode) {
-  const header = mode === 'latex' 
-    ? '% Ocean Similar Generator - Batch Mode\n'
-    : 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR (Batch)\n' + '='.repeat(48) + '\n\n';
-  
+  const header = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR (Batch)\n' + '='.repeat(48) + '\n\n';
   return header + questions.join('\n\n');
 }
 
@@ -963,62 +1108,6 @@ Gõ lại CHÍNH XÁC nội dung trong ảnh.
 Chỉ trả về văn bản OCR (kèm công thức đã bọc).`;
 }
 
-function getRawOCRPrompt() {
-  return `Ocean AI OCR Assistant
-Gõ lại CHÍNH XÁC nội dung trong ảnh, không bình luận.
-- Giữ trật tự, dòng/đoạn như ảnh.
-- Toán học: [BẮT BUỘC] tất cả công thức viết dưới dạng Latex bọc $...$ hoặc $$...$$ theo bố cục.
-Chỉ trả về văn bản OCR sạch.`;
-}
-
-function getExTestTransformPrompt(includeSolutions = false) {
-  return `Ocean AI LaTeX Assistant
-Bạn là một chuyên gia biên soạn đề theo LaTeX gói ex_test.
-NHIỆM VỤ: Chuyển đổi văn bản OCR thành LaTeX theo đúng cấu trúc ex_test, KHÔNG thay đổi nội dung gốc, KHÔNG bịa thêm.
-
-QUY TẮC CHUNG:
-- Mỗi câu hỏi bọc trong:
-\\begin{ex}
-[Phần nội dung]
-[Khối đáp án tuỳ loại câu hỏi]
-${includeSolutions ? '\\loigiai{[Lời giải ngắn gọn, nếu và chỉ nếu văn bản OCR đã có sẵn lời giải hoặc được yêu cầu thêm]}' : '% Không thêm \\loigiai nếu không có trong văn bản'}
-\\end{ex}
-
-- Không được tự suy đoán đáp án đúng. Nếu văn bản gốc chỉ có "A., B., C., D." thì giữ nguyên nội dung đó (chỉ chuyển cấu trúc).
-- Ký hiệu toán học (≥, ≤, ∈, …) phải là LaTeX (\\ge, \\le, \\in, …). Giữ $...$ của công thức.
-
-PHÂN LOẠI & CẤU TRÚC:
-1) Trắc nghiệm (Multiple choice: có các phương án A., B., C., D.):
-   Sử dụng:
-   \\choice
-   {[Phương án A]}
-   {[Phương án B]}
-   {[Phương án C]}
-   {[Phương án D]}
-
-2) Đúng/Sai (True/False: a), b), c), d) hoặc có từ "Đúng/Sai"):
-   Sử dụng:
-   \\choiceTF[t]
-   {[Mệnh đề 1]}
-   {[Mệnh đề 2]}
-   {[Mệnh đề 3 (nếu có)]}
-   {[Mệnh đề 4 (nếu có)]}
-   * Nếu số mệnh đề != 4, chỉ đưa đúng số mệnh đề thu được (2–4). Không bịa thêm.
-
-3) Trả lời ngắn (Short Answer): dùng \\shortans{} khi phù hợp.
-4) Tự luận: chỉ \\begin{ex} ... \\end{ex}.
-
-RÀNG BUỘC:
-- Tách câu theo chỉ báo như "Câu x.", "Bài x.", hoặc ngắt đoạn hợp lý.
-- Không thêm/bớt dữ kiện; không sửa số liệu.
-- Không thêm \\True, không đánh dấu đáp án.
-- Nếu văn bản gốc CÓ lời giải/đáp án, cho vào \\loigiai{...}; nếu KHÔNG, thì bỏ qua.
-
-ĐẦU VÀO (OCR):
-<<<OCR_TEXT>>>
-
-Hãy trả về CHỈ LaTeX ex_test hợp lệ, không bao thêm bình luận.`;
-}
 
 function __ocrImageToWordText(base64, mime = 'image/png') {
   return __geminiGenerate({
@@ -1029,35 +1118,11 @@ function __ocrImageToWordText(base64, mime = 'image/png') {
     temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
     topK: GEMINI_CONFIG.GENERATION.OCR.topK,
     topP: GEMINI_CONFIG.GENERATION.OCR.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
+    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens,
+    keyType: 'OCR'
   });
 }
 
-function __ocrImageRaw(base64, mime = 'image/png') {
-  return __geminiGenerate({
-    model: GEMINI_CONFIG.MODELS.OCR,
-    prompt: getRawOCRPrompt(),
-    imageBase64: base64,
-    imageMime: mime,
-    temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
-    topK: GEMINI_CONFIG.GENERATION.OCR.topK,
-    topP: GEMINI_CONFIG.GENERATION.OCR.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
-  });
-}
-
-function __transformTextToExTest(ocrText, { includeSolutions = false } = {}) {
-  if (typeof ocrText !== 'string' || ocrText.trim().length < 2) throw new Error('OCR trống.');
-  const prompt = getExTestTransformPrompt(includeSolutions).replace('<<<OCR_TEXT>>>', ocrText.trim());
-  return __geminiGenerate({
-    model: GEMINI_CONFIG.MODELS.TRANSFORM,
-    prompt,
-    temperature: GEMINI_CONFIG.GENERATION.TRANSFORM.temperature,
-    topK: GEMINI_CONFIG.GENERATION.TRANSFORM.topK,
-    topP: GEMINI_CONFIG.GENERATION.TRANSFORM.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.TRANSFORM.maxOutputTokens
-  });
-}
 
 function escapeHtml_(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -1077,10 +1142,12 @@ function __isTimeUp(startTime, threshold = 300000) {
   return (Date.now() - startTime) >= threshold;
 }
 
-console.log('Ocean Enhanced PDF Converter v8.1-Simple - Single API Key Location');
-console.log('✅ Simplified Configuration: Update API keys in ONE place only!');
+console.log('Ocean Enhanced PDF Converter v8.1 - Word Mode Only');
+console.log('✅ Word format with $...$ for formulas');
+console.log('✅ Separated API Keys: OCR (10 keys) + SIMILAR (29 keys)');
 console.log('✅ Multi-API Key Rotation System: ENABLED');
 console.log('✅ Smart Performance Tracking: ENABLED'); 
 console.log('✅ Automatic Key Blacklisting: ENABLED');
-console.log('🔧 Configure keys: setGeminiApiKeys("key1,key2,key3")');
+console.log('🔧 Configure OCR keys: setGeminiApiKeys("key1,key2", "OCR")');
+console.log('🔧 Configure SIMILAR keys: setGeminiApiKeys("key1,key2", "SIMILAR")');
 console.log('📊 Check status: getApiKeyStatus()');
