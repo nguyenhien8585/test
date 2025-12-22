@@ -65,7 +65,7 @@ const GEMINI_CONFIG = {
   GENERATION: {
     OCR: { temperature: 0.1, topK: 32, topP: 0.95, maxOutputTokens: 8192 },
     TRANSFORM: { temperature: 0.3, topK: 40, topP: 0.95, maxOutputTokens: 16384 },
-    SIMILAR: { temperature: 0.6, topK: 40, topP: 0.95, maxOutputTokens: 66536 }
+    SIMILAR: { temperature: 0.7, topK: 64, topP: 0.95, maxOutputTokens: 65536 }
   },
   
   // API configuration
@@ -616,12 +616,18 @@ function generateSimilarProblems(originalContent, mode = 'word', options = {}) {
   const preferSingleShot = options.singleShot !== false;
   if (preferSingleShot) {
     try {
+      console.log('🎯 Attempting single-shot generation...');
       const single = generateSimilarSingleShot(originalContent, mode, options);
-      if (single?.success) return single;
+      if (single?.success) {
+        console.log('✅ Single-shot generation successful!');
+        return single;
+      }
     } catch (e) {
-      console.warn('Single-shot failed → fallback batch. Reason:', e && e.message);
+      console.warn('⚠️ Single-shot failed, falling back to batch mode');
+      console.warn('Reason:', e && e.message);
     }
   }
+  console.log('🔄 Using batch generation mode...');
   return generateSimilarProblems_Batch(originalContent, mode, options);
 }
 
@@ -656,50 +662,58 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
       .map((q, idx) => `<<Q${idx + 1}>>\n${__tightenText(q.content, mode)}`)
       .join('\n\n');
 
+    const questionList = sanitizedList.map((q, i) => `Q${i+1}`).join(', ');
+    
     const instructions =
-`Ocean AI Assistant - Chuyên gia biên soạn đề thi Word format.
+`BẠN LÀ CHUYÊN GIA BIÊN SOẠN ĐỀ THI - OCEAN AI
 
-NHIỆM VỤ QUAN TRỌNG:
-Tạo CHÍNH XÁC ${targetCount} câu hỏi tương tự. Không được thiếu, không được thừa!
+🎯 NHIỆM VỤ CỐT LÕI:
+Tạo CHÍNH XÁC ${targetCount} câu hỏi tương tự (${questionList})
+⚠️ QUAN TRỌNG: PHẢI ĐỦ ${targetCount} CÂU, THIẾU 1 CÂU LÀ THẤT BẠI!
 
-YÊU CẦU:
-✓ Số lượng: ĐÚNG ${targetCount} câu (từ Câu 1 đến Câu ${targetCount})
-✓ Giữ nguyên: Dạng toán, độ khó, cấu trúc câu hỏi
-✓ Thay đổi: Số liệu, ngữ cảnh, tình huống trong đề
-✓ Công thức toán: Bọc trong $...$ (ví dụ: $x^2+1$, $\\frac{a}{b}$)
-✓ KHÔNG viết lời giải, KHÔNG thêm chú thích
+📋 YÊU CẦU CHI TIẾT:
+1. SỐ LƯỢNG: Bắt buộc ${targetCount} câu (Câu 1 → Câu ${targetCount})
+2. GIỐNG: Dạng toán, độ khó, cấu trúc, loại câu hỏi
+3. KHÁC: Số liệu, ngữ cảnh, tình huống cụ thể
+4. CÔNG THỨC: Dùng $...$ cho toán (VD: $2x+3$, $\\sqrt{5}$, $\\frac{a}{b}$)
+5. KHÔNG: Lời giải, đáp án đúng, chú thích thêm
 
-ĐỊNH DẠNG ĐẦU RA BẮT BUỘC:
+✅ ĐỊNH DẠNG BẮT BUỘC (COPY CHÍNH XÁC):
 ===BEGIN_SIMILAR===
-Câu 1: [Nội dung câu hỏi 1 tương tự với Q1]
-A. [Đáp án A nếu có]
-B. [Đáp án B nếu có]
-C. [Đáp án C nếu có]
-D. [Đáp án D nếu có]
+Câu 1: [Đề bài tương tự Q1]
+A. [Đáp án]
+B. [Đáp án]
+C. [Đáp án]
+D. [Đáp án]
 
 ---END_QUESTION---
-Câu 2: [Nội dung câu hỏi 2 tương tự với Q2]
-A. [Đáp án A nếu có]
-B. [Đáp án B nếu có]
-C. [Đáp án C nếu có]
-D. [Đáp án D nếu có]
+Câu 2: [Đề bài tương tự Q2]
+A. [Đáp án]
+B. [Đáp án]
+C. [Đáp án]
+D. [Đáp án]
 
 ---END_QUESTION---
-Câu 3: [Nội dung câu hỏi 3 tương tự với Q3]
-...
+Câu 3: [Đề bài tương tự Q3]
+[...]
+
 ---END_QUESTION---
-Câu ${targetCount}: [Nội dung câu hỏi ${targetCount} tương tự với Q${targetCount}]
+[... TIẾP TỤC CHO ĐẾN ...]
+
+---END_QUESTION---
+Câu ${targetCount}: [Đề bài tương tự Q${targetCount}]
+[Đáp án nếu có]
 
 ===END_SIMILAR===
 
-${targetCount} CÂU HỎI GỐC:
+📚 DỮ LIỆU GỐC (${targetCount} CÂU):
 ${compactBody}
 
-BẮT ĐẦU TẠO ${targetCount} CÂU TƯƠNG TỰ:`;
+🚀 BẮT ĐẦU TẠO ${targetCount} CÂU (NHỚ: PHẢI ĐỦ ${targetCount} CÂU!):`;
 
     console.log(`🚀 Sending to AI: ${targetCount} questions to generate`);
     
-    const resp = __geminiGenerate({
+    let resp = __geminiGenerate({
       model: GEMINI_CONFIG.MODELS.SIMILAR,
       prompt: instructions,
       temperature: GEMINI_CONFIG.GENERATION.SIMILAR.temperature,
@@ -711,15 +725,52 @@ BẮT ĐẦU TẠO ${targetCount} CÂU TƯƠNG TỰ:`;
     console.log(`📥 Received response: ${resp.length} chars`);
     console.log(`📄 Response preview: ${resp.substring(0, 500)}...`);
     
-    const blocks = __extractSimilarBlocks(resp, targetCount);
-    console.log(`✅ Final blocks extracted: ${blocks.length} questions`);
+    let blocks = __extractSimilarBlocks(resp, targetCount);
+    console.log(`✅ First attempt extracted: ${blocks.length}/${targetCount} questions`);
     
+    // RETRY nếu thiếu câu (tối đa 2 lần retry)
+    let retryCount = 0;
+    const maxRetries = 2;
+    
+    while (blocks.length < targetCount && retryCount < maxRetries) {
+      retryCount++;
+      console.warn(`⚠️ Retry ${retryCount}/${maxRetries}: Only got ${blocks.length}/${targetCount} questions`);
+      
+      const missingCount = targetCount - blocks.length;
+      const retryPrompt = `BẠN ĐANG BỊ THIẾU ${missingCount} CÂU!
+
+YÊU CẦU: Tạo lại CHÍNH XÁC ${targetCount} câu (từ Câu 1 đến Câu ${targetCount}).
+Format: Mỗi câu phải có "---END_QUESTION---" ở cuối.
+
+${targetCount} CÂU GỐC:
+${compactBody}
+
+TẠO LẠI NGAY ${targetCount} CÂU (KHÔNG ĐƯỢC THIẾU):`;
+      
+      resp = __geminiGenerate({
+        model: GEMINI_CONFIG.MODELS.SIMILAR,
+        prompt: retryPrompt,
+        temperature: 0.8,
+        topK: 64,
+        topP: 0.95,
+        maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens
+      });
+      
+      blocks = __extractSimilarBlocks(resp, targetCount);
+      console.log(`🔄 Retry ${retryCount} result: ${blocks.length}/${targetCount} questions`);
+    }
+    
+    // Kiểm tra kết quả cuối cùng
     if (blocks.length < targetCount) {
-      console.error(`❌ ERROR: Generated only ${blocks.length}/${targetCount} questions`);
+      console.error(`❌ FAILED: Only generated ${blocks.length}/${targetCount} questions after ${retryCount} retries`);
+      console.warn(`⚠️ Falling back to batch mode...`);
+      // Throw error để fallback sang batch mode
+      throw new Error(`Single-shot failed: ${blocks.length}/${targetCount} questions generated`);
     } else if (blocks.length > targetCount) {
-      console.log(`✅ Generated ${blocks.length} questions (expected ${targetCount})`);
+      console.log(`✅ Generated ${blocks.length} questions (expected ${targetCount}) - will trim`);
+      blocks = blocks.slice(0, targetCount);
     } else {
-      console.log(`✅ Perfect! Generated exactly ${targetCount} questions`);
+      console.log(`✅✅✅ PERFECT! Generated exactly ${targetCount} questions!`);
     }
     
     const similarCombined = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
