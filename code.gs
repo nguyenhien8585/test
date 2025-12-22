@@ -1,51 +1,70 @@
 /**
  * code.gs - PDF/Image → Text Converter + Similar Problem Generator
- * HYBRID VERSION: Mistral OCR + Gemini Similar Generator
+ * SIMPLIFIED OCEAN VERSION - Single API Key Location
  * 
- * v8.2-Hybrid (2025-01-26)
- * - NEW: Mistral AI for OCR using chat completions with vision
- * - Gemini AI for Similar Problem Generation
- * - Complete LaTeX wrapping support
+ * v8.1-Simple (2025-01-26)
+ * - SIMPLIFIED: Single API key configuration (easier to manage)
+ * - Enhanced: Multi-API Key Rotation System  
  * - Improved: Better error handling and fallback
  * - Optimized: Performance and reliability
  */
 
-/* ========================= MISTRAL AI CONFIG (OCR) ========================= */
-const MISTRAL_CONFIG = {
-  API_KEY: 'H18aNxUyTYy4jWD3Cag2FkjfO01PYbp6',
-  CHAT_URL: 'https://api.mistral.ai/v1/chat/completions',
-  OCR_MODEL: 'mistral-ocr-latest',  // Model OCR chính thức của Mistral AI
-  MAX_RETRIES: 3,
-  REQUEST_TIMEOUT: 60000,
-  GENERATION: {
-    temperature: 0.1,
-    max_tokens: 8192
-  }
-};
-
-/* ========================= GEMINI CONFIG (Similar Generation) ========================= */
+/* ========================= SIMPLIFIED GEMINI CONFIG ========================= */
 const GEMINI_CONFIG = {
   // Single array of API keys - Just update this one place!
   API_KEYS: [
-    "AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
-    "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
-    "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
-    "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
-    "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
-    "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
-    "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
-    "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
-    "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
-    "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE"
+"AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
+      "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
+      "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
+      "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
+      "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
+      "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
+      "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
+      "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
+      "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
+      "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE",
+      "AIzaSyBrjb43nQTzQoRQd35hw8dtam4gWu6Dbfs",
+      "AIzaSyDfVeYlNOrrvpuEzJ9GJgctJEcABrF1U_0",
+      "AIzaSyDWn6DwNcimrOetCYvQHR3IE5LFLWLFLNE",
+      "AIzaSyAfUdBJGiq1XkrYPrWsdj4lGhtR_H-f5rk",
+      "AIzaSyAVQjuf0haGsLEYRY-rUGl8zFfx-EDzHUs",
+      "AIzaSyCgpc8xsReNC3LXYfSwmLPqsMZOHhFnFOU",
+      "AIzaSyBYarkjC4_zBgzn0eh3m_d3COWOaeAB_ok",
+      "AIzaSyA_y1NS86T263turtvGI1MGf05SMSsCE5M",
+      "AIzaSyDUIhn3PvydKJxXbZn3NtjowHD6KYtm6cI",
+      "AIzaSyCR8lxCX3VOS3uzughEdD_EV_s9DwD7jMw",
+      "AIzaSyD2skUF0Aeua0fgxgGlDdHfrtsfA0XrTbg",
+      "AIzaSyDaYQ-ClvjBo5cNMfICdFkOojKwfyaMco8",
+      "AIzaSyDIG4_v8Et4OHdGbKzKHSmgq5hpJc7-dfU",
+      "AIzaSyAVI13vJFora3sOPA1x-b2SWNIt_ujEXZI",
+      "AIzaSyBhwQ6QAv3mXxivzwB_sQ3552waeEWSvto",
+      "AIzaSyDtsmDqVsYotAh8ggh0ZMWzE651CKw8hUk",
+      "AIzaSyBqSl_4UYXDZgWmC0_fxOw9UOPcKHt795g",
+      "AIzaSyDFKmhBRK4FM2gA9wClKBnxGPzyVRStrF4",
+      "AIzaSyALIjwOKZ-vmyD3arpsN-BeUFrYKi2Cjhk",
+      "AIzaSyDU-V2vrkAnzGfvtBdVXT74FyTdpDG2ojg",
+      "AIzaSyCn44XdE8Vi1O3xWvQiRKsuBaCPexSoDYo",
+      "AIzaSyBLBC9nWH6JQERlgnR1fez3GNhqFXN6yeI",
+      "AIzaSyDTm0FhL5k_1tIMBTO-KFX4kAvWfmji5LM",
+      "AIzaSyDtavNqPc5BG8Bi_YrtYuohOMYW4LAZpK0",
+      "AIzaSyDNzMZXkVrX8bBJB07FU7j18fMNWdNB-kM",
+      "AIzaSyAdX1hJbDFlA5nwSjLJGovlLdQ9IQ_PNFY",
+      "AIzaSyCddxcJFWjSSpXCn77OKt0G6fNxhZEvB_g",
+      "AIzaSyCO2JgRieXQMUrI7r5lNN8PxraJ5aLTwxI",
+      "AIzaSyBD7fPXZ93nIOTRW3HvD6RzVP8HfO_xNmc"
   ],
   
-  // Models configuration (only for Similar Generation now)
+  // Models configuration
   MODELS: {
-    SIMILAR: 'gemini-2.5-flash'
+    OCR: 'gemini-3-flash-preview',
+    TRANSFORM: 'gemini-3-flash-preview', 
+    SIMILAR: 'gemini-3-flash-preview'
   },
   
   // Generation parameters
   GENERATION: {
+    OCR: { temperature: 0.1, topK: 32, topP: 0.95, maxOutputTokens: 8192 },
+    TRANSFORM: { temperature: 0.3, topK: 40, topP: 0.95, maxOutputTokens: 16384 },
     SIMILAR: { temperature: 0.6, topK: 40, topP: 0.95, maxOutputTokens: 66536 }
   },
   
@@ -82,10 +101,10 @@ function doGet() {
     return HtmlService.createTemplateFromFile('index')
       .evaluate()
       .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
-      .setTitle('PDF to Text & Similar Problem Generator');
+      .setTitle('Ocean PDF Converter + Similar Generator');
   } catch (error) {
     console.error('Error serving HTML:', error);
-    return HtmlService.createHtmlOutput('<h1>PDF to Text Generator</h1><p style="color:#ef4444">Error: ' + escapeHtml_(error.message) + '</p>');
+    return HtmlService.createHtmlOutput('<h1>Ocean PDF Converter</h1><p style="color:#ef4444">Error: ' + escapeHtml_(error.message) + '</p>');
   }
 }
 
@@ -438,366 +457,6 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
   throw new Error(`🚨 All API attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
 }
 
-/* ========================= MISTRAL AI OCR FUNCTIONS ========================= */
-
-/**
- * 🎯 COMPLETE LATEX WRAPPING - Enhanced version from working code
- */
-function wrapAllMathInDollarSigns(text) {
-  if (!text || !text.trim()) return text;
-  
-  console.log('🔧 Starting comprehensive LaTeX wrapping...');
-  
-  let result = text;
-  const preserved = [];
-  
-  // ========================================
-  // STEP 0: Handle markdown tables specially
-  // ========================================
-  
-  // Find and process markdown tables (variation tables)
-  const tablePattern = /^\|[^\n]+\|(?:\n\|[^\n]+\|)*$/gm;
-  
-  result = result.replace(tablePattern, (match) => {
-    console.log('Found table block');
-    
-    const id = `__TABLE_${preserved.length}__`;
-    let processedTable = match;
-    
-    // Split into lines
-    const lines = processedTable.split('\n');
-    const processedLines = lines.map(line => {
-      // Skip separator rows (---, :--:, etc.)
-      if (/^\|[\s:|\-]+\|$/.test(line)) {
-        return line;
-      }
-      
-      // Process content rows
-      let processedLine = line;
-      
-      // Wrap x variable: |x| → |$x$|
-      processedLine = processedLine.replace(/\|(\s*)x(\s*)\|/g, '|$1$x$$2|');
-      
-      // Wrap f(x): |f(x)| → |$f(x)$|
-      processedLine = processedLine.replace(/\|(\s*)f\(x\)(\s*)\|/g, '|$1$f(x)$$2|');
-      
-      // Wrap infinity: −∞ → $-\infty$, +∞ → $+\infty$
-      processedLine = processedLine.replace(/([−\-])∞/g, '$-\\infty$');
-      processedLine = processedLine.replace(/\+∞/g, '$+\\infty$');
-      
-      // Wrap isolated numbers: |−2| → |$-2$|, |1| → |$1$|
-      processedLine = processedLine.replace(/\|(\s*)([−\-]?\d+)(\s*)\|/g, '|$1$$$2$$3|');
-      
-      // Wrap 0: | 0 | → | $0$ |
-      processedLine = processedLine.replace(/\|(\s*)0(\s*)\|/g, '|$1$0$$2|');
-      
-      // Wrap + and − signs: |+| → |$+$|, |−| → |$-$|
-      processedLine = processedLine.replace(/\|(\s*)\+(\s*)\|/g, '|$1$+$$2|');
-      processedLine = processedLine.replace(/\|(\s*)[−\-](\s*)\|/g, '|$1$-$$2|');
-      
-      return processedLine;
-    });
-    
-    processedTable = processedLines.join('\n');
-    preserved.push(processedTable);
-    return id;
-  });
-  
-  // ========================================
-  // STEP 1: Preserve already valid LaTeX
-  // ========================================
-  
-  result = result.replace(/\$\$([^$]+)\$\$/g, (match) => {
-    const id = `__PRESERVE_${preserved.length}__`;
-    preserved.push(match);
-    return id;
-  });
-  
-  result = result.replace(/\$([^$\n]{1,}?)\$/g, (match, content) => {
-    if (/\\[a-zA-Z]+|[+\-*/=()[\]{}<>≤≥≠±×÷∞∈∉⊂⊃∩∪αβγδεζηθικλμνξοπρστυφχψω²³⁴⁵⁶⁷⁸⁹⁰ⁿ₀₁₂₃₄₅₆₇₈₉ₙ]/.test(content)) {
-      const id = `__PRESERVE_${preserved.length}__`;
-      preserved.push(match);
-      return id;
-    }
-    return content;
-  });
-  
-  // ========================================
-  // STEP 2: Remove orphaned $ signs
-  // ========================================
-  
-  result = result.replace(/\$/g, '');
-  
-  // ========================================
-  // STEP 3: Wrap LaTeX patterns
-  // ========================================
-  
-  // LaTeX commands: \frac{1}{2}, \sqrt{x}, \infty
-  result = result.replace(/(\\[a-zA-Z]+(?:\{[^}]*\}|\([^)]*\)|[^\s\w])*)/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    if (match === '\\n' || match === '\\t') return match;
-    return `$${match}$`;
-  });
-  
-  // Function definitions: y = f(x), g(x) = ...
-  result = result.replace(/\b([a-zA-Z])\s*=\s*([a-zA-Z])\(([a-zA-Z])\)/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // Intervals with semicolons: [-7;+∞), (0;2], {-7;4}
-  result = result.replace(/[\[\(\{]([^[\](){}]*[;][^[\](){}]*)[\]\)\}]/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // Number ranges: [0 ; 40), [40 ; 80)
-  result = result.replace(/\[\s*(\d+)\s*;\s*(\d+)\s*\)/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // Simple equations: x = -4, y = 9
-  result = result.replace(/\b([a-zA-Z])\s*=\s*([-+]?\d+(?:\.\d+)?)/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // Complex equations: x = -7+4
-  result = result.replace(/\b([a-zA-Z])\s*=\s*([-+]?\d+(?:\s*[+\-*/]\s*\d+)*)/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // Infinity symbols (not in tables)
-  result = result.replace(/([+\-−])∞/g, (match, sign) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    const mathSign = sign === '−' ? '-' : sign;
-    return `$${mathSign}\\infty$`;
-  });
-  
-  // Greek letters
-  const greekMap = {
-    'α': '\\alpha', 'β': '\\beta', 'γ': '\\gamma', 'δ': '\\delta',
-    'ε': '\\epsilon', 'ζ': '\\zeta', 'η': '\\eta', 'θ': '\\theta',
-    'ι': '\\iota', 'κ': '\\kappa', 'λ': '\\lambda', 'μ': '\\mu',
-    'ν': '\\nu', 'ξ': '\\xi', 'π': '\\pi', 'ρ': '\\rho',
-    'σ': '\\sigma', 'τ': '\\tau', 'υ': '\\upsilon', 'φ': '\\phi',
-    'χ': '\\chi', 'ψ': '\\psi', 'ω': '\\omega'
-  };
-  
-  Object.keys(greekMap).forEach(greek => {
-    const regex = new RegExp(greek, 'g');
-    result = result.replace(regex, (match) => {
-      if (result.includes('__PRESERVE_') || result.includes('__TABLE_')) return match;
-      return `$${greekMap[greek]}$`;
-    });
-  });
-  
-  // Superscripts: x², y³
-  result = result.replace(/([a-zA-Z0-9]+)([²³⁴⁵⁶⁷⁸⁹⁰ⁿ]+)/g, (match, base, sup) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    const supMap = {'²':'^2','³':'^3','⁴':'^4','⁵':'^5','⁶':'^6','⁷':'^7','⁸':'^8','⁹':'^9','⁰':'^0','ⁿ':'^n'};
-    let latex = base;
-    for (let c of sup) latex += supMap[c] || c;
-    return `$${latex}$`;
-  });
-  
-  // Subscripts: x₀, a₁
-  result = result.replace(/([a-zA-Z])([₀₁₂₃₄₅₆₇₈₉ₙ]+)/g, (match, base, sub) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    const subMap = {'₀':'_0','₁':'_1','₂':'_2','₃':'_3','₄':'_4','₅':'_5','₆':'_6','₇':'_7','₈':'_8','₉':'_9','ₙ':'_n'};
-    let latex = base;
-    for (let c of sub) latex += subMap[c] || c;
-    return `$${latex}$`;
-  });
-  
-  // Fractions: 1/2, a/b
-  result = result.replace(/\b([a-zA-Z0-9]+)\s*\/\s*([a-zA-Z0-9]+)\b/g, (match, num, den) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$\\frac{${num}}{${den}}$`;
-  });
-  
-  // Square roots: √2, √x
-  result = result.replace(/√\s*([a-zA-Z0-9]+)/g, (match, content) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$\\sqrt{${content}}$`;
-  });
-  
-  // Absolute values: |x|, |-4| (but not table separators)
-  result = result.replace(/\|([a-zA-Z0-9\s+\-*/]+)\|/g, (match, content) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    // Don't wrap if it's likely a table separator
-    if (/^[\s\-:]+$/.test(content)) return match;
-    return `$|${content}|$`;
-  });
-  
-  // Set notation: {1;2;3}
-  result = result.replace(/\{([^{}]*;[^{}]*)\}/g, (match) => {
-    if (match.includes('__PRESERVE_') || match.includes('__TABLE_')) return match;
-    return `$${match}$`;
-  });
-  
-  // ========================================
-  // STEP 4: Merge adjacent math blocks
-  // ========================================
-  
-  result = result.replace(/\$([^$]+)\$\s*([+\-*/=<>≤≥])\s*\$([^$]+)\$/g, '$$$1 $$2 $$3$$');
-  
-  let changed = true;
-  let iterations = 0;
-  while (changed && iterations < 10) {
-    const before = result;
-    result = result.replace(/\$([^$]+)\$\s*=\s*\$([^$]+)\$/g, '$$$1 = $$2$$');
-    changed = (before !== result);
-    iterations++;
-  }
-  
-  result = result.replace(/\$([^$]+)\$\s*;\s*\$([^$]+)\$/g, '$$$1 ; $$2$$');
-  
-  // ========================================
-  // STEP 5: Clean up
-  // ========================================
-  
-  result = result.replace(/\$+([^$]+)\$+/g, (match, content) => {
-    if (match.startsWith('$$') && match.endsWith('$$') && !match.includes('$$$')) {
-      return match;
-    }
-    return `$${content}$`;
-  });
-  
-  result = result.replace(/\$\s*\$/g, '');
-  result = result.replace(/\s+\$/g, ' $');
-  result = result.replace(/\$\s+/g, '$ ');
-  
-  // ========================================
-  // STEP 6: Restore preserved blocks
-  // ========================================
-  
-  preserved.forEach((block, i) => {
-    result = result.replace(`__PRESERVE_${i}__`, block);
-    result = result.replace(`__TABLE_${i}__`, block);
-  });
-  
-  console.log('✅ LaTeX wrapping completed');
-  return result;
-}
-
-/**
- * Mistral OCR - Convert image to text using Mistral AI chat completions
- * Input: base64Image (without data:image/jpeg;base64, prefix)
- */
-function __mistralOCR(base64Image, prompt) {
-  const maxAttempts = MISTRAL_CONFIG.MAX_RETRIES;
-  let lastError = null;
-  
-  // Clean base64 - remove any data URL prefix if present
-  let cleanBase64 = base64Image;
-  if (base64Image.includes('base64,')) {
-    cleanBase64 = base64Image.split('base64,')[1];
-  }
-  
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const startTime = Date.now();
-    
-    try {
-      const url = MISTRAL_CONFIG.CHAT_URL;
-      
-      const payload = {
-        model: MISTRAL_CONFIG.OCR_MODEL,
-        messages: [
-          {
-            role: 'user',
-            content: [
-              {
-                type: 'text',
-                text: prompt
-              },
-              {
-                type: 'image_url',
-                image_url: `data:image/jpeg;base64,${cleanBase64}`
-              }
-            ]
-          }
-        ],
-        temperature: MISTRAL_CONFIG.GENERATION.temperature,
-        max_tokens: MISTRAL_CONFIG.GENERATION.max_tokens
-      };
-      
-      console.log(`🔄 Mistral OCR attempt ${attempt + 1}/${maxAttempts} - Model: ${MISTRAL_CONFIG.OCR_MODEL}`);
-      
-      const response = UrlFetchApp.fetch(url, {
-        method: 'POST',
-        contentType: 'application/json',
-        headers: {
-          'Authorization': `Bearer ${MISTRAL_CONFIG.API_KEY}`
-        },
-        payload: JSON.stringify(payload),
-        muteHttpExceptions: true
-      });
-      
-      const responseTime = Date.now() - startTime;
-      const statusCode = response.getResponseCode();
-      const responseBody = response.getContentText();
-      
-      console.log(`📊 Mistral response: HTTP ${statusCode}, Time: ${responseTime}ms`);
-      
-      if (statusCode === 200) {
-        try {
-          const data = JSON.parse(responseBody);
-          const content = data?.choices?.[0]?.message?.content;
-          
-          if (!content) {
-            throw new Error('No content in Mistral response');
-          }
-          
-          // Apply LaTeX wrapping to OCR result
-          const wrappedContent = wrapAllMathInDollarSigns(content.trim());
-          
-          console.log(`✅ Mistral OCR success (${responseTime}ms, ${content.length} chars)`);
-          return wrappedContent;
-          
-        } catch (parseError) {
-          throw new Error(`Mistral response parse error: ${parseError.message}`);
-        }
-      } else {
-        let errorMessage = `HTTP ${statusCode}`;
-        
-        try {
-          const errorData = JSON.parse(responseBody);
-          errorMessage = errorData?.error?.message || errorData?.message || errorMessage;
-          console.log(`❌ Mistral error details: ${JSON.stringify(errorData)}`);
-        } catch (e) {
-          errorMessage = responseBody.substring(0, 300);
-        }
-        
-        const shouldRetry = statusCode === 429 || statusCode === 503 || statusCode === 500;
-        
-        if (!shouldRetry) {
-          throw new Error(`${errorMessage} (Non-retryable error)`);
-        }
-        
-        lastError = new Error(`${errorMessage} (Attempt ${attempt + 1})`);
-        console.warn(`⚠️ Mistral OCR attempt ${attempt + 1} failed: ${errorMessage}`);
-        
-        if (attempt < maxAttempts - 1) {
-          Utilities.sleep(2000 + (attempt * 1000)); // Progressive backoff
-        }
-      }
-      
-    } catch (error) {
-      lastError = error;
-      console.warn(`🔴 Mistral OCR attempt ${attempt + 1} error: ${error.message}`);
-      
-      if (attempt < maxAttempts - 1) {
-        Utilities.sleep(2000 + (attempt * 1000));
-      }
-    }
-  }
-  
-  throw new Error(`🚨 All Mistral OCR attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
-}
-
 /* ========================= ADMIN FUNCTIONS - SIMPLIFIED ========================= */
 
 /**
@@ -900,70 +559,40 @@ function resetApiKeyTracking() {
 /* ========================= CORE PROCESSING ========================= */
 function processPdfToText(pages, mode = 'word') {
   try {
-    console.log(`📄 Processing PDF with ${pages.length} pages`);
-    
     if (!Array.isArray(pages) || pages.length === 0) throw new Error('Không có dữ liệu ảnh.');
     const MAX_PAGES = 25;
     if (pages.length > MAX_PAGES) throw new Error(`Quá ${MAX_PAGES} trang, hãy chia nhỏ.`);
     
     let combined = '';
-    let successCount = 0;
-    let errorCount = 0;
-    
     for (let i = 0; i < pages.length; i++) {
-      console.log(`🔄 Processing page ${i + 1}/${pages.length}`);
-      
+      const { data, mime } = __splitDataUrl(pages[i]);
       try {
-        // Pages already come as base64 strings from frontend (PDF converted to images)
-        const base64Image = pages[i];
-        
-        // Verify it's valid base64
-        if (!base64Image || typeof base64Image !== 'string') {
-          throw new Error('Invalid base64 image data');
+        if (mode === 'word') {
+          combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
+        } else {
+          const raw = __ocrImageRaw(data, mime);
+          combined += `\n% ====== TRANG ${i + 1} ======\n` + __transformTextToExTest(raw, { includeSolutions: false }) + '\n';
         }
-        
-        console.log(`📷 Page ${i + 1} - Image size: ${base64Image.length} chars`);
-        
-        // Use Word mode with Mistral OCR
-        const ocrResult = __ocrImageToWordText(base64Image, 'image/jpeg');
-        combined += `\n=== TRANG ${i + 1} ===\n` + ocrResult + '\n';
-        successCount++;
-        
-        console.log(`✅ Page ${i + 1} OCR success - ${ocrResult.length} chars`);
-        
       } catch (e) {
-        errorCount++;
-        const errorMsg = e && e.message ? e.message : String(e);
-        console.error(`❌ Page ${i + 1} OCR failed: ${errorMsg}`);
-        combined += `\n=== TRANG ${i + 1} - LỖI: ${errorMsg} ===\n`;
+        combined += `\n=== TRANG ${i + 1} - LỖI: ${e && e.message} ===\n`;
       }
-      
-      // Delay between pages to avoid rate limiting
-      if (i < pages.length - 1) {
-        console.log(`⏱️ Waiting 800ms before next page...`);
-        Utilities.sleep(800);
-      }
+      if (i < pages.length - 1) Utilities.sleep(600);
     }
     
-    console.log(`📊 OCR Summary: ${successCount} success, ${errorCount} errors`);
-    
-    if (!combined.trim()) throw new Error('OCR rỗng - không có kết quả nào.');
+    if (!combined.trim()) throw new Error('OCR rỗng.');
     
     return {
       success: true,
       result: formatTextOutput(combined, pages.length, mode),
       metadata: {
         total_pages: pages.length,
-        success_pages: successCount,
-        error_pages: errorCount,
-        ocr_engine: 'Mistral AI',
-        model_ocr: MISTRAL_CONFIG.OCR_MODEL,
+        model_ocr: GEMINI_CONFIG.MODELS.OCR,
+        ...(mode === 'latex' ? { model_transform: GEMINI_CONFIG.MODELS.TRANSFORM } : {}),
         timestamp: new Date().toISOString(),
-        theme: 'hybrid'
+        theme: 'ocean'
       }
     };
   } catch (error) {
-    console.error(`❌ processPdfToText error: ${error.message}`);
     return { success: false, error: error.message || 'PDF→Text lỗi.' };
   }
 }
@@ -971,17 +600,17 @@ function processPdfToText(pages, mode = 'word') {
 function processImageToText(dataUrlOrBase64, mode = 'word') {
   try {
     const { data, mime } = __splitDataUrl(dataUrlOrBase64);
-    // Always use Mistral OCR in Word mode
-    const out = __ocrImageToWordText(data, mime);
+    const out = (mode === 'word')
+      ? __ocrImageToWordText(data, mime)
+      : __transformTextToExTest(__ocrImageRaw(data, mime), { includeSolutions: false });
     
     return {
       success: true,
       result: out,
       metadata: {
-        mode: 'word',
-        ocr_engine: 'Mistral AI',
-        model_ocr: MISTRAL_CONFIG.OCR_MODEL,
-        theme: 'hybrid',
+        mode,
+        model_ocr: GEMINI_CONFIG.MODELS.OCR,
+        theme: 'ocean',
         ts: new Date().toISOString()
       }
     };
@@ -1177,12 +806,11 @@ function generateSimilarProblems_Batch(originalContent, mode = 'word', options =
 /* ========================= HELPER FUNCTIONS ========================= */
 function formatTextOutput(textContent, totalPages, mode) {
   const hdr =
-`PDF/Image to Text — Hybrid AI (Mistral OCR + Gemini Similar)
+`Ocean PDF/Image → ${mode === 'latex' ? 'LaTeX (ex_test)' : 'Text (with $…$)'} — Enhanced Gemini
 Generated: ${new Date().toLocaleString('vi-VN')}
 Pages: ${totalPages}
-OCR Engine: Mistral AI (${MISTRAL_CONFIG.OCR_MODEL})
-Similar Generator: Gemini AI (${GEMINI_CONFIG.MODELS.SIMILAR})
-Format: Text with math formulas ($…$)
+OCR Model: ${GEMINI_CONFIG.MODELS.OCR}${mode === 'latex' ? ` | Transform: ${GEMINI_CONFIG.MODELS.TRANSFORM}` : ''}
+Theme: Ocean Blue
 
 ========================================
 
@@ -1327,27 +955,20 @@ function __combineSimilarQuestions(questions, mode) {
 }
 
 function getWordOCRPrompt() {
-  return `Bạn là trợ lý OCR chuyên nghiệp. Hãy trích xuất CHÍNH XÁC TẤT CẢ văn bản từ ảnh này.
-
-QUY TẮC QUAN TRỌNG:
-- Giữ NGUYÊN tất cả xuống dòng và định dạng đoạn văn
-- Với bảng biểu: sử dụng định dạng markdown nếu có thể
-- Với công thức toán học: Viết dưới dạng văn bản thuần túy (VD: x^2, sqrt(x), f(x) = 2x + 1)
-- KHÔNG thêm bất kỳ giải thích hay bình luận nào
-- Chỉ trả về văn bản đã trích xuất
-
-Bắt đầu trích xuất:`;
+  return `Ocean AI OCR Assistant
+Gõ lại CHÍNH XÁC nội dung trong ảnh.
+- Giữ xuống dòng tự nhiên; không thêm thuyết minh.
+- Bảng có thể dùng markdown nếu nhận diện được.
+- Toán học: [BẮT BUỘC] tất cả công thức viết dưới dạng Latex bọc $...$ hoặc $$...$$ theo bố cục.
+Chỉ trả về văn bản OCR (kèm công thức đã bọc).`;
 }
 
 function getRawOCRPrompt() {
-  return `Trích xuất TẤT CẢ văn bản từ ảnh này CHÍNH XÁC như trong ảnh.
-
-QUY TẮC:
-- Giữ nguyên xuống dòng và cấu trúc
-- Công thức toán: viết dưới dạng văn bản (x^2, f(x), sqrt, etc)
-- Không có bình luận
-
-Văn bản:`;
+  return `Ocean AI OCR Assistant
+Gõ lại CHÍNH XÁC nội dung trong ảnh, không bình luận.
+- Giữ trật tự, dòng/đoạn như ảnh.
+- Toán học: [BẮT BUỘC] tất cả công thức viết dưới dạng Latex bọc $...$ hoặc $$...$$ theo bố cục.
+Chỉ trả về văn bản OCR sạch.`;
 }
 
 function getExTestTransformPrompt(includeSolutions = false) {
@@ -1399,17 +1020,30 @@ RÀNG BUỘC:
 Hãy trả về CHỈ LaTeX ex_test hợp lệ, không bao thêm bình luận.`;
 }
 
-function __ocrImageToWordText(base64, mime = 'image/jpeg') {
-  console.log(`🔍 __ocrImageToWordText called - Image size: ${base64.length} chars, Mime: ${mime}`);
-  // Using Mistral AI for OCR
-  const result = __mistralOCR(base64, getWordOCRPrompt());
-  console.log(`✅ OCR completed - Result length: ${result.length} chars`);
-  return result;
+function __ocrImageToWordText(base64, mime = 'image/png') {
+  return __geminiGenerate({
+    model: GEMINI_CONFIG.MODELS.OCR,
+    prompt: getWordOCRPrompt(),
+    imageBase64: base64,
+    imageMime: mime,
+    temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
+    topK: GEMINI_CONFIG.GENERATION.OCR.topK,
+    topP: GEMINI_CONFIG.GENERATION.OCR.topP,
+    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
+  });
 }
 
 function __ocrImageRaw(base64, mime = 'image/png') {
-  // Using Mistral AI for OCR
-  return __mistralOCR(base64, getRawOCRPrompt());
+  return __geminiGenerate({
+    model: GEMINI_CONFIG.MODELS.OCR,
+    prompt: getRawOCRPrompt(),
+    imageBase64: base64,
+    imageMime: mime,
+    temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
+    topK: GEMINI_CONFIG.GENERATION.OCR.topK,
+    topP: GEMINI_CONFIG.GENERATION.OCR.topP,
+    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
+  });
 }
 
 function __transformTextToExTest(ocrText, { includeSolutions = false } = {}) {
@@ -1443,11 +1077,10 @@ function __isTimeUp(startTime, threshold = 300000) {
   return (Date.now() - startTime) >= threshold;
 }
 
-console.log('🚀 PDF to Text & Similar Problem Generator v8.2-Hybrid');
-console.log('✅ OCR Engine: Mistral AI (' + MISTRAL_CONFIG.OCR_MODEL + ')');
-console.log('✅ Similar Generator: Gemini AI (' + GEMINI_CONFIG.MODELS.SIMILAR + ')');
-console.log('✅ Multi-API Key Rotation: ENABLED');
+console.log('Ocean Enhanced PDF Converter v8.1-Simple - Single API Key Location');
+console.log('✅ Simplified Configuration: Update API keys in ONE place only!');
+console.log('✅ Multi-API Key Rotation System: ENABLED');
 console.log('✅ Smart Performance Tracking: ENABLED'); 
 console.log('✅ Automatic Key Blacklisting: ENABLED');
-console.log('🔧 Configure Gemini keys: setGeminiApiKeys("key1,key2,key3")');
+console.log('🔧 Configure keys: setGeminiApiKeys("key1,key2,key3")');
 console.log('📊 Check status: getApiKeyStatus()');
