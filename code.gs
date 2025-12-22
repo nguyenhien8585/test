@@ -16,7 +16,7 @@ const MISTRAL_CONFIG = {
   CHAT_URL: 'https://api.mistral.ai/v1/chat/completions',
   OCR_URL: 'https://api.mistral.ai/v1/ocr',
   FILES_URL: 'https://api.mistral.ai/v1/files',
-  OCR_MODEL: 'mistral-ocr-latest',
+  OCR_MODEL: 'pixtral-large-latest',  // Mistral's vision model for OCR
   MAX_RETRIES: 3,
   REQUEST_TIMEOUT: 60000,
   GENERATION: {
