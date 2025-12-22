@@ -14,7 +14,7 @@
 const MISTRAL_CONFIG = {
   API_KEY: 'H18aNxUyTYy4jWD3Cag2FkjfO01PYbp6',
   CHAT_URL: 'https://api.mistral.ai/v1/chat/completions',
-  OCR_MODEL: 'pixtral-large-latest',
+  OCR_MODEL: 'mistral-ocr-latest',  // Model OCR chính thức của Mistral AI
   MAX_RETRIES: 3,
   REQUEST_TIMEOUT: 60000,
   GENERATION: {
