@@ -9,49 +9,53 @@
  * - Optimized: Performance and reliability
  */
 
-/* ========================= SIMPLIFIED GEMINI CONFIG ========================= */
+/* ========================= SEPARATED GEMINI CONFIG ========================= */
 const GEMINI_CONFIG = {
-  // Single array of API keys - Just update this one place!
-  API_KEYS: [
-"AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
-      "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
-      "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
-      "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
-      "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
-      "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
-      "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
-      "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
-      "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
-      "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE",
-      "AIzaSyBrjb43nQTzQoRQd35hw8dtam4gWu6Dbfs",
-      "AIzaSyDfVeYlNOrrvpuEzJ9GJgctJEcABrF1U_0",
-      "AIzaSyDWn6DwNcimrOetCYvQHR3IE5LFLWLFLNE",
-      "AIzaSyAfUdBJGiq1XkrYPrWsdj4lGhtR_H-f5rk",
-      "AIzaSyAVQjuf0haGsLEYRY-rUGl8zFfx-EDzHUs",
-      "AIzaSyCgpc8xsReNC3LXYfSwmLPqsMZOHhFnFOU",
-      "AIzaSyBYarkjC4_zBgzn0eh3m_d3COWOaeAB_ok",
-      "AIzaSyA_y1NS86T263turtvGI1MGf05SMSsCE5M",
-      "AIzaSyDUIhn3PvydKJxXbZn3NtjowHD6KYtm6cI",
-      "AIzaSyCR8lxCX3VOS3uzughEdD_EV_s9DwD7jMw",
-      "AIzaSyD2skUF0Aeua0fgxgGlDdHfrtsfA0XrTbg",
-      "AIzaSyDaYQ-ClvjBo5cNMfICdFkOojKwfyaMco8",
-      "AIzaSyDIG4_v8Et4OHdGbKzKHSmgq5hpJc7-dfU",
-      "AIzaSyAVI13vJFora3sOPA1x-b2SWNIt_ujEXZI",
-      "AIzaSyBhwQ6QAv3mXxivzwB_sQ3552waeEWSvto",
-      "AIzaSyDtsmDqVsYotAh8ggh0ZMWzE651CKw8hUk",
-      "AIzaSyBqSl_4UYXDZgWmC0_fxOw9UOPcKHt795g",
-      "AIzaSyDFKmhBRK4FM2gA9wClKBnxGPzyVRStrF4",
-      "AIzaSyALIjwOKZ-vmyD3arpsN-BeUFrYKi2Cjhk",
-      "AIzaSyDU-V2vrkAnzGfvtBdVXT74FyTdpDG2ojg",
-      "AIzaSyCn44XdE8Vi1O3xWvQiRKsuBaCPexSoDYo",
-      "AIzaSyBLBC9nWH6JQERlgnR1fez3GNhqFXN6yeI",
-      "AIzaSyDTm0FhL5k_1tIMBTO-KFX4kAvWfmji5LM",
-      "AIzaSyDtavNqPc5BG8Bi_YrtYuohOMYW4LAZpK0",
-      "AIzaSyDNzMZXkVrX8bBJB07FU7j18fMNWdNB-kM",
-      "AIzaSyAdX1hJbDFlA5nwSjLJGovlLdQ9IQ_PNFY",
-      "AIzaSyCddxcJFWjSSpXCn77OKt0G6fNxhZEvB_g",
-      "AIzaSyCO2JgRieXQMUrI7r5lNN8PxraJ5aLTwxI",
-      "AIzaSyBD7fPXZ93nIOTRW3HvD6RzVP8HfO_xNmc"
+  // API Keys for OCR (PDF/Image to Text)
+  API_KEYS_OCR: [
+    "AIzaSyAQtE8tkQBfsxoE552XQ8kpEYN5xYDURBg",
+    "AIzaSyDzaTupNVfuFEQ0l6eAavUBkSbEpDL-vN4",
+    "AIzaSyAVOgQe7qoKUPh-t03g7XM6l2Xgs8VaSm0",
+    "AIzaSyD61TBHx1U2q7U-dhgur-nZ4ntOYwurSp0",
+    "AIzaSyD6uAzLz6y2CwgEHg-1XVPM11iAPoEoc3E",
+    "AIzaSyDCrzo3_3hKMF3jr114J7pb_wAAd2LesjI",
+    "AIzaSyCVUtoKWzyw27LvVbQPxs5D4n48eZWNw9k",
+    "AIzaSyAH1fQINWj6p_fK_dW8v5pQ2F5KAzoZQAw",
+    "AIzaSyCP-2YaYvQD4w5E8uNlm150vVa0CJQFCGA",
+    "AIzaSyCN94-Mkws5Ip0YJYL9nl6QNLwXdW6HxPE"
+  ],
+  
+  // API Keys for SIMILAR (Similar Problem Generation)
+  API_KEYS_SIMILAR: [
+    "AIzaSyBrjb43nQTzQoRQd35hw8dtam4gWu6Dbfs",
+    "AIzaSyDfVeYlNOrrvpuEzJ9GJgctJEcABrF1U_0",
+    "AIzaSyDWn6DwNcimrOetCYvQHR3IE5LFLWLFLNE",
+    "AIzaSyAfUdBJGiq1XkrYPrWsdj4lGhtR_H-f5rk",
+    "AIzaSyAVQjuf0haGsLEYRY-rUGl8zFfx-EDzHUs",
+    "AIzaSyCgpc8xsReNC3LXYfSwmLPqsMZOHhFnFOU",
+    "AIzaSyBYarkjC4_zBgzn0eh3m_d3COWOaeAB_ok",
+    "AIzaSyA_y1NS86T263turtvGI1MGf05SMSsCE5M",
+    "AIzaSyDUIhn3PvydKJxXbZn3NtjowHD6KYtm6cI",
+    "AIzaSyCR8lxCX3VOS3uzughEdD_EV_s9DwD7jMw",
+    "AIzaSyD2skUF0Aeua0fgxgGlDdHfrtsfA0XrTbg",
+    "AIzaSyDaYQ-ClvjBo5cNMfICdFkOojKwfyaMco8",
+    "AIzaSyDIG4_v8Et4OHdGbKzKHSmgq5hpJc7-dfU",
+    "AIzaSyAVI13vJFora3sOPA1x-b2SWNIt_ujEXZI",
+    "AIzaSyBhwQ6QAv3mXxivzwB_sQ3552waeEWSvto",
+    "AIzaSyDtsmDqVsYotAh8ggh0ZMWzE651CKw8hUk",
+    "AIzaSyBqSl_4UYXDZgWmC0_fxOw9UOPcKHt795g",
+    "AIzaSyDFKmhBRK4FM2gA9wClKBnxGPzyVRStrF4",
+    "AIzaSyALIjwOKZ-vmyD3arpsN-BeUFrYKi2Cjhk",
+    "AIzaSyDU-V2vrkAnzGfvtBdVXT74FyTdpDG2ojg",
+    "AIzaSyCn44XdE8Vi1O3xWvQiRKsuBaCPexSoDYo",
+    "AIzaSyBLBC9nWH6JQERlgnR1fez3GNhqFXN6yeI",
+    "AIzaSyDTm0FhL5k_1tIMBTO-KFX4kAvWfmji5LM",
+    "AIzaSyDtavNqPc5BG8Bi_YrtYuohOMYW4LAZpK0",
+    "AIzaSyDNzMZXkVrX8bBJB07FU7j18fMNWdNB-kM",
+    "AIzaSyAdX1hJbDFlA5nwSjLJGovlLdQ9IQ_PNFY",
+    "AIzaSyCddxcJFWjSSpXCn77OKt0G6fNxhZEvB_g",
+    "AIzaSyCO2JgRieXQMUrI7r5lNN8PxraJ5aLTwxI",
+    "AIzaSyBD7fPXZ93nIOTRW3HvD6RzVP8HfO_xNmc"
   ],
   
   // Models configuration
@@ -82,18 +86,24 @@ const GEMINI_CONFIG = {
     RESET_BLACKLIST_INTERVAL: 300000
   },
   
-  // Script Properties keys - SIMPLIFIED
+  // Script Properties keys - SEPARATED
   PROPERTIES: {
-    API_KEYS: 'GEMINI_API_KEYS',
-    CURRENT_INDEX: 'GEMINI_KEY_IDX',
-    KEY_PERFORMANCE: 'GEMINI_KEY_PERF',
-    KEY_BLACKLIST: 'GEMINI_KEY_BLACKLIST'
+    API_KEYS_OCR: 'GEMINI_API_KEYS_OCR',
+    API_KEYS_SIMILAR: 'GEMINI_API_KEYS_SIMILAR',
+    CURRENT_INDEX_OCR: 'GEMINI_KEY_IDX_OCR',
+    CURRENT_INDEX_SIMILAR: 'GEMINI_KEY_IDX_SIMILAR',
+    KEY_PERFORMANCE_OCR: 'GEMINI_KEY_PERF_OCR',
+    KEY_PERFORMANCE_SIMILAR: 'GEMINI_KEY_PERF_SIMILAR',
+    KEY_BLACKLIST_OCR: 'GEMINI_KEY_BLACKLIST_OCR',
+    KEY_BLACKLIST_SIMILAR: 'GEMINI_KEY_BLACKLIST_SIMILAR'
   }
 };
 
-// Global variables for key management
-let __keyPerformanceCache = null;
-let __keyBlacklistCache = null;
+// Global variables for key management (separated by type)
+let __keyPerformanceCacheOCR = null;
+let __keyPerformanceCacheSimilar = null;
+let __keyBlacklistCacheOCR = null;
+let __keyBlacklistCacheSimilar = null;
 
 /* ========================= WEB APP ========================= */
 function doGet() {
@@ -115,13 +125,15 @@ function include(filename) {
 /* ========================= SIMPLIFIED KEY MANAGEMENT ========================= */
 
 /**
- * Get all available API keys - SIMPLIFIED VERSION
+ * Get all available API keys by type (OCR or SIMILAR)
  */
-function __getAllApiKeys() {
+function __getAllApiKeys(keyType = 'OCR') {
   const keys = [];
+  const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.API_KEYS_SIMILAR : GEMINI_CONFIG.PROPERTIES.API_KEYS_OCR;
+  const defaultKeys = keyType === 'SIMILAR' ? GEMINI_CONFIG.API_KEYS_SIMILAR : GEMINI_CONFIG.API_KEYS_OCR;
   
   try {
-    const propsKeys = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.API_KEYS);
+    const propsKeys = PropertiesService.getScriptProperties().getProperty(propKey);
     if (propsKeys) {
       propsKeys.split(',').forEach(key => {
         const cleanKey = (key || '').trim();
@@ -131,12 +143,12 @@ function __getAllApiKeys() {
       });
     }
   } catch (e) {
-    console.warn('Cannot read API keys from properties:', e.message);
+    console.warn(`Cannot read ${keyType} API keys from properties:`, e.message);
   }
   
   // Fallback to hardcoded keys
   if (keys.length === 0) {
-    GEMINI_CONFIG.API_KEYS.forEach(key => {
+    defaultKeys.forEach(key => {
       const cleanKey = (key || '').trim();
       if (cleanKey && cleanKey.startsWith('AIzaSy') && !cleanKey.includes('ReplaceWithRealKey')) {
         keys.push(cleanKey);
@@ -144,33 +156,35 @@ function __getAllApiKeys() {
     });
   }
   
+  console.log(`📊 Loaded ${keys.length} ${keyType} API keys`);
   return keys;
 }
 
 /**
- * Get next API key with smart rotation
+ * Get next API key with smart rotation (by type)
  */
-function __getNextApiKey() {
-  const allKeys = __getAllApiKeys();
+function __getNextApiKey(keyType = 'OCR') {
+  const allKeys = __getAllApiKeys(keyType);
   
   if (!allKeys.length) {
-    throw new Error('🚨 No valid API keys available. Please configure keys in Script Properties.');
+    throw new Error(`🚨 No valid ${keyType} API keys available. Please configure keys in Script Properties.`);
   }
   
   if (!GEMINI_CONFIG.ROTATION.ENABLE_SMART_ROTATION) {
-    return __getSimpleRotationKey(allKeys);
+    return __getSimpleRotationKey(allKeys, keyType);
   }
   
-  return __getSmartRotationKey(allKeys);
+  return __getSmartRotationKey(allKeys, keyType);
 }
 
 /**
- * Simple round-robin key rotation
+ * Simple round-robin key rotation (by type)
  */
-function __getSimpleRotationKey(keys) {
+function __getSimpleRotationKey(keys, keyType = 'OCR') {
   try {
     const props = PropertiesService.getScriptProperties();
-    let currentIndex = parseInt(props.getProperty(GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX) || '0', 10);
+    const indexProp = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX_SIMILAR : GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX_OCR;
+    let currentIndex = parseInt(props.getProperty(indexProp) || '0', 10);
     
     if (isNaN(currentIndex) || currentIndex < 0 || currentIndex >= keys.length) {
       currentIndex = 0;
@@ -179,24 +193,24 @@ function __getSimpleRotationKey(keys) {
     const selectedKey = keys[currentIndex];
     const nextIndex = (currentIndex + 1) % keys.length;
     
-    props.setProperty(GEMINI_CONFIG.PROPERTIES.CURRENT_INDEX, nextIndex.toString());
+    props.setProperty(indexProp, nextIndex.toString());
     
-    console.log(`🔄 Key rotation: ${currentIndex} → ${nextIndex} (${keys.length} total)`);
+    console.log(`🔄 ${keyType} key rotation: ${currentIndex} → ${nextIndex} (${keys.length} total)`);
     return selectedKey;
     
   } catch (e) {
-    console.warn('Simple rotation failed, using first key:', e.message);
+    console.warn(`Simple ${keyType} rotation failed, using first key:`, e.message);
     return keys[0];
   }
 }
 
 /**
- * Smart key rotation with performance tracking
+ * Smart key rotation with performance tracking (by type)
  */
-function __getSmartRotationKey(keys) {
+function __getSmartRotationKey(keys, keyType = 'OCR') {
   try {
-    const performance = __getKeyPerformance();
-    const blacklist = __getKeyBlacklist();
+    const performance = __getKeyPerformance(keyType);
+    const blacklist = __getKeyBlacklist(keyType);
     const now = Date.now();
     
     const availableKeys = keys.filter(key => {
@@ -215,8 +229,8 @@ function __getSmartRotationKey(keys) {
     const keysToUse = availableKeys.length > 0 ? availableKeys : keys;
     
     if (availableKeys.length === 0) {
-      console.warn('🔄 All keys blacklisted, resetting blacklist');
-      __saveKeyBlacklist({});
+      console.warn(`🔄 All ${keyType} keys blacklisted, resetting blacklist`);
+      __saveKeyBlacklist({}, keyType);
     }
     
     const sortedKeys = keysToUse.sort((a, b) => {
@@ -235,23 +249,23 @@ function __getSmartRotationKey(keys) {
       return scoreB - scoreA;
     });
     
-    console.log(`🧠 Smart rotation selected key with highest score (${sortedKeys.length} available)`);
+    console.log(`🧠 Smart ${keyType} rotation selected key with highest score (${sortedKeys.length} available)`);
     return sortedKeys[0];
     
   } catch (e) {
-    console.warn('Smart rotation failed, falling back to simple:', e.message);
-    return __getSimpleRotationKey(keys);
+    console.warn(`Smart ${keyType} rotation failed, falling back to simple:`, e.message);
+    return __getSimpleRotationKey(keys, keyType);
   }
 }
 
 /**
- * Track API key performance
+ * Track API key performance (by type)
  */
-function __trackKeyPerformance(apiKey, success, responseTime = 0) {
+function __trackKeyPerformance(apiKey, success, responseTime = 0, keyType = 'OCR') {
   if (!GEMINI_CONFIG.ROTATION.TRACK_KEY_PERFORMANCE) return;
   
   try {
-    const performance = __getKeyPerformance();
+    const performance = __getKeyPerformance(keyType);
     const now = Date.now();
     
     if (!performance[apiKey]) {
@@ -274,86 +288,114 @@ function __trackKeyPerformance(apiKey, success, responseTime = 0) {
     } else if (GEMINI_CONFIG.ROTATION.BLACKLIST_FAILED_KEYS) {
       const recentFailures = keyPerf.total - keyPerf.success;
       if (recentFailures >= 3) {
-        __addToBlacklist(apiKey, 'Multiple consecutive failures');
+        __addToBlacklist(apiKey, 'Multiple consecutive failures', keyType);
       }
     }
     
-    __saveKeyPerformance(performance);
+    __saveKeyPerformance(performance, keyType);
     
   } catch (e) {
-    console.warn('Failed to track key performance:', e.message);
+    console.warn(`Failed to track ${keyType} key performance:`, e.message);
   }
 }
 
-function __getKeyPerformance() {
-  if (__keyPerformanceCache) return __keyPerformanceCache;
+function __getKeyPerformance(keyType = 'OCR') {
+  const cache = keyType === 'SIMILAR' ? __keyPerformanceCacheSimilar : __keyPerformanceCacheOCR;
+  if (cache) return cache;
   
   try {
-    const stored = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE);
-    __keyPerformanceCache = stored ? JSON.parse(stored) : {};
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_OCR;
+    const stored = PropertiesService.getScriptProperties().getProperty(propKey);
+    const result = stored ? JSON.parse(stored) : {};
+    
+    if (keyType === 'SIMILAR') {
+      __keyPerformanceCacheSimilar = result;
+    } else {
+      __keyPerformanceCacheOCR = result;
+    }
+    
+    return result;
   } catch (e) {
-    __keyPerformanceCache = {};
+    return {};
   }
-  
-  return __keyPerformanceCache;
 }
 
-function __saveKeyPerformance(performance) {
+function __saveKeyPerformance(performance, keyType = 'OCR') {
   try {
-    __keyPerformanceCache = performance;
+    if (keyType === 'SIMILAR') {
+      __keyPerformanceCacheSimilar = performance;
+    } else {
+      __keyPerformanceCacheOCR = performance;
+    }
+    
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE_OCR;
     const serialized = JSON.stringify(performance);
-    PropertiesService.getScriptProperties().setProperty(GEMINI_CONFIG.PROPERTIES.KEY_PERFORMANCE, serialized);
+    PropertiesService.getScriptProperties().setProperty(propKey, serialized);
   } catch (e) {
-    console.warn('Failed to save key performance:', e.message);
+    console.warn(`Failed to save ${keyType} key performance:`, e.message);
   }
 }
 
-function __getKeyBlacklist() {
-  if (__keyBlacklistCache) return __keyBlacklistCache;
+function __getKeyBlacklist(keyType = 'OCR') {
+  const cache = keyType === 'SIMILAR' ? __keyBlacklistCacheSimilar : __keyBlacklistCacheOCR;
+  if (cache) return cache;
   
   try {
-    const stored = PropertiesService.getScriptProperties().getProperty(GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST);
-    __keyBlacklistCache = stored ? JSON.parse(stored) : {};
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_OCR;
+    const stored = PropertiesService.getScriptProperties().getProperty(propKey);
+    const result = stored ? JSON.parse(stored) : {};
+    
+    if (keyType === 'SIMILAR') {
+      __keyBlacklistCacheSimilar = result;
+    } else {
+      __keyBlacklistCacheOCR = result;
+    }
+    
+    return result;
   } catch (e) {
-    __keyBlacklistCache = {};
+    return {};
   }
-  
-  return __keyBlacklistCache;
 }
 
-function __saveKeyBlacklist(blacklist) {
+function __saveKeyBlacklist(blacklist, keyType = 'OCR') {
   try {
-    __keyBlacklistCache = blacklist;
+    if (keyType === 'SIMILAR') {
+      __keyBlacklistCacheSimilar = blacklist;
+    } else {
+      __keyBlacklistCacheOCR = blacklist;
+    }
+    
+    const propKey = keyType === 'SIMILAR' ? GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_SIMILAR : GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST_OCR;
     const serialized = JSON.stringify(blacklist);
-    PropertiesService.getScriptProperties().setProperty(GEMINI_CONFIG.PROPERTIES.KEY_BLACKLIST, serialized);
+    PropertiesService.getScriptProperties().setProperty(propKey, serialized);
   } catch (e) {
-    console.warn('Failed to save key blacklist:', e.message);
+    console.warn(`Failed to save ${keyType} key blacklist:`, e.message);
   }
 }
 
-function __addToBlacklist(apiKey, reason) {
-  const blacklist = __getKeyBlacklist();
+function __addToBlacklist(apiKey, reason, keyType = 'OCR') {
+  const blacklist = __getKeyBlacklist(keyType);
   blacklist[apiKey] = {
     reason: reason,
     timestamp: Date.now()
   };
-  __saveKeyBlacklist(blacklist);
-  console.warn(`⚫ Blacklisted API key: ${reason}`);
+  __saveKeyBlacklist(blacklist, keyType);
+  console.warn(`⚫ Blacklisted ${keyType} API key: ${reason}`);
 }
 
 /* ========================= GEMINI API CALL ========================= */
-function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'image/png', temperature = 0.2, topK = 40, topP = 0.95, maxOutputTokens = 2048 }) {
-  const allKeys = __getAllApiKeys();
+function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'image/png', temperature = 0.2, topK = 40, topP = 0.95, maxOutputTokens = 2048, keyType = 'OCR' }) {
+  const allKeys = __getAllApiKeys(keyType);
   
   if (!allKeys.length) {
-    throw new Error('🚨 No Gemini API keys configured. Please set up keys in Script Properties.');
+    throw new Error(`🚨 No ${keyType} Gemini API keys configured. Please set up keys in Script Properties.`);
   }
   
   const maxAttempts = Math.min(allKeys.length * 2, 10);
   let lastError = null;
   
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    const apiKey = __getNextApiKey();
+    const apiKey = __getNextApiKey(keyType);
     const startTime = Date.now();
     
     try {
@@ -407,9 +449,9 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
             throw new Error('Empty response text');
           }
           
-          __trackKeyPerformance(apiKey, true, responseTime);
+          __trackKeyPerformance(apiKey, true, responseTime, keyType);
           
-          console.log(`✅ Gemini API success (${responseTime}ms, attempt ${attempt + 1})`);
+          console.log(`✅ ${keyType} Gemini API success (${responseTime}ms, attempt ${attempt + 1})`);
           return text;
           
         } catch (parseError) {
@@ -425,7 +467,7 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
           errorMessage = responseBody.substring(0, 200);
         }
         
-        __trackKeyPerformance(apiKey, false, responseTime);
+        __trackKeyPerformance(apiKey, false, responseTime, keyType);
         
         const shouldRetry = statusCode === 429 || statusCode === 503 || statusCode === 500 || statusCode === 403;
         
@@ -443,10 +485,10 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
       
     } catch (error) {
       const responseTime = Date.now() - startTime;
-      __trackKeyPerformance(apiKey, false, responseTime);
+      __trackKeyPerformance(apiKey, false, responseTime, keyType);
       
       lastError = error;
-      console.warn(`🔴 API key attempt ${attempt + 1} failed: ${error.message}`);
+      console.warn(`🔴 ${keyType} API key attempt ${attempt + 1} failed: ${error.message}`);
       
       if (attempt < maxAttempts - 1) {
         Utilities.sleep(GEMINI_CONFIG.RETRY_DELAY);
@@ -454,7 +496,7 @@ function __geminiGenerate({ model, prompt, imageBase64 = null, imageMime = 'imag
     }
   }
   
-  throw new Error(`🚨 All API attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
+  throw new Error(`🚨 All ${keyType} API attempts failed. Last error: ${lastError?.message || 'Unknown error'}`);
 }
 
 /* ========================= ADMIN FUNCTIONS - SIMPLIFIED ========================= */
@@ -591,25 +633,6 @@ function processPdfToText(pages, mode = 'word') {
   }
 }
 
-function processImageToText(dataUrlOrBase64, mode = 'word') {
-  try {
-    const { data, mime } = __splitDataUrl(dataUrlOrBase64);
-    const out = __ocrImageToWordText(data, mime);
-    
-    return {
-      success: true,
-      result: out,
-      metadata: {
-        mode: 'word',
-        model_ocr: GEMINI_CONFIG.MODELS.OCR,
-        theme: 'ocean',
-        ts: new Date().toISOString()
-      }
-    };
-  } catch (e) {
-    return { success: false, error: e.message || 'Image→Text lỗi.' };
-  }
-}
 
 /* ========================= SIMILAR GENERATION ========================= */
 function generateSimilarProblems(originalContent, mode = 'word', options = {}) {
@@ -719,7 +742,8 @@ ${compactBody}
       temperature: GEMINI_CONFIG.GENERATION.SIMILAR.temperature,
       topK: GEMINI_CONFIG.GENERATION.SIMILAR.topK,
       topP: GEMINI_CONFIG.GENERATION.SIMILAR.topP,
-      maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens
+      maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens,
+      keyType: 'SIMILAR'
     });
 
     console.log(`📥 Received response: ${resp.length} chars`);
@@ -753,7 +777,8 @@ TẠO LẠI NGAY ${targetCount} CÂU (KHÔNG ĐƯỢC THIẾU):`;
         temperature: 0.8,
         topK: 64,
         topP: 0.95,
-        maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens
+        maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens,
+        keyType: 'SIMILAR'
       });
       
       blocks = __extractSimilarBlocks(resp, targetCount);
@@ -842,7 +867,8 @@ function generateSimilarProblems_Batch(originalContent, mode = 'word', options =
           temperature: GEMINI_CONFIG.GENERATION.SIMILAR.temperature,
           topK: GEMINI_CONFIG.GENERATION.SIMILAR.topK,
           topP: GEMINI_CONFIG.GENERATION.SIMILAR.topP,
-          maxOutputTokens: Math.min(GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens, 4096)
+          maxOutputTokens: Math.min(GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens, 4096),
+          keyType: 'SIMILAR'
         });
         out.push(__postProcessSimilar(text, mode, idx));
         ok++; produced++;
@@ -1092,7 +1118,8 @@ function __ocrImageToWordText(base64, mime = 'image/png') {
     temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
     topK: GEMINI_CONFIG.GENERATION.OCR.topK,
     topP: GEMINI_CONFIG.GENERATION.OCR.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
+    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens,
+    keyType: 'OCR'
   });
 }
 
@@ -1115,10 +1142,12 @@ function __isTimeUp(startTime, threshold = 300000) {
   return (Date.now() - startTime) >= threshold;
 }
 
-console.log('Ocean Enhanced PDF Converter v8.1-Simple - Word Mode Only');
+console.log('Ocean Enhanced PDF Converter v8.1 - Word Mode Only');
 console.log('✅ Word format with $...$ for formulas');
+console.log('✅ Separated API Keys: OCR (10 keys) + SIMILAR (29 keys)');
 console.log('✅ Multi-API Key Rotation System: ENABLED');
 console.log('✅ Smart Performance Tracking: ENABLED'); 
 console.log('✅ Automatic Key Blacklisting: ENABLED');
-console.log('🔧 Configure keys: setGeminiApiKeys("key1,key2,key3")');
+console.log('🔧 Configure OCR keys: setGeminiApiKeys("key1,key2", "OCR")');
+console.log('🔧 Configure SIMILAR keys: setGeminiApiKeys("key1,key2", "SIMILAR")');
 console.log('📊 Check status: getApiKeyStatus()');

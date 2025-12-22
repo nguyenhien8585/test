@@ -1065,7 +1065,7 @@
         <span class="ocean-badge">Enhanced v8.1</span>
       </h1>
       <p class="subtitle">
-        Chuyển đổi PDF/Ảnh sang văn bản (Word format) và tạo bài tập tương tự
+        Chuyển đổi PDF sang văn bản (Word format) và tạo bài tập tương tự
       </p>
     </div>
 
@@ -1131,86 +1131,6 @@
       </div>
     </div>
 
-    <!-- Image Processing -->
-    <div class="card">
-      <div class="card-header">
-        <i class="fas fa-image me-2"></i>
-        Chuyển đổi hình ảnh sang văn bản
-      </div>
-      <div class="card-body">
-        <div class="upload-zone" id="imageUploadArea">
-          <input type="file" class="hidden-input" id="imageFileInput" accept="image/*">
-          <div class="upload-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <div class="upload-text">Kéo thả hình ảnh vào đây hoặc click để chọn</div>
-          <div class="upload-subtext">
-            Hỗ trợ JPG, PNG, GIF tối đa 10MB - Định dạng Word với công thức trong $...$<br>
-            <span style="color: var(--ocean-primary); font-weight: 600;">
-              <i class="fas fa-keyboard me-1"></i>
-              Hoặc nhấn Ctrl+V để dán ảnh từ clipboard
-            </span>
-          </div>
-        </div>
-
-        <!-- Paste Indicator -->
-        <div id="pasteIndicator" class="paste-indicator">
-          <i class="fas fa-clipboard"></i>
-          <span>Nhấn Ctrl+V để dán ảnh từ clipboard - Ocean AI sẵn sàng!</span>
-        </div>
-
-        <!-- Image Preview Container -->
-        <div id="imagePreviewContainer" class="image-preview-container">
-          <div class="preview-header">
-            <span><i class="fas fa-eye me-2"></i>Xem trước hình ảnh</span>
-            <button class="btn-close-preview" onclick="clearImagePreview()" style="background: rgba(255,255,255,0.2); border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer;">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-          <div class="preview-content" style="padding: 20px; text-align: center;">
-            <img id="imagePreview" alt="Image Preview" style="max-width: 100%; max-height: 400px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            <div class="preview-info" style="margin-top: 15px; padding: 12px 20px; background: var(--ocean-lightest); border-radius: 8px; color: var(--ocean-primary); font-weight: 600; display: inline-block;">
-              <span id="imageInfo">Ocean AI - Ảnh đã sẵn sàng để chuyển đổi</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <button class="btn btn-ocean" id="convertImageBtn" disabled>
-            <i class="fas fa-magic me-2"></i>
-            Chuyển đổi ảnh sang văn bản
-          </button>
-        </div>
-
-        <div class="result-section" id="imageResult">
-          <div class="result-header">
-            <h5 class="result-title">
-              <i class="fas fa-file-text me-2"></i>
-              Nội dung văn bản từ ảnh
-            </h5>
-          </div>
-          <textarea class="output-content" id="imageTextOutput" rows="10" readonly></textarea>
-          <div class="output-actions">
-            <button class="btn btn-outline-ocean" onclick="copyToClipboard('imageTextOutput')">
-              <i class="fas fa-copy me-1"></i>
-              Sao chép
-            </button>
-            <button class="btn btn-outline-ocean" onclick="downloadText('imageTextOutput', 'image_text')">
-              <i class="fas fa-download me-1"></i>
-              Tải về .txt
-            </button>
-            <button class="btn btn-outline-ocean" onclick="clearResults('imageResult')">
-              <i class="fas fa-trash me-1"></i>
-              Xóa
-            </button>
-            <button class="btn btn-similar-ocean" onclick="generateSimilar('imageTextOutput', 'image')">
-              <i class="fas fa-magic me-2"></i>
-              Tạo bài tương tự
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Similar Problem Comparison Section -->
     <div class="similar-comparison-section" id="similarComparison">
@@ -1330,7 +1250,6 @@
     function initializeApp() {
       setupFileUploads();
       setupButtons();
-      setupPasteHandler();
       
       // Show welcome message about Ocean theme and features
       setTimeout(() => {
@@ -1339,6 +1258,7 @@
       
       console.log('PDF to Text & Similar Problem Generator initialized successfully');
       console.log('✅ Word mode only - LaTeX removed');
+      console.log('✅ Separated API keys: OCR + SIMILAR');
       console.log('✅ Enhanced multi-API key system ready');
       console.log('✅ Smart rotation and performance tracking enabled');
       console.log('💎 Multi paid keys support enabled');
@@ -1349,146 +1269,10 @@
       return 'word'; // Always Word mode
     }
 
-    // ===== PASTE FUNCTIONALITY =====
-    function setupPasteHandler() {
-      document.addEventListener('paste', handlePaste);
-      
-      const pasteIndicator = document.getElementById('pasteIndicator');
-      if (pasteIndicator) {
-        pasteIndicator.addEventListener('click', () => {
-          showStatus('💡 Nhấn Ctrl+V để dán ảnh từ clipboard! Ocean AI sẵn sàng xử lý.', 'info');
-        });
-      }
-      
-      document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && e.key === 'v') {
-          const pasteIndicator = document.getElementById('pasteIndicator');
-          if (pasteIndicator) {
-            pasteIndicator.style.background = 'linear-gradient(135deg, var(--ocean-secondary) 0.2, var(--ocean-light) 100%)';
-            pasteIndicator.style.transform = 'scale(1.05)';
-            setTimeout(() => {
-              pasteIndicator.style.background = '';
-              pasteIndicator.style.transform = '';
-            }, 1000);
-          }
-        }
-      });
-      
-      console.log('📋 Ocean paste handler initialized - Ctrl+V ready');
-    }
-
-    async function handlePaste(event) {
-      if (isProcessing) {
-        showStatus('⚠️ Ocean AI đang xử lý, vui lòng đợi...', 'warning');
-        return;
-      }
-      
-      const clipboardItems = event.clipboardData?.items;
-      if (!clipboardItems) return;
-      
-      let imageItem = null;
-      for (let i = 0; i < clipboardItems.length; i++) {
-        const item = clipboardItems[i];
-        if (item.type.startsWith('image/')) {
-          imageItem = item;
-          break;
-        }
-      }
-      
-      if (!imageItem) return;
-      
-      event.preventDefault();
-      
-      try {
-        showLoading('Ocean AI đang xử lý ảnh từ clipboard...');
-        
-        const imageFile = imageItem.getAsFile();
-        
-        if (!imageFile) {
-          throw new Error('Không thể lấy ảnh từ clipboard');
-        }
-        
-        if (imageFile.size > 10 * 1024 * 1024) {
-          throw new Error('Ảnh từ clipboard quá lớn! Tối đa 10MB.');
-        }
-        
-        selectedImageFile = imageFile;
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          console.log('📋 Ocean: Image loaded from clipboard');
-          showImagePreview(e.target.result, imageFile);
-          document.getElementById('convertImageBtn').disabled = false;
-          clearResults('imageResult');
-          hideLoading();
-          showStatus('✅ Ocean AI: Ảnh đã được dán từ clipboard! Sẵn sàng chuyển đổi.', 'success');
-        };
-        
-        reader.onerror = function() {
-          hideLoading();
-          throw new Error('Lỗi đọc ảnh từ clipboard');
-        };
-        
-        reader.readAsDataURL(imageFile);
-        
-      } catch (error) {
-        hideLoading();
-        showStatus('❌ Lỗi dán ảnh: ' + error.message, 'error');
-        console.error('Paste error:', error);
-      }
-    }
-
-    // ===== IMAGE PREVIEW FUNCTIONS =====
-    function showImagePreview(imageSrc, file) {
-      console.log('🖼️ showImagePreview called');
-      
-      const container = document.getElementById('imagePreviewContainer');
-      const preview = document.getElementById('imagePreview');
-      const info = document.getElementById('imageInfo');
-      
-      if (container && preview && info) {
-        preview.src = imageSrc;
-        preview.style.display = 'block';
-        
-        const sizeInMB = (file.size / (1024 * 1024)).toFixed(2);
-        const fileType = file.type.split('/')[1].toUpperCase();
-        info.innerHTML = `<i class="fas fa-check-circle" style="color: var(--success); margin-right: 8px;"></i>${file.name || 'Ảnh từ clipboard'} • ${fileType} • ${sizeInMB} MB`;
-        
-        container.style.display = 'block';
-        container.classList.add('show');
-        
-        console.log('✅ Ocean preview container visible');
-        
-        setTimeout(() => {
-          container.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'center' 
-          });
-        }, 200);
-      }
-    }
-
-    function clearImagePreview() {
-      const container = document.getElementById('imagePreviewContainer');
-      const preview = document.getElementById('imagePreview');
-      
-      if (container && preview) {
-        container.style.display = 'none';
-        container.classList.remove('show');
-        preview.src = '';
-        
-        selectedImageFile = null;
-        document.getElementById('convertImageBtn').disabled = true;
-        document.getElementById('imageFileInput').value = '';
-        
-        showStatus('🗑️ Đã xóa ảnh xem trước', 'info');
-      }
-    }
 
     // ===== FILE UPLOAD SETUP =====
     function setupFileUploads() {
       setupSingleFileUpload('pdfUploadArea', 'pdfFileInput', '.pdf', handlePdfSelect);
-      setupSingleFileUpload('imageUploadArea', 'imageFileInput', 'image/*', handleImageSelect);
     }
 
     function setupSingleFileUpload(areaId, inputId, accept, handler) {
@@ -1548,33 +1332,6 @@
       showStatus('✅ File PDF đã được chọn. Ocean AI đang đọc thông tin...', 'info');
     }
 
-    function handleImageSelect(event) {
-      const file = event.target.files[0];
-      if (!file) return;
-      
-      if (!file.type.startsWith('image/')) {
-        showStatus('❌ Vui lòng chọn file ảnh hợp lệ!', 'error');
-        return;
-      }
-      
-      if (file.size > 10 * 1024 * 1024) {
-        showStatus('❌ File ảnh quá lớn! Tối đa 10MB.', 'error');
-        return;
-      }
-      
-      selectedImageFile = file;
-      
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        console.log('📁 Ocean: Image selected from file');
-        showImagePreview(e.target.result, file);
-      };
-      reader.readAsDataURL(file);
-      
-      document.getElementById('convertImageBtn').disabled = false;
-      showStatus('✅ Ảnh đã được chọn. Ocean AI sẵn sàng chuyển đổi!', 'success');
-    }
-
     async function showPdfInfo(file) {
       const pdfInfoDiv = document.getElementById('pdfFileInfo');
       const pdfDetailsDiv = document.getElementById('pdfFileDetails');
@@ -1616,7 +1373,6 @@
     // ===== BUTTON SETUP =====
     function setupButtons() {
       document.getElementById('processPdfBtn').addEventListener('click', processPdf);
-      document.getElementById('convertImageBtn').addEventListener('click', convertImage);
     }
 
     // ===== PROCESSING FUNCTIONS =====
@@ -1704,44 +1460,6 @@
       }
     }
 
-    async function convertImage() {
-      if (isProcessing || !selectedImageFile) return;
-      
-      isProcessing = true;
-      showLoading('🖼️ Ocean AI đang chuyển đổi ảnh sang văn bản...');
-      hideResults();
-      document.getElementById('convertImageBtn').disabled = true;
-
-      try {
-        const base64Image = await fileToBase64(selectedImageFile);
-        
-        const currentMode = getCurrentMode();
-        
-        const result = await new Promise((resolve, reject) => {
-          google.script.run
-            .withSuccessHandler(resolve)
-            .withFailureHandler(reject)
-            .processImageToText(base64Image, currentMode);
-        });
-
-        hideLoading();
-        document.getElementById('convertImageBtn').disabled = false;
-        isProcessing = false;
-
-        if (result.success) {
-          showResult('imageResult', 'imageTextOutput', result.result);
-          showStatus(`✅ Chuyển đổi ảnh thành công!`, 'success');
-        } else {
-          showStatus('❌ Lỗi: ' + result.error, 'error');
-        }
-
-      } catch (error) {
-        hideLoading();
-        document.getElementById('convertImageBtn').disabled = false;
-        isProcessing = false;
-        showStatus('❌ Lỗi: ' + error.message, 'error');
-      }
-    }
 
     // ===== SIMILAR PROBLEM GENERATION =====
     async function generateSimilar(outputElementId, sourceType) {
@@ -1945,8 +1663,6 @@
         document.getElementById('pdfFileInfo').classList.remove('show');
         document.getElementById('processPdfBtn').disabled = true;
         document.getElementById('pdfFileInput').value = '';
-      } else if (resultId === 'imageResult') {
-        document.getElementById('imageTextOutput').value = '';
       }
       
       showStatus('🗑️ Đã xóa kết quả', 'info');
@@ -1956,7 +1672,6 @@
     window.copyToClipboard = copyToClipboard;
     window.downloadText = downloadText;
     window.clearResults = clearResults;
-    window.clearImagePreview = clearImagePreview;
     window.getCurrentMode = getCurrentMode;
     window.generateSimilar = generateSimilar;
     window.copyComparison = copyComparison;
@@ -1967,15 +1682,15 @@
     console.log('PDF to Text & Similar Problem Generator v8.1 - Initialized');
     console.log('🎨 Theme: Enhanced Ocean Blue with Wave Animation');
     console.log('⚡ Features: 3D Effects, Smooth Animations, Responsive Layout');
-    console.log('📋 Paste: Ctrl+V Image from Clipboard Support');
-    console.log('🖼️ Preview: Enhanced Image Preview Container');
+    console.log('📄 Focus: PDF to Text only (Image processing removed)');
     console.log('📝 Mode: Word format only (formulas in $...$)');
     console.log('🎯 Similar: AI Similar Problem Generator');
+    console.log('🔑 API: Separated keys - OCR (10 keys) + SIMILAR (29 keys)');
     console.log('📊 Features: Question counting, format preservation, difficulty matching');
     console.log('🎲 Creativity: AI generates similar problems while maintaining structure');
     console.log('📱 Mobile: Responsive design with improved touch interface');
     console.log('💎 Backend: Enhanced multi-key rotation for better reliability');
-    console.log('✅ Ready to process documents in Word format!');
+    console.log('✅ Ready to process PDF documents in Word format!');
   </script>
 </body>
 </html>
