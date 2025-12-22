@@ -638,11 +638,19 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
       if (sliced) working = sliced;
     }
 
+    console.log(`📄 Processing content length: ${working.length} chars`);
+    
     const parsed = __parseQuestions(working, mode, options);
-    if (!parsed.length) throw new Error('Không tìm thấy câu hỏi.');
+    console.log(`✅ Found ${parsed.length} questions`);
+    
+    if (!parsed.length) {
+      console.error('❌ No questions parsed from content');
+      throw new Error('Không tìm thấy câu hỏi.');
+    }
     
     const sanitizedList = parsed.map(q => __sanitizeQuestion(q, mode));
     const targetCount = sanitizedList.length;
+    console.log(`🎯 Target count: ${targetCount} questions`);
 
     const compactBody = sanitizedList
       .map((q, idx) => `<<Q${idx + 1}>>\n${__tightenText(q.content, mode)}`)
@@ -650,27 +658,38 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
 
     const instructions =
 `Ocean AI Assistant - Chuyên gia biên soạn đề Word.
-Hãy TẠO BÀI TƯƠNG TỰ cho toàn bộ câu sau, giữ nguyên số lượng (${targetCount} câu), dạng toán, độ khó, nhưng THAY số liệu/ngữ cảnh.
 
-QUY TẮC:
-- Không thêm lời giải.
-- Giữ công thức trong $...$; mỗi câu bắt đầu bằng "Câu i:"; xuống dòng gọn.
-- Trả về CHỈ NỘI DUNG đề tương tự, KHÔNG kèm chú thích, KHÔNG giải thích.
-- Phải sinh đủ ${targetCount} câu, theo đúng thứ tự Q1→Q${targetCount}.
-- Dùng các marker sau để phân tách:
+NHIỆM VỤ: Tạo BÀI TƯƠNG TỰ cho ${targetCount} câu hỏi dưới đây.
+- Giữ NGUYÊN số lượng: ${targetCount} câu
+- Giữ NGUYÊN dạng toán và độ khó
+- THAY ĐỔI: số liệu, ngữ cảnh, đề bài
+
+QUY TẮC BẮT BUỘC:
+1. ĐỊNH DẠNG: Mỗi câu BẮT ĐẦU bằng "Câu [số]:" (ví dụ: Câu 1:, Câu 2:,...)
+2. CÔNG THỨC: Viết trong $...$ (ví dụ: $x^2 + 1$, $\\frac{1}{2}$)
+3. KHÔNG thêm lời giải, chú thích hay giải thích
+4. XUỐNG DÒNG: Mỗi câu cách nhau 2 dòng trống
+
+CẤU TRÚC ĐẦU RA:
 ===BEGIN_SIMILAR===
-... (Câu 1 tương ứng Q1) ...
+Câu 1: [Nội dung câu 1 tương tự]
+[Đáp án nếu có]
+
 ---END_QUESTION---
-... (Câu 2 tương ứng Q2) ...
+Câu 2: [Nội dung câu 2 tương tự]
+[Đáp án nếu có]
+
 ---END_QUESTION---
-... (tiếp tục cho đến Q${targetCount}) ...
+... (tiếp tục cho đến Câu ${targetCount}) ...
 ===END_SIMILAR===
 
-DỮ LIỆU GỐC:
+DỮ LIỆU GỐC (${targetCount} câu):
 ${compactBody}
 
-BẮT ĐẦU SINH:`;
+HÃY TẠO ${targetCount} CÂU TƯƠNG TỰ NGAY BÂY GIỜ:`;
 
+    console.log(`🚀 Sending to AI: ${targetCount} questions to generate`);
+    
     const resp = __geminiGenerate({
       model: GEMINI_CONFIG.MODELS.SIMILAR,
       prompt: instructions,
@@ -680,7 +699,15 @@ BẮT ĐẦU SINH:`;
       maxOutputTokens: GEMINI_CONFIG.GENERATION.SIMILAR.maxOutputTokens
     });
 
+    console.log(`📥 Received response: ${resp.length} chars`);
+    
     const blocks = __extractSimilarBlocks(resp, targetCount);
+    console.log(`✅ Final blocks extracted: ${blocks.length} questions`);
+    
+    if (blocks.length < targetCount) {
+      console.warn(`⚠️ Warning: Generated ${blocks.length} questions, expected ${targetCount}`);
+    }
+    
     const similarCombined = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
 
     return {
@@ -820,8 +847,17 @@ function __parseQuestions(content, mode, options = {}) {
 function __detectGranularity(content) {
   const cau = (content.match(/^\s*(?:Câu|CÂU)\s*\d+/gmi) || []).length;
   const bai = (content.match(/^\s*(?:Bài|BÀI)\s*\d+/gmi) || []).length;
-  if (cau === 0 && bai === 0) return 'cau';
-  return (cau >= bai) ? 'cau' : 'bai';
+  
+  console.log(`🔍 Detected: ${cau} câu, ${bai} bài`);
+  
+  if (cau === 0 && bai === 0) {
+    console.log('⚠️ No structured questions found, defaulting to "cau" mode');
+    return 'cau';
+  }
+  
+  const result = (cau >= bai) ? 'cau' : 'bai';
+  console.log(`📊 Granularity selected: ${result}`);
+  return result;
 }
 
 function __parseWordTopLevel(content, kind) {
@@ -831,12 +867,38 @@ function __parseWordTopLevel(content, kind) {
   const reStart = kind === 'bai'
     ? /^\s*(?:Bài|BÀI)\s*(\d+)\s*([\.\-:–—\)])?/i
     : /^\s*(?:Câu|CÂU)\s*(\d+)\s*([\.\-:–—\)])?/i;
+  
   for (let i = 0; i < lines.length; i++) {
-    const line = lines[i], m = reStart.exec(line);
-    if (m) { if (cur.trim()) items.push({ type: kind === 'bai' ? 'problem' : 'question', index: num, content: cur.trim() }); cur = line.trim(); num = Number(m[1]); continue; }
-    cur += (cur ? '\n' : '') + line;
+    const line = lines[i];
+    const m = reStart.exec(line);
+    
+    if (m) {
+      // Tìm thấy câu mới, lưu câu trước
+      if (cur.trim()) {
+        items.push({ 
+          type: kind === 'bai' ? 'problem' : 'question', 
+          index: num, 
+          content: cur.trim() 
+        });
+      }
+      cur = line.trim();
+      num = Number(m[1]);
+    } else {
+      // Nối dòng vào câu hiện tại
+      cur += (cur ? '\n' : '') + line;
+    }
   }
-  if (cur.trim()) items.push({ type: kind === 'bai' ? 'problem' : 'question', index: num, content: cur.trim() });
+  
+  // Lưu câu cuối cùng
+  if (cur.trim()) {
+    items.push({ 
+      type: kind === 'bai' ? 'problem' : 'question', 
+      index: num, 
+      content: cur.trim() 
+    });
+  }
+  
+  console.log(`📋 Parsed ${items.length} items in ${kind} mode`);
   return items;
 }
 
@@ -868,22 +930,61 @@ function __buildPerQuestionPrompt(q, mode, idx) {
 
 function __extractSimilarBlocks(resp, targetCount) {
   if (!resp) return [];
+  
+  // Bước 1: Tìm và trích xuất phần nội dung giữa markers
   const start = resp.indexOf('===BEGIN_SIMILAR===');
   const end = resp.lastIndexOf('===END_SIMILAR===');
-  const body = (start !== -1 && end !== -1 && end > start)
+  let body = (start !== -1 && end !== -1 && end > start)
     ? resp.substring(start + '===BEGIN_SIMILAR==='.length, end).trim()
     : resp.trim();
-  const rawBlocks = body.split(/^\s*---END_QUESTION---\s*$/gmi).map(s => s.trim()).filter(Boolean);
   
-  if (!rawBlocks.length) {
-    const approx = body.split(/\n(?=Câu\s+\d+\s*[:\.\-])/i);
-    if (approx.length > 1) return approx.map(s => s.trim()).filter(Boolean);
-    const exsplit = body.split(/(?=\\begin\{ex)/);
-    if (exsplit.length > 1) return exsplit.map(s => s.trim()).filter(Boolean);
-    return [body];
+  // Bước 2: Thử tách theo marker ---END_QUESTION---
+  let rawBlocks = body.split(/^\s*---END_QUESTION---\s*$/gmi).map(s => s.trim()).filter(Boolean);
+  
+  // Bước 3: Nếu không có marker, thử tách theo "Câu X:"
+  if (rawBlocks.length < 2) {
+    // Thử tách theo pattern "Câu [số]:" hoặc "Câu [số]."
+    const byQuestion = body.split(/(?=\n\s*(?:Câu|CÂU)\s+\d+\s*[:\.\-])/i);
+    if (byQuestion.length > 1) {
+      rawBlocks = byQuestion.map(s => s.trim()).filter(Boolean);
+    }
   }
   
-  return rawBlocks.slice(0, Math.max(targetCount, rawBlocks.length));
+  // Bước 4: Nếu vẫn chỉ có 1 block, thử tách theo xuống dòng 2 lần
+  if (rawBlocks.length < 2) {
+    const byParagraph = body.split(/\n\s*\n+/);
+    if (byParagraph.length > 1) {
+      // Gộp lại các đoạn nhỏ thành câu hỏi hoàn chỉnh
+      rawBlocks = [];
+      let current = '';
+      for (let para of byParagraph) {
+        para = para.trim();
+        if (!para) continue;
+        
+        // Nếu đoạn bắt đầu bằng "Câu X:", bắt đầu câu hỏi mới
+        if (/^(?:Câu|CÂU)\s+\d+\s*[:\.\-]/i.test(para)) {
+          if (current) rawBlocks.push(current.trim());
+          current = para;
+        } else {
+          current += (current ? '\n' : '') + para;
+        }
+      }
+      if (current) rawBlocks.push(current.trim());
+    }
+  }
+  
+  // Bước 5: Nếu không tách được, trả về toàn bộ
+  if (rawBlocks.length < 1) {
+    rawBlocks = [body];
+  }
+  
+  // Bước 6: Lọc và giới hạn số lượng
+  const filtered = rawBlocks.filter(s => s && s.length > 10);
+  
+  console.log(`📊 Extracted ${filtered.length} blocks from response (target: ${targetCount})`);
+  
+  // Trả về đúng số lượng targetCount hoặc nhiều hơn nếu có
+  return filtered.slice(0, Math.max(targetCount, filtered.length));
 }
 
 function __postProcessSimilar(text, mode, idx) {
