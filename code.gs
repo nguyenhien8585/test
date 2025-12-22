@@ -657,36 +657,45 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
       .join('\n\n');
 
     const instructions =
-`Ocean AI Assistant - Chuyên gia biên soạn đề Word.
+`Ocean AI Assistant - Chuyên gia biên soạn đề thi Word format.
 
-NHIỆM VỤ: Tạo BÀI TƯƠNG TỰ cho ${targetCount} câu hỏi dưới đây.
-- Giữ NGUYÊN số lượng: ${targetCount} câu
-- Giữ NGUYÊN dạng toán và độ khó
-- THAY ĐỔI: số liệu, ngữ cảnh, đề bài
+NHIỆM VỤ QUAN TRỌNG:
+Tạo CHÍNH XÁC ${targetCount} câu hỏi tương tự. Không được thiếu, không được thừa!
 
-QUY TẮC BẮT BUỘC:
-1. ĐỊNH DẠNG: Mỗi câu BẮT ĐẦU bằng "Câu [số]:" (ví dụ: Câu 1:, Câu 2:,...)
-2. CÔNG THỨC: Viết trong $...$ (ví dụ: $x^2 + 1$, $\\frac{1}{2}$)
-3. KHÔNG thêm lời giải, chú thích hay giải thích
-4. XUỐNG DÒNG: Mỗi câu cách nhau 2 dòng trống
+YÊU CẦU:
+✓ Số lượng: ĐÚNG ${targetCount} câu (từ Câu 1 đến Câu ${targetCount})
+✓ Giữ nguyên: Dạng toán, độ khó, cấu trúc câu hỏi
+✓ Thay đổi: Số liệu, ngữ cảnh, tình huống trong đề
+✓ Công thức toán: Bọc trong $...$ (ví dụ: $x^2+1$, $\\frac{a}{b}$)
+✓ KHÔNG viết lời giải, KHÔNG thêm chú thích
 
-CẤU TRÚC ĐẦU RA:
+ĐỊNH DẠNG ĐẦU RA BẮT BUỘC:
 ===BEGIN_SIMILAR===
-Câu 1: [Nội dung câu 1 tương tự]
-[Đáp án nếu có]
+Câu 1: [Nội dung câu hỏi 1 tương tự với Q1]
+A. [Đáp án A nếu có]
+B. [Đáp án B nếu có]
+C. [Đáp án C nếu có]
+D. [Đáp án D nếu có]
 
 ---END_QUESTION---
-Câu 2: [Nội dung câu 2 tương tự]
-[Đáp án nếu có]
+Câu 2: [Nội dung câu hỏi 2 tương tự với Q2]
+A. [Đáp án A nếu có]
+B. [Đáp án B nếu có]
+C. [Đáp án C nếu có]
+D. [Đáp án D nếu có]
 
 ---END_QUESTION---
-... (tiếp tục cho đến Câu ${targetCount}) ...
+Câu 3: [Nội dung câu hỏi 3 tương tự với Q3]
+...
+---END_QUESTION---
+Câu ${targetCount}: [Nội dung câu hỏi ${targetCount} tương tự với Q${targetCount}]
+
 ===END_SIMILAR===
 
-DỮ LIỆU GỐC (${targetCount} câu):
+${targetCount} CÂU HỎI GỐC:
 ${compactBody}
 
-HÃY TẠO ${targetCount} CÂU TƯƠNG TỰ NGAY BÂY GIỜ:`;
+BẮT ĐẦU TẠO ${targetCount} CÂU TƯƠNG TỰ:`;
 
     console.log(`🚀 Sending to AI: ${targetCount} questions to generate`);
     
@@ -700,12 +709,17 @@ HÃY TẠO ${targetCount} CÂU TƯƠNG TỰ NGAY BÂY GIỜ:`;
     });
 
     console.log(`📥 Received response: ${resp.length} chars`);
+    console.log(`📄 Response preview: ${resp.substring(0, 500)}...`);
     
     const blocks = __extractSimilarBlocks(resp, targetCount);
     console.log(`✅ Final blocks extracted: ${blocks.length} questions`);
     
     if (blocks.length < targetCount) {
-      console.warn(`⚠️ Warning: Generated ${blocks.length} questions, expected ${targetCount}`);
+      console.error(`❌ ERROR: Generated only ${blocks.length}/${targetCount} questions`);
+    } else if (blocks.length > targetCount) {
+      console.log(`✅ Generated ${blocks.length} questions (expected ${targetCount})`);
+    } else {
+      console.log(`✅ Perfect! Generated exactly ${targetCount} questions`);
     }
     
     const similarCombined = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
@@ -939,20 +953,22 @@ function __extractSimilarBlocks(resp, targetCount) {
     : resp.trim();
   
   // Bước 2: Thử tách theo marker ---END_QUESTION---
-  let rawBlocks = body.split(/^\s*---END_QUESTION---\s*$/gmi).map(s => s.trim()).filter(Boolean);
+  let rawBlocks = body.split(/---END_QUESTION---/gi).map(s => s.trim()).filter(Boolean);
+  console.log(`📝 Step 2 - Split by marker: ${rawBlocks.length} blocks`);
   
   // Bước 3: Nếu không có marker, thử tách theo "Câu X:"
   if (rawBlocks.length < 2) {
     // Thử tách theo pattern "Câu [số]:" hoặc "Câu [số]."
-    const byQuestion = body.split(/(?=\n\s*(?:Câu|CÂU)\s+\d+\s*[:\.\-])/i);
-    if (byQuestion.length > 1) {
-      rawBlocks = byQuestion.map(s => s.trim()).filter(Boolean);
-    }
+    const byQuestion = body.split(/(?=(?:^|\n)\s*(?:Câu|CÂU)\s+\d+\s*[:\.\-])/i);
+    rawBlocks = byQuestion.map(s => s.trim()).filter(Boolean);
+    console.log(`📝 Step 3 - Split by 'Câu X:': ${rawBlocks.length} blocks`);
   }
   
   // Bước 4: Nếu vẫn chỉ có 1 block, thử tách theo xuống dòng 2 lần
   if (rawBlocks.length < 2) {
     const byParagraph = body.split(/\n\s*\n+/);
+    console.log(`📝 Step 4 - Split by double newline: ${byParagraph.length} paragraphs`);
+    
     if (byParagraph.length > 1) {
       // Gộp lại các đoạn nhỏ thành câu hỏi hoàn chỉnh
       rawBlocks = [];
@@ -966,15 +982,17 @@ function __extractSimilarBlocks(resp, targetCount) {
           if (current) rawBlocks.push(current.trim());
           current = para;
         } else {
-          current += (current ? '\n' : '') + para;
+          current += (current ? '\n\n' : '') + para;
         }
       }
       if (current) rawBlocks.push(current.trim());
+      console.log(`📝 Step 4 - Regrouped into: ${rawBlocks.length} questions`);
     }
   }
   
   // Bước 5: Nếu không tách được, trả về toàn bộ
   if (rawBlocks.length < 1) {
+    console.warn('⚠️ Could not split response, returning as single block');
     rawBlocks = [body];
   }
   
@@ -983,8 +1001,12 @@ function __extractSimilarBlocks(resp, targetCount) {
   
   console.log(`📊 Extracted ${filtered.length} blocks from response (target: ${targetCount})`);
   
-  // Trả về đúng số lượng targetCount hoặc nhiều hơn nếu có
-  return filtered.slice(0, Math.max(targetCount, filtered.length));
+  if (filtered.length < targetCount) {
+    console.warn(`⚠️ WARNING: Only found ${filtered.length} questions, expected ${targetCount}`);
+  }
+  
+  // Trả về tất cả câu tìm được (không giới hạn)
+  return filtered;
 }
 
 function __postProcessSimilar(text, mode, idx) {
