@@ -567,12 +567,7 @@ function processPdfToText(pages, mode = 'word') {
     for (let i = 0; i < pages.length; i++) {
       const { data, mime } = __splitDataUrl(pages[i]);
       try {
-        if (mode === 'word') {
-          combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
-        } else {
-          const raw = __ocrImageRaw(data, mime);
-          combined += `\n% ====== TRANG ${i + 1} ======\n` + __transformTextToExTest(raw, { includeSolutions: false }) + '\n';
-        }
+        combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
       } catch (e) {
         combined += `\n=== TRANG ${i + 1} - LỖI: ${e && e.message} ===\n`;
       }
@@ -583,11 +578,10 @@ function processPdfToText(pages, mode = 'word') {
     
     return {
       success: true,
-      result: formatTextOutput(combined, pages.length, mode),
+      result: formatTextOutput(combined, pages.length),
       metadata: {
         total_pages: pages.length,
         model_ocr: GEMINI_CONFIG.MODELS.OCR,
-        ...(mode === 'latex' ? { model_transform: GEMINI_CONFIG.MODELS.TRANSFORM } : {}),
         timestamp: new Date().toISOString(),
         theme: 'ocean'
       }
@@ -600,15 +594,13 @@ function processPdfToText(pages, mode = 'word') {
 function processImageToText(dataUrlOrBase64, mode = 'word') {
   try {
     const { data, mime } = __splitDataUrl(dataUrlOrBase64);
-    const out = (mode === 'word')
-      ? __ocrImageToWordText(data, mime)
-      : __transformTextToExTest(__ocrImageRaw(data, mime), { includeSolutions: false });
+    const out = __ocrImageToWordText(data, mime);
     
     return {
       success: true,
       result: out,
       metadata: {
-        mode,
+        mode: 'word',
         model_ocr: GEMINI_CONFIG.MODELS.OCR,
         theme: 'ocean',
         ts: new Date().toISOString()
@@ -657,14 +649,12 @@ function generateSimilarSingleShot(originalContent, mode = 'word', options = {})
       .join('\n\n');
 
     const instructions =
-`Ocean AI Assistant - Chuyên gia biên soạn đề ${mode === 'latex' ? 'LaTeX (ex_test)' : 'Word'}.
+`Ocean AI Assistant - Chuyên gia biên soạn đề Word.
 Hãy TẠO BÀI TƯƠNG TỰ cho toàn bộ câu sau, giữ nguyên số lượng (${targetCount} câu), dạng toán, độ khó, nhưng THAY số liệu/ngữ cảnh.
 
 QUY TẮC:
 - Không thêm lời giải.
-- ${mode === 'latex'
-  ? 'Mỗi câu bọc đầy đủ \\begin{ex} ... \\end{ex}; dùng \\choice/\\choiceTF/\\shortans khi phù hợp.'
-  : 'Giữ công thức trong $...$; mỗi câu bắt đầu bằng "Câu i:"; xuống dòng gọn.'}
+- Giữ công thức trong $...$; mỗi câu bắt đầu bằng "Câu i:"; xuống dòng gọn.
 - Trả về CHỈ NỘI DUNG đề tương tự, KHÔNG kèm chú thích, KHÔNG giải thích.
 - Phải sinh đủ ${targetCount} câu, theo đúng thứ tự Q1→Q${targetCount}.
 - Dùng các marker sau để phân tách:
@@ -691,9 +681,7 @@ BẮT ĐẦU SINH:`;
     });
 
     const blocks = __extractSimilarBlocks(resp, targetCount);
-    const similarCombined = (mode === 'latex')
-      ? '% Ocean Similar Generator\n' + blocks.join('\n\n')
-      : 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
+    const similarCombined = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR\n' + '='.repeat(48) + '\n\n' + blocks.join('\n\n');
 
     return {
       success: true,
@@ -804,12 +792,12 @@ function generateSimilarProblems_Batch(originalContent, mode = 'word', options =
 }
 
 /* ========================= HELPER FUNCTIONS ========================= */
-function formatTextOutput(textContent, totalPages, mode) {
+function formatTextOutput(textContent, totalPages) {
   const hdr =
-`Ocean PDF/Image → ${mode === 'latex' ? 'LaTeX (ex_test)' : 'Text (with $…$)'} — Enhanced Gemini
+`Ocean PDF/Image → Word Format (with $…$) — Enhanced Gemini
 Generated: ${new Date().toLocaleString('vi-VN')}
 Pages: ${totalPages}
-OCR Model: ${GEMINI_CONFIG.MODELS.OCR}${mode === 'latex' ? ` | Transform: ${GEMINI_CONFIG.MODELS.TRANSFORM}` : ''}
+OCR Model: ${GEMINI_CONFIG.MODELS.OCR}
 Theme: Ocean Blue
 
 ========================================
@@ -821,29 +809,11 @@ Theme: Ocean Blue
 function __parseQuestions(content, mode, options = {}) {
   const a = [];
   try {
-    if (mode === 'latex') {
-      const re = /\\begin\{(?:ex\*?|bt\*?|vd\*?)\}(?:\[[^\]]*\])?([\s\S]*?)\\end\{(?:ex\*?|bt\*?|vd\*?)\}/g;
-      let m;
-      while ((m = re.exec(content)) !== null) {
-        const inner = (m[1] || '').trim();
-        const full = m[0].trim();
-        if (inner) {
-          const envMatch = /\\begin\{(ex\*?|bt\*?|vd\*?)\}/.exec(full);
-          const env = envMatch ? envMatch[1] : 'ex';
-          a.push({ type: env.replace('*',''), content: full, inner });
-        }
-      }
-      if (!a.length) {
-        const parts = content.split(/(?=\\begin\{ex)/);
-        if (parts.length > 1) parts.forEach(p => { const seg = p.trim(); if (seg) a.push({ type: 'ex', content: seg, inner: seg }); });
-      }
-    } else {
-      const kind = (options.granularity || __detectGranularity(content));
-      __parseWordTopLevel(content, kind).forEach(it => a.push(it));
-    }
+    const kind = (options.granularity || __detectGranularity(content));
+    __parseWordTopLevel(content, kind).forEach(it => a.push(it));
     return a;
   } catch {
-    return [{ type: mode === 'latex' ? 'ex' : 'question', content: content.trim() }];
+    return [{ type: 'question', content: content.trim() }];
   }
 }
 
@@ -880,15 +850,7 @@ function __sanitizeQuestion(q, mode) {
   const cleaned = { ...q };
   try {
     let s = q.content || '';
-    if (mode === 'latex') {
-      s = s.replace(/\\loigiai\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g, '');
-      s = s.replace(/\\includegraphics[^{}]*\{[^}]*\}/g, '');
-      s = s.replace(/\\begin\{figure\}[\s\S]*?\\end\{figure\}/g, '');
-      s = s.replace(/^%.*$/gm, '');
-      s = s.replace(/\n\s*\n\s*\n/g, '\n\n');
-    } else {
-      s = s.replace(/\[Hình.*?\]/g, '').replace(/\(Hình.*?\)/g, '').replace(/\s+/g, ' ').trim();
-    }
+    s = s.replace(/\[Hình.*?\]/g, '').replace(/\(Hình.*?\)/g, '').replace(/\s+/g, ' ').trim();
     cleaned.content = s;
     return cleaned;
   } catch { return q; }
@@ -896,24 +858,11 @@ function __sanitizeQuestion(q, mode) {
 
 function __tightenText(s, mode) {
   if (!s) return '';
-  if (mode === 'latex') {
-    return s
-      .replace(/^\s*%.*$/gm, '')
-      .replace(/\\loigiai\{[\s\S]*?\}/g, '')
-      .replace(/\\begin\{figure\}[\s\S]*?\\end\{figure\}/g, '')
-      .replace(/\\includegraphics[^{}]*\{[^}]*\}/g, '')
-      .replace(/[ \t]+\n/g, '\n')
-      .replace(/\n{3,}/g, '\n\n')
-      .trim();
-  }
   return s.replace(/\s+/g, ' ').trim();
 }
 
 function __buildPerQuestionPrompt(q, mode, idx) {
   const oceanPrefix = 'Ocean AI Assistant - ';
-  if (mode === 'latex') {
-    return `${oceanPrefix}Sinh 1 câu tương tự theo ex_test (không \\loigiai), CHỈ in LaTeX hoàn chỉnh:\n\nCÂU GỐC:\n${q.content}\n\nBẮT ĐẦU:`;
-  }
   return `${oceanPrefix}Sinh 1 câu tương tự giữ định dạng Word (công thức $...$), CHỈ in câu, bắt đầu bằng "Câu ${idx}:", không lời giải:\n\nCÂU GỐC:\n${q.content}\n\nBẮT ĐẦU:`;
 }
 
@@ -942,15 +891,11 @@ function __postProcessSimilar(text, mode, idx) {
 }
 
 function __createFallbackSimilar(q, mode, idx) {
-  const fallbackPrefix = mode === 'latex' ? '% Ocean Fallback' : 'Ocean Fallback';
-  return `${fallbackPrefix}\n${q.content}`;
+  return `Ocean Fallback\n${q.content}`;
 }
 
 function __combineSimilarQuestions(questions, mode) {
-  const header = mode === 'latex' 
-    ? '% Ocean Similar Generator - Batch Mode\n'
-    : 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR (Batch)\n' + '='.repeat(48) + '\n\n';
-  
+  const header = 'BÀI TẬP TƯƠNG TỰ - OCEAN GENERATOR (Batch)\n' + '='.repeat(48) + '\n\n';
   return header + questions.join('\n\n');
 }
 
@@ -963,62 +908,6 @@ Gõ lại CHÍNH XÁC nội dung trong ảnh.
 Chỉ trả về văn bản OCR (kèm công thức đã bọc).`;
 }
 
-function getRawOCRPrompt() {
-  return `Ocean AI OCR Assistant
-Gõ lại CHÍNH XÁC nội dung trong ảnh, không bình luận.
-- Giữ trật tự, dòng/đoạn như ảnh.
-- Toán học: [BẮT BUỘC] tất cả công thức viết dưới dạng Latex bọc $...$ hoặc $$...$$ theo bố cục.
-Chỉ trả về văn bản OCR sạch.`;
-}
-
-function getExTestTransformPrompt(includeSolutions = false) {
-  return `Ocean AI LaTeX Assistant
-Bạn là một chuyên gia biên soạn đề theo LaTeX gói ex_test.
-NHIỆM VỤ: Chuyển đổi văn bản OCR thành LaTeX theo đúng cấu trúc ex_test, KHÔNG thay đổi nội dung gốc, KHÔNG bịa thêm.
-
-QUY TẮC CHUNG:
-- Mỗi câu hỏi bọc trong:
-\\begin{ex}
-[Phần nội dung]
-[Khối đáp án tuỳ loại câu hỏi]
-${includeSolutions ? '\\loigiai{[Lời giải ngắn gọn, nếu và chỉ nếu văn bản OCR đã có sẵn lời giải hoặc được yêu cầu thêm]}' : '% Không thêm \\loigiai nếu không có trong văn bản'}
-\\end{ex}
-
-- Không được tự suy đoán đáp án đúng. Nếu văn bản gốc chỉ có "A., B., C., D." thì giữ nguyên nội dung đó (chỉ chuyển cấu trúc).
-- Ký hiệu toán học (≥, ≤, ∈, …) phải là LaTeX (\\ge, \\le, \\in, …). Giữ $...$ của công thức.
-
-PHÂN LOẠI & CẤU TRÚC:
-1) Trắc nghiệm (Multiple choice: có các phương án A., B., C., D.):
-   Sử dụng:
-   \\choice
-   {[Phương án A]}
-   {[Phương án B]}
-   {[Phương án C]}
-   {[Phương án D]}
-
-2) Đúng/Sai (True/False: a), b), c), d) hoặc có từ "Đúng/Sai"):
-   Sử dụng:
-   \\choiceTF[t]
-   {[Mệnh đề 1]}
-   {[Mệnh đề 2]}
-   {[Mệnh đề 3 (nếu có)]}
-   {[Mệnh đề 4 (nếu có)]}
-   * Nếu số mệnh đề != 4, chỉ đưa đúng số mệnh đề thu được (2–4). Không bịa thêm.
-
-3) Trả lời ngắn (Short Answer): dùng \\shortans{} khi phù hợp.
-4) Tự luận: chỉ \\begin{ex} ... \\end{ex}.
-
-RÀNG BUỘC:
-- Tách câu theo chỉ báo như "Câu x.", "Bài x.", hoặc ngắt đoạn hợp lý.
-- Không thêm/bớt dữ kiện; không sửa số liệu.
-- Không thêm \\True, không đánh dấu đáp án.
-- Nếu văn bản gốc CÓ lời giải/đáp án, cho vào \\loigiai{...}; nếu KHÔNG, thì bỏ qua.
-
-ĐẦU VÀO (OCR):
-<<<OCR_TEXT>>>
-
-Hãy trả về CHỈ LaTeX ex_test hợp lệ, không bao thêm bình luận.`;
-}
 
 function __ocrImageToWordText(base64, mime = 'image/png') {
   return __geminiGenerate({
@@ -1033,31 +922,6 @@ function __ocrImageToWordText(base64, mime = 'image/png') {
   });
 }
 
-function __ocrImageRaw(base64, mime = 'image/png') {
-  return __geminiGenerate({
-    model: GEMINI_CONFIG.MODELS.OCR,
-    prompt: getRawOCRPrompt(),
-    imageBase64: base64,
-    imageMime: mime,
-    temperature: GEMINI_CONFIG.GENERATION.OCR.temperature,
-    topK: GEMINI_CONFIG.GENERATION.OCR.topK,
-    topP: GEMINI_CONFIG.GENERATION.OCR.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.OCR.maxOutputTokens
-  });
-}
-
-function __transformTextToExTest(ocrText, { includeSolutions = false } = {}) {
-  if (typeof ocrText !== 'string' || ocrText.trim().length < 2) throw new Error('OCR trống.');
-  const prompt = getExTestTransformPrompt(includeSolutions).replace('<<<OCR_TEXT>>>', ocrText.trim());
-  return __geminiGenerate({
-    model: GEMINI_CONFIG.MODELS.TRANSFORM,
-    prompt,
-    temperature: GEMINI_CONFIG.GENERATION.TRANSFORM.temperature,
-    topK: GEMINI_CONFIG.GENERATION.TRANSFORM.topK,
-    topP: GEMINI_CONFIG.GENERATION.TRANSFORM.topP,
-    maxOutputTokens: GEMINI_CONFIG.GENERATION.TRANSFORM.maxOutputTokens
-  });
-}
 
 function escapeHtml_(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -1077,8 +941,8 @@ function __isTimeUp(startTime, threshold = 300000) {
   return (Date.now() - startTime) >= threshold;
 }
 
-console.log('Ocean Enhanced PDF Converter v8.1-Simple - Single API Key Location');
-console.log('✅ Simplified Configuration: Update API keys in ONE place only!');
+console.log('Ocean Enhanced PDF Converter v8.1-Simple - Word Mode Only');
+console.log('✅ Word format with $...$ for formulas');
 console.log('✅ Multi-API Key Rotation System: ENABLED');
 console.log('✅ Smart Performance Tracking: ENABLED'); 
 console.log('✅ Automatic Key Blacklisting: ENABLED');

@@ -1065,7 +1065,7 @@
         <span class="ocean-badge">Enhanced v8.1</span>
       </h1>
       <p class="subtitle">
-        Tạo bài tập tương tự từ file PDF
+        Chuyển đổi PDF/Ảnh sang văn bản (Word format) và tạo bài tập tương tự
       </p>
     </div>
 
@@ -1082,7 +1082,7 @@
             <i class="fas fa-file-pdf"></i>
           </div>
           <div class="upload-text">Kéo thả file PDF vào đây hoặc click để chọn</div>
-          <div class="upload-subtext">Hỗ trợ PDF tối đa 25 trang, 10MB - Chỉ văn bản thuần túy (Plain Text)</div>
+          <div class="upload-subtext">Hỗ trợ PDF tối đa 25 trang, 10MB - Định dạng Word với công thức trong $...$</div>
         </div>
 
         <div class="file-info" id="pdfFileInfo">
@@ -1145,7 +1145,7 @@
           </div>
           <div class="upload-text">Kéo thả hình ảnh vào đây hoặc click để chọn</div>
           <div class="upload-subtext">
-            Hỗ trợ JPG, PNG, GIF tối đa 10MB - Chỉ văn bản thuần túy (Plain Text)<br>
+            Hỗ trợ JPG, PNG, GIF tối đa 10MB - Định dạng Word với công thức trong $...$<br>
             <span style="color: var(--ocean-primary); font-weight: 600;">
               <i class="fas fa-keyboard me-1"></i>
               Hoặc nhấn Ctrl+V để dán ảnh từ clipboard
@@ -1331,27 +1331,22 @@
       setupFileUploads();
       setupButtons();
       setupPasteHandler();
-      setupModeToggle();
       
       // Show welcome message about Ocean theme and features
       setTimeout(() => {
-        showStatus('Chào mừng đến với PDF to Text & Similar Problem Generator v8.1!', 'info');
+        showStatus('Chào mừng đến với PDF to Text & Similar Problem Generator v8.1 - Word Mode!', 'info');
       }, 1000);
       
       console.log('PDF to Text & Similar Problem Generator initialized successfully');
+      console.log('✅ Word mode only - LaTeX removed');
       console.log('✅ Enhanced multi-API key system ready');
       console.log('✅ Smart rotation and performance tracking enabled');
       console.log('💎 Multi paid keys support enabled');
     }
 
-    // ===== MODE - ALWAYS WORD MODE (LaTeX removed) =====
-    function setupModeToggle() {
-      // No toggle needed - always Word mode
-      console.log('✅ Word mode enabled (LaTeX mode removed)');
-    }
-    
+    // ===== MODE - WORD ONLY =====
     function getCurrentMode() {
-      return 'word'; // Always return 'word'
+      return 'word'; // Always Word mode
     }
 
     // ===== PASTE FUNCTIONALITY =====
@@ -1974,13 +1969,13 @@
     console.log('⚡ Features: 3D Effects, Smooth Animations, Responsive Layout');
     console.log('📋 Paste: Ctrl+V Image from Clipboard Support');
     console.log('🖼️ Preview: Enhanced Image Preview Container');
-    console.log('📝 Mode: Plain text format (NO LaTeX)');
+    console.log('📝 Mode: Word format only (formulas in $...$)');
     console.log('🎯 Similar: AI Similar Problem Generator');
     console.log('📊 Features: Question counting, format preservation, difficulty matching');
     console.log('🎲 Creativity: AI generates similar problems while maintaining structure');
     console.log('📱 Mobile: Responsive design with improved touch interface');
     console.log('💎 Backend: Enhanced multi-key rotation for better reliability');
-    console.log('✅ Ready to process documents!');
+    console.log('✅ Ready to process documents in Word format!');
   </script>
 </body>
 </html>
