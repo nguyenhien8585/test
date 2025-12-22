@@ -14,7 +14,7 @@
 const MISTRAL_CONFIG = {
   API_KEY: 'H18aNxUyTYy4jWD3Cag2FkjfO01PYbp6',
   CHAT_URL: 'https://api.mistral.ai/v1/chat/completions',
-  OCR_MODEL: 'mistral-ocr-latest',
+  OCR_MODEL: 'mistral-ocr-latest',  // Model OCR chính thức của Mistral AI
   MAX_RETRIES: 3,
   REQUEST_TIMEOUT: 60000,
   GENERATION: {
@@ -685,10 +685,17 @@ function wrapAllMathInDollarSigns(text) {
 
 /**
  * Mistral OCR - Convert image to text using Mistral AI chat completions
+ * Input: base64Image (without data:image/jpeg;base64, prefix)
  */
 function __mistralOCR(base64Image, prompt) {
   const maxAttempts = MISTRAL_CONFIG.MAX_RETRIES;
   let lastError = null;
+  
+  // Clean base64 - remove any data URL prefix if present
+  let cleanBase64 = base64Image;
+  if (base64Image.includes('base64,')) {
+    cleanBase64 = base64Image.split('base64,')[1];
+  }
   
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const startTime = Date.now();
@@ -708,7 +715,7 @@ function __mistralOCR(base64Image, prompt) {
               },
               {
                 type: 'image_url',
-                image_url: `data:image/jpeg;base64,${base64Image}`
+                image_url: `data:image/jpeg;base64,${cleanBase64}`
               }
             ]
           }
@@ -716,6 +723,8 @@ function __mistralOCR(base64Image, prompt) {
         temperature: MISTRAL_CONFIG.GENERATION.temperature,
         max_tokens: MISTRAL_CONFIG.GENERATION.max_tokens
       };
+      
+      console.log(`🔄 Mistral OCR attempt ${attempt + 1}/${maxAttempts} - Model: ${MISTRAL_CONFIG.OCR_MODEL}`);
       
       const response = UrlFetchApp.fetch(url, {
         method: 'POST',
@@ -731,6 +740,8 @@ function __mistralOCR(base64Image, prompt) {
       const statusCode = response.getResponseCode();
       const responseBody = response.getContentText();
       
+      console.log(`📊 Mistral response: HTTP ${statusCode}, Time: ${responseTime}ms`);
+      
       if (statusCode === 200) {
         try {
           const data = JSON.parse(responseBody);
@@ -743,7 +754,7 @@ function __mistralOCR(base64Image, prompt) {
           // Apply LaTeX wrapping to OCR result
           const wrappedContent = wrapAllMathInDollarSigns(content.trim());
           
-          console.log(`✅ Mistral OCR success (${responseTime}ms, attempt ${attempt + 1})`);
+          console.log(`✅ Mistral OCR success (${responseTime}ms, ${content.length} chars)`);
           return wrappedContent;
           
         } catch (parseError) {
@@ -755,8 +766,9 @@ function __mistralOCR(base64Image, prompt) {
         try {
           const errorData = JSON.parse(responseBody);
           errorMessage = errorData?.error?.message || errorData?.message || errorMessage;
+          console.log(`❌ Mistral error details: ${JSON.stringify(errorData)}`);
         } catch (e) {
-          errorMessage = responseBody.substring(0, 200);
+          errorMessage = responseBody.substring(0, 300);
         }
         
         const shouldRetry = statusCode === 429 || statusCode === 503 || statusCode === 500;
@@ -888,29 +900,62 @@ function resetApiKeyTracking() {
 /* ========================= CORE PROCESSING ========================= */
 function processPdfToText(pages, mode = 'word') {
   try {
+    console.log(`📄 Processing PDF with ${pages.length} pages`);
+    
     if (!Array.isArray(pages) || pages.length === 0) throw new Error('Không có dữ liệu ảnh.');
     const MAX_PAGES = 25;
     if (pages.length > MAX_PAGES) throw new Error(`Quá ${MAX_PAGES} trang, hãy chia nhỏ.`);
     
     let combined = '';
+    let successCount = 0;
+    let errorCount = 0;
+    
     for (let i = 0; i < pages.length; i++) {
-      const { data, mime } = __splitDataUrl(pages[i]);
+      console.log(`🔄 Processing page ${i + 1}/${pages.length}`);
+      
       try {
-        // Always use Word mode with Mistral OCR
-        combined += `\n=== TRANG ${i + 1} ===\n` + __ocrImageToWordText(data, mime) + '\n';
+        // Pages already come as base64 strings from frontend (PDF converted to images)
+        const base64Image = pages[i];
+        
+        // Verify it's valid base64
+        if (!base64Image || typeof base64Image !== 'string') {
+          throw new Error('Invalid base64 image data');
+        }
+        
+        console.log(`📷 Page ${i + 1} - Image size: ${base64Image.length} chars`);
+        
+        // Use Word mode with Mistral OCR
+        const ocrResult = __ocrImageToWordText(base64Image, 'image/jpeg');
+        combined += `\n=== TRANG ${i + 1} ===\n` + ocrResult + '\n';
+        successCount++;
+        
+        console.log(`✅ Page ${i + 1} OCR success - ${ocrResult.length} chars`);
+        
       } catch (e) {
-        combined += `\n=== TRANG ${i + 1} - LỖI: ${e && e.message} ===\n`;
+        errorCount++;
+        const errorMsg = e && e.message ? e.message : String(e);
+        console.error(`❌ Page ${i + 1} OCR failed: ${errorMsg}`);
+        combined += `\n=== TRANG ${i + 1} - LỖI: ${errorMsg} ===\n`;
       }
-      if (i < pages.length - 1) Utilities.sleep(600);
+      
+      // Delay between pages to avoid rate limiting
+      if (i < pages.length - 1) {
+        console.log(`⏱️ Waiting 800ms before next page...`);
+        Utilities.sleep(800);
+      }
     }
     
-    if (!combined.trim()) throw new Error('OCR rỗng.');
+    console.log(`📊 OCR Summary: ${successCount} success, ${errorCount} errors`);
+    
+    if (!combined.trim()) throw new Error('OCR rỗng - không có kết quả nào.');
     
     return {
       success: true,
       result: formatTextOutput(combined, pages.length, mode),
       metadata: {
         total_pages: pages.length,
+        success_pages: successCount,
+        error_pages: errorCount,
         ocr_engine: 'Mistral AI',
         model_ocr: MISTRAL_CONFIG.OCR_MODEL,
         timestamp: new Date().toISOString(),
@@ -918,6 +963,7 @@ function processPdfToText(pages, mode = 'word') {
       }
     };
   } catch (error) {
+    console.error(`❌ processPdfToText error: ${error.message}`);
     return { success: false, error: error.message || 'PDF→Text lỗi.' };
   }
 }
@@ -1353,9 +1399,12 @@ RÀNG BUỘC:
 Hãy trả về CHỈ LaTeX ex_test hợp lệ, không bao thêm bình luận.`;
 }
 
-function __ocrImageToWordText(base64, mime = 'image/png') {
+function __ocrImageToWordText(base64, mime = 'image/jpeg') {
+  console.log(`🔍 __ocrImageToWordText called - Image size: ${base64.length} chars, Mime: ${mime}`);
   // Using Mistral AI for OCR
-  return __mistralOCR(base64, getWordOCRPrompt());
+  const result = __mistralOCR(base64, getWordOCRPrompt());
+  console.log(`✅ OCR completed - Result length: ${result.length} chars`);
+  return result;
 }
 
 function __ocrImageRaw(base64, mime = 'image/png') {
