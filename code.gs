@@ -14,6 +14,8 @@
 const MISTRAL_CONFIG = {
   API_KEY: 'H18aNxUyTYy4jWD3Cag2FkjfO01PYbp6',
   CHAT_URL: 'https://api.mistral.ai/v1/chat/completions',
+  OCR_URL: 'https://api.mistral.ai/v1/ocr',
+  FILES_URL: 'https://api.mistral.ai/v1/files',
   OCR_MODEL: 'mistral-ocr-latest',
   MAX_RETRIES: 3,
   REQUEST_TIMEOUT: 60000,
