@@ -5,7 +5,7 @@ new TikzItem2
     Title = "Đồ thị hàm số phân thức hữu tỉ y = x/(x^2 - 1)",
     Category = "Đồ thị tiệm cận",
     Description = "Hình vẽ mô tả đồ thị của một hàm số lẻ có hai đường tiệm cận đứng x = ±1 và nhận trục hoành làm đường tiệm cận ngang.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_1.png",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_1.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth]
   \draw[->] (-3,0)--(3,0) node[below]{$x$};
   \draw[->] (0,-2.5)--(0,2.5) node[right]{$y$};
@@ -31,7 +31,7 @@ new TikzItem2
     Title = "Đồ thị hàm số mũ $y = 2^{-x} + 1$ và đường tiệm cận ngang",
     Category = "Đồ thị tiệm cận",
     Description = "Hình vẽ minh họa đồ thị hàm số mũ nghịch biến trên $\mathbb{R}$ và xác định đường tiệm cận ngang $y = 1$ khi $x$ tiến đến dương vô cực.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_2.png",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_2.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.5,>=stealth]
  \draw[->] (-2,0)--(4,0) node[below]{$x$};
  \draw[->] (0,-1.5)--(0,3.5) node[right]{$y$};
@@ -47,10 +47,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị hàm số với hai tiệm cận ngang y = 2 và y = -2",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_3.png",
+    Description = "Đồ thị hàm số y = 2x/√(x²+1) có hai đường tiệm cận ngang y = 2 (khi x→+∞) và y = -2 (khi x→-∞).",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_3.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.5,>=stealth]
  \draw[->] (-4,0)--(4,0) node[below]{$x$};
  \draw[->] (0,-3)--(0,3) node[right]{$y$};
@@ -68,10 +68,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị hàm số với tiệm cận đứng x = 1",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_4.png",
+    Description = "Đồ thị hàm số y = (x+1)/(x²-1) có đường tiệm cận đứng x = 1.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_4.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth]
   \draw[->] (-2,0)--(3,0) node[below]{$x$};
   \draw[->] (0,-2.5)--(0,2.5) node[right]{$y$};
@@ -90,10 +90,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị hàm số với hai TCĐ và một TCN",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_5.png",
+    Description = "Đồ thị hàm số y = 2x²/(x²-1) có hai tiệm cận đứng x = -1 và x = 1, tiệm cận ngang y = 2.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_5.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-6} \def\xmax{6}
 \def\ymin{-5} \def\ymax{7}
@@ -125,10 +125,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị hàm số với tiệm cận xiên",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_6.png",
+    Description = "Đồ thị hàm số có tiệm cận đứng x = -1 và tiệm cận xiên y = x - 1.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_6.png",
     Code = @"\begin{tikzpicture}[scale=.4, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \draw[->] (-6,0)--(0,0) node[below left]{$O$}--(6,0) node[below]{$x$};
 \draw[->] (0,-8) --(0,6) node[right]{$y$};
@@ -147,10 +147,10 @@ plot (\x, {\x-1});
 new TikzItem2
 {
     Id = 7,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với tiệm cận xiên khi x→+∞",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_7.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận xiên y=ax+b khi x→+∞, thỏa lim[f(x)-(ax+b)]=0.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_7.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-3.5} \def\xmax{3}
 \def\ymin{-0.5} \def\ymax{3}
@@ -174,10 +174,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với giới hạn dương vô cực phải",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_8.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận đứng x=a với lim(x→a⁺) f(x)=+∞.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_8.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình b
 \def\xmin{-1.2} \def\xmax{4}
@@ -200,10 +200,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với giới hạn âm vô cực trái",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_9.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận đứng x=a với lim(x→a⁻) f(x)=-∞.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_9.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình c
 \def\xmin{-2.2} \def\xmax{3.5}
@@ -227,10 +227,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với giới hạn âm vô cực phải",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_10.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận đứng x=a với lim(x→a⁺) f(x)=-∞.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_10.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình d
 \def\xmin{-2.2} \def\xmax{3.5}
@@ -254,10 +254,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với tiệm cận xiên khi x→-∞",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_11.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận xiên y=ax+b khi x→-∞, thỏa lim[f(x)-(ax+b)]=0.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_11.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-4} \def\xmax{2.5}
 \def\ymin{-0.5} \def\ymax{3}
@@ -281,10 +281,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với giới hạn dương vô cực trái",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_12.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận đứng x=a với lim(x→a⁻) f(x)=+∞.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_12.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình a
 \def\xmin{-2.2} \def\xmax{3.5}
@@ -308,10 +308,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với tiệm cận ngang khi x→+∞",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_13.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận ngang y=m khi x→+∞, thỏa lim(x→+∞) f(x)=m.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_13.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-1.5} \def\xmax{4}
 \def\ymin{-0.5} \def\ymax{3}
@@ -335,10 +335,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị với tiệm cận ngang khi x→-∞",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_14.png",
+    Description = "Đồ thị hàm số y=f(x) có tiệm cận ngang y=m khi x→-∞, thỏa lim(x→-∞) f(x)=m.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_14.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-4} \def\xmax{2}
 \def\ymin{-0.5} \def\ymax{3}
@@ -363,10 +363,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Hình minh họa Toán học",
+    Title = "Đồ thị hàm số tiến tới giá trị 5",
     Category = "Đồ thị tiệm cận",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
-    ImagePath = "O_thi_tiem_can/dothitiemcan_15.png",
+    Description = "Đồ thị hàm số y = 5 - 15t/(9t²+1) có tiệm cận ngang y=5 khi t→+∞.",
+    ImagePath = "Do_thi_tiem_can/dothitiemcan_15.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=0.3cm,scale=1.5,font=\footnotesize]
 \draw[->] (-0.5,0) -- (4,0) node[below] {$t$};
 \draw[->] (0,-1) -- (0,6) node[left] {$y$};
