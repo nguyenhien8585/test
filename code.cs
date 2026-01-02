@@ -2,10 +2,10 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado1.png",
+    Title = "Hai tam giác đối xứng qua gốc tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai tam giác ABC và A'B'C' đối xứng qua gốc tọa độ O trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado1.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.5,>=stealth,font=\footnotesize]
 \draw[line width=0.05pt,dashed,gray] (-5,-5) grid (5,5); 
 \coordinate (O) at (0,0);
@@ -28,10 +28,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado2.png",
+    Title = "Ba điểm thẳng hàng trên trục hoành",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Ba điểm O, A, B thẳng hàng trên trục hoành với lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado2.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \draw[line width=0.1pt,dashed] (-1.4,-0.4) grid (5.4,0.4); 
 \tkzDefPoints{0/0/O,4/0/B,2/0/A}
@@ -43,10 +43,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado3.png",
+    Title = "Phép tịnh tiến tam giác trên lưới",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Phép tịnh tiến tam giác ABC thành A'B'C' theo vector từ (0,4) đến (5,0) trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado3.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.4, line join=round, line cap=round]
 \def\xt{-5.5} \def\xp{5.5} \def\yt{5.1} \def\yd{-4.1} % x_trái, x_phải, y_trên, y_dưới (giới hạn)
 \draw[line width=0.1pt,dashed] (\xt,\yd) grid (\xp,\yt); % Lưới toạ độ
@@ -69,10 +69,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado4.png",
+    Title = "Phép quay điểm M quanh gốc tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Phép quay điểm M(1,-1) thành M'(1,1) và điểm A(1,0) thành A'(0,1) quanh gốc O với các cung tròn minh họa.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado4.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \draw[->] (-1,0)--(2,0) node [below]{$x$};
 \draw[->] (0,-1.5)--(0,1.5) node [left]{$y$};
@@ -96,10 +96,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado5.png",
+    Title = "Phép quay điểm M thành M' với cung tròn",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Phép quay điểm M(1,1) thành M'(0,√2) quanh gốc O, hai đoạn OM và OM' có độ dài bằng nhau.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado5.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round,>=stealth]
 \draw[->] (-1,0)--(2,0) node [below]{$x$};
 \draw[->] (0,-0.5)--(0,2) node [left]{$y$};
@@ -122,10 +122,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado6.png",
+    Title = "Ba điểm O, A, B trên trục hoành (lưới)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Ba điểm O(0,0), A(2,0), B(4,0) thẳng hàng trên trục hoành với lưới nền.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado6.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \draw[line width=0.1pt,dashed] (-1.4,-0.4) grid (5.4,0.4); 
 \tkzDefPoints{0/0/O,4/0/B,2/0/A}
@@ -137,10 +137,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado7.png",
+    Title = "Hai điểm và vector trên lưới",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai điểm A(-1,3) và B(5,1) với vector v trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado7.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join=round, line cap=round]
 \def\xt{-5.5} \def\xp{5.5} \def\yt{7.1} \def\yd{-1.1} % x_trái, x_phải, y_trên, y_dưới (giới hạn)
 \draw[line width=0.1pt,dashed] (\xt,\yd) grid (\xp,\yt); % Lưới toạ độ
@@ -158,10 +158,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado8.png",
+    Title = "Hai tam giác song song trên lưới",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai tam giác ABC và A'B'C' với A(-4,3), C(-4,1), B(-2.5,1) và A'(4,-1), C'(4,-3), B'(5.5,-3) trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado8.png",
     Code = @"\begin{tikzpicture}[scale=0.7,>=stealth, line join=round, line cap=round]
 \draw[dashed,line width=0.1pt] (-5,-4) grid (6,4);
 \draw[->,line width = 1pt] (-5,0)--(0,0)%
@@ -183,10 +183,10 @@ node[below right]{$O$}--(6.5,0) node[below]{$x$};
 new TikzItem2
 {
     Id = 9,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado9.png",
+    Title = "Hai tam giác trên lưới tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai tam giác ABC và DEF vẽ trên lưới tọa độ với các đỉnh được đánh dấu rõ ràng.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado9.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=1cm,scale=0.7]
 \tkzDefPoints{3/1/A, 2/-1/B, 1/2/C, -1/0/D, -2/-2/E, -3/1/F, 0/-0.3/O}
 \tkzInit[xmin=-3.5,ymin=-2.5,xmax=3.75,ymax=2.75]
@@ -210,10 +210,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado10.png",
+    Title = "Tam giác vuông A'IA'' trên lưới",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Tam giác vuông tại I với các điểm A(-3,-2), A'(-1,-3), I(2,-2), A''(1,1) trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado10.png",
     Code = @"\begin{tikzpicture}
 \draw[color=gray!80,, xstep=1.0cm,ystep=1.0cm,dashed] (-3.44,-3.66) grid (3.7,3.72);
 \draw[->,color=black] (-3.44,0.) -- (3.7,0.) node[below] {$x$};
@@ -239,10 +239,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado11.png",
+    Title = "Đường tròn và tam giác trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I bán kính 5 với tam giác AMB nội tiếp, các điểm A(0,8), B(7,9), M và M₀ trên đường tròn.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado11.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.4,>=stealth,font=\footnotesize]
 \draw[->] (-5,0)--(8,0) node[below]{$x$};
 \draw[->] (0,-5)--(0,10) node[right]{$y$};
@@ -264,10 +264,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado12.png",
+    Title = "Tam giác vuông OAB với góc vuông tại O",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Tam giác AOB vuông tại O với A(-1,5), B(5,1), minh họa góc vuông và góc tạo bởi OA và OB.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado12.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \def \xmin{-2.3};
 \def \xmax{6.1};
@@ -290,10 +290,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado13.png",
+    Title = "Hai điểm I và I' với đường phụ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai điểm I(3,-1) và I'(1,3) kẻ đường phụ đến các trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado13.png",
     Code = @"\begin{tikzpicture}[scale=.7]
 \tkzInit[xmin=-3,xmax=3,ymin=-3,ymax=3]
 \tkzDefPoints{0/0/O,1/3/I',3/-1/I,1/0/A,3/0/B,0/-1/C,0/3/D}
@@ -315,10 +315,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado14.png",
+    Title = "Hai điểm I(4,1) và I'(1,-4) với đường phụ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai điểm I(4,1) và I'(1,-4) với các đường phụ kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado14.png",
     Code = @"\begin{tikzpicture}[scale=.7]
 \tkzInit[xmin=-3,xmax=3,ymin=-3,ymax=3]
 \tkzDefPoints{0/0/O,1/-4/I,4/1/I',1/0/A,4/0/B,0/-4/C,0/1/D}
@@ -340,10 +340,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado15.png",
+    Title = "Đường tròn tâm I và tam giác MAB",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(3,-1) bán kính 2 với tam giác MAB, các điểm A(7,1), B(2,3), M và M₀ trên đường tròn.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado15.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
 \draw[->] (-1,0)--(8.5,0) node[below]{$x$};
 \draw[->] (0,-3)--(0,4) node[right]{$y$};
@@ -365,10 +365,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado16.png",
+    Title = "Đường tròn tâm I cắt đường thẳng d",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(1,2) bán kính 2 cắt đường thẳng d (x=5) tại hai điểm N và N₀, đoạn MN.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado16.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.6,>=stealth,font=\footnotesize]
 \draw[->] (-1.8,0)--(6,0) node[below]{$x$};
 \draw[->] (0,-1)--(0,4.5) node[right]{$y$};
@@ -392,10 +392,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado17.png",
+    Title = "Hình thoi OACB trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hình thoi OACB với O(0,0), A(1,2), C(2,0), B(1,-2), đường chéo AC nằm trên trục hoành.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado17.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8, x=1.2cm,>=stealth,font=\footnotesize]
 \draw[->] (-1,0)--(3,0) node[below]{$x$};
 \draw[->] (0,-2.5)--(0,3) node[right]{$y$};
@@ -409,10 +409,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado18.png",
+    Title = "Đường tròn tâm I và đường thẳng Δ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(-5,0) bán kính 5 với đường thẳng Δ, điểm M trên đường tròn và điểm N là hình chiếu vuông góc.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado18.png",
     Code = @"\begin{tikzpicture}[scale=.35,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \pgfmathsetmacro{\r}{5}
 \tkzDefPoints{-3.125/10/a, 7.375/-4/b, -5/0/I, 0/0/O}
@@ -438,10 +438,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado19.png",
+    Title = "Đường tròn tâm I qua điểm M",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(2,4) đi qua điểm M(1,2), bán kính OM = √5.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado19.png",
     Code = @"\begin{tikzpicture}[scale=0.7,>=stealth] 
 \tkzDefPoints{0/0/O, 1/2/M, 2/4/I} 
 \draw[->] (-1,0) -- (5,0)node[below]{$x$}; \foreach \x in {1,2} 
@@ -458,10 +458,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado20.png",
+    Title = "Đường thẳng d qua hai điểm",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng d đi qua điểm A(0,3) và P(1,0).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado20.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6]
 \draw[->] (-1,0)--(2.5,0) node[below]{$x$};
 \draw[->] (0,-1)--(0,4) node[right]{$y$};
@@ -478,10 +478,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado21.png",
+    Title = "Đường thẳng qua A', B và điểm M",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng đi qua A(0,-2), A'(2,0), B(5,-9), M(3,-3) với các đường nối liền.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado21.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth]
 \draw[->] (0,-10)--(0,1.5) node[right]{\scriptsize $y$};
 \draw[->] (-.5,0) -- (4.7,0) node[above]{\scriptsize $x$};
@@ -508,10 +508,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado22.png",
+    Title = "Đường tròn tâm I(0,-1) bán kính 1",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn có tâm I(0,-1) và bán kính 1, tiếp xúc với trục hoành tại gốc tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado22.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth]
 \clip(-2,-3) rectangle (2.5,1.5);
 \draw[->] (-2,0) -- (2,0);
@@ -532,10 +532,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado23.png",
+    Title = "Đường tròn tâm I(2,2) bán kính √2",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn có tâm I(2,2) và bán kính √2.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado23.png",
     Code = @"\begin{tikzpicture}[line width=0.6pt,>=stealth,scale=0.7]
 \draw[->] (-1,0)--(4,0) node[below]{$x$};
 \draw[->] (0,-1)--(0,4) node[left]{$y$};
@@ -551,10 +551,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 24,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado24.png",
+    Title = "Đường tròn tâm I(2,2) bán kính √2 (bản 2)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn có tâm I(2,2) và bán kính √2, tương tự item 23.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado24.png",
     Code = @"\begin{tikzpicture}[line width=0.6pt,>=stealth,scale=0.7]
 \draw[->] (-1,0)--(4,0) node[below]{$x$};
 \draw[->] (0,-1)--(0,4) node[left]{$y$};
@@ -570,10 +570,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 25,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado25.png",
+    Title = "Khoảng cách từ O đến đường thẳng",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng và điểm H là hình chiếu vuông góc của O lên đường thẳng, minh họa khoảng cách từ điểm đến đường thẳng.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado25.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,font=\footnotesize,>=stealth,scale=1]
 \draw[->] (-2,0)--(1,0) node[above] {$x$};
 \draw[->] (0,-3.5)--(0,2.5) node[left] {$y$};
@@ -589,10 +589,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado26.png",
+    Title = "Hình vành khăn với hai đường tròn đồng tâm",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai đường tròn đồng tâm I(-1,3) với bán kính 5 và 3, tạo thành hình vành khăn có hoa văn gạch chéo.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado26.png",
     Code = @"\begin{tikzpicture}[scale=0.5, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
 \filldraw[pattern=north east lines] (-1,3) circle(5);
@@ -607,10 +607,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado27.png",
+    Title = "Bốn điểm M, N, P, Q tạo hình chữ nhật",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Bốn điểm M(-2,-3), N(-4,-3), P(3,2), Q(2,3) với các đường phụ kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado27.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
 \def\xt{-5.0} \def\xp{4.0} \def\yt{5.0} \def\yd{-4.0} % x_trái, x_phải, y_trên, y_dưới (giới hạn)
 \draw[->] (\xt,0)--(\xp,0) node [below]{$x$};
@@ -638,10 +638,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado28.png",
+    Title = "Năm điểm O, M, E, N, P, Q trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Năm điểm O(0,0), M(1,1), E(2,2), N(-2,-1.3), P(2,-1.5), Q(-2,2) với các đoạn thẳng nối.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado28.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=.7]
 \draw[->](-2.5,0)--(2.5,0)node[below]{$x$};
 \draw[->](0,-2.5)--(0,2.5)node[right]{$y$};
@@ -665,10 +665,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado29.png",
+    Title = "Năm điểm với tọa độ M(a,b) và E(2a,2b)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Năm điểm O, M(1,1), E(2,2), N, P, Q với đường phụ thể hiện M(a,b) và E(2a,2b).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado29.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=.7]
 \draw[->](-2.5,0)--(2.5,0)node[below]{$x$};
 \draw[->](0,-2.5)--(0,2.5)node[right]{$y$};
@@ -693,10 +693,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado30.png",
+    Title = "Hình bình hành OACB trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hình bình hành OACB với O(0,0), A(3,1), C(-1,2), B được xác định bởi quy tắc hình bình hành.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado30.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,>=stealth,scale=1]
 \tkzDefPoints{0/0/O,-1/2/C,3/1/A}
 \coordinate (B) at ($(A)+(C)$);
@@ -713,10 +713,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado31.png",
+    Title = "Hai điểm M(1,2) và N(3,1)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai điểm M(1,2) và N(3,1) với các đường phụ kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado31.png",
     Code = @"\begin{tikzpicture}[>=stealth, scale= 1,samples=1000,smooth,color=black,line width=0.6pt,xscale=1,yscale=1]
 \draw[->] (-0.5,0) -- (3.5,0) node[below] { $x$};
 \draw[->] (0,-0.5) -- (0,2.5) node[below right] {$y$};
@@ -739,10 +739,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 32,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado32.png",
+    Title = "Điểm M(3,-1) trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Điểm M(3,-1) với đường phụ kẻ đến các trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado32.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=1cm]
 \tkzInit[ymin=-1.5,ymax=2,xmin=-0.5,xmax=4]
 \tkzClip
@@ -755,10 +755,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 33,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado33.png",
+    Title = "Hình vành khăn tô gạch chéo",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai đường tròn đồng tâm tạo thành hình vành khăn có hoa văn gạch chéo, tâm nằm trên trục hoành.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado33.png",
     Code = @"\begin{tikzpicture}[scale=0.6,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/O,2/2/I, 2/1/A1, 2/0/A2}
 \pgfmathsetmacro{\a}{sqrt((2-2)^2 + (1-2)^2)}
@@ -780,10 +780,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 34,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado34.png",
+    Title = "Hình chữ nhật MNPQ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hình chữ nhật MNPQ với M(1,2), N(-1,2), P(-1,-2), Q(1,-2) đối xứng qua gốc tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado34.png",
     Code = @"\begin{tikzpicture}[xscale=0.7,yscale=0.5,font=\footnotesize, line join=round, line cap=round,>=stealth]
 \def\a{1} \def\b{0} \def\c{-4} \def\d{2} % Hệ số
 \def\xt{-1.8} \def\xp{1.8} \def\yt{2.8} \def\yd{-2.8} % x_trái, x_phải, y_trên, y_dưới (giới hạn)
@@ -805,10 +805,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 35,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado35.png",
+    Title = "Điểm M(3,-1) đơn giản",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Điểm M(3,-1) với các đường phụ kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado35.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[->] (-1,0)--(4,0) node[below]{$x$};
 \draw[->] (0,-1.5)--(0,1) node[right]{$y$};
@@ -821,10 +821,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 36,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado36.png",
+    Title = "Bốn điểm A, B, C, D trên tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Bốn điểm A(-1,4), B(3,-2), C(2,2), D(4,1) với các đường phụ kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado36.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,x=0.5cm,y=0.5cm,>=stealth,font=\footnotesize]
 \draw[->] (-2,0)--(5.5,0) node[below]{$x$};
 \draw[->] (0,-3)--(0,4.8) node[right]{$y$};
@@ -840,10 +840,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 37,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado37.png",
+    Title = "Hai vector OM và ON",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai vector OM và ON từ gốc tọa độ đến các điểm M và N.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado37.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round,x=0.5cm,y=0.5cm,>=stealth,font=\footnotesize]
 \draw[->] (-4,0)--(4,0) node [below]{$x$};
 \draw[->] (0,-1)--(0,8) node [left]{$y$};
@@ -859,10 +859,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 38,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado38.png",
+    Title = "Năm điểm A, M, N, P, Q đối xứng",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Năm điểm A, M, N, P, Q với các vector từ gốc tọa độ, thể hiện tính đối xứng quay.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado38.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round,>=stealth,font=\footnotesize]
 \draw[->] (-2,0)--(2,0) node [below]{$x$};
 \draw[->] (0,-2)--(0,2) node [left]{$y$};
@@ -885,10 +885,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 39,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado39.png",
+    Title = "Bốn điểm M, N, P, Q đối xứng qua trục",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Bốn điểm M(3,1), N(-3,1), P(-3,-1), Q(3,-1) tạo hình chữ nhật đối xứng qua các trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado39.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[->] (-4,0)--(4,0) node[below]{$x$};
 \draw[->] (0,-2)--(0,2) node[right]{$y$};
@@ -901,10 +901,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 40,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado40.png",
+    Title = "Hình chữ nhật NMPQ đường nét đứt",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hình chữ nhật NMPQ với N(-1,2), M(1,2), P(-1,-2), Q(1,-2) được vẽ bằng đường nét đứt.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado40.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=1cm,scale=0.8]
 \tkzInit[xmin=-1.9,xmax=1.7,ymin=-2.9,ymax=2.7]
 \tkzDrawX
@@ -924,10 +924,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 41,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado41.png",
+    Title = "Điểm M(2,1) với điểm rỗng",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Điểm M(2,1) được biểu diễn bằng điểm rỗng (không tô màu) với các đường phụ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado41.png",
     Code = @"\begin{tikzpicture}
 \draw[->] (-0.5,0) -- (2.5,0) node[below] {$x$};
 \draw[->] (0,-0.5) -- (0,2.5) node[right] {$y$};
@@ -944,10 +944,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 42,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado42.png",
+    Title = "Bốn điểm M, N, P, Q trên lưới tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Bốn điểm M(2,1), N(-1,1), P(-1,-2), Q(2,-2) trên lưới tọa độ chi tiết.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado42.png",
     Code = @"\begin{tikzpicture}[scale=0.6,thick,>=stealth]
 \draw[->] (-2,0) -- (4,0) node [below left] {\tiny$x$};
 \draw[->] (0,-3) -- (0,3) node [below right] {\tiny$y$};
@@ -964,10 +964,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 43,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado43.png",
+    Title = "Đường tròn và tam giác AMB với điểm D",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I bán kính 3 với các điểm A(-5,0), B(-6,-3), D(-2,0), M và tam giác AMB.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado43.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %\draw[color=gray!50,dashed] (-7,-7) grid (7,7);
 %\draw[->] (-6,0)--(6,0) node [below]{$x$};
@@ -990,10 +990,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 44,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado44.png",
+    Title = "Đường tròn và tam giác với điểm M",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(0,-1) bán kính 2, tam giác AA'M với A(4,-1), B(3,-3), A'(1,-1), M(-1,-2.732).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado44.png",
     Code = @"\begin{tikzpicture}[scale=0.75, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \draw[->] (-3,0) --(5,0) node[below]{$x$};
 \draw[->] (0,-4) --(0,2) node[left]{$y$};
@@ -1016,10 +1016,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 45,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado45.png",
+    Title = "Đường tròn tâm I(2,2) và dây cung AB",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(2,2) bán kính 2 với dây cung AB, A(1,1), B(5,2).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado45.png",
     Code = @"\begin{tikzpicture}[>=stealth, scale=0.8]
 \draw [->,line width=1pt] (-1.5,0)--(0,0) node[above left]{$O$}--(6,0)node[above] {$x$};
 \draw [->,line width=1pt] (0,-1.5)--(0,5.5) node [right] {$y$};
@@ -1041,10 +1041,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 46,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado46.png",
+    Title = "Tam giác ABC với đường cao CI",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Tam giác ABC với A(2,3), B(5,-2), C(-1,-2) và đường cao CI vuông góc với AB.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado46.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round, >=stealth, scale=0.7]
 \tkzDefPoints{2/3/A, 5/-2/B, -1/-2/C}
 \draw[->](-2,0)--(6,0) node[below left] {$x$};;
@@ -1068,10 +1068,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 47,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado47.png",
+    Title = "Đường tròn và dây cung MN",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm O bán kính √2 với điểm M, dây cung MN và điểm N(4,√2).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado47.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tikzset{label style/.style={font=\footnotesize}}
 \def\xmax{5}
@@ -1105,10 +1105,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 48,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado48.png",
+    Title = "Đường tròn tâm I(1,1) với đường kính AD",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(1,1) với đường kính AD, tia OI kéo dài cắt đường tròn tại A và D.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado48.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,>=stealth,scale=0.7,every node/.style={scale=0.7}]
 \tkzDefPoints{0/0/O,1/1/I,-1/2/B}
 \draw[->] (-2,0)--(4.5,0) node[above] {$x$};
@@ -1130,10 +1130,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 49,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado49.png",
+    Title = "Hai đường thẳng cắt nhau tại gốc",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai đường thẳng đi qua gốc tọa độ, một đường thẳng qua (5/4, 0) và (0, -5/2), đường kia gọi là Δ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado49.png",
     Code = @"\begin{tikzpicture}[>=stealth]
 \draw[->] (-1.5,0)--(0,0)node[below left]{$O$}--(2,0)node[above]{$x$};
 \draw[->] (0,-3)--(0,1)node[left]{$y$};
@@ -1148,10 +1148,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 50,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado50.png",
+    Title = "Đường thẳng d và vector OI",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng d và vector OI từ gốc tọa độ đến điểm I(1,1) trên lưới tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado50.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \clip (-2.5,-1.5) rectangle (3.5,3.5);
 \draw[->] (-2.5,0)--(3.5,0)node[below left]{$x$};
@@ -1175,10 +1175,10 @@ node at (0,0)[below left]{$O$};
 new TikzItem2
 {
     Id = 51,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado51.png",
+    Title = "Đường tròn tâm I và tiếp tuyến từ A",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(3,-3) bán kính 2 với tiếp tuyến từ điểm A(0,1), các tiếp điểm P và Q trên lưới.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado51.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6]
 \draw[->] (-1,0)--(6,0) node[above] {$x$};
 \draw[->] (0,-6)--(0,2) node[left] {$y$};
@@ -1200,10 +1200,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 52,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado52.png",
+    Title = "Đường tròn tâm I(0,-1) bán kính 1 (bản 2)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn có tâm I(0,-1) và bán kính 1, tiếp xúc với trục hoành, tương tự item 22.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado52.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth]
 \clip(-2,-3) rectangle (2.5,1.5);
 \draw[->] (-2,0) -- (2,0);
@@ -1224,10 +1224,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 53,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado53.png",
+    Title = "Đường tròn tâm I(-5,0) và đường thẳng Δ (bản 2)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(-5,0) bán kính 5 với đường thẳng Δ, tương tự item 18.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado53.png",
     Code = @"\begin{tikzpicture}[scale=.35,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \pgfmathsetmacro{\r}{5}
 \tkzDefPoints{-3.125/10/a, 7.375/-4/b, -5/0/I, 0/0/O}
@@ -1253,10 +1253,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 54,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado54.png",
+    Title = "Đường thẳng d trên lưới tọa độ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng d trên lưới tọa độ, tương tự item 50.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado54.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \clip (-2.5,-1.5) rectangle (3.5,3.5);
 \draw[->] (-2.5,0)--(3.5,0)node[below left]{$x$};
@@ -1278,10 +1278,10 @@ node at (0,0)[below left]{$O$};
 new TikzItem2
 {
     Id = 55,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado55.png",
+    Title = "Elip với các tiêu điểm và đỉnh",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Elip có tâm O với các đỉnh A₁(-5,0), A₂(5,0), B₁(0,3), B₂(0,-3) và tiêu điểm F₁(-4,0), F₂(4,0).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado55.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
 \draw[->] (-6,0)--(7,0) node [below]{$x$};
 \draw[->] (0,-4)--(0,4.5) node [right]{$y$};
@@ -1302,10 +1302,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 56,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado56.png",
+    Title = "Đường thẳng d: -2x+y+2=0",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng d có phương trình -2x+y+2=0, đi qua hai điểm (1,0) và (0,2).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado56.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.7]
 \draw[->,line width = 1pt] (-1,0) --(3,0) node[above]{$x$};
 \draw[->,line width = 1pt] (0,-0.5) --(0,3) node[right]{$y$};
@@ -1320,10 +1320,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 57,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado57.png",
+    Title = "Bốn đường tròn đồng tâm và tam giác",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Bốn đường tròn đồng tâm O với bán kính 1, 2, 3, 4.359 và tam giác OMN, M'P với các điểm đặc biệt.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado57.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.75,>=stealth,font=\footnotesize]
 \draw[->] (-5,0)--(5.5,0) node[below]{$x$};
 \draw[->] (0,-5.5)--(0,5.5) node[right]{$y$};
@@ -1349,10 +1349,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 58,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado58.png",
+    Title = "Đường tròn tâm I(1,2) với tiếp tuyến từ A",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường tròn tâm I(1,2) bán kính 4 với tiếp tuyến từ điểm A(-3,-2), các tiếp điểm N₁, N₂, N.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado58.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round,>=stealth,font=\footnotesize]
 \tikzset{label style/.style={font=\footnotesize}}
 \draw[->] (-4,0)--(6,0) node [below]{$x$};
@@ -1377,10 +1377,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 59,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado59.png",
+    Title = "Năm điểm A, M, N, P, Q phép quay",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Năm điểm A, M, N, P, Q với các vector từ gốc O, thể hiện phép quay 90° và phép đối xứng.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado59.png",
     Code = @"\begin{tikzpicture}[scale=1.3, line join=round,>=stealth,font=\footnotesize]
 \draw[->] (-1.5,0)--(1.5,0) node [below]{$x$};
 \draw[->] (0,-1.5)--(0,1.5) node [right]{$y$};
@@ -1403,10 +1403,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 60,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado60.png",
+    Title = "Hai vector OM và ON đối xứng qua Ox",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Hai vector OM(a,b) và ON(a,-b) đối xứng qua trục hoành, M(2,1) và N(2,-1).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado60.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=1,>=stealth]
 \draw[->] (-0.8,0)--(3,0) node[below]{$x$};
 \draw[->] (0,-1.5)--(0,1.5) node[right]{$y$};
@@ -1421,10 +1421,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 61,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado61.png",
+    Title = "Đoạn thẳng MN và đường thẳng Δ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đoạn thẳng MN với M(-1.5, 0.875), N(-1,1) và đường thẳng Δ có phương trình y=-x/2+1/8.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado61.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round,>=stealth,thick,scale=1]
 \tikzset{label style/.style={font=\footnotesize}}
 %%Nhập giới hạn đồ thị và hàm số cần vẽ
@@ -1458,10 +1458,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 62,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado62.png",
+    Title = "Khoảng cách từ O đến đường thẳng d",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Đường thẳng d: 4x+2y+3=0 với điểm M(-1.5, 1.5), H là hình chiếu vuông góc của O lên d.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado62.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[->] (-3,0)--(3.5,0) node[below]{$x$};
 \draw[->] (0,-2.5)--(0,2.5) node[right]{$y$};
@@ -1476,10 +1476,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 63,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado63.png",
+    Title = "Điểm M(-4,-2) với đường phụ",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Điểm M(-4,-2) với các đường phụ nét đứt kẻ đến trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado63.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.4]
 \draw[->] (-5,0) --(2,0) node[above]{$x$};
 \draw[->] (0,-3) --(0,1) node[right]{$y$};
@@ -1495,10 +1495,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 64,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado64.png",
+    Title = "Vector OM với M(a,b)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Vector OM từ gốc O đến điểm M(3,2) biểu diễn tọa độ M(a,b).",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado64.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.6,>=stealth,font=\footnotesize]
 \draw[->] (-1,0)--(3.7,0) node[below]{$x$};
 \draw[->] (0,-0.7)--(0,3) node[right]{$y$};
@@ -1512,10 +1512,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 65,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado65.png",
+    Title = "Số phức z=a+bi và số phức liên hợp",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Biểu diễn số phức z=a+bi tại M(3,2) và số phức liên hợp z̄=a-bi tại (3,-2) trên mặt phẳng phức.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado65.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5]
 \draw[->,line width = 1pt] (-1.5,0)--(-1,0) node[below]{$O$}--(7,0) node[below]{$x$};
 \draw[->,line width = 1pt] (0,-2.8) --(0,3) node[right]{$y$};
@@ -1544,10 +1544,10 @@ new TikzItem2
 new TikzItem2
 {
     Id = 66,
-    Title = "Bảng biến thiên f(x)",
-    Category = "Hình toạ độ",
-    Description = "Bảng biến thiên của hàm số.",
-    ImagePath = "Hinh_toa_o/hinhtoado66.png",
+    Title = "Vector biểu diễn điểm M(a,b)",
+    Category = "Đồ thị hình toạ độ",
+    Description = "Vector OM từ gốc O đến điểm M(3,2) với các ký hiệu a và b trên trục tọa độ.",
+    ImagePath = "Do_thi_hinh_toa_do/hinhtoado66.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5]
 \draw[->,line width = 1pt] (-1.5,0)--(0,0) node[below right]{$O$}--(5,0) node[below]{$x$};
 \draw[->,line width = 1pt] (0,-1) --(0,3.5) node[right]{$y$};
