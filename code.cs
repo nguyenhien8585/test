@@ -4,7 +4,7 @@ new TikzItem2
     Title = "Lục giác đều với các đường chéo",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo nối các đỉnh đối diện và các đường nối với tâm.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac  hịnhtugiac_1_1.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_1.png",
     Code = @"\begin{tikzpicture}[scale=1.5]
 \foreach \x in {0,60,...,300} {
 \draw (\x:1 cm) -- (\x + 60:1 cm);
@@ -23,7 +23,7 @@ new TikzItem2
     Title = "Lục giác đều ABCDEF tâm O",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF với tâm O, các đỉnh được tạo bởi phép quay 60° liên tiếp quanh tâm O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_2.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_2.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){O}
 \tkzDefPoint(2,0){E}
@@ -44,7 +44,7 @@ new TikzItem2
     Title = "Lục giác đều với tâm O (bản thu nhỏ)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O, các điểm được tạo bằng phép quay 60°, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_3.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_3.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
 \tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
 \tkzClip
@@ -70,7 +70,7 @@ new TikzItem2
     Title = "Lục giác đều với đường chéo FC",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, các đỉnh tạo bởi phép quay 60° liên tiếp, tỷ lệ 0.6.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_4.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_4.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=0.6]
 \coordinate[label=below left:$O$](O) at (0,0);
 \coordinate[label=right :$C$](C) at (2,0);
@@ -93,7 +93,7 @@ new TikzItem2
     Title = "Lục giác đều ABCDEF (chuẩn)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, tỷ lệ 1.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_5.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_5.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=1]
 \coordinate[label=below left:$O$](O) at (0,0);
 \coordinate[label=right :$C$](C) at (2,0);
@@ -116,7 +116,7 @@ new TikzItem2
     Title = "Lục giác đều với các đường chéo (nét dày)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ dày, tỷ lệ 1.7.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_6.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_6.png",
     Code = @"\begin{tikzpicture}[scale=1.7,thick]
 \foreach \x in {0,60,...,300} {
 \draw (\x:1 cm) -- (\x + 60:1 cm);
@@ -135,7 +135,7 @@ new TikzItem2
     Title = "Lục giác đều với các đường chéo (nét rất dày)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ rất dày, tỷ lệ 2.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_7.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_7.png",
     Code = @"\begin{tikzpicture}[scale=2,very thick]
 \foreach \x in {0,60,...,300} {
 \draw (\x:1 cm) -- (\x + 60:1 cm);
@@ -154,7 +154,7 @@ new TikzItem2
     Title = "Lục giác đều với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với các đường chéo, nét dày, tỷ lệ 1.7.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_8.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_8.png",
     Code = @"\begin{tikzpicture}[scale=1.7,thick]
 \foreach \x in {0,60,...,300} {
 \draw (\x:1 cm) -- (\x + 60:1 cm);
@@ -173,7 +173,7 @@ new TikzItem2
     Title = "Ngũ giác đều với điểm đối xứng",
     Category = "Hình tứ giác",
     Description = "Ngũ giác đều ABCDE tâm O với các đường nối tâm, điểm M đối xứng của O qua AB, điểm N đối xứng của O qua CE.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_9.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_9.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.2, xmax=4.2, ymin=-0.5, ymax=5.5]
 \tkzClip
@@ -201,7 +201,7 @@ new TikzItem2
     Title = "Lục giác đều ABCDEF (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF với tâm O, các đỉnh phân bố đều quanh tâm với góc 60°.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_10.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_10.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){O}
 \tkzDefPoint(2,0){E}
@@ -222,7 +222,7 @@ new TikzItem2
     Title = "Lục giác đều với đường chéo (nét rất dày)",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với các đường chéo nối đỉnh đối diện, nét vẽ rất dày, tỷ lệ 2.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_11.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_11.png",
     Code = @"\begin{tikzpicture}[scale=2,very thick]
 \foreach \x in {0,60,...,300} {
 \draw (\x:1 cm) -- (\x + 60:1 cm);
@@ -241,7 +241,7 @@ new TikzItem2
     Title = "Hình thoi với hai đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_12.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_12.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
 \tkzDrawPoints[size=5,fill=black](A,B,C,D)
@@ -260,7 +260,7 @@ new TikzItem2
     Title = "Hình thoi ABCD với đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau (lặp lại).",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_13.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_13.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
 \tkzDrawPoints[size=5,fill=black](A,B,C,D)
@@ -279,7 +279,7 @@ new TikzItem2
     Title = "Tam giác với tam giác trung điểm",
     Category = "Hình tứ giác",
     Description = "Tam giác ABC với tam giác trung điểm MNP, trong đó M, N, P là trung điểm BC, AC, AB.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_14.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_14.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
 \tkzInit[xmin=-0.5,xmax=5.5,ymin=-1,ymax=4]
 \tkzClip
@@ -303,7 +303,7 @@ new TikzItem2
     Title = "Lục giác đều với vector OA",
     Category = "Hình tứ giác",
     Description = "Lục giác đều ABCDEF tâm O với vector OA, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_15.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_15.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
 \tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
 \tkzClip
@@ -330,7 +330,7 @@ new TikzItem2
     Title = "Hình bình hành với hai đường chéo tô màu",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O, tam giác AOB tô xanh, tam giác AOD tô xám.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_16.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_16.png",
     Code = @"\begin{tikzpicture}[scale=0.6,line join=round, line cap=round,>=stealth]
 \tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
 \coordinate (C) at ($(B)+(D)-(A)$);
@@ -355,7 +355,7 @@ new TikzItem2
     Title = "Hình thang với đường trung bình",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AB và CD.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_17.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_17.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/D,7/0/C,3/3/A}
@@ -378,7 +378,7 @@ new TikzItem2
     Title = "Hình vuông ABCD với đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình vuông ABCD với hai đường chéo AC và BD cắt nhau tại I.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_18.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_18.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
 \tkzInit[xmin=-1,xmax=4.5,ymin=-0.5,ymax=4.5]
 \tkzClip
@@ -402,7 +402,7 @@ new TikzItem2
     Title = "Hình thang ABCD",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với AB song song CD.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_19.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_19.png",
     Code = @"\begin{tikzpicture}
 \def\a{3} \def\h{2} \def\b{4}
 \tkzDefPoints{0/0/A,\a/0/B,\b/\h/C}
@@ -422,7 +422,7 @@ new TikzItem2
     Title = "Hình bình hành ABCD đơn giản",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với bốn đỉnh A, B, C, D.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_20.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_20.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/D,7/0/C,3/3/A}
@@ -440,7 +440,7 @@ new TikzItem2
     Title = "Hình thang với hai đường tròn",
     Category = "Hình tứ giác",
     Description = "Hình thang ABMN với hai đường tròn tâm O và I, phép tịnh tiến từ A đến B biến M thành N và O thành I.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_21.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_21.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzInit[xmin=-2,xmax=6, ymin=-1,ymax=4.5]\tkzClip
 \tkzDefPoints{0/0/A,4/0/B,1/2/M,0/3/O}
@@ -467,7 +467,7 @@ new TikzItem2
     Title = "Hình bình hành ABCD (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD đơn giản với bốn đỉnh.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_22.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_22.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/D,7/0/C,3/3/A}
@@ -485,7 +485,7 @@ new TikzItem2
     Title = "Hình bình hành với trung điểm và tam giác tô màu",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác AMO tô vàng.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_23.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_23.png",
     Code = @"\begin{tikzpicture}[scale=0.6,line join=round, font=\footnotesize,line cap=round,>=stealth]
 \tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
 \coordinate (C) at ($(B)+(D)-(A)$);
@@ -510,7 +510,7 @@ new TikzItem2
     Title = "Hình bình hành với trung điểm và trung tuyến",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với M, N là trung điểm AB và AD, đường chéo AC và BD cắt nhau tại O, các đường MO và NO.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_24.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_24.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A, 2/3/B, 7/3/C}
 \coordinate (D) at ($(A)+(C)-(B)$);
@@ -534,7 +534,7 @@ new TikzItem2
     Title = "Hình chữ nhật với đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_25.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_25.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
 \coordinate (A) at (1,2); \coordinate (O) at (2.5,0.5);\coordinate (E) at (5.5,0.5);
@@ -554,7 +554,7 @@ new TikzItem2
     Title = "Hình chữ nhật với cung tròn và góc vuông",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với các điểm E, F, đường chéo, cung tròn nét đứt, góc vuông FBE.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_26.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_26.png",
     Code = @"\begin{tikzpicture}[thick,scale=1]
 \coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
 \coordinate (A) at (1,2); \coordinate (O) at (2.5,0.5);\coordinate (E) at (5.5,0.5);
@@ -578,7 +578,7 @@ new TikzItem2
     Title = "Hình bình hành ABCD (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD đơn giản, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_27.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_27.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/D,7/0/C,3/3/A}
@@ -596,7 +596,7 @@ new TikzItem2
     Title = "Hình vuông MNPQ với đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình vuông MNPQ với hai đường chéo MP và NQ cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_28.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_28.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \coordinate (M) at (0,0); \coordinate (N) at (2,0); \coordinate (P) at (2,2);
 \coordinate (Q) at (0,2); \coordinate (O) at (1,1);
@@ -615,7 +615,7 @@ new TikzItem2
     Title = "Hình vuông với đường chéo và trung điểm",
     Category = "Hình tứ giác",
     Description = "Hình vuông ABCD với hai đường chéo AC và BD, M và N là trung điểm AB và BC.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_29.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_29.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,4/4/C,0/4/D}
 \coordinate (M) at ($(A)!0.5!(B)$);
@@ -635,7 +635,7 @@ new TikzItem2
     Title = "Hình thang phức tạp với trung điểm",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCDEFG với các trung điểm M, N và đường nối, đường nét đứt BM, BN, MN.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_30.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_30.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
 \tkzDefPoints{-4/0/A,0/0/B,2.5/0/E,-4/4/D,0/2.5/G}
@@ -666,7 +666,7 @@ new TikzItem2
     Title = "Hình thang với trung điểm (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCDEFG với trung điểm M, N và các đường nét đứt.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_31.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_31.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
 \tkzDefPoints{-4/0/A,0/0/B,2.5/0/E,-4/4/D,0/2.5/G}
@@ -697,7 +697,7 @@ new TikzItem2
     Title = "Hình thang vuông với đường cao",
     Category = "Hình tứ giác",
     Description = "Hình thang vuông ABCD với đường cao DH vuông góc với AB, góc vuông tại H và D.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_32.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_32.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,6/0/B,3/1.5/C,1/1.5/D, 1/0/H}
 \tkzDrawSegments(A,B B,C C,D D,A D,H)
@@ -715,7 +715,7 @@ new TikzItem2
     Title = "Hình thoi với đường chéo vuông góc",
     Category = "Hình tứ giác",
     Description = "Hình thoi ABCD với hai đường chéo AC và BD vuông góc tại I, đường chéo nét đứt.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_33.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_33.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{-2.2/0/A,0/-1/B,2.2/0/C,0/1/D, 0/0/I}
 \tkzDrawSegments(A,B B,C C,D D,A)
@@ -736,7 +736,7 @@ new TikzItem2
     Title = "Hình thoi với góc 60° và cạnh bằng nhau",
     Category = "Hình tứ giác",
     Description = "Hình thoi ABCD với góc ABC = 60°, đường chéo AC, tất cả các cạnh bằng nhau (AB=BC=CD=DA).",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_34.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_34.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 0/-4/C};
 \tkzDefPointBy[rotation = center A angle -60](C)\tkzGetPoint{B};
@@ -760,7 +760,7 @@ new TikzItem2
     Title = "Hình vuông với trung điểm và tam giác tô màu",
     Category = "Hình tứ giác",
     Description = "Hình vuông ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác OND tô xám.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_35.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_35.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 4/0/B};
 \tkzDefSquare(A,B)\tkzGetPoints{C}{D};
@@ -786,7 +786,7 @@ new TikzItem2
     Title = "Hình thang với đường cao nét đứt",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với đường cao AM và BN (nét đứt) từ A và B xuống đáy CD.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_36.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_36.png",
     Code = @"\begin{tikzpicture}
 \path 
 (-3,0) coordinate (D)
@@ -809,7 +809,7 @@ new TikzItem2
     Title = "Hình bình hành với đường chéo và góc vuông",
     Category = "Hình tứ giác",
     Description = "Hình bình hành OABC với đường chéo OC, AB, I là trung điểm OC, góc vuông OIB.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_37.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_37.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/O,4/0/A,2/3.5/B};
 \coordinate (C) at ($(A)+(B)$);
@@ -828,7 +828,7 @@ new TikzItem2
     Title = "Hình vuông với trung điểm và đường nét đứt",
     Category = "Hình tứ giác",
     Description = "Hình vuông ABCD với đường chéo AC và BD cắt nhau tại I với góc vuông, M và N là trung điểm AB và BC, đường nét đứt AN và DM.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_38.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_38.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,3/0/B}
 \tkzDefSquare(A,B)\tkzGetPoints{C}{D}
@@ -851,7 +851,7 @@ new TikzItem2
     Title = "Hình chữ nhật với đường chéo nét đứt",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD (nét đứt) cắt nhau tại I.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_39.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_39.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,4/2/C,0/2/D}
 \tkzInterLL(A,C)(B,D)\tkzGetPoint{I}
@@ -869,7 +869,7 @@ new TikzItem2
     Title = "Hình thang cân với nền nước",
     Category = "Hình tứ giác",
     Description = "Hình thang cân ABCD với ba cạnh bằng nhau có độ dài a (m), nền tô màu xanh cyan biểu thị mặt nước, có chú thích Hình 36.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_40.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_40.png",
     Code = @"\begin{tikzpicture}
 \path 
 (-3,0) coordinate (D)
@@ -891,7 +891,7 @@ new TikzItem2
     Title = "Hình chữ nhật với viền cắt góc",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD 30cm×80cm với viền bên trong cắt bỏ bốn góc, mỗi góc có kích thước x cm, có chú thích a).",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_41.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_41.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round,scale=0.9]
 \coordinate (A) at (0,3);
 \coordinate (B) at (5,3);
@@ -923,7 +923,7 @@ new TikzItem2
     Title = "Hình chữ nhật 10×16 với các điểm cắt",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD 10×16 với các điểm E, F, G, H, I, J, M, N chia các cạnh, đoạn cắt x từ các góc.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_42.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_42.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tkzInit[xmin=-5,xmax=6,ymin=-3,ymax=6]
 \tkzDefPoints{0/0/A, 8/0/D, 8/6/C, 0/6/B, 0/1/E, 0/5/F, 1/6/G, 7/6/H, 8/5/I, 8/1/J, 1/0/M, 7/0/N}
@@ -942,7 +942,7 @@ new TikzItem2
     Title = "Hình chữ nhật với đường vuông góc d",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với đường chéo AC và BD cắt nhau tại I, đường trung bình NE vuông góc tại N, đường thẳng d.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_43.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_43.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-3.5,-1.5) rectangle (3.5,4);
 %%%%%%%%%%%%%%%
@@ -973,7 +973,7 @@ new TikzItem2
     Title = "Hình chữ nhật với vector BD màu đỏ",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với vector màu đỏ từ B đến D.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_44.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_44.png",
     Code = @"\begin{tikzpicture}[>=stealth,line cap=round,line join=round,scale=.7,font=\footnotesize]
 \tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
 \tkzDrawPolygon(A,B,C,D)
@@ -992,7 +992,7 @@ new TikzItem2
     Title = "Hình chữ nhật với phép vị tự",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABC với góc vuông tại A, phép vị tự tâm A tỷ số 4 biến C thành D, phép tịnh tiến từ A đến B biến D thành E.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_45.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_45.png",
     Code = @"\begin{tikzpicture}[scale=0.8,font=\footnotesize,line join=round,
 line cap=round,>=stealth]
 \tkzInit[xmin=-0.5,ymin=-0.5,xmax=8.5,ymax=3.0]\tkzClip
@@ -1017,7 +1017,7 @@ new TikzItem2
     Title = "Hình bình hành với đường chéo và tâm O",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_46.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_46.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/A,2/3/B,5/0/D}
 \coordinate (C) at ($(B)+(D)-(A)$);
@@ -1038,7 +1038,7 @@ new TikzItem2
     Title = "Hình thang với đường trung bình vuông góc",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với đường trung bình IJ, I và J là trung điểm AB và CD, IJ vuông góc CJ.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_47.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_47.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-3.5,-1) rectangle (3.5,4);
 %%%%%%%%%%%%%%%
@@ -1064,7 +1064,7 @@ new TikzItem2
     Title = "Hình chữ nhật với vector từ A",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với ba vector từ A: AB, AD, AC.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_48.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_48.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
 \tkzDrawSegments(A,B B,C C,D D,A)
@@ -1085,7 +1085,7 @@ new TikzItem2
     Title = "Hình vuông với đường chéo và tâm O",
     Category = "Hình tứ giác",
     Description = "Hình vuông ABCD với hai đường chéo AC và BD vuông góc cắt nhau tại tâm O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_49.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_49.png",
     Code = @"\begin{tikzpicture}[scale=1.0,font=\footnotesize,line join=round,
 line cap=round,>=stealth]
 %\tkzInit[xmin=-0.5,ymin=-0.5,xmax=7.0,ymax=5.5]\tkzClip
@@ -1109,7 +1109,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo BD và AC cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_50.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_50.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{0/0/A,1/2/B,4/0/D,5/2/C}
 \tkzDrawPolygon(A,B,C,D)
@@ -1128,7 +1128,7 @@ new TikzItem2
     Title = "Hình thang với trọng tâm G",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với M là trung điểm DC, O là giao điểm AC và BD, G là giao điểm AC và BM.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_51.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_51.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A, 4/0/B, -1/-2/D}
 \tkzDefPointBy[translation=from A to B](D) \tkzGetPoint{C}
@@ -1148,7 +1148,7 @@ new TikzItem2
     Title = "Hình bình hành với điểm đối xứng",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với O là trung điểm AB, C đối xứng với A qua O, hai đường chéo AC và BD.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_52.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_52.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{-2/1.5/A,3/1.5/B,0/0/O}
 \coordinate (C) at ($(O)!-1!(A)$);
@@ -1167,7 +1167,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo cắt nhau",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_53.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_53.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1185,7 +1185,7 @@ new TikzItem2
     Title = "Hình thang ABCD đơn giản",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_54.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_54.png",
     Code = @"\begin{tikzpicture}[scale=.5, line join=round, line cap=round]
 %%%%%%%%%%%%%%%
 \tkzDefPoints{0/0/A,4/0/B,0.5/2/D}
@@ -1203,7 +1203,7 @@ new TikzItem2
     Title = "Hình thang với giao điểm đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_55.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_55.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1221,7 +1221,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_56.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_56.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1239,7 +1239,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_57.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_57.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1257,7 +1257,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo (tỷ lệ 1)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_58.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_58.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1275,7 +1275,7 @@ new TikzItem2
     Title = "Hình bình hành với đường trung tuyến",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với M là trung điểm CD, đường trung tuyến AM.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_59.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_59.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,3/0/B,3/3/C}
 \coordinate (D) at ($(A)+(C)-(B)$);
@@ -1293,7 +1293,7 @@ new TikzItem2
     Title = "Hình thang từ tam giác đều",
     Category = "Hình tứ giác",
     Description = "Tam giác đều ABC với I là trung điểm BC (IB=IC), phép tịnh tiến từ A đến B biến C thành D tạo hình thang ABDC.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_60.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_60.png",
     Code = @"\begin{tikzpicture}[scale=.6]
 \tkzDefPoints{0/0/B, 5/0/C}
 \tkzDefPointBy[rotation = center B angle 60](C)\tkzGetPoint{A}
@@ -1316,7 +1316,7 @@ new TikzItem2
     Title = "Hình thang với trọng tâm phức tạp",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với M trên AB (AM=AB/3), N là trung điểm DC, các đường MN, NB, z1, z2 (nét đứt), trọng tâm G.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_61.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_61.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A, -1.6/-2/D, 4/-2/C}
 \coordinate (B) at ($(A)+(C)-(D)$); 
@@ -1340,7 +1340,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo (tỷ lệ 0.5)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_62.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_62.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
 \tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
@@ -1357,7 +1357,7 @@ new TikzItem2
     Title = "Hình thang với phép tịnh tiến",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với phép tịnh tiến từ B đến A biến C thành D, đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_63.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_63.png",
     Code = @"\begin{tikzpicture}[scale=1,font=
 \footnotesize,line join=round,line cap=round, >=stealth]
 \tkzDefPoints{0/0/A,4/0/B,5/1.5/C}
@@ -1377,7 +1377,7 @@ new TikzItem2
     Title = "Hình thang với giao điểm O (tỷ lệ 0.5)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_64.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_64.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
 \tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
@@ -1394,7 +1394,7 @@ new TikzItem2
     Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_65.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_65.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
 \tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
@@ -1411,7 +1411,7 @@ new TikzItem2
     Title = "Hình thang với trung điểm H và K",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo cắt nhau tại O, H và K là trung điểm BC và AD.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_66.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_66.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
 \tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
@@ -1430,7 +1430,7 @@ new TikzItem2
     Title = "Hình thang ABCD không đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD đơn giản không có đường chéo, tỷ lệ 0.5.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_67.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_67.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
 \tkzDrawSegments(A,B B,C C,D D,A)
@@ -1446,7 +1446,7 @@ new TikzItem2
     Title = "Hình lục giác từ các phép tịnh tiến",
     Category = "Hình tứ giác",
     Description = "Hình lục giác ABCDEF được tạo từ các phép tịnh tiến vector, với các đường AC, AE, BC, BE.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_68.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_68.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{3/0/B,0/0/A,0/3/D}
 \coordinate (C) at ($(D)+(B)$);
@@ -1468,7 +1468,7 @@ new TikzItem2
     Title = "Hình thang với đường trung bình MN",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AD và BC.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_69.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_69.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=.7]
 \tkzDefPoints{0/0/A}
 \coordinate (B) at ($(A)+(6.2,0)$);
@@ -1493,7 +1493,7 @@ new TikzItem2
     Title = "Hình bình hành với tâm O và đường chéo",
     Category = "Hình tứ giác",
     Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại tâm O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_70.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_70.png",
     Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
 \coordinate (A) at (0,0);
@@ -1514,7 +1514,7 @@ new TikzItem2
     Title = "Hình thang với các đường phụ",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với M, N là trung điểm AB và DC, O là trung điểm AC, P trên NC, đường nét đứt MN và BN.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_71.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_71.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A, -1/-2/D, 4/-2/C}
 \coordinate (B) at ($(A)+(C)-(D)$);
@@ -1539,7 +1539,7 @@ new TikzItem2
     Title = "Tứ giác với hai đường chéo I và J",
     Category = "Hình tứ giác",
     Description = "Tứ giác ABCD với hai đường chéo DC và AB cắt nhau tại I và J.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_72.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_72.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \draw[smooth] (1,1)--(-2,-2)--(-5,-1)--(-5,3)--cycle;
 \draw[smooth] (-5,3)--(-2,-2);
@@ -1559,7 +1559,7 @@ new TikzItem2
     Title = "Hình thang với nhiều điểm phụ",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, N và P là các điểm trên cạnh và đường chéo.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_73.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_73.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \draw[smooth] (-4,0)--(1,0)--(3,2)--(-2,2)--cycle;
 \draw[smooth] (-4,0)--(3,2);
@@ -1580,7 +1580,7 @@ new TikzItem2
     Title = "Hình chữ nhật với nhiều góc vuông",
     Category = "Hình tứ giác",
     Description = "Hình chữ nhật ABCD với đường chéo BD và AH, M, N, O là các điểm phụ, E và K là chân góc vuông, nhiều đường và góc vuông.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_74.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_74.png",
     Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
 \coordinate (A) at (0,0);
@@ -1608,7 +1608,7 @@ new TikzItem2
     Title = "Tứ giác với hai đường chéo AC và BD",
     Category = "Hình tứ giác",
     Description = "Tứ giác ABCD với hai đường chéo AC và BD cắt nhau tại O.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_75.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_75.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,fill=black, >=stealth]
 \coordinate (A) at (0,0);
 \coordinate (B) at (-2,-2);
@@ -1627,7 +1627,7 @@ new TikzItem2
     Title = "Hình thang với giao điểm O (Hình 1)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, có chú thích Hình 1.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_76.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_76.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1646,7 +1646,7 @@ new TikzItem2
     Title = "Hình thang ABCD đơn giản (tỷ lệ 0.6)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.6.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_77.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_77.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
 \tkzDrawSegments(A,B B,C C,D D,A)
@@ -1662,7 +1662,7 @@ new TikzItem2
     Title = "Hình thang với giao điểm O (tỷ lệ 1)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_78.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_78.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
 \tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
@@ -1679,7 +1679,7 @@ new TikzItem2
     Title = "Hình thang với đường trung bình MN (0.7)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với đường trung bình MN nối trung điểm BC và AD, tỷ lệ 0.7.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_79.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_79.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
 \coordinate (M) at ($(C)!0.5!(B)$);
@@ -1697,7 +1697,7 @@ new TikzItem2
     Title = "Hình thang với giao điểm O (lặp lại)",
     Category = "Hình tứ giác",
     Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_80.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_80.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
 \tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
@@ -1715,7 +1715,7 @@ new TikzItem2
     Title = "Hình thang cân với các góc và đoạn bằng nhau",
     Category = "Hình tứ giác",
     Description = "Hình thang cân ABCD với BI song song AD (AD=AB=BI=DI), góc vuông IOB, đánh dấu góc và cạnh bằng nhau.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_81.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_81.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{0/0/D, 1/3/A, 4/3/B, 5/0/C}
 \tkzDefLine[parallel=through B](A,D)\tkzGetPoint{I} 
@@ -1739,7 +1739,7 @@ new TikzItem2
     Title = "Hai hình vuông đồng tâm với pattern",
     Category = "Hình tứ giác",
     Description = "Hai hình vuông ABCD và EFGH đồng tâm O, hình lớn tô pattern chấm màu đỏ, hình nhỏ tô pattern chấm xanh lá, phép vị tự tâm A tỷ số 0.3, đoạn AE=x và ED=20-x.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_82.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_82.png",
     Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/B,2/2/O}
@@ -1786,7 +1786,7 @@ new TikzItem2
     Title = "Hai hình vuông đồng tâm với kích thước",
     Category = "Hình tứ giác",
     Description = "Hai hình vuông ABCD (màu đen) và EFGH (màu đỏ) đồng tâm O, hình nhỏ tô pattern xanh lá, kích thước x cm và 20 cm được ghi trên các cạnh.",
-    ImagePath = "Hinh_tu_giac/hinhtugiac_83.png",
+    ImagePath = "Hinh_tu_giac/hịnhtugiac_83.png",
     Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/B,2/2/O}
