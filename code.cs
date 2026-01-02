@@ -2,7 +2,7 @@ new TikzItem2
 {
     Id = 1,
     Title = "Đồ thị y = (x+1)e^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số y = (x+1)e^x qua điểm (0,1) và có nghiệm tại x = -1.",
     ImagePath = "Mu_logarit/mulogarit1.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
@@ -20,7 +20,7 @@ new TikzItem2
 {
     Id = 2,
     Title = "Đồ thị y = 0.4^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số mũ cơ số 0 < a < 1, qua điểm (0,1).",
     ImagePath = "Mu_logarit/mulogarit2.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
@@ -37,7 +37,7 @@ new TikzItem2
 {
     Id = 3,
     Title = "Đồ thị y = log_a x và y = log_b x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh hai đồ thị logarit với cơ số khác nhau qua điểm M(9,y), có điểm N và P.",
     ImagePath = "Mu_logarit/mulogarit3.png",
     Code = @"\begin{tikzpicture}[scale=0.6]	
@@ -58,7 +58,7 @@ new TikzItem2
 {
     Id = 4,
     Title = "Đồ thị y = e^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số mũ cơ số e qua điểm (0,1).",
     ImagePath = "Mu_logarit/mulogarit4.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
@@ -75,7 +75,7 @@ new TikzItem2
 {
     Id = 5,
     Title = "Đồ thị y = 2^x, y = 3^x và y = log_(1/2) x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị: C₁ là y = 3^x, C₂ là y = 2^x, C₃ là y = log_(1/2) x.",
     ImagePath = "Mu_logarit/mulogarit5.png",
     Code = @"\begin{tikzpicture}[scale=0.6,>=stealth]
@@ -98,7 +98,7 @@ new TikzItem2
 {
     Id = 6,
     Title = "Đồ thị y = a^x, y = b^x và y = c^x với x = 1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 hàm mũ tại x = 1 để xác định thứ tự a < 1 < c < b.",
     ImagePath = "Mu_logarit/mulogarit6.png",
     Code = @"\begin{tikzpicture}
@@ -120,7 +120,7 @@ new TikzItem2
 {
     Id = 7,
     Title = "Đồ thị y = a^x, y = b^x và y = c^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị hàm mũ với cơ số khác nhau: a < 1 < c < b.",
     ImagePath = "Mu_logarit/mulogarit7.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
@@ -137,7 +137,7 @@ new TikzItem2
 {
     Id = 8,
     Title = "Đồ thị hàm logarit với các điểm A, B, H",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Hai đồ thị logarit với cơ số khác nhau, có điểm H(2,0), A và B trên hai đồ thị.",
     ImagePath = "Mu_logarit/mulogarit8.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.8, font=\footnotesize, line join=round, line cap=round]
@@ -154,7 +154,7 @@ new TikzItem2
 {
     Id = 9,
     Title = "Đồ thị y = x^a, y = x^b và y = x^c",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị hàm lũy thừa với số mũ khác nhau trên lưới ô vuông.",
     ImagePath = "Mu_logarit/mulogarit9.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1.0cm,y=1.0cm,scale=0.6,thick]
@@ -176,7 +176,7 @@ new TikzItem2
 {
     Id = 10,
     Title = "Đồ thị y = x^α và y = x^β",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh hai đồ thị hàm lũy thừa với α > 1 và 0 < β < 1.",
     ImagePath = "Mu_logarit/mulogarit10.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.8cm,y=0.8cm]
@@ -204,7 +204,7 @@ new TikzItem2
 {
     Id = 11,
     Title = "Đồ thị y = 2^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số mũ cơ số 2.",
     ImagePath = "Mu_logarit/mulogarit11.png",
     Code = @"\begin{tikzpicture}[scale=0.6,>=stealth,x=1cm,
@@ -233,7 +233,7 @@ new TikzItem2
 {
     Id = 12,
     Title = "Đồ thị y = log₃ x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm logarit cơ số 3 qua điểm (1,0) và (3,1).",
     ImagePath = "Mu_logarit/mulogarit12.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
@@ -250,7 +250,7 @@ new TikzItem2
 {
     Id = 13,
     Title = "Đồ thị y = log_a x và y = log_b x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh hai đồ thị logarit: cơ số a > 1 (đồng biến) và cơ số 0 < b < 1 (nghịch biến).",
     ImagePath = "Mu_logarit/mulogarit13.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
@@ -267,7 +267,7 @@ new TikzItem2
 {
     Id = 14,
     Title = "Đồ thị y = 2^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số mũ y = 2^x với đường nét đứt qua (1,2).",
     ImagePath = "Mu_logarit/mulogarit14.png",
     Code = @"\begin{tikzpicture}[line width=0.6pt,>=stealth,scale=1]
@@ -286,7 +286,7 @@ new TikzItem2
 {
     Id = 15,
     Title = "Đồ thị y = 0.5^(x+1) và y = m-1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ y = 0.5^(x+1) với đường thẳng y = m-1.",
     ImagePath = "Mu_logarit/mulogarit15.png",
     Code = @"\begin{tikzpicture}[>=stealth]
@@ -310,7 +310,7 @@ new TikzItem2
 {
     Id = 16,
     Title = "Đồ thị y = a^x và y = b (a > 1)",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ với a > 1 cắt đường y = b tại x = log_a b.",
     ImagePath = "Mu_logarit/mulogarit16.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -330,7 +330,7 @@ new TikzItem2
 {
     Id = 17,
     Title = "Đồ thị y = a^x và y = b (0 < a < 1)",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ với 0 < a < 1 cắt đường y = b tại x = log_a b.",
     ImagePath = "Mu_logarit/mulogarit17.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -350,7 +350,7 @@ new TikzItem2
 {
     Id = 18,
     Title = "Đồ thị y = log_a x và y = b (a > 1)",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị logarit với a > 1 cắt đường y = b tại x = a^b.",
     ImagePath = "Mu_logarit/mulogarit18.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -369,7 +369,7 @@ new TikzItem2
 {
     Id = 19,
     Title = "Đồ thị y = log_a x và y = b (0 < a < 1)",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị logarit với 0 < a < 1 cắt đường y = b tại x = a^b.",
     ImagePath = "Mu_logarit/mulogarit19.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -388,7 +388,7 @@ new TikzItem2
 {
     Id = 20,
     Title = "Đồ thị y = log₂ x và y = b",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị logarit cơ số 2 với đường y = b < 0, giao điểm tại x = 0.5.",
     ImagePath = "Mu_logarit/mulogarit20.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -407,7 +407,7 @@ new TikzItem2
 {
     Id = 21,
     Title = "Đồ thị y = a^x với hai đường y = b",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ với a > 1 và hai đường thẳng y = b khác nhau.",
     ImagePath = "Mu_logarit/mulogarit21.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -429,7 +429,7 @@ new TikzItem2
 {
     Id = 22,
     Title = "Đồ thị y = log_a x, y = log_b x và y = log_c x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị logarit với cơ số khác nhau: 0 < c < 1 < b < a.",
     ImagePath = "Mu_logarit/mulogarit22.png",
     Code = @"\begin{tikzpicture}[thick,>=stealth,x=1cm,y=0.9cm,scale=.8] 
@@ -459,7 +459,7 @@ new TikzItem2
 {
     Id = 23,
     Title = "Đồ thị y = a^x, y = b^x và y = c^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị hàm mũ: a > 1 > b > c > 0.",
     ImagePath = "Mu_logarit/mulogarit23.png",
     Code = @"\begin{tikzpicture}[>=stealth, scale=0.6]
@@ -479,7 +479,7 @@ new TikzItem2
 {
     Id = 24,
     Title = "So sánh a, b, c từ đồ thị logarit",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 cơ số a, b, c từ giao điểm của đồ thị logarit với y = 1: c < b < 1 < a.",
     ImagePath = "Mu_logarit/mulogarit24.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -503,7 +503,7 @@ new TikzItem2
 {
     Id = 25,
     Title = "Đồ thị y = 2^x và y = log₂ x đối xứng qua y = x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Hai đồ thị hàm mũ và logarit cùng cơ số đối xứng qua đường thẳng y = x.",
     ImagePath = "Mu_logarit/mulogarit25.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -524,7 +524,7 @@ new TikzItem2
 {
     Id = 26,
     Title = "Đồ thị y = 2^x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm số mũ cơ số 2 qua (0,1) và (1,2).",
     ImagePath = "Mu_logarit/mulogarit26.png",
     Code = @"\begin{tikzpicture}[scale=0.7,>=stealth]
@@ -557,7 +557,7 @@ new TikzItem2
 {
     Id = 27,
     Title = "Đồ thị y = a^x và y = log_b x",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ với a > 1 và hàm logarit với 0 < b < 1.",
     ImagePath = "Mu_logarit/mulogarit27.png",
     Code = @"\begin{tikzpicture}[scale=0.7,>=stealth,x=1cm,y=1cm]
@@ -575,7 +575,7 @@ new TikzItem2
 {
     Id = 28,
     Title = "Đồ thị y = log_a x với 0 < a < 1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị logarit nghịch biến, qua (1,0) và (1/a, -1).",
     ImagePath = "Mu_logarit/mulogarit28.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -594,7 +594,7 @@ new TikzItem2
 {
     Id = 29,
     Title = "Đồ thị y = log_a x với a > 1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị logarit đồng biến, qua (1,0) và (a,1).",
     ImagePath = "Mu_logarit/mulogarit29.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -613,7 +613,7 @@ new TikzItem2
 {
     Id = 30,
     Title = "So sánh a, b, c từ đồ thị hàm mũ",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 cơ số từ giao điểm với x = 1: c < 1 < b < a.",
     ImagePath = "Mu_logarit/mulogarit30.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -636,7 +636,7 @@ new TikzItem2
 {
     Id = 31,
     Title = "Đồ thị y = 0.5^x với 0 < a < 1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ nghịch biến, qua (0,1) và (-1, 1/a).",
     ImagePath = "Mu_logarit/mulogarit31.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -655,7 +655,7 @@ new TikzItem2
 {
     Id = 32,
     Title = "Đồ thị y = x^α với các α khác nhau",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh các hàm lũy thừa: α = 0, α = 1, α > 1, 0 < α < 1, và α < 0.",
     ImagePath = "Mu_logarit/mulogarit32.png",
     Code = @"\begin{tikzpicture}[thick,>=stealth,scale=0.7] 
@@ -676,7 +676,7 @@ new TikzItem2
 {
     Id = 33,
     Title = "Đồ thị y = x³, y = x² và y = x^(1/2)",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị lũy thừa: (1) y = x³, (2) y = x², (3) y = x^(1/2).",
     ImagePath = "Mu_logarit/mulogarit33.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
@@ -700,7 +700,7 @@ new TikzItem2
 {
     Id = 34,
     Title = "Đồ thị y = x^a, y = x^b và y = x^c",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "So sánh 3 đồ thị lũy thừa: a < 0 < c < 1 < b.",
     ImagePath = "Mu_logarit/mulogarit34.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
@@ -724,7 +724,7 @@ new TikzItem2
 {
     Id = 35,
     Title = "Đồ thị y = 2^x với a > 1",
-    Category = "Mũ logarit",
+    Category = "Đồ thị mũ logarit",
     Description = "Đồ thị hàm mũ đồng biến, qua (0,1) và (1,a).",
     ImagePath = "Mu_logarit/mulogarit35.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
