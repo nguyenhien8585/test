@@ -2,9 +2,9 @@ new TikzItem2
 {
     Id = 1,
     Title = "Đồ thị hàm số có 2 tiệm cận ngang",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=2x/√(x²+1) có hai tiệm cận ngang y=2 và y=-2.",
-    ImagePath = "Tiem_can/Tiemcan1.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan1.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.5,>=stealth]
  \draw[->] (-4,0)--(4,0) node[below]{$x$};
  \draw[->] (0,-3)--(0,3) node[right]{$y$};
@@ -23,9 +23,9 @@ new TikzItem2
 {
     Id = 2,
     Title = "Đồ thị hàm số mũ có tiệm cận ngang",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=2⁻ˣ+1 có tiệm cận ngang y=1, đi qua điểm (0, 2).",
-    ImagePath = "Tiem_can/Tiemcan2.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan2.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.5,>=stealth]
  \draw[->] (-2,0)--(4,0) node[below]{$x$};
  \draw[->] (0,-1.5)--(0,3.5) node[right]{$y$};
@@ -42,9 +42,9 @@ new TikzItem2
 {
     Id = 3,
     Title = "Đồ thị hàm hữu tỉ có 2 tiệm cận đứng",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=x/(x²-1) có hai tiệm cận đứng x=-1 và x=1, đi qua gốc tọa độ.",
-    ImagePath = "Tiem_can/Tiemcan3.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan3.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth]
   \draw[->] (-3,0)--(3,0) node[below]{$x$};
   \draw[->] (0,-2.5)--(0,2.5) node[right]{$y$};
@@ -68,9 +68,9 @@ new TikzItem2
 {
     Id = 4,
     Title = "Tiệm cận xiên khi x→+∞",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số có tiệm cận xiên y=ax+b khi x→+∞, thỏa mãn lim[f(x)-(ax+b)]=0.",
-    ImagePath = "Tiem_can/Tiemcan4.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan4.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-3.5} \def\xmax{3}
 \def\ymin{-0.5} \def\ymax{3}
@@ -95,9 +95,9 @@ new TikzItem2
 {
     Id = 5,
     Title = "Đồ thị có tiệm cận đứng và tiệm cận xiên",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=x-1+2/(x+1) có tiệm cận đứng x=-1 và tiệm cận xiên y=x-1.",
-    ImagePath = "Tiem_can/Tiemcan5.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan5.png",
     Code = @"\begin{tikzpicture}[scale=.4, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \draw[->] (-6,0)--(0,0) node[below left]{$O$}--(6,0) node[below]{$x$};
 \draw[->] (0,-8) --(0,6) node[right]{$y$};
@@ -117,9 +117,9 @@ new TikzItem2
 {
     Id = 6,
     Title = "Đồ thị có 2 tiệm cận đứng và 1 tiệm cận ngang",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=2x²/(x²-1) có hai tiệm cận đứng x=-1, x=1 và tiệm cận ngang y=2.",
-    ImagePath = "Tiem_can/Tiemcan6.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan6.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-6} \def\xmax{6}
 \def\ymin{-5} \def\ymax{7}
@@ -152,9 +152,9 @@ new TikzItem2
 {
     Id = 7,
     Title = "Đồ thị hàm hữu tỉ có 1 tiệm cận đứng",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=(x+1)/(x²-1) có tiệm cận đứng x=1, khử được nghiệm x=-1.",
-    ImagePath = "Tiem_can/Tiemcan7.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan7.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth]
   \draw[->] (-2,0)--(3,0) node[below]{$x$};
   \draw[->] (0,-2.5)--(0,2.5) node[right]{$y$};
@@ -174,9 +174,9 @@ new TikzItem2
 {
     Id = 8,
     Title = "Tiệm cận xiên khi x→-∞",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số có tiệm cận xiên y=ax+b khi x→-∞, thỏa mãn lim[f(x)-(ax+b)]=0.",
-    ImagePath = "Tiem_can/Tiemcan8.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan8.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-4} \def\xmax{2.5}
 \def\ymin{-0.5} \def\ymax{3}
@@ -201,9 +201,9 @@ new TikzItem2
 {
     Id = 9,
     Title = "Giới hạn âm vô cực bên phải x=a",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số minh họa lim(x→a⁺) f(x)=-∞, đường thẳng x=a là tiệm cận đứng bên phải.",
-    ImagePath = "Tiem_can/Tiemcan9.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan9.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình d
 \def\xmin{-2.2} \def\xmax{3.5}
@@ -228,9 +228,9 @@ new TikzItem2
 {
     Id = 10,
     Title = "Giới hạn âm vô cực bên trái x=a",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số minh họa lim(x→a⁻) f(x)=-∞, đường thẳng x=a là tiệm cận đứng bên trái.",
-    ImagePath = "Tiem_can/Tiemcan10.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan10.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình c
 \def\xmin{-2.2} \def\xmax{3.5}
@@ -255,9 +255,9 @@ new TikzItem2
 {
     Id = 11,
     Title = "Giới hạn dương vô cực bên phải x=a",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số minh họa lim(x→a⁺) f(x)=+∞, đường thẳng x=a là tiệm cận đứng bên phải.",
-    ImagePath = "Tiem_can/Tiemcan11.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan11.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình b
 \def\xmin{-1.2} \def\xmax{4}
@@ -281,9 +281,9 @@ new TikzItem2
 {
     Id = 12,
     Title = "Đồ thị nồng độ thuốc có tiệm cận ngang",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số y=5-15t/(9t²+1) theo thời gian t, có tiệm cận ngang y=5, ứng dụng thực tế nồng độ thuốc.",
-    ImagePath = "Tiem_can/Tiemcan12.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan12.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=0.3cm,scale=1.5,font=\footnotesize]
 \draw[->] (-0.5,0) -- (4,0) node[below] {$t$};
 \draw[->] (0,-1) -- (0,6) node[left] {$y$};
@@ -299,9 +299,9 @@ new TikzItem2
 {
     Id = 13,
     Title = "Tiệm cận ngang khi x→-∞",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số có tiệm cận ngang y=m khi x→-∞, minh họa lim(x→-∞) f(x)=m.",
-    ImagePath = "Tiem_can/Tiemcan13.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan13.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-4} \def\xmax{2}
 \def\ymin{-0.5} \def\ymax{3}
@@ -327,9 +327,9 @@ new TikzItem2
 {
     Id = 14,
     Title = "Tiệm cận ngang khi x→+∞",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số có tiệm cận ngang y=m khi x→+∞, minh họa lim(x→+∞) f(x)=m.",
-    ImagePath = "Tiem_can/Tiemcan14.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan14.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-1.5} \def\xmax{4}
 \def\ymin{-0.5} \def\ymax{3}
@@ -354,9 +354,9 @@ new TikzItem2
 {
     Id = 15,
     Title = "Giới hạn dương vô cực bên trái x=a",
-    Category = "Tiệm cận",
+    Category = "Đồ thị Tiệm cận",
     Description = "Đồ thị hàm số minh họa lim(x→a⁻) f(x)=+∞, đường thẳng x=a là tiệm cận đứng bên trái.",
-    ImagePath = "Tiem_can/Tiemcan15.png",
+    ImagePath = "Do_thi_tiem_can/Tiemcan15.png",
     Code = @"\begin{tikzpicture}[scale=.7,>=stealth, font=\footnotesize, line join=round, line cap=round]
 %Hình a
 \def\xmin{-2.2} \def\xmax{3.5}
