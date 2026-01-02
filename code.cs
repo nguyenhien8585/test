@@ -4,7 +4,7 @@ new TikzItem2
     Title = "Trọng tâm G và tam giác trung điểm",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, tam giác trung điểm A'B'C' và các đường trung tuyến AA', BB', CC'.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac1.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_1.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/B,5/0/C,2/4/A}
@@ -30,7 +30,7 @@ new TikzItem2
     Title = "Trọng tâm G và tam giác trung điểm (bản thu nhỏ)",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, tam giác trung điểm A'B'C' và các đường trung tuyến, tỷ lệ 0.7.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac2.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_2.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.7, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/B,5/0/C,2/4/A}
@@ -56,7 +56,7 @@ new TikzItem2
     Title = "Tam giác vuông và tam giác đều ACD",
     Category = "Hình tam giác",
     Description = "Tam giác ABC vuông tại B và tam giác đều ACD dựng trên cạnh AC, có các cung tròn minh họa phép quay.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac3.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_3.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \pgfmathsetmacro\x{4*sqrt(3)/3}
 \tkzDefPoints{0/0/B,4/0/C,0/\x/A}
@@ -81,7 +81,7 @@ new TikzItem2
     Title = "Các tam giác đều dựng trên cạnh AC",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với tam giác đều BEC và BFC dựng bên ngoài, M và N là trung điểm AF và EC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac4.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_4.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
 \tkzDefPoints{-2/0/A,0/0/B,4/0/C}
@@ -107,7 +107,7 @@ new TikzItem2
     Title = "Trọng tâm G, tâm ngoại tiếp O, trực tâm H",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, tâm ngoại tiếp O, trực tâm H, tam giác trung điểm A'B'C' và các đường đặc biệt.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac5.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_5.png",
     Code = @"\begin{tikzpicture}
 \tkzInit[xmin=-1,xmax=6,ymin=-1,ymax=4]
 \tkzClip
@@ -142,7 +142,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm G và trung tuyến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, các trung điểm M, N, P và tam giác trung điểm MNP.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac6.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_6.png",
     Code = @"\begin{tikzpicture}[scale=0.6,line join=round, font=\scriptsize,line cap=round,>=stealth]
 \tkzDefPoints{2/4/A, 0/0/B, 6/0/C}
 \tkzDefMidPoint(A,B) \tkzGetPoint{P}
@@ -165,7 +165,7 @@ new TikzItem2
     Title = "Tam giác vuông và tam giác đều (không cung tròn)",
     Category = "Hình tam giác",
     Description = "Tam giác ABC vuông tại B và tam giác đều ACD dựng trên cạnh AC, K là trung điểm AC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac7.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_7.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \pgfmathsetmacro\x{4*sqrt(3)/3}
 \tkzDefPoints{0/0/B,4/0/C,0/\x/A}
@@ -190,7 +190,7 @@ new TikzItem2
     Title = "Các tam giác đều và đường thẳng MN",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với tam giác đều BEC và BFC, M và N là trung điểm AF và EC, đường thẳng MN.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac8.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_8.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
 \tkzDefPoints{-2/0/A,0/0/B,4/0/C}
@@ -216,7 +216,7 @@ new TikzItem2
     Title = "Tam giác với đường cao và trung tuyến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với đường cao AH, trung tuyến AM, M là trung điểm BC, H là chân đường cao, góc BAC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac9.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_9.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,1/3/A,5/0/C,2.5/0/M, 1/0/H}
 \tkzDrawSegments(A,B B,C A,C A,M A,H)
@@ -234,7 +234,7 @@ new TikzItem2
     Title = "Tam giác đều với trọng tâm G",
     Category = "Hình tam giác",
     Description = "Tam giác đều ABC với trọng tâm G, đường cao AM vuông góc với BC tại M, M là trung điểm BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac10.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_10.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,4/0/C,2/0/M}
 \tkzDefEquilateral(B,C)\tkzGetPoint{A}
@@ -255,7 +255,7 @@ new TikzItem2
     Title = "Tam giác vuông tại A với đường cao và trung tuyến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC vuông tại A, có đường cao AH và trung tuyến AM, M là trung điểm BC, H là chân đường cao.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac11.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_11.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,1/2/A,5/0/C,2.5/0/M, 1/0/H}
 \tkzDrawSegments(A,B B,C A,C A,M A,H)
@@ -273,7 +273,7 @@ new TikzItem2
     Title = "Tam giác và tam giác trung điểm với đánh dấu",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với tam giác trung điểm MNP, đánh dấu các cặp cạnh bằng nhau: AP=PB, BM=MC, AN=NC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac12.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_12.png",
     Code = @"\begin{tikzpicture}%hình 1
 \clip (-0.5,-0.5) rectangle (3.5,2);
 \tkzDefPoints{0/0/A, 3/0/B, 2/1.5/C}
@@ -300,7 +300,7 @@ new TikzItem2
     Title = "Đường tròn tâm I và dây cung AB",
     Category = "Hình tam giác",
     Description = "Đường tròn tâm I bán kính 2cm, dây cung AB song song với tiếp tuyến d, IH vuông góc với AB tại H.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac13.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_13.png",
     Code = @"\begin{tikzpicture}
 \tkzInit[xmin=-2.1,ymin=-2,xmax=2.2,ymax=2]
 \tkzClip
@@ -326,7 +326,7 @@ new TikzItem2
     Title = "Đường tròn tâm I và dây cung vuông góc",
     Category = "Hình tam giác",
     Description = "Đường tròn tâm I bán kính 2cm, dây cung AB vuông góc với bán kính IH tại điểm H trong đường tròn.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac14.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_14.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzDefPoint(0,0){I}
 \def\r{2}
@@ -350,7 +350,7 @@ new TikzItem2
     Title = "Tam giác và đường phân giác trong",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với điểm D trên cạnh AC, đường BD và AI, I là giao điểm của BD và AC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac15.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_15.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=1.0cm,y=1.0cm]
 \draw (0.0,-0.0)-- (1.0,3.0)-- (4.0,0.0)-- (0.0,-0.0)-- (2.321,1.678);
 \draw (1.0,3.0)-- (1.606,0.0);
@@ -370,7 +370,7 @@ new TikzItem2
     Title = "Tam giác với đường trung bình",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M, P là trung điểm AB và AC, đường trung bình MP song song BC, các đường thẳng d₁, d₂.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac16.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_16.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -404,7 +404,7 @@ new TikzItem2
     Title = "Tam giác với đường vuông góc từ N",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M, P, N là trung điểm, NF vuông góc với MP tại I, CN vuông góc với BC tại N.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac17.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_17.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -432,7 +432,7 @@ new TikzItem2
     Title = "Tam giác với hai đường cao vuông góc",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với đường cao từ A cắt đường thẳng d₂ từ C tại M, đường cao từ A cắt đường thẳng d₁ từ B tại N.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac18.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_18.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -466,7 +466,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm G và trung tuyến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, M là trung điểm BC, C' và B' là trung điểm AB và AC, CC' và BB' cắt nhau tại G.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac19.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_19.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -493,7 +493,7 @@ new TikzItem2
     Title = "Tam giác ABC với ba trung điểm",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với ba trung điểm a, b, c của các cạnh BC, AC và AB.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac20.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_20.png",
     Code = @"\begin{tikzpicture}[scale=0.7,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/B,1/2/A,4/0/C}
 \tkzDrawPoints[fill=black](A,B,C)
@@ -514,7 +514,7 @@ new TikzItem2
     Title = "Tam giác với đường cao và trung tuyến (d₁, d₂)",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm AB, đường cao BH vuông góc AC, trung tuyến CM, hai đường thẳng d₁ và d₂.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac21.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_21.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -541,7 +541,7 @@ new TikzItem2
     Title = "Tam giác với hai đường cao d₁ và d₂",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với hai đường cao: CH vuông góc AB (d₂) và BK vuông góc AC (d₁), H và K là chân đường cao.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac22.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_22.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -570,7 +570,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm G và trung tuyến (lặp lại)",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, M là trung điểm BC, trung tuyến CC' và BB' cắt nhau tại G.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac23.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_23.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-1,-1) rectangle (7,6);
 %%%%%%%%%%%%%%%
@@ -597,7 +597,7 @@ new TikzItem2
     Title = "Tam giác với ba đường cao",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với ba đường cao: AK vuông góc BC, CE vuông góc AB, BF vuông góc AC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac24.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_24.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,3/0/C,1/2/A}
 \tkzDefPointBy[projection=onto C--B](A)\tkzGetPoint{K}
@@ -619,7 +619,7 @@ new TikzItem2
     Title = "Tam giác với ba đường cao và trực tâm H",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với ba đường cao cắt nhau tại trực tâm H: AK, CE, BF vuông góc với các cạnh tương ứng.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac25.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_25.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,3/0/C,1/2/A}
 \tkzDefPointBy[projection=onto C--B](A)\tkzGetPoint{K}
@@ -643,7 +643,7 @@ new TikzItem2
     Title = "Tam giác với ba trung tuyến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với ba trung tuyến: AM (M là trung điểm BC), CN (N là trung điểm AB), BP (P là trung điểm AC).",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac26.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_26.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,4/0/C,1/2/A}
 \coordinate (M) at ($(C)!0.5!(B)$);
@@ -664,7 +664,7 @@ new TikzItem2
     Title = "Tam giác với tam giác trung điểm MNP",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với tam giác trung điểm MNP, trong đó M, N, P là trung điểm của BC, AC, AB.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac27.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_27.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \tkzInit[xmin=-3,xmax=3,ymin=-3,ymax=1]
 \tkzDefPoints{0/0/A, -2/-3/B,2/-3/C}
@@ -689,7 +689,7 @@ new TikzItem2
     Title = "Tam giác với trung tuyến AM",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trung tuyến AM (M là trung điểm BC) và N là trung điểm AB.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac28.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_28.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \coordinate (A) at (0,0);
 \coordinate (B) at (-1.5,-2);
@@ -712,7 +712,7 @@ new TikzItem2
     Title = "Tam giác với đường trung bình MN",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M, N là trung điểm AB và AC, K là trung điểm MN, đường trung tuyến AK.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac29.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_29.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/B, 1/4/A,5/0/C}
 \tkzDefMidPoint(A,B) \tkzGetPoint{M}
@@ -733,7 +733,7 @@ new TikzItem2
     Title = "Tam giác đều với đường cao AH",
     Category = "Hình tam giác",
     Description = "Tam giác đều ABC với đường cao AH, H là trung điểm BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac30.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_30.png",
     Code = @"\begin{tikzpicture}[scale=1,>=stealth, line join=round, line cap=round]
 \tkzDefPoints{0/0/C,4/0/B}
 \tkzDefEquilateral(C,B)\tkzGetPoint{A}
@@ -753,7 +753,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm G và đường cao",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, đường cao AH vuông góc BC, trung tuyến AF (F là trung điểm BC), GI vuông góc BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac31.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_31.png",
     Code = @"\begin{tikzpicture}[scale=0.9, line join=round, line cap=round]
 \tkzDefPoints{1.2/3.5/A,0/0/B,5/0/C}
 \tkzCentroid(A,C,B)\tkzGetPoint{G}
@@ -782,7 +782,7 @@ new TikzItem2
     Title = "Tam giác đều với trung tuyến AM",
     Category = "Hình tam giác",
     Description = "Tam giác đều ABC với trung tuyến AM, M là trung điểm BC, vector AM màu xanh.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac32.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_32.png",
     Code = @"\begin{tikzpicture}[>=stealth,line cap=round,line join=round,scale=.6,font=\footnotesize]
 \tkzDefPoints{-2/-3/B,4/-3/C}
 \tkzDefPointBy[rotation = center B angle 60](C) \tkzGetPoint{A}
@@ -804,7 +804,7 @@ new TikzItem2
     Title = "Tam giác với đường trung bình MN",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M, N là trung điểm AB và AC, đường trung bình MN song song với BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac33.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_33.png",
     Code = @"\begin{tikzpicture}[scale=1,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \tkzDefPoints{2/3/A,0/0/B,5/0/C}
 \tkzDefMidPoint(A,B)\tkzGetPoint{M}
@@ -824,7 +824,7 @@ new TikzItem2
     Title = "Tam giác đều với trọng tâm G và vector AG",
     Category = "Hình tam giác",
     Description = "Tam giác đều ABC với trọng tâm G, I là trung điểm BC, đoạn GI, vector AG màu xanh.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac34.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_34.png",
     Code = @"\begin{tikzpicture}[>=stealth,line cap=round,line join=round,scale=.6,font=\footnotesize]
 \tkzDefPoints{-2/-3/B,4/-3/C}
 \tkzDefPointBy[rotation = center B angle 60](C) \tkzGetPoint{A}
@@ -847,7 +847,7 @@ new TikzItem2
     Title = "Tam giác với đường trung tuyến BD",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với D là trung điểm AC (AD=DC), đường trung tuyến BD, K là trọng tâm tam giác DBC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac35.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_35.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-2.5,-0.5) rectangle (5,4.5);
 \tkzDefPoints{-2/0/A,4/0/B,0/3/C}
@@ -869,7 +869,7 @@ new TikzItem2
     Title = "Tam giác với đường thẳng song song qua M",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M trên cạnh BC, đường thẳng qua M song song với AC cắt AB tại N.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac36.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_36.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.5, xmax=4, ymin=-0.5, ymax=4.5]
 \tkzClip
@@ -890,7 +890,7 @@ new TikzItem2
     Title = "Lục giác đều với tam giác trung điểm",
     Category = "Hình tam giác",
     Description = "Lục giác đều ABCDEF với tam giác trung điểm MNP, trong đó M, N, P là trung điểm của AB, CD, EF.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac37.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_37.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,fill=black, >=stealth]%[fill=black,scale=0.7]
 \coordinate (A) at (-1,3);
 \coordinate (B) at (1,3);
@@ -915,7 +915,7 @@ new TikzItem2
     Title = "Tam giác với đoạn nối hai trung điểm",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M, N là trung điểm AB và AC, đoạn thẳng MN nối hai trung điểm.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac38.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_38.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{1/2/A,0/0/B,3/0/C}
@@ -935,7 +935,7 @@ new TikzItem2
     Title = "Tam giác với đường trung tuyến BD (lặp lại)",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với D là trung điểm AC (AD=DC), đường trung tuyến BD, K là trọng tâm tam giác DBC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac39.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_39.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
 %\clip (-2.5,-0.5) rectangle (5,4.5);
 \tkzDefPoints{-2/0/A,4/0/B,0/3/C}
@@ -957,7 +957,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm G và điểm đối xứng I",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm BC, G là trọng tâm, I là điểm đối xứng của B qua G, đường BI và AM.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac40.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_40.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,fill=black, >=stealth]%[fill=black]
 \coordinate (A) at (0,0);
 \coordinate (B) at (2,3);
@@ -979,7 +979,7 @@ new TikzItem2
     Title = "Tam giác với tỷ số đồng dạng",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm AB, N trên AC sao cho AN/AC=1/3, K là trung điểm MN, D là trung điểm BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac41.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_41.png",
     Code = @"\begin{tikzpicture}[scale=0.8]
 \tkzDefPoints{3/5/A,1/0/B,7/0/C}
 \tkzDefMidPoint(B,A)\tkzGetPoint{M}
@@ -1001,7 +1001,7 @@ new TikzItem2
     Title = "Tam giác với phép vị tự",
     Category = "Hình tam giác",
     Description = "Tam giác SAB với C là điểm trên AB sao cho AC/AB=1/3, phép vị tự tâm A tỷ số 1/3.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac42.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_42.png",
     Code = @"\begin{tikzpicture}[scale=0.8]
 \tkzDefPoints{0/0/A,5/0/B,3/4/S}
 \tkzDefPointBy[homothety = center A ratio 0.33](B)\tkzGetPoint{C}
@@ -1018,7 +1018,7 @@ new TikzItem2
     Title = "Tam giác với phép tịnh tiến",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm AB, D, E, F là các điểm liên quan đến phép tịnh tiến và tỷ số trên cạnh.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac43.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_43.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{0/0/B,5/0/C,2/4/A}
 \coordinate (M) at ($(A)!0.5!(B)$);
@@ -1042,7 +1042,7 @@ new TikzItem2
     Title = "Tam giác với phép vị tự tỷ số 4 và 3",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm BC, D và E là các điểm thỏa BD=4BA và AE=3AC, đường AM.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac44.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_44.png",
     Code = @"\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \coordinate (A) at (0,0);
 \coordinate (B) at (-.5,-1);
@@ -1062,7 +1062,7 @@ new TikzItem2
     Title = "Hai tam giác đối xứng tâm",
     Category = "Hình tam giác",
     Description = "Tam giác ABC và A'B'C' đối xứng qua các tâm A, B, C tương ứng, tạo thành hai tam giác liên kết.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac45.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_45.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.5, xmax=4.5, ymin=-0.5, ymax=3.5]
 \tkzClip
@@ -1085,7 +1085,7 @@ new TikzItem2
     Title = "Tam giác với điểm I và trọng tâm G",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm BC, N là trung điểm AC, I trên AC sao cho AI/AC=3/4, G là trọng tâm.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac46.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_46.png",
     Code = @"\begin{tikzpicture}
 \coordinate[label=left:$B$] (B) at (0,0);
 \coordinate[label=right:$C$] (C) at (4,0);
@@ -1106,7 +1106,7 @@ new TikzItem2
     Title = "Tam giác với nhiều đường nét đứt",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, M là trung điểm BC, N là trung điểm AC, các đường nét đứt AJ, AI, AM, BN.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac47.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_47.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/J,2/0/B,7/0/C,3/5/A,4/0/I}
@@ -1129,7 +1129,7 @@ new TikzItem2
     Title = "Tam giác và hình ảnh phóng to",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với hình ảnh phóng to DEF (tỷ số 2), M và N là trung điểm, G là trọng tâm, I và K liên quan đến phép vị tự.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac48.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_48.png",
     Code = @"\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
 \coordinate (B) at (0,0);
@@ -1158,7 +1158,7 @@ new TikzItem2
     Title = "Tam giác với trọng tâm và phép vị tự",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, M là trung điểm BC, E và F là điểm liên quan phép vị tự tâm G tỷ số 3.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac49.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_49.png",
     Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
 \coordinate (B) at (0,0);
@@ -1183,7 +1183,7 @@ new TikzItem2
     Title = "Tam giác với các trung điểm và trọng tâm",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, M là trung điểm BC, N là trung điểm AC, E và F trên BC, P là trung điểm AF.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac50.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_50.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tkzDefPoints{0/0/B, 6/0/C, 1.5/0/E, 4.5/0/F, 4/3/A}
 \tkzDefMidPoint(B,C)\tkzGetPoint{M}
@@ -1205,7 +1205,7 @@ new TikzItem2
     Title = "Tam giác ABC với ba trung điểm M, N, K",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với M là trung điểm AB, N là trung điểm AC, K là trung điểm BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac51.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_51.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,4/0/C}
 \coordinate (M) at ($(A)!0.5!(B)$);
@@ -1226,7 +1226,7 @@ new TikzItem2
     Title = "Tam giác với tam giác trung điểm MNK",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với tam giác trung điểm MNK, trong đó M, N, K là trung điểm của AB, AC, BC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac52.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_52.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,4/0/C}
 \coordinate (M) at ($(A)!0.5!(B)$);
@@ -1247,7 +1247,7 @@ new TikzItem2
     Title = "Tam giác với điểm đối xứng B' qua G",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với trọng tâm G, I là trung điểm BC, B' là điểm đối xứng của B qua G, đường AI và BB'.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac53.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_53.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,4/0/C, 1/2/A}
 \coordinate (I) at ($(C)!0.5!(B)$);
@@ -1267,7 +1267,7 @@ new TikzItem2
     Title = "Tam giác ABC đơn giản",
     Category = "Hình tam giác",
     Description = "Tam giác ABC đơn giản với ba đỉnh A, B, C.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac54.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_54.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
 \tkzDefPoints{0/0/B,5/0/C,2/2/A}
 \tkzDrawSegments(A,B B,C C,A)
@@ -1283,7 +1283,7 @@ new TikzItem2
     Title = "Tam giác với ba trung tuyến và trọng tâm G",
     Category = "Hình tam giác",
     Description = "Tam giác ABC với ba trung tuyến AI, CK, BM cắt nhau tại trọng tâm G, trong đó I, K, M là trung điểm của BC, AB, AC.",
-    ImagePath = "Hinh_tam_giac/hinhtamgiac55.png",
+    ImagePath = "Hinh_tam_giac/hinhtamgiac_55.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
 \tkzDefPoints{0/0/B,4/0/C,1/2/A}
