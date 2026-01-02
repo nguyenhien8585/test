@@ -2,9 +2,9 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị kết hợp hàm bậc ba và hàm phân thức",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị gồm hàm bậc ba y=-x³+3x trên [-√2, √2] và hàm phân thức y=2/x ở hai nhánh ngoài, có điểm cực trị tại (±1, ±2).",
     ImagePath = "Phuc_tap/phuctap1.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1cm,y=1cm,scale=.7] 
 \draw[->] (-5,0) -- (5,0) node[below] {\small $x$};
@@ -29,9 +29,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm Gauss với hình chữ nhật nội tiếp",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm phân phối chuẩn y=e^(-2x²) với hình chữ nhật ABCD nội tiếp, minh họa bài toán tối ưu diện tích.",
     ImagePath = "Phuc_tap/phuctap2.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=1.3,>=stealth]
 \draw[->] (-1.8,0)--(1.8,0) node[below]{\footnotesize $x$};
@@ -46,9 +46,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số đi qua 4 điểm đặc biệt",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số trơn đi qua các điểm (-1,-4), (0,-4), (1,-3), (2,-2), minh họa hàm số có nhiều điểm uốn.",
     ImagePath = "Phuc_tap/phuctap3.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \def \xmin{-3}
@@ -87,9 +87,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số dạng chữ W đối xứng",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đối xứng qua trục y, có hai điểm cực tiểu (-2,-4) và (2,-4), đi qua gốc tọa độ.",
     ImagePath = "Phuc_tap/phuctap4.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \draw[->] (-3,0)--(3,0)node[below left]{$x$};
@@ -106,9 +106,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 4 điểm đặc biệt liên tiếp",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua các điểm (-1,1), (0,0), (1,-1), (2,-2) với dạng dao động phức tạp.",
     ImagePath = "Phuc_tap/phuctap5.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.8, line join=round, line cap=round]
 \draw[->] (-2,0)--(4,0) node [below]{$x$};
@@ -128,9 +128,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số với nhiều điểm cực trị",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số có 3 điểm cực trị tại x=-1, x=1.5, x=5.5 với giá trị cực đại y=10 và y=13.",
     ImagePath = "Phuc_tap/phuctap6.png",
     Code = @"\begin{tikzpicture}[>=latex,smooth,line cap=round, line join=round, font=\scriptsize,scale=0.33]
 \draw[->] (-6,0) -- (11,0)node[below]{$x$};
@@ -144,9 +144,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hai đồ thị hàm số y=f(x) và y=h(x)",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm hữu tỉ y=x/(x+1) có tiệm cận đứng x=-1, tiệm cận ngang y=1 và đồ thị y=h(x) có điểm cực tiểu tại x=-3 và x=1.",
     ImagePath = "Phuc_tap/phuctap7.png",
     Code = @"\begin{tikzpicture}[scale=.71,font=\footnotesize,line join=round, line cap=round,>=stealth]
 \draw[->] (-7,0)--(7,0) node[below] {$x$};
@@ -177,9 +177,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 4 điểm đặc biệt",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=f(x) đi qua các điểm (-2,1), (-1,3), (1,0), (3,5) với dạng dao động liên tục.",
     ImagePath = "Phuc_tap/phuctap8.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
 \draw[->] (-4,0)--(7,0) node[below]{$x$};
@@ -195,9 +195,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hai đồ thị đối xứng y=f(x) và y=-f(x)",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số y=f(x) và y=-f(x) đối xứng qua trục hoành, với đường thẳng y=√(m²-1) cắt cả hai đồ thị.",
     ImagePath = "Phuc_tap/phuctap9.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,y=0.7cm,>=stealth,font=\footnotesize]
 \draw[->] (-4,0)--(7,0) node[below]{$x$};
@@ -216,9 +216,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có đường thẳng ngang cắt",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số với đường thẳng ngang y=-0.9 cắt đồ thị tại hai điểm x≈1 và x≈2.",
     ImagePath = "Phuc_tap/phuctap10.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=.8]
 \path (2.8,0.2)coordinate[label=center:$x$](x) (0.2,1.8)coordinate[label=center:$y$](y) (-.4,-.7)coordinate[label=center:$-1$](-1)
@@ -236,9 +236,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 3 điểm cực trị",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua các điểm cực trị tại x=-4, x=-2, x=3 với biên độ dao động lớn.",
     ImagePath = "Phuc_tap/phuctap11.png",
     Code = @"\begin{tikzpicture}[scale=.61, font=\footnotesize,x=0.8cm,line join=round, line cap=round,>=stealth]
 \draw[->] (-7,0)--(7,0) node[below] {$x$};
@@ -269,9 +269,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị giá trị tuyệt đối hàm bậc ba",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=|ax³+bx²+cx+d| với đường thẳng y=4/3, minh họa phương trình chứa giá trị tuyệt đối.",
     ImagePath = "Phuc_tap/phuctap12.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \def\a{0.2} \def\b{-0.8} \def\c{-0.8} \def\d{3.2} % Hệ số
@@ -291,9 +291,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm đạo hàm y=f'(x)",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đạo hàm y=f'(x) dạng dao động, cắt trục hoành tại nhiều điểm, dùng để xét tính đơn điệu của f(x).",
     ImagePath = "Phuc_tap/phuctap13.png",
     Code = @"\begin{tikzpicture}[>=stealth, font=\footnotesize, scale=0.8]
 \draw[->] (-4,0)--(3,0) node[below] {$x$};
@@ -310,9 +310,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị y=f'(t) và y=1/√t",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hai đồ thị hàm đạo hàm y=f'(t) và hàm y=1/√t trên cùng hệ trục, minh họa bài toán so sánh hàm số.",
     ImagePath = "Phuc_tap/phuctap14.png",
     Code = @"\begin{tikzpicture}[>=stealth, font=\footnotesize, scale=0.8]
 \draw[->] (-4,0)--(3,0) node[below] {$t$};
@@ -330,9 +330,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số với 6 điểm đặc biệt",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=f(x) đi qua các điểm (-11/4, 3/4), (-2,2), (-1,3/4), (3/4,4), (3,3), (15/4,4) với nhiều điểm cực trị.",
     ImagePath = "Phuc_tap/phuctap15.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\scriptsize]
 \draw[->] (-4,0)--(4.5,0) node[below]{$x$};
@@ -354,9 +354,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số liên tục từng khúc tại x=1",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đa thức từng khúc có nghiệm x=-2, x=1 (kép), x=3 (kép), liên tục tại x=1.",
     ImagePath = "Phuc_tap/phuctap16.png",
     Code = @"\begin{tikzpicture}[thick,>=stealth,scale=0.8]
 \draw[->] (-3,0)--(4,0) node[below] {$x$};
@@ -375,9 +375,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn có điểm uốn",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số y=-x⁴+2.2x³-1.6x+1 có điểm uốn tại (x₀, y₀) ≈ (0.45, 0.44).",
     ImagePath = "Phuc_tap/phuctap17.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=1.1,>=stealth,font=\footnotesize]
 \draw[->] (-1.5,0)--(2.5,0) node[below]{$x$};
@@ -394,9 +394,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số dao động có tiệm cận đứng",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số có tiệm cận đứng x=-3, đi qua điểm (2,2), dao động mạnh với nhiều điểm uốn.",
     ImagePath = "Phuc_tap/phuctap18.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,x=0.4cm,y=0.4cm,font=\footnotesize, line join=round, line cap=round, >=stealth]font=\footnotesize, line join=round, line cap=round, >=stealth
 \draw[->] (-5,0)--(6.4,0) node[below]{$x$};
@@ -413,9 +413,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị đạo hàm y=f'(x) từng khúc",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đạo hàm y=f'(x) gồm parabol và parabol ngược, có nghiệm x=0, x=2, x=4.",
     ImagePath = "Phuc_tap/phuctap19.png",
     Code = @"\begin{tikzpicture}[scale=0.9, >=stealth]
 \draw[->] (-0.6,0.) -- (5.3,0.);
@@ -432,9 +432,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số trên lưới tọa độ",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số gồm nhiều parabol nối tiếp, đi qua các điểm (-2,-2), (2,2), (4,4) trên lưới tọa độ.",
     ImagePath = "Phuc_tap/phuctap20.png",
     Code = @"\begin{tikzpicture}[thick,>=stealth,scale=.4]
 \clip(-3.5,-2.5) rectangle (6.5,7.8);
@@ -462,9 +462,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số và đường thẳng y=x",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số trên lưới với đường thẳng y=x cắt đồ thị, minh họa bài toán tìm giao điểm.",
     ImagePath = "Phuc_tap/phuctap21.png",
     Code = @"\begin{tikzpicture}[thick,>=stealth,scale=.4]
 \clip(-3.5,-2.5) rectangle (6.5,8.5);
@@ -493,9 +493,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm đạo hàm f'(x) trên đoạn [-2, 4]",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đạo hàm f'(x) có 3 điểm cực trị, dùng để xét tính biến thiên của hàm f(x).",
     ImagePath = "Phuc_tap/phuctap22.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=1.0cm,y=1.0cm,scale=0.7]
 % \draw[color=gray,dash pattern =on 1pt off 1pt, xstep=1.0cm,ystep=1.0cm](-2.5,-2.5) grid (4.5,4.5);
@@ -514,9 +514,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 3 điểm cực trị nổi bật",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua điểm (2, 4), có 2 điểm cực tiểu và 1 điểm cực đại, dạng dao động mạnh.",
     ImagePath = "Phuc_tap/phuctap23.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, y=0.7cm,line join=round, line cap=round, >=stealth]
 \draw[->] (-3,0)--(5,0) node[below]{$x$};
@@ -543,9 +543,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 24,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 4 nghiệm",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số cắt trục hoành tại 4 điểm x=1, x=2, x=5, x=6, dạng sóng liên tục.",
     ImagePath = "Phuc_tap/phuctap24.png",
     Code = @"\begin{tikzpicture}[scale=0.7,line cap=round,line join=round,>=stealth,x=1cm,
 y=1cm]
@@ -578,9 +578,9 @@ node[above left] {\normalsize $\y$};
 new TikzItem2
 {
     Id = 25,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số với đường thẳng xiên",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua các điểm (-4,5), (-3,3), (-1,2), (3,-2) với đường thẳng xiên cắt đồ thị.",
     ImagePath = "Phuc_tap/phuctap25.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=0.7]
 \def\xt{-5} \def\xp{6} \def\yd{-3} \def\yt{6}
@@ -627,9 +627,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số trên miền bị chặn",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số bị chặn trong hình chữ nhật, đi qua các điểm (-4,5), (-3,3), (-1,2), (3,-2).",
     ImagePath = "Phuc_tap/phuctap26.png",
     Code = @"\begin{tikzpicture}[>=stealth, line join=round, line cap=round, font=\footnotesize, scale=0.6]
 \def\xt{-5} \def\xp{6} \def\yd{-3} \def\yt{6}
@@ -672,9 +672,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số qua 3 nghiệm x=-1, x=1, x=4",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số trơn cắt trục hoành tại x=-1, x=1, có điểm ngoài đồ thị tại (4, 2.12).",
     ImagePath = "Phuc_tap/phuctap27.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.8]
 \draw[->] (-2,0)--(5,0) node[below]{$x$};
@@ -692,9 +692,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số dao động nhiều lần",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số có nhiều điểm cực trị, đi qua điểm (-1,1) và có 6 điểm uốn, dạng dao động phức tạp.",
     ImagePath = "Phuc_tap/phuctap28.png",
     Code = @"\begin{tikzpicture}[scale=.7,font=\footnotesize,>=stealth,x=2cm,y=2cm]
 %\draw[gray!20] (-2,-1) grid (1.5,1.5);
@@ -726,9 +726,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số với đường thẳng y=-x",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua các điểm (-1,1), (0,0), (1,-1), (2,-2) trên đường thẳng y=-x với dao động xung quanh.",
     ImagePath = "Phuc_tap/phuctap29.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.8, line join=round, line cap=round]
 \draw[->] (-2,0)--(4,0) node [below]{$x$};
@@ -749,9 +749,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị Parabol và đường thẳng nối tiếp",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị gồm parabol y=-x²+2 và đoạn thẳng nối từ (2,-2) đến (3,3), liên tục tại x=2.",
     ImagePath = "Phuc_tap/phuctap30.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm,>=stealth,scale=0.65, font = \footnotesize]
 \draw[-> ] (-1.5,0) -- (3.5,0)node[below] {$x$};
@@ -776,9 +776,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị đạo hàm y=f'(x) hàm bậc năm",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị đạo hàm y=x(x+2)(x-2)(x-5)(x-6)/30 có 5 nghiệm, dùng để lập bảng biến thiên của f(x).",
     ImagePath = "Phuc_tap/phuctap31.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth,
 declare function={
@@ -799,9 +799,9 @@ f(\x)= (\x)*(\x + 2)*(\x - 2)*(\x - 5)*(\x - 6)/30;
 new TikzItem2
 {
     Id = 32,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn có nghiệm kép",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=(x+1)(x-1)²(x-2)+1, có nghiệm kép tại x=1, đi qua các điểm (-1,1), (1,1), (2,1).",
     ImagePath = "Phuc_tap/phuctap32.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round,>=stealth,scale=.9]
 \draw[->](-2,0)--(3,0)node[above]{$x$};
@@ -819,9 +819,9 @@ plot(\x,{(\x+1)*(\x-1)^2*(\x-2)+1});
 new TikzItem2
 {
     Id = 33,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc năm dạng S kép",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đa thức bậc 5 có 2 điểm uốn, đi qua các điểm đặc biệt x=-1, x=2, có dạng S kép.",
     ImagePath = "Phuc_tap/phuctap33.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap =round, >=stealth,x=0.5cm,y=0.5cm]
 \draw[->] (-3,0)--(0,0)%
@@ -838,9 +838,9 @@ plot[domain=-2.3:3, samples=100] (\x, {0.03*(\x)^5+0.14*(\x)^4-0.45*(\x)^3-1.06*
 new TikzItem2
 {
     Id = 34,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn có 1 cực trị",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đa thức bậc 4 có 1 điểm cực tiểu, đi qua điểm (x=2, y≈1).",
     ImagePath = "Phuc_tap/phuctap34.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap =round, >=stealth,x=0.5cm,y=0.5cm]
 \draw[->] (-2,0)--(0,0)%
@@ -857,9 +857,9 @@ plot[domain=-1.5:3.5, samples=100] (\x, {0.06*(\x)^4-0.07*(\x)^3-0.41*(\x)^2-0.2
 new TikzItem2
 {
     Id = 35,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc năm có 2 cực trị",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đa thức bậc 5 có 2 điểm cực trị, đi qua gốc tọa độ, đi qua các điểm x=-1, x=2.",
     ImagePath = "Phuc_tap/phuctap35.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap =round, >=stealth,x=0.5cm,y=0.5cm]
 \draw[->] (-2,0)--(0,0)%
@@ -876,9 +876,9 @@ plot[domain=-1.5:2.8, samples=100] (\x, {0.13*(\x)^5-0.11*(\x)^4-1.1*(\x)^3+0.72
 new TikzItem2
 {
     Id = 36,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị nhiệt độ theo thời gian trong ngày",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị nhiệt độ t(°C) theo thời gian x(giờ) trong 24 giờ, dao động từ 20°C đến 34°C, ứng dụng thực tế.",
     ImagePath = "Phuc_tap/phuctap36.png",
     Code = @"\begin{tikzpicture}[>=stealth,x=0.25cm,y=0.15cm]
 \draw[->] (-2,0)--(0,0) node[below left]{$O$}--(28,0) node[below right]{$x$ (giờ)};
@@ -912,9 +912,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 37,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn đi qua 2 điểm biên",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm bậc 4 đi qua các điểm (-2, 2.5) và (6, 1.5), có 1 điểm cực trị trong khoảng.",
     ImagePath = "Phuc_tap/phuctap37.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round,>=stealth,scale=.8]
 \def\xmin{-3}\def\xmax{6.5}\def\ymin{-1}\def\ymax{3.5}
@@ -932,9 +932,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 38,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có điểm uốn nằm ngang",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số có điểm uốn nằm ngang tại x=2, tiếp cận giá trị y≈1.3 khi x→5.",
     ImagePath = "Phuc_tap/phuctap38.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \draw[->](-1,0)--(5.5,0) node[right] {$x$};
@@ -954,9 +954,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 39,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn có 2 cực trị",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đa thức bậc 4 có 1 điểm cực tiểu và 1 điểm cực đại, đi qua các điểm x=-1, x=2.",
     ImagePath = "Phuc_tap/phuctap39.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap =round, >=stealth,x=0.5cm,y=0.5cm]
 \draw[->] (-2,0)--(0,0)%
@@ -973,9 +973,9 @@ plot[domain=-1.55:2.5, samples=100] (\x, {0.01*(\x)^4-0.15*(\x)^3+0.59*(\x)^2+0.
 new TikzItem2
 {
     Id = 40,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị đạo hàm y=f'(x) hai nhánh parabol",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm đạo hàm y=f'(x) gồm hai nhánh parabol, có nghiệm x=0, x=2, x=4.",
     ImagePath = "Phuc_tap/phuctap40.png",
     Code = @"\begin{tikzpicture}[scale=0.79, >=stealth]
 \draw[->] (-0.6,0.) -- (5.3,0.);
@@ -992,9 +992,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 41,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm số có 5 điểm đặc biệt",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm số đi qua các điểm (-1,-2), (0,1), (2,-2), (3,1), (4,3), (5,1) với nhiều điểm cực trị.",
     ImagePath = "Phuc_tap/phuctap41.png",
     Code = @"\begin{tikzpicture}[scale=0.65, font=\footnotesize, line join=round, line cap=round, >=stealth]
 %%Nhập giới hạn đồ thị và hàm số cần vẽ
@@ -1037,9 +1037,9 @@ to[in=105, out=-75] (6,-2.7);
 new TikzItem2
 {
     Id = 42,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị Parabol với giá trị lớn nhất và nhỏ nhất",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=0.5(x²-4x+1) trên [a,b], có y_max=f(a)=3 tại x=-1, y_min=f(x₀)=-1.5 tại x=2.",
     ImagePath = "Phuc_tap/phuctap42.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth]
 \draw[->] (-1.5,0)--(4.8,0) node[below]{$x$};
@@ -1057,9 +1057,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 43,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị minh họa nghiệm bội chẵn và bội lẻ",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị y=f'(x) có nghiệm bội lẻ tại x₁, x₃ (đổi dấu) và nghiệm bội chẵn tại x₂, x₄ (không đổi dấu).",
     ImagePath = "Phuc_tap/phuctap43.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[->] (-3.5,0)--(6,0) node[below]{$x$};
@@ -1078,9 +1078,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 44,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hai đồ thị y=f(x) và y=g(x) trên lưới",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị parabol y=f(x) và đồ thị gấp khúc y=g(x) trên lưới tọa độ, minh họa bài toán so sánh hàm số.",
     ImagePath = "Phuc_tap/phuctap44.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.7]
 \draw[->] (-1.2,0)--(0,0) node[below left]{$O$}--(7.5,0) node[below]{$x$};
@@ -1097,9 +1097,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 45,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc bốn y=x⁴-2x²-1",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm bậc 4 trên lưới, có 2 điểm cực tiểu và 1 điểm cực đại, đối xứng qua trục y.",
     ImagePath = "Phuc_tap/phuctap45.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1]
 \draw[->] (-3,0)--(0,0)%
@@ -1114,9 +1114,9 @@ plot (\x, {(\x)^4 -2*(\x)^2-1});
 new TikzItem2
 {
     Id = 46,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị hàm bậc ba y=x³-3x",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị hàm bậc 3 trên lưới, có 1 điểm cực đại và 1 điểm cực tiểu, dạng chữ S.",
     ImagePath = "Phuc_tap/phuctap46.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1]
 \draw[->] (-3,0)--(0,0)%
@@ -1131,9 +1131,9 @@ plot (\x, {(\x)^3 -3*(\x)});
 new TikzItem2
 {
     Id = 47,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Đồ thị Parabol y=40+18x-x² với giá trị max",
     Category = "Phức tạp",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Đồ thị parabol ngược y=40+18x-x², đạt giá trị lớn nhất y=121 tại x=9, ứng dụng bài toán tối ưu.",
     ImagePath = "Phuc_tap/phuctap47.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.1cm,y=0.1cm, scale=0.4]
 \draw[->,color=black] (0,0.) -- (30,0.);
