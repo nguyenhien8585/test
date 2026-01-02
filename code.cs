@@ -2,9 +2,9 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn tâm I với tiếp tuyến d",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I, tiếp tuyến d, IH vuông góc với d tại H.",
     ImagePath = "Hinh_tron/hinhtron_1.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.9]
 \tkzDefPoints{0/0/I}
@@ -18,9 +18,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Hình minh họa Toán học",
+    Title = "Elip với hai tiêu điểm",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Elip tâm O trên hệ trục Oxy, hai tiêu điểm F₁ và F₂, điểm M trên elip, đoạn MF₁ và MF₂ nét đứt.",
     ImagePath = "Hinh_tron/hinhtron_2.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[->] (-2.5,0)--(3,0) node[below]{$x$};
@@ -41,9 +41,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường tròn trong hình vuông",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình vuông ABCD 16×16, hai đường tròn tâm I và J bán kính 8 tô màu xám, IK và JK nét đứt.",
     ImagePath = "Hinh_tron/hinhtron_3.png",
     Code = @"\begin{tikzpicture}[scale=.17]
 \tkzDefPoint(0,0){A}
@@ -73,9 +73,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn ngoại tiếp tam giác với trực tâm",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I ngoại tiếp tam giác ABC, D đối xứng với B qua I, trực tâm H, đường cao AA' và CC'.",
     ImagePath = "Hinh_tron/hinhtron_4.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-2.5+0.1,-2.5+0.1) rectangle (2.5+0.5,2.5+0.1);
@@ -103,9 +103,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Hình minh họa Toán học",
+    Title = "Nửa đường tròn với hình thang tô màu",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Nửa đường tròn đường kính AB tâm O, điểm C và D trên cung, hình thang ABCD tô xanh cyan.",
     ImagePath = "Hinh_tron/hinhtron_6.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=1] 
 \def\R{2}
@@ -125,9 +125,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung và đường thẳng d",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I, dây cung AB, M là trung điểm AB, IM vuông góc AB, đường thẳng d: x+y-m=0.",
     ImagePath = "Hinh_tron/hinhtron_7.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/I}
@@ -148,9 +148,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung và góc vuông",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, dây cung AB cắt đường thẳng Δ, IH vuông góc AB tại H, góc AIB và góc IHA vuông góc.",
     ImagePath = "Hinh_tron/hinhtron_8.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/I,0/-1/C,1/-1/D}
@@ -174,9 +174,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn ngoại tiếp tam giác vuông",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Nửa đường tròn tâm I đường kính AB, tam giác vuông ABC với góc vuông tại A, đường cao AH, AE vuông góc AB, CH=HD.",
     ImagePath = "Hinh_tron/hinhtron_9.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \clip (-1.8,-2.5) rectangle (9,5);
@@ -203,9 +203,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Hình minh họa Toán học",
+    Title = "Elip với hai tiêu điểm (tỷ lệ 0.9)",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Elip tâm O trên hệ trục Oxy, hai tiêu điểm F₁ và F₂, điểm M, đoạn MF₁ và MF₂ nét đứt, tỷ lệ 0.9.",
     ImagePath = "Hinh_tron/hinhtron_10.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.9,>=stealth,font=\footnotesize]
 \draw[->] (-3,0)--(3.2,0) node[below]{$x$};
@@ -226,9 +226,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Hình minh họa Toán học",
+    Title = "Elip và hình chữ nhật ABCD",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Elip trên hệ trục Oxy, hình chữ nhật ABCD nội tiếp elip với A, B, C, D trên elip.",
     ImagePath = "Hinh_tron/hinhtron_11.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \def\xmin{-5} \def\xmax{5}
@@ -250,9 +250,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung và trung điểm",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, dây cung EF, H là trung điểm EF, IH vuông góc EF.",
     ImagePath = "Hinh_tron/hinhtron_12.png",
     Code = @"\begin{tikzpicture}[scale=0.5]
 \clip (-4,-4) rectangle (5,5);
@@ -273,9 +273,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với hai đường thẳng vuông góc",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính 3, hai đường thẳng Δ₁ và Δ₂, dây cung EF, IH vuông góc EF, góc FIE=90°, EH=3√2/2.",
     ImagePath = "Hinh_tron/hinhtron_13.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,scale=1] 
 \tkzDefPoints{1/2/I,-3/1/A,2/6/D}
@@ -301,9 +301,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn trên hệ trục tọa độ với tam giác vuông",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I(1;0) bán kính √10 trên hệ trục Oxy, tam giác AMN vuông tại A, dây cung MN, góc NAM=90°, IH vuông góc MN.",
     ImagePath = "Hinh_tron/hinhtron_14.png",
     Code = @"\begin{tikzpicture}[line width=1.0pt,line join=round,>=stealth,scale=1]
 \draw[->] (-3,0) -- (5,0) node[below] {\footnotesize $x$};
@@ -334,9 +334,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung và khoảng cách",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính 5, dây cung EF cắt đường thẳng Δ, H là trung điểm EF, IH vuông góc EF, IE=5, HE=2√5.",
     ImagePath = "Hinh_tron/hinhtron_15.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,scale=0.5] 
 \tkzDefPoints{3/2/I,-6/0/A,-2/2/D}
@@ -360,9 +360,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với tiếp tuyến Δ",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, tiếp tuyến Δ, IH vuông góc Δ tại H, IH=R.",
     ImagePath = "Hinh_tron/hinhtron_16.png",
     Code = @"\begin{tikzpicture}[scale=0.8,line cap=round,line join=round] 
 \tikzset{label style/.style={font=\scriptsize}}
@@ -383,9 +383,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với ba đường thẳng",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm K với ba đường thẳng d, d₁, d₂, hai góc vuông tại giao điểm với đường tròn.",
     ImagePath = "Hinh_tron/hinhtron_17.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=1.0cm,y=1.0cm,scale=.85]
 \clip(1.32,-1.26) rectangle (6.54,3.66);
@@ -410,9 +410,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với tiếp tuyến vuông góc",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính IM₀, tiếp tuyến Δ vuông góc với IM₀ tại M₀, vector IM₀.",
     ImagePath = "Hinh_tron/hinhtron_18.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/I,-2/1/M_0}
@@ -432,9 +432,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung AB và Δ",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, dây cung AB cắt đường thẳng Δ, H là trung điểm AB, IH vuông góc AB, IA=R.",
     ImagePath = "Hinh_tron/hinhtron_19.png",
     Code = @"\begin{tikzpicture}[scale=0.8,line cap=round,line join=round] 
 \tikzset{label style/.style={font=\scriptsize}}
@@ -459,9 +459,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với tiếp tuyến Δ (lặp lại)",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, tiếp tuyến Δ, IH vuông góc Δ tại H, IH=R.",
     ImagePath = "Hinh_tron/hinhtron_20.png",
     Code = @"\begin{tikzpicture}[scale=0.8,line cap=round,line join=round]
 \tikzset{label style/.style={font=\scriptsize}} 
@@ -482,9 +482,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với đường trung trực",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I qua A và B, đường trung trực Δ của AB cắt AB tại M, IH vuông góc đường thẳng d.",
     ImagePath = "Hinh_tron/hinhtron_21.png",
     Code = @"\begin{tikzpicture}[scale=0.4]
 \tkzDefPoints{-1/1/A,3/3/B,3/-2/I,4/5/E,-4/-1/F}
@@ -503,9 +503,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với hai đường thẳng d₁ và d₂",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I, đường thẳng d₁ đi qua tâm I, đường thẳng d₂ cắt đường tròn tại A và B, góc vuông tại B.",
     ImagePath = "Hinh_tron/hinhtron_22.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=1.0cm,y=1.0cm,scale=.85]
 \clip(1.56,-0.84) rectangle (7.94,4.84);
@@ -528,9 +528,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với dây cung và trung điểm M",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I, dây cung AB cắt đường thẳng d, M là trung điểm AB, góc vuông AMB.",
     ImagePath = "Hinh_tron/hinhtron_23.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=1.0cm,y=1.0cm]
 \clip(1.24,-1.) rectangle (7.7,4.92);
@@ -556,9 +556,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 25,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với tiếp tuyến Δ (lặp lại)",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính IM₀, tiếp tuyến Δ vuông góc với IM₀ tại M₀, vector IM₀.",
     ImagePath = "Hinh_tron/hinhtron_25.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/I,-2/1/M_0}
@@ -578,9 +578,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn tâm I bán kính R",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, đoạn IM=R.",
     ImagePath = "Hinh_tron/hinhtron_26.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -597,9 +597,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với bán kính và tiếp tuyến",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, bán kính IA=R, tiếp tuyến Δ vuông góc IA tại A.",
     ImagePath = "Hinh_tron/hinhtron_27.png",
     Code = @"\begin{tikzpicture}[scale=0.9]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -617,9 +617,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn với hai tiếp tuyến Δ₁ và Δ₂",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính 2, hai tiếp tuyến Δ₁ và Δ₂ tại M và N, các bán kính IA, IM, IN.",
     ImagePath = "Hinh_tron/hinhtron_28.png",
     Code = @"\begin{tikzpicture}[scale=0.8,font=\footnotesize]
 \def\r{2}
@@ -641,9 +641,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn tâm I bán kính R (tỷ lệ 0.8)",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bán kính R, đoạn IM=R, tỷ lệ 0.8.",
     ImagePath = "Hinh_tron/hinhtron_29.png",
     Code = @"\begin{tikzpicture}[scale=0.8]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -660,9 +660,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn ngoại tiếp tam giác với đường cao",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm O ngoại tiếp tam giác ABC, trực tâm H, đường cao BD và CE, A' đối xứng A qua O, M là trung điểm BC, vector AH và OM.",
     ImagePath = "Hinh_tron/hinhtron_30.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.55, xmax=5.55, ymin=-1.7, ymax=5]
@@ -690,9 +690,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn ngoại tiếp tam giác vuông với đối xứng",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm O ngoại tiếp tam giác ABC, trực tâm H, B' đối xứng B qua O, đường cao AM và CN, góc vuông tại M, N, C, A.",
     ImagePath = "Hinh_tron/hinhtron_31.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -721,9 +721,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 32,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn nội tiếp hình vuông",
     Category = "Hình tròn",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm O bán kính 1cm nội tiếp hình vuông A₀A₁A₂A₃, các đường chéo A₀A₂ và A₁A₃.",
     ImagePath = "Hinh_tron/hinhtron_32.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1.6]
 \draw (0,0) node[below left] {$O$} circle (1cm);
