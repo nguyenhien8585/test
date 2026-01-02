@@ -2,9 +2,9 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng song song và mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với hai đường thẳng song song a và b cắt mặt phẳng α tạo góc α.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_1.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.6]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C, 2/1.5/I, 4/1.5/J, 2/4.5/K}
@@ -32,9 +32,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Hình minh họa Toán học",
+    Title = "Khoảng cách bằng nhau từ hai điểm đến mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Minh họa d(A,α)=d(B,α), hai điểm A và B có khoảng cách bằng nhau đến mặt phẳng α, với hình chiếu A' và B'.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_2.png",
     Code = @"\begin{tikzpicture}[line width=0.6,>=stealth, scale=1.35]
 \coordinate (a) at (0,0);
@@ -62,9 +62,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Hình minh họa Toán học",
+    Title = "Tỷ lệ khoảng cách từ hai điểm đến mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Minh họa công thức d(A,α)/d(B,α)=AI/BI, tỷ lệ khoảng cách từ A, B đến mặt phẳng α bằng tỷ lệ phân đoạn trên đường thẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_3.png",
     Code = @"\begin{tikzpicture}[line width=0.6,>=stealth, scale=1.35]
 \coordinate (A) at (0,0);
@@ -105,9 +105,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Hình minh họa Toán học",
+    Title = "Góc giữa đường thẳng và mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Góc α giữa mặt phẳng và đường thẳng a, điểm A trên a, B là hình chiếu vuông góc của A xuống đường thẳng b nằm trong mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_4.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/M,5/0/N,1.5/2.5/Q,6.5/2.5/P,2.5/-0.5/R,2.5/3.5/S,2.5/1.7/B,1.8/0.4/E,6/2.2/F}
@@ -129,9 +129,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Hình minh họa Toán học",
+    Title = "Góc giữa đường thẳng song song và mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng a song song với b, M và M' trên a, A và B là hình chiếu vuông góc, góc α giữa a và mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_5.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/O,5/0/N,1.5/2.5/Q,6.5/2.5/P,1.6/3.5/R,5.5/3.5/S,1.6/1.8/E,4.7/3.5/M,4.7/1.8/M',2/2.3/G,4.8/0.2/H}
@@ -156,9 +156,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng vuông góc trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng a và b vuông góc nhau tại điểm M, đường thẳng MN vuông góc với cả a và b.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_6.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/-1/A,0/1.5/B, 0/-2/C, 3/0/D,0/0/M, 1.5/-1/N}
@@ -175,9 +175,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp S.ABC với góc giữa mặt bên và đáy",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp tam giác S.ABC với góc α giữa mặt bên SBC và mặt đáy (góc β), M là chân đường cao từ S, K và H là các điểm chiếu.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_7.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,5/0/B, 6/2/C,1/2/D,2/2/E,2/1/M,2/4/S}
@@ -204,9 +204,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với đường cao và góc mặt bên",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp S.ABC với đỉnh S, M là chân đường cao, H là hình chiếu lên cạnh BC, góc α và β giữa các mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_8.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B, 6/2/C,2/2/D,3/1/M}
@@ -233,9 +233,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng với đường thẳng d và điểm M",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng tạo góc α và β, đường thẳng d nằm trong một mặt phẳng, điểm M với hình chiếu H lên d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_9.png",
     Code = @"\begin{tikzpicture}[line width=0.6pt,scale=1.2]
 \coordinate (A) at (0,0);
@@ -268,9 +268,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với khoảng cách từ điểm đến đường thẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng a, điểm O và H là hình chiếu vuông góc của O lên a.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_10.png",
     Code = @"\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-1,xmax=7,ymin=-1,ymax=3] 
@@ -295,9 +295,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với đường vuông góc không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, điểm O, H và M tạo thành đường gấp khúc vuông góc MHO.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_11.png",
     Code = @"\begin{tikzpicture}[scale=.7, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 5/0/B,2/2/D, 4.5/3/O, 4.5/1/H, 2.5/1/M,3.5/2/E, 4.5/2/F}
@@ -317,9 +317,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chiếu của hai điểm lên đường thẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành với góc α, điểm M và H được chiếu lên đường thẳng a thành các điểm A và B.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_12.png",
     Code = @"\begin{tikzpicture}[scale=.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-1,xmax=7,ymin=-1,ymax=5] 
@@ -343,9 +343,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Hình minh họa Toán học",
+    Title = "Lăng trụ với hai mặt phẳng song song",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lăng trụ ABCD.A'B'C'D' với hai mặt đáy tạo góc α và β, điểm M với hình chiếu H xuống mặt đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_13.png",
     Code = @"\begin{tikzpicture}[scale=1.5, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \coordinate(A) at (0,0); 
@@ -374,9 +374,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với hai đường thẳng trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp E.ABCD với F trên cạnh bên, hai đường thẳng a và b trong không gian tạo góc α và β, điểm H và M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_14.png",
     Code = @"\begin{tikzpicture}[scale=.6][>=stealth, line join=round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -393,9 +393,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Hình minh họa Toán học",
+    Title = "Góc giữa hai đường thẳng chéo nhau",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp E.ABCD với đường thẳng m và n chéo nhau, giao điểm I, góc α và β giữa các mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_15.png",
     Code = @"\begin{tikzpicture}[scale=.7][>=stealth, line join=round, line cap = round]
 \tkzDefPoints{0/0/A, 4/0/B, 5/2/C, 1/2/D, 3/4/E, 4/6/F, 3.5/2/G, 2/1/H, 3.73/1/K,4/3/M, 4.5/1/N}
@@ -412,9 +412,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp S.ABC với đường cao và hình chiếu",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp S.ABC với đỉnh S, H là chân đường cao, I là hình chiếu vuông góc của S lên BC, góc α tại đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_16.png",
     Code = @"\begin{tikzpicture}[scale=.7][>=stealth, line join=round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -433,9 +433,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với nhiều đường thẳng trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp phức tạp với các đường thẳng a, b, c, d trong không gian, góc α và β, điểm I là giao điểm.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_17.png",
     Code = @"\begin{tikzpicture}[scale=.7][>=stealth, line join=round, line cap = round]
 \tkzDefPoints{0/0/A, 7/0/B, 8/2/C, 1/2/D, 2/0/H, 2/2/G, 4/2/M, 3/1/I, 2/4/N, 4/6/Q, 3/4/T, 3/0.5/P, 7/1.5/X, 5/1.5/R, 6/0.5/V}
@@ -452,9 +452,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai hình bình hành với đường thẳng qua tâm",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai hình bình hành ABCD với góc α và β, đường thẳng m và n đi qua tâm I của mỗi hình.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_18.png",
     Code = @"\begin{tikzpicture}[scale=.7]
 \tkzDefPoints{-1.5/0/O',0/0/A, 3.5/0.5/B, 4.5/2/C,1.5/3/M}
@@ -488,9 +488,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với đường thẳng vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp ABCD.C' với đường thẳng vuông góc từ M xuống mặt đáy, các đoạn thẳng a và b.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_19.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -519,9 +519,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình hộp chữ nhật trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình hộp chữ nhật ABCD.A'B'C'D' với các đỉnh và cạnh được ký hiệu rõ ràng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_20.png",
     Code = @"\begin{tikzpicture}[scale=0.7,line join=round,line cap=round]
 \tkzDefPoints{0/0/A,1.2/-1.5/B,4/0/C}
@@ -544,9 +544,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với đường vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với lăng trụ trên đỉnh A'B', điểm I là trung điểm AB, đường thẳng a vuông góc với I, góc α và β.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_21.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -574,9 +574,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Hình minh họa Toán học",
+    Title = "Góc giữa hai đường thẳng d và d'",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành MNPQ với góc α, hai đường thẳng d và d', điểm A và H, góc φ giữa d và d'.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_22.png",
     Code = @"\begin{tikzpicture}[scale=0.7,scale=0.9]
 \tikzset{label style/.style={font=\scriptsize}}
@@ -609,9 +609,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chiếu của đoạn thẳng lên mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành MNPQ với đoạn thẳng b và hình chiếu b' lên mặt phẳng, A, B, A', B', góc α, đường thẳng a.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_23.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.6]
 \tkzInit[ymin=-4.1,ymax=1.6,xmin=-4.1,xmax=4.1]
@@ -644,9 +644,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 24,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng d song song với Δ",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng Δ và đường thẳng d song song với Δ, EF là đoạn thẳng vuông góc.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_24.png",
     Code = @"\begin{tikzpicture}[scale=0.9]
 \tkzDefPoints{0/0/A, 5/0/B, 6/2/C, 1/2/D, 2.5/1/E, 2.5/3/F, 2.5/0/G, 3/0.5/M, 4.5/1.5/N, 3/1.5/P, 4.5/0.5/Q}
@@ -662,9 +662,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 25,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng song song Δ và d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng Δ và d song song nhau, EF vuông góc với cả hai.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_25.png",
     Code = @"\begin{tikzpicture}[scale=0.9]
 \tkzDefPoints{0/0/A, 5/0/B, 6/2/C, 1/2/D, 2.5/1/E, 2.5/3/F, 2.5/0/G, 3/0.5/M, 4.5/1.5/N, 3/1.5/P, 4.5/0.5/Q, 4.5/3/R, 4.5/-0.2/S}
@@ -680,9 +680,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a và b vuông góc trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng a nằm trong mặt phẳng trên, đường thẳng b vuông góc với mặt đáy tại tâm O.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_26.png",
     Code = @"\begin{tikzpicture}[scale=0.9, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,5/0/B,6.5/2/C, 3/1/O}
@@ -703,9 +703,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chiếu đoạn thẳng b lên mặt phẳng (dạng nhỏ)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 23, hình bình hành MNPQ với đoạn b và hình chiếu b', A, B, A', B', góc α, đường a (kích thước nhỏ hơn).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_27.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.5]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -739,9 +739,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Hình minh họa Toán học",
+    Title = "Góc giữa hai đường thẳng với điểm A, H, O",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 22, hình bình hành MNPQ với góc α, hai đường thẳng d và d', các điểm A, H, O, góc φ (có thêm điểm cụ thể).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_28.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.6]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -775,9 +775,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng a và b trong không gian",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng Δ, hai đường thẳng a và b trong không gian, EF vuông góc.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_29.png",
     Code = @"\begin{tikzpicture}[scale=0.9]
 \tkzDefPoints{0/0/A, 5/0/B, 6/2/C, 1/2/D, 2.5/1/E, 2.5/3/F, 2.5/0/G, 3/0.5/M, 4.5/1.5/N, 3/1.5/P, 4.5/0.5/Q}
@@ -794,9 +794,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Hình minh họa Toán học",
+    Title = "Lăng trụ với hai mặt đáy song song",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lăng trụ ABCD.A'B'C'D' với đường thẳng a vuông góc cạnh AB, góc α và β giữa hai mặt đáy, điểm O.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_30.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.9]
 \tkzInit[ymin=-3.6,ymax=1.6,xmin=-4.1,xmax=2.6]
@@ -824,9 +824,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng song song a và b cắt mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với hai đường thẳng song song a và b, góc α, các điểm I, J, K, P.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_31.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,scale=0.7]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C, 2/1.5/I, 4/1.5/J, 2/4/K}
@@ -854,9 +854,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 32,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với đường thẳng d và điểm O",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng d đi qua điểm O nằm trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_32.png",
     Code = @"\begin{tikzpicture}[scale=1.5,font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 1/1/B, 3/0/D, 2/2/m1}
@@ -883,9 +883,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 33,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chữ nhật EFGH với đoạn vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chữ nhật EFGH với các điểm A, B, I, M, đoạn thẳng MB vuông góc với I, trong không gian ba chiều.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_33.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize, line join=round, line cap=round,>=stealth,xscale=0.8,yscale=0.6]
 \tkzDefPoints{0/0/E, 3/1/F, 0/5/H, 2/4.5/M, 1/2/I, -2/2/A}%điểm A ngay góc alpha, G ngay góc beta
@@ -913,9 +913,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 34,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng vuông góc a, b và d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng d vuông góc với đường thẳng a tại O và vuông góc với đường thẳng b tại M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_34.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \tkzDefPoints{0/0/O,-3/0/a,1.5/0/A,-4/1.2/b,0/1.2/M,1/1.2/B,0/-1/D,0/3/d}
@@ -931,9 +931,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 35,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với đường thẳng d và a",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng d vuông góc mặt đáy, đường thẳng a nằm trong mặt đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_35.png",
     Code = @"\begin{tikzpicture}[scale=1.2,font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 1/1/B, 3/0/D, 2/2/m1}
@@ -959,9 +959,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 36,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với hai đường thẳng a, b và điểm O",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng d vuông góc, hai đường thẳng a và b cắt nhau tại O trong mặt đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_36.png",
     Code = @"\begin{tikzpicture}[scale=1.5,font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 1/1.5/B, 3/0/D, 2.5/2/m1}
@@ -999,9 +999,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 37,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với đường thẳng d và điểm O",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, đường thẳng d cắt mặt phẳng, điểm O nằm trong mặt đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_37.png",
     Code = @"\begin{tikzpicture}[scale=1.5,font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 1/1/B, 3/0/D, 2.5/2/m1}
@@ -1028,9 +1028,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 38,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng a và b vuông góc tại O",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai đường thẳng a và b vuông góc nhau tại điểm O (hình đơn giản).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_38.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \tkzDefPoints{0/0/O,-2/0/a,0.5/0/A,0/-0.5/B,0/2/b}
@@ -1044,9 +1044,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 39,
-    Title = "Hình minh họa Toán học",
+    Title = "Lăng trụ với hai đường thẳng song song a và b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lăng trụ ABCD.A'B'C'D' với hai đường thẳng song song a và b, các góc P, Q, R giữa các mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_39.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=.5]
 \clip (-2,-3) rectangle (10,8.5);
@@ -1099,9 +1099,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 40,
-    Title = "Hình minh họa Toán học",
+    Title = "Ba đường thẳng song song a, b, c",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành A'B'C'D' với góc α, ba đường thẳng song song a, b, c trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_40.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 1/1/A, 4/1/B, 0/2.5/M, 1/.5/P, 4/1.75/Q}
@@ -1123,9 +1123,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 41,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng song song a và b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành A'B'C'D' với góc α, hai đường thẳng song song a và b trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_41.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 1/1/A, 4/1/B, 0/2.5/M}
@@ -1146,9 +1146,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 42,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a cắt mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành A'B'C'D' với góc P, đường thẳng a cắt mặt phẳng tại điểm A, các giao điểm I và J.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_42.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 2/1/A, 0/2.5/B}
@@ -1170,9 +1170,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 43,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai hình bình hành song song với đường thẳng a",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai hình bình hành MNPQ với góc P và góc Q, đường thẳng a song song với cả hai mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_43.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize,yscale=0.8]
 \tkzDefPoints{0/0/m,1/1.5/n,4.5/1.5/p,3.5/0/q,0/-2/a,1/-0.5/b,4.5/-0.5/c,3.5/-2/d}
@@ -1189,9 +1189,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 44,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với hai đường thẳng song song a và b - Hình 1",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp ABCD.PQ với hai đường thẳng song song a và b, góc α và β giữa các mặt phẳng (Hình 1).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_44.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize,scale=0.9]
 \tkzDefPoints{0/0/a, 2/1.5/b, 6/1.5/c, 4/0/d, 0.5/3/z}
@@ -1219,9 +1219,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 45,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp với hai đường thẳng song song a và b - Hình 2",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp ABCD.PQ với hai đường thẳng song song a và b, góc α và β giữa các mặt phẳng (Hình 2).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_45.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize,scale=0.9]
 \tkzDefPoints{0/0/a, 0/3/b, 1.5/4/c, 1.5/1/d, 3/3/p, 3/0/q}
@@ -1239,9 +1239,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 46,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a song song với mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành A'B'C'D' biểu diễn mặt phẳng P, đường thẳng a song song với mặt phẳng P.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_46.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 0/2.5/M}
@@ -1262,9 +1262,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 47,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a nằm trong mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành A'B'C'D' biểu diễn mặt phẳng P, đường thẳng a nằm hoàn toàn trong mặt phẳng P.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_47.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 1/1/A, 4/1/B}
@@ -1283,9 +1283,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 48,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai hình bình hành với đường thẳng a chung",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai hình bình hành với góc P và Q, đường thẳng a song song hoặc nằm giữa hai mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_48.png",
     Code = @"\begin{tikzpicture}[font=\footnotesize,yscale=0.8]
 \tkzDefPoints{0/0/m,1/1.5/n,4.5/1.5/p,3.5/0/q,0/-2/a,1/-0.5/b,4.5/-0.5/c,3.5/-2/d}
@@ -1302,9 +1302,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 49,
-    Title = "Hình minh họa Toán học",
+    Title = "Ba hình bình hành song song",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Ba hình bình hành ABCD song song với nhau, tạo góc α và β giữa các mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_49.png",
     Code = @"\begin{tikzpicture}[scale=0.4]
 \tkzDefPoints{0/0/A, 9/0/B, 12/2.5/C}
@@ -1329,9 +1329,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 50,
-    Title = "Hình minh họa Toán học",
+    Title = "Mặt phẳng α và β với điểm A",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai hình bình hành biểu diễn mặt phẳng α và β, điểm A nằm trên mặt phẳng α.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_50.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.7]
 \begin{scope}[shift={(0,0)}]
@@ -1357,9 +1357,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 51,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng α, β với hai đường thẳng a, b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng α và β, hai đường thẳng a và b cắt cả hai mặt phẳng, các điểm A, A', B, B'.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_51.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.7]
 \tkzDefPoints{0/0/A,5/0/B,6.5/1.5/C}
@@ -1397,9 +1397,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 52,
-    Title = "Hình minh họa Toán học",
+    Title = "Ba mặt phẳng α, β, γ cắt nhau",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Ba mặt phẳng α, β, γ cắt nhau theo ba đường thẳng, với ba cặp điểm A-A', B-B', C-C'.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_52.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.7]
 \tkzDefPoints{0/0/A,5/0/B,6.5/1.5/C,3.5/2/d,4/2/d',1/-4.9/e,4.8/-4.9/e'}
@@ -1445,9 +1445,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 54,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng song song P và Q - Hình 2",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình 2: Hai mặt phẳng (P) và (Q) không có điểm chung, do đó (P)∥(Q).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_54.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.7]
 \begin{scope}[shift={(8,0)}]
@@ -1472,9 +1472,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 55,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P và Q cắt nhau - Hình 1",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình 1: Hai mặt phẳng (P) và (Q) có 1 điểm chung, giao tuyến (P)∩(Q)=a.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_55.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=0.7]
 \tkzDefPoints{0/0/A,5/0/B,6.5/1.5/C}
@@ -1501,9 +1501,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 56,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng a và d trên mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng P với hai đường thẳng a và d song song với nhau trên mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_56.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1525,9 +1525,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 57,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng a và d song song (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 56, mặt phẳng P với hai đường thẳng a và d song song.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_57.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 1/1/A, 4/1/B, 0/2.5/M}
@@ -1548,9 +1548,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 58,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng với giao tuyến nổi bật",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng tạo góc α và β, giao tuyến được đánh dấu màu xanh nổi bật, các điểm a và b.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_58.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1569,9 +1569,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 59,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình lập phương cắt bởi mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình lập phương ABCD với mặt phẳng cắt qua điểm E, góc α và β, các đường thẳng d và d'.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_59.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1590,9 +1590,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 60,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với các đường thẳng a, b, b', M",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD với góc α, các đường thẳng a, b, b' và điểm M, Q trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_60.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1607,9 +1607,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 61,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a với điểm A và B trên mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng P với đường thẳng a đi qua hai điểm A và B nằm trên mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_61.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 1/1/A, 4/1/B}
@@ -1628,9 +1628,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 62,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a cắt mặt phẳng P tại A",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng a cắt mặt phẳng P tại điểm A, với giao tuyến I và J trên mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_62.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 2/1/A, 0/2.5/B}
@@ -1652,9 +1652,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 63,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng a song song với mặt phẳng P (đơn giản)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng P với đường thẳng a song song, biểu diễn đơn giản.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_63.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A', 4/0/B', 1/2/D', 0/2.5/M}
@@ -1675,9 +1675,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 64,
-    Title = "Hình minh họa Toán học",
+    Title = "Ba vị trí tương đối của hai mặt phẳng",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Ba trường hợp: hai mặt phẳng song song, cắt nhau, hoặc trùng nhau, với các đường thẳng d, d', d'' và góc α, β.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_64.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm, font=\scriptsize]
 \begin{scope}[>=stealth,scale=0.5]
@@ -1731,9 +1731,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 65,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng song song a và b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành α với hai đường thẳng song song a và b trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_65.png",
     Code = @"\begin{tikzpicture}[scale=0.6,font=\scriptsize]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C}
@@ -1752,9 +1752,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 66,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng trùng nhau a và b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành α với hai đường thẳng a và b trùng nhau.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_66.png",
     Code = @"\begin{tikzpicture}[scale=0.6,font=\scriptsize]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C}
@@ -1772,9 +1772,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 67,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng cắt nhau a và b tại I",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành α với hai đường thẳng a và b cắt nhau tại điểm I.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_67.png",
     Code = @"\begin{tikzpicture}[scale=0.6,font=\scriptsize]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C}
@@ -1797,9 +1797,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 68,
-    Title = "Hình minh họa Toán học",
+    Title = "Ba mặt phẳng đôi một cắt nhau",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai trường hợp: ba mặt phẳng α, β, γ cắt nhau theo ba giao tuyến a, b, c đồng quy hoặc song song.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_68.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,x=1.0cm,y=1.0cm, font=\scriptsize]
 \begin{scope}[>=stealth,scale=0.5]
@@ -1851,9 +1851,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 69,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng a và b cắt nhau tại M",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành α với hai đường thẳng a và b cắt nhau tại điểm M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_69.png",
     Code = @"\begin{tikzpicture}[scale=0.6,font=\scriptsize]
 \tkzDefPoints{0/0/A, 5/0/B, 6/3/C}
@@ -1874,9 +1874,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 70,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng cắt nhau theo giao tuyến",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai hình thang với góc α và β, ba điểm A, B, C trên giao tuyến, hai đường thẳng a và b trong không gian.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_70.png",
     Code = @"\begin{tikzpicture}[scale=0.65, font=\footnotesize,line join=round, line cap=round,>=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1903,9 +1903,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 71,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P và Q với đường thẳng a, d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng P và Q với đường thẳng a, d song song với d, điểm M là trung điểm.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_71.png",
     Code = @"\begin{tikzpicture}[line cap=round, line join=round,font=\footnotesize,>=stealth, scale=0.9]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1936,9 +1936,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 72,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp lục giác S.A₁A₂A₃A₄A₅A₆",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp lục giác đều S.A₁A₂A₃A₄A₅A₆ với đỉnh S và đáy lục giác, mặt phẳng P cắt hình chóp.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_72.png",
     Code = @"\begin{tikzpicture}[scale=1.3, line join=round, line cap=round]
 \tkzDefPoints{0/0/A1,0.3/-1/A2,1/-1.6/A3,1.7/-1.5/A4,2.2/-1/A5,2.5/0.3/A6,1/2/S,-1.5/-2/P,-0.7/0.3/Q,3/-2/R}
@@ -1961,9 +1961,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 73,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang với các điểm vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang MNPQ với góc α, điểm A, các điểm H, K vuông góc, B và C trên đoạn EF.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_73.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/M,1/2/N,6/2/P,2/4/A,1.5/0.4/E,5.4/1.5/F,2/1.6/H}
@@ -1989,9 +1989,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 74,
-    Title = "Hình minh họa Toán học",
+    Title = "Mặt phẳng P với đường thẳng Δ, Δ', d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng (P) với ba đường thẳng (Δ), (Δ'), (d), điểm H, M, A, K, góc α, các quan hệ vuông góc.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_74.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){H}
@@ -2027,9 +2027,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 75,
-    Title = "Hình minh họa Toán học",
+    Title = "Ký hiệu mặt phẳng (P) hoặc mp(P)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành ABCD biểu diễn mặt phẳng P với ký hiệu (P) hoặc mp(P).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_75.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5.5/2/C,1.5/2/D}
@@ -2043,9 +2043,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 76,
-    Title = "Hình minh họa Toán học",
+    Title = "Ký hiệu mặt phẳng (α) hoặc mp(α)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Góc tạo bởi hai đoạn thẳng biểu diễn mặt phẳng α với ký hiệu (α) hoặc mp(α).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_76.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,1.5/2/D}
@@ -2059,9 +2059,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 77,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình tròn cắt bởi mặt phẳng tạo elip",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm I bị cắt bởi mặt phẳng P, tạo elip, với các điểm A, B, M, H, Y.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_77.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round, scale=0.6]
 \clip (-6.5,-5.75) rectangle (4.5,3.75);
@@ -2106,9 +2106,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 78,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang với các điểm vuông góc A, K, H",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang SBCD với mặt phẳng P, các điểm A, K, H thỏa mãn quan hệ vuông góc, đường thẳng EF.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_78.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -2132,9 +2132,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 79,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành với các quan hệ vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành với mặt phẳng P, các điểm K, H, E, M, N thỏa mãn quan hệ vuông góc KH⊥E và KE⊥M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_79.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \def\a{5}
@@ -2167,9 +2167,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 80,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành P với đường thẳng d và các điểm vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành P với đường thẳng d, các điểm I, K, H thỏa mãn IK⊥A và IH⊥K.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_80.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,font=\footnotesize,>=stealth,scale=0.75]
 \fill (0,0) coordinate (x)
@@ -2192,9 +2192,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 81,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác MNP vuông tại N với tọa độ",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác MNP vuông tại N với tọa độ M(2;3;-1), N(-1;1;1), P(1;m-1;2).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_81.png",
     Code = @"\begin{tikzpicture}[scale=0.9, font=\normalsize, line join=round, line cap=round, >=stealth]
 \path
@@ -2212,9 +2212,9 @@ pic [draw=red,fill=yellow!30,angle radius=4mm] {right angle = M--N--P};
 new TikzItem2
 {
     Id = 82,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác AOB với đường cao AH",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác AOB vuông tại H với tọa độ A(1;2;-1), O(0;0;0), B(0;-2;3), H là chân đường cao từ A.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_82.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \path
@@ -2234,9 +2234,9 @@ pic [draw=red,fill=yellow!30,angle radius=4mm] {right angle = A--H--B};;
 new TikzItem2
 {
     Id = 83,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang với điểm M, M', I",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang ABCD với điểm M(0;-1;0), I(0;-1;-1), M' là hình chiếu của M lên mặt đáy.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_83.png",
     Code = @"\begin{tikzpicture}[scale=0.9, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \path
@@ -2266,9 +2266,9 @@ pic [draw=red,fill=yellow!30,angle radius=4mm] {right angle = M'--M--I}
 new TikzItem2
 {
     Id = 84,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang với đường thẳng d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang với các điểm H, A, B và đường thẳng d, quan hệ vuông góc AH⊥B.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_84.png",
     Code = @"\begin{tikzpicture}
 \tkzInit[ymin=-0.5,ymax=7,xmin=-2,xmax=4.1]
@@ -2290,9 +2290,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 85,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang P với đoạn AM vuông góc MB",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang P với điểm A, M, B thỏa AM⊥MB.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_85.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -2316,9 +2316,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 86,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang P với AM⊥MB (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 85, hình thang P với điểm A, M, B thỏa AM⊥MB.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_86.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize,line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -2342,9 +2342,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 87,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ tọa độ Oyz với mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oyz với mặt phẳng P, các điểm A, A', A'', I, H, C, B, M, các quan hệ và giao tuyến.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_87.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \clip (-5,-2) rectangle (6,5);
@@ -2377,9 +2377,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 88,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ tọa độ Oxz với mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxz với mặt phẳng P, các điểm A, A', A'', I, H, C, B, M (tương tự item 87 nhưng với Oxz).",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_88.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \clip (-5,-2) rectangle (6,5);
@@ -2412,9 +2412,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 89,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình hộp với tam giác ABC vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình hộp với tam giác ABC, BH⊥C và AC⊥B, các điểm P, Q.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_89.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \tkzDefPoints{0/0/I, 5/0/Y, 2/2/U, 7/2/V, 0/3/z, 1.7/1/A', 4/3/B', 4/1/H', 6/1.5/C', 0.3/0.79/P}
@@ -2440,9 +2440,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 90,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình hộp với tam giác ABC (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 89, hình hộp với tam giác ABC, các quan hệ vuông góc.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_90.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \tkzDefPoints{0/0/I, 5/0/Y, 2/2/U, 7/2/V, 0/3/z, 1.7/1/A', 4/3/B', 4/1/H', 6/1.5/C', 0.3/0.79/P}
@@ -2468,9 +2468,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 91,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P và Q với điểm A, B, H",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng P và Q, điểm A, B, H thỏa AH⊥B, đường thẳng d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_91.png",
     Code = @"\begin{tikzpicture}[scale=1,x=1cm,y=1cm,line join = round, line cap = round]
 \tkzInit[xmin = -1, ymin=-3,xmax = 9,ymax=6]
@@ -2501,9 +2501,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 92,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P và Q với điểm O, A, H",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng P và Q, điểm O, A, H thỏa OH⊥A, đường thẳng d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_92.png",
     Code = @"\begin{tikzpicture}[scale=1,x=1cm,y=1cm,line join = round, line cap = round]
 \tkzInit[xmin = -1, ymin=-3,xmax = 9,ymax=6]
@@ -2534,9 +2534,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 93,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P, Q với đường thẳng Δ",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai mặt phẳng P và Q, đường thẳng Δ, các điểm A, B, H, K thỏa các quan hệ vuông góc.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_93.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,font=\footnotesize,scale=0.8]
 \coordinate (W1) at (0,0);
@@ -2571,9 +2571,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 94,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai mặt phẳng P, Q với đường Δ (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 93, hai mặt phẳng P và Q, đường Δ, các điểm A, B, H, K.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_94.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,font=\footnotesize,scale=0.8]
 \coordinate (W1) at (0,0);
@@ -2608,9 +2608,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 95,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng Δ, Δ' với khoảng cách a, b",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai đường thẳng Δ và Δ', điểm M, các điểm H, K, H₀, K₀, khoảng cách a và b.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_95.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \coordinate (A) at (0,0);\coordinate (B) at (6,0);\coordinate (C) at (-1,2);\coordinate (D) at (3,5);\coordinate (M) at (4.5,4);\coordinate (H) at ($(A)!1/2!(B)$);\coordinate (K) at ($(C)!3/4!(D)$);\coordinate (H0) at ($(A)!1/4!(B)$);\coordinate (K0) at ($(C)!1/4!(D)$);
@@ -2633,9 +2633,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 96,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng Δ, Δ' (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 95, hai đường thẳng Δ và Δ', điểm M, H, K, H₀, K₀.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_96.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \coordinate (A) at (0,0);\coordinate (B) at (6,0);\coordinate (C) at (-1,2);\coordinate (D) at (3,5);\coordinate (M) at (4.5,4);\coordinate (H) at ($(A)!1/2!(B)$);\coordinate (K) at ($(C)!3/4!(D)$);\coordinate (H0) at ($(A)!1/4!(B)$);\coordinate (K0) at ($(C)!1/4!(D)$);
@@ -2658,9 +2658,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 97,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ tọa độ Oxz với các điểm A, A', B, M, I",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxz, các điểm A, A', B, M (trung điểm), I, các giao tuyến với mặt phẳng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_97.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/H,1/2/N,7/2/P,6/0/Q,2/3/A,2/1/I,5/3/B}
@@ -2685,9 +2685,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 98,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ tọa độ Oxy với các điểm A, B, B', I, M",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxy, các điểm A, B, B', I, M trong không gian, phép tịnh tiến và đồng dạng.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_98.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/P1, 7/0/P2, 2/2/P3, 2.5/-0.6/B, 6.5/1.5/M, 2.5/1/I}
@@ -2711,9 +2711,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 99,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang Q với đường Δ và các điểm vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang Q với đường Δ, đường thẳng d, các điểm A, H, K thỏa AH⊥K và AK⊥d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_99.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=1]
 \tkzInit[ymin=0,ymax=4,xmin=0,xmax=4]\tkzClip
@@ -2738,9 +2738,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 100,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang Q với Δ, d (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 99, hình thang Q với đường Δ, d, các điểm A, H, K.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_100.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=1]
 \tkzInit[ymin=0,ymax=4,xmin=0,xmax=4]\tkzClip
@@ -2765,9 +2765,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 101,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ tọa độ Oxy với phép tịnh tiến từ M₀ đến M",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxy, các điểm E, F, M, M₀, phép tịnh tiến vector từ M₀ đến M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_101.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,7/2/C,6/0/D,4.5/3.5/E,3/1.4/M_0,4/0.6/M}
@@ -2791,9 +2791,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 102,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang P với đường thẳng d và các điểm vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang P, đường thẳng d, các điểm A, H, K thỏa AH⊥K và AK⊥C.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_102.png",
     Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/M,1/2/N,6/2/P,2/4/A,1.5/0.4/E,5.4/1.5/F,2/1.6/H}
@@ -2820,9 +2820,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 103,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành P với tam giác AHB vuông tại H",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành P, tam giác AHB vuông tại H.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_103.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,font=\footnotesize,>=stealth,scale=0.75]
 \fill (0,0) coordinate (x)
@@ -2842,9 +2842,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 104,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang P với các điểm A, B, C, H, K",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang P với các điểm A, B, C, H, K, các quan hệ vuông góc AH⊥K và AK⊥C.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_104.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/M,1/2/N,6/2/P,2/4/A,1.5/0.4/E,5.4/1.5/F,2/1.6/H}
@@ -2870,9 +2870,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 105,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành P với vector pháp tuyến n̄ₚ",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình bình hành P với vector pháp tuyến n̄ₚ, các điểm M, H, M', đối xứng qua H.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_105.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/1.5/C,2/1/H,2/3/M}
@@ -2893,9 +2893,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 106,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình bình hành P với vector pháp tuyến (phiên bản 2)",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự item 105, hình bình hành P với vector pháp tuyến n̄ₚ.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_106.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,5/0/B,2/0/H,2/1.5/M}
@@ -2912,9 +2912,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 107,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường tròn tâm O với đường thẳng d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường tròn tâm O bán kính OA và OB, đường thẳng d, điểm M trên d, H là hình chiếu O lên d, OH⊥d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_107.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round,font=\footnotesize,>=stealth,scale=1]
 \fill (0,0) coordinate [label=above left:$O$] (O) circle(1pt)
@@ -2931,9 +2931,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 108,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình thang P với các điểm A, H, K",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình thang P, các điểm A, H, K thỏa AH⊥K.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_108.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/M,1/2/N,6/2/P,2/4/A,1.5/0.4/E,5.4/1.5/F,2/1.6/H}
@@ -2956,9 +2956,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 109,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng d với Δ₁ và Δ₂",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng d, hai đường thẳng Δ₁ và Δ₂, các điểm M, A, B.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_109.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/X,5/0/d, 2/0/A, 4/0/B, 3/2/K,1/0/M,1/-1/E}
@@ -2974,9 +2974,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 110,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng d với Δ₁, Δ₂ và vector ū₂",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng d, Δ₁ và Δ₂, các điểm M, A, vector ū₂ của đường thẳng Δ₂.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_110.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/X,5/0/d, 3/0/A, 4/0.5/H, 4/2/K,1/0/M,1/-1/E}
@@ -2993,9 +2993,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 111,
-    Title = "Hình minh họa Toán học",
+    Title = "Đoạn vuông góc chung HK của d₁ và d₂",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai đường thẳng chéo nhau d₁ và d₂, HK là đoạn vuông góc chung, HK⊥d₁ và HK⊥d₂.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_111.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,5/-1/B,1/2/C,4/3.5/D}
@@ -3016,9 +3016,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 112,
-    Title = "Hình minh họa Toán học",
+    Title = "Khoảng cách từ điểm M đến đường thẳng d",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng d, điểm M, H là hình chiếu của M lên d, M₀ trên d, MH là khoảng cách từ M đến d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_112.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw (-1,0)--(5,0) node[below]{$d$};
@@ -3031,9 +3031,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 113,
-    Title = "Hình minh họa Toán học",
+    Title = "Mặt phẳng P với hai vector pháp tuyến n̄ và n̄'",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng P với hai vector pháp tuyến n̄ và n̄' cùng phương.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_113.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -3049,9 +3049,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 114,
-    Title = "Hình minh họa Toán học",
+    Title = "Khoảng cách từ điểm M đến mặt phẳng P",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Mặt phẳng P, điểm M, H là hình chiếu của M lên P, MH là khoảng cách từ M đến P.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_114.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -3067,9 +3067,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 115,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ trục tọa độ Oxyz",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ trục tọa độ Oxyz với gốc O, ba trục x, y, z, các điểm A, B, C.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_115.png",
     Code = @"\begin{tikzpicture}[line width=0.6pt,>=stealth,scale=0.8]
 \coordinate (O) at (0,0);
@@ -3091,9 +3091,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 116,
-    Title = "Hình minh họa Toán học",
+    Title = "Đường thẳng d với hai vector chỉ phương ū và ū'",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đường thẳng d, hai vector chỉ phương ū và ū' cùng phương với d.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_116.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round,>=stealth]
 \draw[thick] (0,0)--(4,0)node[below right]{$d$};
@@ -3105,9 +3105,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 117,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ Oxy với M, I, M' và MM'⊥MI",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxy, các điểm M(-1;-2;0), I(-1;-2;11/4), M', MM'⊥MI.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_117.png",
     Code = @"\begin{tikzpicture}[scale=0.9, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \path
@@ -3137,9 +3137,9 @@ pic [draw=red,fill=yellow!30,angle radius=4mm] {right angle = M'--M--I}
 new TikzItem2
 {
     Id = 118,
-    Title = "Hình minh họa Toán học",
+    Title = "Hệ Oxy với M(1;3;0), I(1;3;3), M'",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hệ tọa độ Oxy, các điểm M(1;3;0), I(1;3;3), M', M'M⊥MI.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_118.png",
     Code = @"\begin{tikzpicture}[scale = 1, font=\footnotesize, line join = round, line cap = round,>=stealth]
 \def\a{5}
@@ -3163,9 +3163,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 119,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chóp S với các quan hệ vuông góc",
     Category = "Mặt và đường trong hình học không gian",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chóp SABCD với góc α, các điểm S, H, K, M, N thỏa SH⊥K, SK⊥N, HK⊥M.",
     ImagePath = "Mat_va_uong_trong_hinh_hoc_khong_gian/matvaduongtronghinhhockhonggian_119.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,6/2/C,5/0/D,5/2/N,3/0/M,2/1/H,4/1/K}
