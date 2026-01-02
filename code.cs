@@ -1,740 +1,1825 @@
-new TikzItem2 
+new TikzItem2
 {
     Id = 1,
-    Title = "Đồ thị y = (x+1)e^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số y = (x+1)e^x qua điểm (0,1) và có nghiệm tại x = -1.",
-    ImagePath = "Mu_logarit/mulogarit1.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
-		\draw[->] (-2,0)--(1,0) node[below]{$x$};
-		\draw[->] (0,-1)--(0,2.5) node[left]{$y$};
-		\draw (0,0) node[below left,]{$O$};
-		\draw[line width=0.7pt,domain=-2:0.5] plot(\x,{(\x+1)*e^(\x)});
-		\draw[fill=black] (0,1) circle(1.5pt) (-1,0) circle(1.5pt);
-		\node[right] at (0,1) {$1$};
-		\node[above] at (-1,0) {$-1$};
-		\end{tikzpicture}"
+    Title = "Lục giác đều với các đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo nối các đỉnh đối diện và các đường nối với tâm.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac  hịnhtugiac_1_1.png",
+    Code = @"\begin{tikzpicture}[scale=1.5]
+\foreach \x in {0,60,...,300} {
+\draw (\x:1 cm) -- (\x + 60:1 cm);
+\draw (\x:1 cm) -- (\x + 180:1 cm);
+}
+\draw(0:1 cm) node[shift={(0.2,0)}] {$A$}; \draw(60:1 cm) node[shift={(0.2,0.2)}] {$B$}; 
+\draw(120:1 cm) node[shift={(-0.2,0.2)}] {$C$}; \draw(180:1 cm) node[shift={(-0.2,0)}] {$D$}; 
+\draw(240:1 cm) node[shift={(-0.2,-0.2)}] {$E$}; \draw(300:1 cm) node[shift={(0.2,-0.2)}] {$F$}; 
+\draw(0,0.08 ) node[above] {$O$}; 
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 2,
-    Title = "Đồ thị y = 0.4^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số mũ cơ số 0 < a < 1, qua điểm (0,1).",
-    ImagePath = "Mu_logarit/mulogarit2.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
-		\draw[->] (-1,0)--(2,0) node[below]{$x$};
-		\draw[->] (0,-1)--(0,2.5) node[right]{$y$};
-		\draw (0,0) node[below left,]{$O$};
-		\draw[line width=0.7pt,domain=-1:1.8] plot(\x,{0.4^(\x)});
-		\draw[fill=black] (0,1) circle(1.5pt);
-		\node[right] at (0,1) {$1$};
-		\end{tikzpicture}"
+    Title = "Lục giác đều ABCDEF tâm O",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF với tâm O, các đỉnh được tạo bởi phép quay 60° liên tiếp quanh tâm O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_2.png",
+    Code = @"\begin{tikzpicture}
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(2,0){E}
+\tkzDefPointBy[rotation = center O angle 60](E) \tkzGetPoint{F}
+\tkzDefPointBy[rotation = center O angle 120](E) \tkzGetPoint{A}
+\tkzDefPointBy[rotation = center O angle 180](E) \tkzGetPoint{B}
+\tkzDefPointBy[rotation = center O angle 240](E) \tkzGetPoint{C}
+\tkzDefPointBy[rotation = center O angle 300](E) \tkzGetPoint{D}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,E,F,O)
+\tkzDrawSegments(A,B B,C C,D D,E E,F F,A)
+\draw (A) node[above] {$A$} (B) node[left] {$B$} (C) node[below] {$C$} (D) node[below] {$D$} (E) node[right] {$E$} (F) node[above] {$F$} (O) node[below left] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 3,
-    Title = "Đồ thị y = log_a x và y = log_b x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh hai đồ thị logarit với cơ số khác nhau qua điểm M(9,y), có điểm N và P.",
-    ImagePath = "Mu_logarit/mulogarit3.png",
-    Code = @"\begin{tikzpicture}[scale=0.6]	
-		%\clip(-1, -1) rectangle (8, 8);
-		\draw[->] (-1,0) --(0,0) node[below left]{$O$}--(8.5,0) node[below]{$x$};
-		\draw[->] (0,-2.5) --(0,4.5) node[right]{$y$};
-		\draw (6,0) node[below right]{$9$} circle (1.5pt);
-		\draw (6,0) node[above left]{$M$} circle (1.5pt);
-		\draw (6,1.8) node[above left]{$N$} circle (1.5pt);
-		\draw (6,3.6) node[above left]{$P$} circle (1.5pt);
-		\draw [samples=100, domain=0.3:8] plot (\x, {(ln(\x))}) (6,2.3) node[right]{\footnotesize $y = \log_{a}x$};
-		\draw [samples=100, domain=0.4:8] plot (\x, {2*(ln(\x))}) (6,4.4) node[right]{\footnotesize $y = \log_{b}x$};
-		\draw [-] (6,0)--(6,3.63);
-		\end{tikzpicture}"
+    Title = "Lục giác đều với tâm O (bản thu nhỏ)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O, các điểm được tạo bằng phép quay 60°, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_3.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
+\tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
+\tkzClip
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/O,-3/0/A}
+\tkzDefPointBy[rotation = center O angle 60](A) \tkzGetPoint{B}
+\tkzDefPointBy[rotation = center O angle 120](A) \tkzGetPoint{C}
+\tkzDefPointBy[rotation = center O angle 180](A) \tkzGetPoint{D}
+\tkzDefPointBy[rotation = center O angle 240](A) \tkzGetPoint{E}
+\tkzDefPointBy[rotation = center O angle 300](A) \tkzGetPoint{F}
+\tkzDrawPoints(O,A,B,C,E,F)
+\tkzDrawPolygon(A,B,C,D,E,F)
+\tkzLabelPoints[above](E,F,O)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 4,
-    Title = "Đồ thị y = e^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số mũ cơ số e qua điểm (0,1).",
-    ImagePath = "Mu_logarit/mulogarit4.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.7,>=stealth,font=\footnotesize]
-		\draw[->] (-2,0)--(1,0) node[below]{$x$};
-		\draw[->] (0,-1)--(0,2.5) node[left]{$y$};
-		\draw (0,0) node[below left,]{$O$};
-		\draw[line width=0.7pt,domain=-2:0.9] plot(\x,{e^(\x)});
-		\draw[fill=black] (0,1) circle(1.5pt);
-		\node[right] at (0,1) {$1$};
-		\end{tikzpicture}"
+    Title = "Lục giác đều với đường chéo FC",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, các đỉnh tạo bởi phép quay 60° liên tiếp, tỷ lệ 0.6.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_4.png",
+    Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=0.6]
+\coordinate[label=below left:$O$](O) at (0,0);
+\coordinate[label=right :$C$](C) at (2,0);
+\tkzDefPointBy[rotation= center O angle 60](C)\tkzGetPoint{B}
+\tkzDefPointBy[rotation= center O angle 60](B)\tkzGetPoint{A}
+\tkzDefPointBy[rotation= center O angle 60](A)\tkzGetPoint{F}
+\tkzDefPointBy[rotation= center O angle 60](F)\tkzGetPoint{E}
+\tkzDefPointBy[rotation= center O angle 60](E)\tkzGetPoint{D}
+\tkzDrawPoints[fill=black](A,B,C,D,E,F,O)
+\tkzDrawSegments(A,B B,C C,D D,E E,F F,A F,C)
+\tkzLabelPoints[below](D,E)
+\tkzLabelPoints[left](F)
+\tkzLabelPoints[above](A,B)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 5,
-    Title = "Đồ thị y = 2^x, y = 3^x và y = log_(1/2) x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị: C₁ là y = 3^x, C₂ là y = 2^x, C₃ là y = log_(1/2) x.",
-    ImagePath = "Mu_logarit/mulogarit5.png",
-    Code = @"\begin{tikzpicture}[scale=0.6,>=stealth]
-		\draw[->](0,-1.5)--(0,5) node [left] {$y$};
-		\draw[->](-2.5,0)--(3.5,0) node [below] {$x$};
-		%\clip (-1.5,5)rectangle (3.5,-3);
-		\draw[smooth,samples=100,domain=-1.5:2] plot({\x},{(2)^(\x)}) node[right]{$ C_2 $};
-		\draw[smooth,samples=100,domain=-1.5:1.3] plot({\x},{(3)^(\x)}) node[above]{$ C_1 $};
-		\draw[smooth,samples=100,domain=.06:2.5] plot(\x,{ln(\x)/ln(1/2)})node[above] {$C_3$}; 	
-		\node at (-0.3,-0.3) {$O$};
-		\node[above left] at (0,1) {$1$};
-		\node[below] at (1,0) {$1$};
-		\draw[fill=black] (0,1) circle (1pt);
-		\draw[fill=black] (1,0) circle (1pt);  
-		\draw[fill=black] (0,0) circle (1pt);  
-		\end{tikzpicture}"
+    Title = "Lục giác đều ABCDEF (chuẩn)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, tỷ lệ 1.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_5.png",
+    Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=1]
+\coordinate[label=below left:$O$](O) at (0,0);
+\coordinate[label=right :$C$](C) at (2,0);
+\tkzDefPointBy[rotation= center O angle 60](C)\tkzGetPoint{B}
+\tkzDefPointBy[rotation= center O angle 60](B)\tkzGetPoint{A}
+\tkzDefPointBy[rotation= center O angle 60](A)\tkzGetPoint{F}
+\tkzDefPointBy[rotation= center O angle 60](F)\tkzGetPoint{E}
+\tkzDefPointBy[rotation= center O angle 60](E)\tkzGetPoint{D}
+\tkzDrawPoints[fill=black](A,B,C,D,E,F,O)
+\tkzDrawSegments(A,B B,C C,D D,E E,F F,A F,C)
+\tkzLabelPoints[below](D,E)
+\tkzLabelPoints[left](F)
+\tkzLabelPoints[above](A,B)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 6,
-    Title = "Đồ thị y = a^x, y = b^x và y = c^x với x = 1",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 hàm mũ tại x = 1 để xác định thứ tự a < 1 < c < b.",
-    ImagePath = "Mu_logarit/mulogarit6.png",
-    Code = @"\begin{tikzpicture}
-			\draw[->] (-3,0)--(0,0) node[below left]{$O$}--(4,0) node[below] {$x$};
-			\draw[->] (0,-1)-- (0,5) node[left]{$y$};
-			\node[left] at (-.2,1) {$1$};
-			\draw[-](1,-.7) node[below]{$x=1$}--(1,0) node[below left]{$1$}--(1,3.5);
-			\draw[-][dashed](1,.5556)--(0,.5556) node[left]{$a$};
-			\draw[-][dashed](1,1.8)--(0,1.8) node[left]{$c$};
-			\draw[-][dashed](1,2.5)--(0,2.5) node[left]{$b$};
-			\draw[-][dashed](1,1)--(0,1);
-			\draw[smooth,samples=100,domain=-2.5:2.5] plot(\x,{1/(1.8^(\x))}) node[above right]{$y=a^x$};
-			\draw[smooth,samples=100,domain=-2.5:1.5] plot(\x,{2.5^(\x)}) node[above]{$y=b^x$};
-			\draw[smooth,samples=100,domain=-2.5:2.5] plot(\x,{1.8^(\x)}) node[right]{$y=c^x$};
-			\end{tikzpicture}"
+    Title = "Lục giác đều với các đường chéo (nét dày)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ dày, tỷ lệ 1.7.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_6.png",
+    Code = @"\begin{tikzpicture}[scale=1.7,thick]
+\foreach \x in {0,60,...,300} {
+\draw (\x:1 cm) -- (\x + 60:1 cm);
+\draw (\x:1 cm) -- (\x + 180:1 cm);
+}
+\draw (0:1 cm) node[shift={(0.2,0)}] {$A$}; \draw (60:1 cm) node[shift={(0.2,0.2)}] {$B$};
+\draw (120:1 cm) node[shift={(-0.2,0.2)}] {$C$}; \draw (180:1 cm) node[shift={(-0.2,0)}] {$D$};
+\draw (240:1 cm) node[shift={(-0.2,-0.2)}] {$E$}; \draw (300:1 cm) node[shift={(0.2,-0.2)}] {$F$};
+\draw (0,0.08 ) node[above] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 7,
-    Title = "Đồ thị y = a^x, y = b^x và y = c^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị hàm mũ với cơ số khác nhau: a < 1 < c < b.",
-    ImagePath = "Mu_logarit/mulogarit7.png",
-    Code = @"\begin{tikzpicture}[scale=0.6]
-		\draw[->] (-3,0)--(0,0) node[below left]{$O$}--(4,0) node[below] {$x$};
-		\draw[->] (0,-1)-- (0,5) node[left]{$y$};
-		\node[left] at (-.2,1) {$1$};
-		\draw[smooth,samples=100,domain=-2.5:2.5] plot(\x,{1/(1.8^(\x))}) node[above right]{$y=a^x$};
-		\draw[smooth,samples=100,domain=-2.5:1.5] plot(\x,{2.5^(\x)}) node[above]{$y=b^x$};
-		\draw[smooth,samples=100,domain=-2.5:2.5] plot(\x,{1.8^(\x)}) node[right]{$y=c^x$};
-		\end{tikzpicture}"
+    Title = "Lục giác đều với các đường chéo (nét rất dày)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ rất dày, tỷ lệ 2.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_7.png",
+    Code = @"\begin{tikzpicture}[scale=2,very thick]
+\foreach \x in {0,60,...,300} {
+\draw (\x:1 cm) -- (\x + 60:1 cm);
+\draw (\x:1 cm) -- (\x + 180:1 cm);
+}
+\draw(0:1 cm) node[shift={(0.2,0)}] {$A$}; \draw(60:1 cm) node[shift={(0.2,0.2)}] {$B$};
+\draw(120:1 cm) node[shift={(-0.2,0.2)}] {$C$}; \draw(180:1 cm) node[shift={(-0.2,0)}] {$D$};
+\draw(240:1 cm) node[shift={(-0.2,-0.2)}] {$E$}; \draw(300:1 cm) node[shift={(0.2,-0.2)}] {$F$};
+\draw(0,0.08 ) node[above] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 8,
-    Title = "Đồ thị hàm logarit với các điểm A, B, H",
-    Category = "Đồ thị mũ logarit",
-    Description = "Hai đồ thị logarit với cơ số khác nhau, có điểm H(2,0), A và B trên hai đồ thị.",
-    ImagePath = "Mu_logarit/mulogarit8.png",
-    Code = @"\begin{tikzpicture}[>=stealth,scale=0.8, font=\footnotesize, line join=round, line cap=round]
-			\draw[->](-0.5,0)--(3,0)node[below]{$x$};
-			\draw[->](0,-2.5)--(0,2.4)node[left]{$y$};
-			\draw[smooth, samples=100, domain=0.07:3]plot(\x,{log10(\x)/log10(0.3)});
-			\draw[smooth, samples=100, domain=0.12:3]plot(\x,{log10(\x)/log10(2.47)});
-			\draw(2,-0.576)--(2,0)--(2,0.767);
-			\fill (0,0)node[above left]{\footnotesize{$O$}}circle(1.2pt) (2,-0.576)node[below]{\footnotesize{$B$}}circle(1.2pt) (2,0)node[above right]{\footnotesize{$H$}}circle(1.2pt) (2,0.767)node[above]{\footnotesize{$A$}}circle(1.2pt);
-	\end{tikzpicture}"
+    Title = "Lục giác đều với đường chéo (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với các đường chéo, nét dày, tỷ lệ 1.7.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_8.png",
+    Code = @"\begin{tikzpicture}[scale=1.7,thick]
+\foreach \x in {0,60,...,300} {
+\draw (\x:1 cm) -- (\x + 60:1 cm);
+\draw (\x:1 cm) -- (\x + 180:1 cm);
+}
+\draw (0:1 cm) node[shift={(0.2,0)}] {$A$}; \draw (60:1 cm) node[shift={(0.2,0.2)}] {$B$};
+\draw (120:1 cm) node[shift={(-0.2,0.2)}] {$C$}; \draw (180:1 cm) node[shift={(-0.2,0)}] {$D$};
+\draw (240:1 cm) node[shift={(-0.2,-0.2)}] {$E$}; \draw (300:1 cm) node[shift={(0.2,-0.2)}] {$F$};
+\draw (0,0.08 ) node[above] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 9,
-    Title = "Đồ thị y = x^a, y = x^b và y = x^c",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị hàm lũy thừa với số mũ khác nhau trên lưới ô vuông.",
-    ImagePath = "Mu_logarit/mulogarit9.png",
-    Code = @"\begin{tikzpicture}[>=stealth,x=1.0cm,y=1.0cm,scale=0.6,thick]
-		\draw [color=gray!30,, xstep=1.0cm,ystep=1.0cm] (-1.26,-1.2) grid (6.64,4.76);
-		\draw[->,color=black] (-1.26,0.) -- (6.64,0.) node[below] {\large $x$};
-		\draw[->,color=black] (0,-1.2) -- (0.,4.76) node[left] {\large $y$};
-		\draw (0,0) node[below left] {$O$} ;
-		\draw (2.5,4) node[left] {$y=x^a$};
-		\draw (4.5,4.5) node[right] {$y=x^b$};
-		\draw (5,2.8) node[right] {$y=x^c$};
-		\clip(-1.26,-1.5) rectangle (6.64,4.76);
-		\draw[color=blue,smooth,samples=100,domain=0:6.64] plot(\x,{(\x)^(2/3)});
-		\draw[color=cyan,smooth,samples=100,domain=0:6.64] plot(\x,{(\x)^(3/2)});
-		\draw[color=red,smooth,samples=100,domain=0:6.64] plot(\x,{(\x)});
-		\end{tikzpicture}"
+    Title = "Ngũ giác đều với điểm đối xứng",
+    Category = "Hình tứ giác",
+    Description = "Ngũ giác đều ABCDE tâm O với các đường nối tâm, điểm M đối xứng của O qua AB, điểm N đối xứng của O qua CE.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_9.png",
+    Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
+\tkzInit[xmin=-0.2, xmax=4.2, ymin=-0.5, ymax=5.5]
+\tkzClip
+\tkzDefPoints{2/1.8/O,2/0/D}
+\tkzDefPointBy[rotation=center O angle 72](D)\tkzGetPoint{C}
+\tkzDefPointBy[rotation=center O angle 72](C)\tkzGetPoint{B}
+\tkzDefPointBy[rotation=center O angle 72](B)\tkzGetPoint{A}
+\tkzDefPointBy[rotation=center O angle 72](A)\tkzGetPoint{E}
+\tkzDefPointBy[reflection=over A--B](O)\tkzGetPoint{M}
+\tkzDefPointBy[reflection=over C--E](O)\tkzGetPoint{N}
+\tkzDrawPoints[fill=black](O,A,B,C,D,E,M,N)
+\tkzDrawSegments(A,B B,C C,D D,E E,A O,A O,B O,C O,D O,E M,D A,M B,M C,N E,N)
+\tkzLabelPoints[above](M)
+\tkzLabelPoints[above left](A)
+\tkzLabelPoints[above right](B)
+\tkzLabelPoints[below](D)
+\tkzLabelPoints[below left](E)
+\tkzLabelPoints[below right](C,N,O)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 10,
-    Title = "Đồ thị y = x^α và y = x^β",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh hai đồ thị hàm lũy thừa với α > 1 và 0 < β < 1.",
-    ImagePath = "Mu_logarit/mulogarit10.png",
-    Code = @"\begin{tikzpicture}[line cap=round,line join=round,>=stealth,x=0.8cm,y=0.8cm]
-		%\draw [color=gray!50,, xstep=1.0cm,ystep=1.0cm] (-2.,-5) grid (4,2);
-		\draw[->,color=black] (-1.,0.) -- (4,0.);
-		\foreach \x in {1}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {$\x$};
-		\draw[->,color=black] (0.,-1) -- (0.,4);
-		\foreach \y in {1}
-		\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {$\y$};
-		\draw[color=black] (0,0) node[below right] {$O$};
-		\clip(-1.,-1) rectangle (4,4);
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:5] plot(\x,{(\x)^(2.0)});
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:5] plot(\x,{(\x)^(0.5)});
-		\draw[color=black] (4,0) node[above left] {$x$};
-		\draw[color=black] (0,4) node[below right] {$y$};
-		\draw[color=black] (1.5,3) node[below right] {$y=x^{\alpha}$};
-		\draw[color=black] (2,1.7) node[below right] {$y=x^{\beta}$};
-		\draw[dashed] (1,0)--(1,1);
-		\draw[dashed] (0,1)--(1,1);
-		\end{tikzpicture}"
+    Title = "Lục giác đều ABCDEF (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF với tâm O, các đỉnh phân bố đều quanh tâm với góc 60°.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_10.png",
+    Code = @"\begin{tikzpicture}
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(2,0){E}
+\tkzDefPointBy[rotation = center O angle 60](E) \tkzGetPoint{F}
+\tkzDefPointBy[rotation = center O angle 120](E) \tkzGetPoint{A}
+\tkzDefPointBy[rotation = center O angle 180](E) \tkzGetPoint{B}
+\tkzDefPointBy[rotation = center O angle 240](E) \tkzGetPoint{C}
+\tkzDefPointBy[rotation = center O angle 300](E) \tkzGetPoint{D}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,E,F,O)
+\tkzDrawSegments(A,B B,C C,D D,E E,F F,A)
+\draw (A) node[above] {$A$} (B) node[left] {$B$} (C) node[below] {$C$} (D) node[below] {$D$} (E) node[right] {$E$} (F) node[above] {$F$} (O) node[below left] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 11,
-    Title = "Đồ thị y = 2^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số mũ cơ số 2.",
-    ImagePath = "Mu_logarit/mulogarit11.png",
-    Code = @"\begin{tikzpicture}[scale=0.6,>=stealth,x=1cm,
-		y=1cm]
-		\def \xmin{-2.5}
-		\def \xmax{3.5}
-		\def \ymin{-0.66}
-		\def \ymax{3.98}
-		% Vẽ 2 trục, điền các số lên trục
-		\draw[->] (\xmin,0) -- (\xmax,0);
-		\draw[->,color=black] (0,\ymin) -- (0,\ymax);
-		\draw[color=black](\xmax-0.3,.2)node[right] {$x$};
-		\draw[color=black] (.1,\ymax) node[right] {\normalsize $y$};
-		\draw[color=black] (0pt,-8pt) node[left] {\normalsize $O$};
-		\begin{scope}
-		\clip(\xmin ,\ymin) rectangle (\xmax-1,\ymax-0.5);
-		%Vẽ đồ thị
-		\draw[smooth,samples=100,domain=\xmin:\xmax] 
-		plot(\x,{2^(\x)});
-		\end{scope}
-		\node at (-.3,1.3){1};
-		\end{tikzpicture}"
+    Title = "Lục giác đều với đường chéo (nét rất dày)",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với các đường chéo nối đỉnh đối diện, nét vẽ rất dày, tỷ lệ 2.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_11.png",
+    Code = @"\begin{tikzpicture}[scale=2,very thick]
+\foreach \x in {0,60,...,300} {
+\draw (\x:1 cm) -- (\x + 60:1 cm);
+\draw (\x:1 cm) -- (\x + 180:1 cm);
+}
+\draw(0:1 cm) node[shift={(0.2,0)}] {$A$}; \draw(60:1 cm) node[shift={(0.2,0.2)}] {$B$};
+\draw(120:1 cm) node[shift={(-0.2,0.2)}] {$C$}; \draw(180:1 cm) node[shift={(-0.2,0)}] {$D$};
+\draw(240:1 cm) node[shift={(-0.2,-0.2)}] {$E$}; \draw(300:1 cm) node[shift={(0.2,-0.2)}] {$F$};
+\draw(0,0.08 ) node[above] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 12,
-    Title = "Đồ thị y = log₃ x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm logarit cơ số 3 qua điểm (1,0) và (3,1).",
-    ImagePath = "Mu_logarit/mulogarit12.png",
-    Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
-			\draw[->](-1,0)--(5,0)node[below]{$x$};
-			\draw[->](0,-2)--(0,3)node[left]{$y$};
-			\draw [fill=black,draw=black] (0,0) circle (1pt)node[below left] {$O$} (1,0) circle (1pt)node[below] {$1$} (3,0) circle (1pt)node[below] {$3$} (0,1) circle (1pt)node[left] {$1$} (3,1) circle (1pt);
-			\draw[dashed] (3,0)--(3,1)--(0,1);
-			\clip(-1,-2) rectangle (5,3);
-			\draw[smooth,samples=100,domain=0.1:5] plot(\x,{ln(\x)/ln(3)});
-	\end{tikzpicture}"
+    Title = "Hình thoi với hai đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_12.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D)
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](A)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[left](D)
+\tkzDrawSegments(A,C B,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 13,
-    Title = "Đồ thị y = log_a x và y = log_b x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh hai đồ thị logarit: cơ số a > 1 (đồng biến) và cơ số 0 < b < 1 (nghịch biến).",
-    ImagePath = "Mu_logarit/mulogarit13.png",
-    Code = @"\begin{tikzpicture}[scale=0.7, font=\footnotesize, line join=round, line cap=round, >=stealth]
-			\draw[->](-1,0)--(7,0)node[below]{$x$};
-			\draw[->](0,-3)--(0,3)node[left]{$y$};
-			\draw [fill=black,draw=black] (0,0) circle (1pt)node[above left] {$O$} (1,0) circle (1pt)node[below] {$1$} (6,2.5) node[below] {$y=\log_a x$} (6,-2.5) node[above] {$y=\log_b x$};
-			\clip(-1,-3) rectangle (7,3);
-			\draw[smooth,samples=100,domain=0.1:7] plot(\x,{ln(\x)/ln(2)});
-			\draw[smooth,samples=100,domain=0.1:7] plot(\x,{ln(\x)/ln(0.5)});
-	\end{tikzpicture}"
+    Title = "Hình thoi ABCD với đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau (lặp lại).",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_13.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D)
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](A)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[left](D)
+\tkzDrawSegments(A,C B,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 14,
-    Title = "Đồ thị y = 2^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số mũ y = 2^x với đường nét đứt qua (1,2).",
-    ImagePath = "Mu_logarit/mulogarit14.png",
-    Code = @"\begin{tikzpicture}[line width=0.6pt,>=stealth,scale=1]
-		\draw[->] (-2,0)--(2,0) node[below]{$x$};
-		\draw[->] (0,-0.5)--(0,3) node[left]{$y$};
-		\node at (0,0) [below left]{$O$};
-		\draw[domain=-1.9:1.5] plot(\x,{2^(\x)});
-		\draw[dashed] (1,0)--(1,2)--(0,2);
-		\node at (0,1.2) [left]{$1$};
-		\node at (0,2) [left]{$2$};
-		\node at (1,0) [below]{$1$};
-		\end{tikzpicture}"
+    Title = "Tam giác với tam giác trung điểm",
+    Category = "Hình tứ giác",
+    Description = "Tam giác ABC với tam giác trung điểm MNP, trong đó M, N, P là trung điểm BC, AC, AB.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_14.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
+\tkzInit[xmin=-0.5,xmax=5.5,ymin=-1,ymax=4]
+\tkzClip
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/B,5/0/C,2/3/A}
+\coordinate (M) at ($(B)!0.5!(C)$);
+\coordinate (N) at ($(A)!0.5!(C)$);
+\coordinate (P) at ($(B)!0.5!(A)$);
+\tkzDrawSegments(A,B B,C C,A M,N N,P P,M)
+\tkzDrawPoints(A,B,C,M,N,P)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,C,M)
+\tkzLabelPoints[left](P)
+\tkzLabelPoints[right](N)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 15,
-    Title = "Đồ thị y = 0.5^(x+1) và y = m-1",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ y = 0.5^(x+1) với đường thẳng y = m-1.",
-    ImagePath = "Mu_logarit/mulogarit15.png",
-    Code = @"\begin{tikzpicture}[>=stealth]
-			\draw[->,line width = 1pt] (-3.5,0)--(0,0) node[below right]{$O$}--(4,0) node[below]{$x$};
-			\draw[->,line width = 1pt] (0,-1.5) --(0,3.6) node[right]{$y$};
-			\foreach \x in {-3,-2,-1,1,2,3}{
-				\draw (\x,0) node[below]{$\x$} circle (1pt);
-			}
-			\foreach \x in {-1,1,2,3}{
-				\draw (0,\x) node[left]{$\x$} circle (1pt);
-			}
-			\draw [thick, domain=-2.5:3.25, samples=100] %
-			plot (\x,{(0.5)^(\x+1)});
-			
-			\draw [thick, domain=-3:3.5, samples=100] %
-			plot (\x, {1.5}) node[above]{$m-1$};;
-			\end{tikzpicture}"
+    Title = "Lục giác đều với vector OA",
+    Category = "Hình tứ giác",
+    Description = "Lục giác đều ABCDEF tâm O với vector OA, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_15.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
+\tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
+\tkzClip
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/O,-3/0/A}
+\tkzDefPointBy[rotation = center O angle 60](A) \tkzGetPoint{B}
+\tkzDefPointBy[rotation = center O angle 120](A) \tkzGetPoint{C}
+\tkzDefPointBy[rotation = center O angle 180](A) \tkzGetPoint{D}
+\tkzDefPointBy[rotation = center O angle 240](A) \tkzGetPoint{E}
+\tkzDefPointBy[rotation = center O angle 300](A) \tkzGetPoint{F}
+\tkzDrawPoints(O,A,B,C,E,F)
+\tkzDrawPolygon(A,B,C,D,E,F)
+\tkzLabelPoints[above](E,F,O)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](D)
+\draw[->] (O)--(A);
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 16,
-    Title = "Đồ thị y = a^x và y = b (a > 1)",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ với a > 1 cắt đường y = b tại x = log_a b.",
-    ImagePath = "Mu_logarit/mulogarit16.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-2,0)--(3,0) node[below]{$x$};
-	\draw[->] (0,-1)--(0,4) node[right]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[dashed,color=blue,domain=-2:1] plot(\x,{2^(\x)});
-	\draw[line width=1pt,color=blue,domain=1:1.8] plot(\x,{2^(\x)})node[right]{$y=a^x$};
-	\draw[color=red!60!black,line width=1pt] (-2,2)--(3,2) node[below]{$y=b$};
-	\draw[dashed] (1,0)node[below]{\small$\log_ab$}--(1,2);
-	\draw[fill=black](1,2) circle(2pt);
-	\node[left] at (0,2.35) {$b$};
-	\end{tikzpicture}"
+    Title = "Hình bình hành với hai đường chéo tô màu",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O, tam giác AOB tô xanh, tam giác AOD tô xám.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_16.png",
+    Code = @"\begin{tikzpicture}[scale=0.6,line join=round, line cap=round,>=stealth]
+\tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
+\coordinate (C) at ($(B)+(D)-(A)$);
+\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+\tkzDefMidPoint(A,B) \tkzGetPoint{M}
+\tkzDefMidPoint(B,C) \tkzGetPoint{N}
+\tkzDefMidPoint(C,D) \tkzGetPoint{P}
+\tkzDefMidPoint(A,D) \tkzGetPoint{Q}
+\tkzFillPolygon[color=blue!20](A,O,B)
+\tkzFillPolygon[color=black!20](A,O,D)
+\tkzDrawPoints(A,B,C,D,O)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](C,B)
+\tkzLabelPoints[below](O)
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 17,
-    Title = "Đồ thị y = a^x và y = b (0 < a < 1)",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ với 0 < a < 1 cắt đường y = b tại x = log_a b.",
-    ImagePath = "Mu_logarit/mulogarit17.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-2,0)--(3,0) node[below]{$x$};
-	\draw[->] (0,-1)--(0,4) node[right]{$y$};
-	\draw (0,0) node[below right]{$O$};
-	\draw[dashed,color=blue,domain=-1:1.8] plot(\x,{0.5^(\x)})node[above right]{$y=a^x$};
-	\draw[line width=1pt,color=blue,domain=-2:-1] plot(\x,{0.5^(\x)});
-	\draw[color=red!60!black,line width=1pt] (-2,2)--(3,2) node[above]{$y=b$};
-	\draw[dashed] (-1,0)node[below]{\small$\log_ab$}--(-1,2);
-	\draw[fill=black](-1,2) circle(2pt);
-	\node[left] at (0,2.35) {$b$};
-	\end{tikzpicture}"
+    Title = "Hình thang với đường trung bình",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AB và CD.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_17.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/D,7/0/C,3/3/A}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\tkzDefMidPoint(A,B)\tkzGetPoint{M}
+\tkzDefMidPoint(C,D)\tkzGetPoint{N}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(M,N)
+\tkzDrawPoints(D,C,A,B,M,N)
+\tkzLabelPoints[above](A,B,M)
+\tkzLabelPoints[right](C)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[below](N)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 18,
-    Title = "Đồ thị y = log_a x và y = b (a > 1)",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị logarit với a > 1 cắt đường y = b tại x = a^b.",
-    ImagePath = "Mu_logarit/mulogarit18.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-1,0)--(4,0) node[below]{$x$};
-	\draw[->] (0,-2.5)--(0,3) node[right]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[dashed,black,domain=0.2:2]plot(\x,{ln((\x))/ln(2)});
-	\draw[line width=0.8pt,black,domain=2:3.2]plot(\x,{ln((\x))/ln(2)})node[above right]{$y=\log_ax$};
-	\draw[fill=black] (2,1) circle(1.5pt);
-	\draw[dashed] (2,0)node[below]{\small$a^b$}--(2,1)--(0,1)node[above left]{\small$b$};
-	\draw[color=red!60!black,thick] (-1,1)--(4,1) node[below]{$y=b$};
-	\end{tikzpicture}"
+    Title = "Hình vuông ABCD với đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD cắt nhau tại I.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_18.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
+\tkzInit[xmin=-1,xmax=4.5,ymin=-0.5,ymax=4.5]
+\tkzClip
+\def\a{3}
+\tkzDefPoints{0/0/A,\a/0/B,0/\a/D}
+\tkzDefPointWith[colinear = at D](A,B)
+\tkzGetPoint{C}
+\coordinate (I) at ($(A)!0.5!(C)$);
+\tkzDrawPoints(A,B,C,D,I)
+\tkzDrawSegments(A,C B,D)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[above](C,D,I)
+\tkzDrawPolygon(A,B,C,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 19,
-    Title = "Đồ thị y = log_a x và y = b (0 < a < 1)",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị logarit với 0 < a < 1 cắt đường y = b tại x = a^b.",
-    ImagePath = "Mu_logarit/mulogarit19.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-1,0)--(4,0) node[below]{$x$};
-	\draw[->] (0,-2.5)--(0,3) node[right]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[dashed,black,domain=0.5:3.2]plot(\x,{ln((\x))/ln(0.5)})node[below right]{$y=\log_ax$};
-	\draw[line width=0.8pt,black,domain=0.15:0.5]plot(\x,{ln((\x))/ln(0.5)});
-	\draw[fill=black] (0.5,1) circle(1.5pt);
-	\draw[dashed] (0.5,0)node[below]{\small$a^b$}--(0.5,1)--(0,1)node[above left]{\small$b$};
-	\draw[color=red!60!black,thick] (-1,1)--(4,1) node[below]{$y=b$};
-	\end{tikzpicture}"
+    Title = "Hình thang ABCD",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với AB song song CD.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_19.png",
+    Code = @"\begin{tikzpicture}
+\def\a{3} \def\h{2} \def\b{4}
+\tkzDefPoints{0/0/A,\a/0/B,\b/\h/C}
+\tkzDefPointWith[colinear = at C](B,A)
+\tkzGetPoint{D}
+\tkzDrawPoints(A,B,C,D)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[above](C,D)
+\tkzDrawPolygon(A,B,C,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 20,
-    Title = "Đồ thị y = log₂ x và y = b",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị logarit cơ số 2 với đường y = b < 0, giao điểm tại x = 0.5.",
-    ImagePath = "Mu_logarit/mulogarit20.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-			\draw[->] (-1,0)--(4,0) node[below]{$x$};
-			\draw[->] (0,-2.5)--(0,2) node[right]{$y$};
-			\draw (0,0) node[below left]{$O$};
-			\draw[line width=0.8pt,color=violet,domain=0.2:3.2]plot(\x,{ln((\x))/ln(2)});
-			\draw[fill=black] (1,0) circle(1.5pt) (2,1) circle(1.5pt) (0.5,-1) circle(1.5pt);
-			\draw[dashed] (2,0)node[below]{\small$a$}--(2,1)--(0,1)node[left]{\small$1$};
-			\draw[color=red!60!black] (-1,-1)--(4,-1) node[below]{$y=b$};
-			\node[below] at (1.1,0) {\small$1$};
-			\end{tikzpicture}"
+    Title = "Hình bình hành ABCD đơn giản",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với bốn đỉnh A, B, C, D.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_20.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/D,7/0/C,3/3/A}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints(D,C,A,B)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 21,
-    Title = "Đồ thị y = a^x với hai đường y = b",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ với a > 1 và hai đường thẳng y = b khác nhau.",
-    ImagePath = "Mu_logarit/mulogarit21.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-		\draw[->] (-2,0)--(3,0) node[below]{$x$};
-		\draw[->] (0,-2)--(0,4) node[right]{$y$};
-		\draw (0,0) node[below left]{$O$};
-		\draw[line width=1pt,color=blue,domain=-2:1.8] plot(\x,{2^(\x)});
-		\draw[color=red!60!black,line width=1pt] (-2,2)--(3,2) node[below]{$y=b$};
-		\draw[dashed,color=red!60!black] (-2,-1)--(3,-1) node[below]{$y=b$};
-		\draw[dashed] (1,0)node[below]{\small$\log_ab$}--(1,2);
-		\draw[fill=black](1,2) circle(2pt);
-		\node[above] at (-2,0.3) {$y=a^x$};
-		\node[left] at (0,2.35) {$b$};
-		\node[left] at (0,1.15) {$1$};
-		\end{tikzpicture}"
+    Title = "Hình thang với hai đường tròn",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABMN với hai đường tròn tâm O và I, phép tịnh tiến từ A đến B biến M thành N và O thành I.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_21.png",
+    Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzInit[xmin=-2,xmax=6, ymin=-1,ymax=4.5]\tkzClip
+\tkzDefPoints{0/0/A,4/0/B,1/2/M,0/3/O}
+\tkzDrawCircle(O,M)
+\tkzDefPointBy[translation=from A to B](M)\tkzGetPoint{N}
+\tkzDefPointBy[translation=from A to B](O)\tkzGetPoint{I}
+\tkzDrawCircle(I,N)
+\tkzDrawSegments(A,B A,M M,N N,B)
+\tkzDrawPoints[fill=black](A,B,M,O,N,I)
+\tkzLabelPoints[left]()
+\tkzLabelPoints[right](N)
+\tkzLabelPoints[above]()
+\tkzLabelPoints[above left](O,M)
+\tkzLabelPoints[above right](I)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[below left]()
+\tkzLabelPoints[below right]()
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 22,
-    Title = "Đồ thị y = log_a x, y = log_b x và y = log_c x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị logarit với cơ số khác nhau: 0 < c < 1 < b < a.",
-    ImagePath = "Mu_logarit/mulogarit22.png",
-    Code = @"\begin{tikzpicture}[thick,>=stealth,x=1cm,y=0.9cm,scale=.8] 
-		\draw[->] (-1,0) -- (4.5,0) node[below] {\small $x$};
-		\draw[->] (0,-3) -- (0,3.7) node[right] {\small $y$};
-		\foreach \x in {,,1,}
-		\draw[thin,shift={(\x,0)}] (0pt,3pt)--(0pt,-3pt)node[below] {\footnotesize $\x$};
-		\foreach \y in {,,,,,}
-		\draw[thin,shift={(0,\y)}] (3pt,0pt)--(-3pt,0pt)node[right] {\footnotesize $\y$};
-		\draw (0,0) node [below left] {\footnotesize $O$};
-		\clip(-3,-2.4) rectangle (5,5);
-		
-		\draw [ line width = 1 pt, domain=0.09:3.1, samples=100]%
-		plot(\x, {ln(\x)/ln(0.4)}) node[below]{\small $y=\log_c x$};
-		
-		\draw [line width = 1 pt, domain=0.09:3.1, samples=100]%
-		plot(\x, {ln(\x)/ln(3)}) node[above]{\small $y=\log_b x$};
-		
-		\draw [ line width = 1 pt, domain=0.01:3.1, samples=200]%
-		plot(\x, {ln(\x)/ln(1.4)}) node[above]{\small $y=\log_a x$};
-		
-		
-		\end{tikzpicture}"
+    Title = "Hình bình hành ABCD (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD đơn giản với bốn đỉnh.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_22.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/D,7/0/C,3/3/A}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints(D,C,A,B)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 23,
-    Title = "Đồ thị y = a^x, y = b^x và y = c^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị hàm mũ: a > 1 > b > c > 0.",
-    ImagePath = "Mu_logarit/mulogarit23.png",
-    Code = @"\begin{tikzpicture}[>=stealth, scale=0.6]
-		\draw[->,line width = 1pt] (-3,0)--(4,0) node[below]{$x$};
-		\draw(0,0)node[below right]{$O$} circle (1pt);
-		\draw(0,1)node[below left]{$1$} circle (1pt);
-		\draw[->,line width = 1pt] (0,-1) --(0,5) node[below left]{$y$};
-		\draw [black, thick, domain=-2:2.2] plot (\x, {2^\x})node[above]{$y=a^x$};
-		\draw [black, thick, domain=-2.2:3] plot (\x, {(0.6)^\x});
-		\draw (-4.5,2.7) node[above right]{$y=c^x$};
-		\draw [black, thick, domain=-1.3:2] plot (\x, {(0.3)^\x});
-		\draw (-1.5,4.7) node[above left]{$y=b^x$};
-		\end{tikzpicture}"
+    Title = "Hình bình hành với trung điểm và tam giác tô màu",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác AMO tô vàng.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_23.png",
+    Code = @"\begin{tikzpicture}[scale=0.6,line join=round, font=\footnotesize,line cap=round,>=stealth]
+\tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
+\coordinate (C) at ($(B)+(D)-(A)$);
+\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+\tkzDefMidPoint(A,B) \tkzGetPoint{M}
+\tkzDefMidPoint(B,C) \tkzGetPoint{N}
+\tkzDefMidPoint(C,D) \tkzGetPoint{P}
+\tkzDefMidPoint(A,D) \tkzGetPoint{Q}
+\tkzFillPolygon[color=yellow](A,M,O)
+\tkzDrawPoints(A,B,C,D,O,M,N,P,Q)
+\tkzLabelPoints[left](A,D,Q)
+\tkzLabelPoints[above](M)
+\tkzLabelPoints[right](C,B,N)
+\tkzLabelPoints[below](P,O)
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D M,O N,Q)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 24,
-    Title = "So sánh a, b, c từ đồ thị logarit",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 cơ số a, b, c từ giao điểm của đồ thị logarit với y = 1: c < b < 1 < a.",
-    ImagePath = "Mu_logarit/mulogarit24.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-			\draw[->] (-1,0)--(4,0) node[below]{$x$};
-			\draw[->] (0,-2.5)--(0,3.5) node[right]{$y$};
-			\draw (0,0) node[below left]{$O$};
-			\draw[line width=0.8pt,color=violet,domain=0.15:4]plot(\x,{ln((\x))/ln(3)});
-			\draw[line width=0.8pt,color=blue,domain=0.4:3.2]plot(\x,{ln((\x))/ln(1.5)});
-			\draw[line width=0.8pt,color=orange,domain=0.2:3.2]plot(\x,{ln((\x))/ln(0.5)});
-			\draw[fill=black] (1,0) circle(1.5pt) (0.5,1) circle(1.5pt) (1.5,1) circle(1.5pt) (3,1) circle(1.5pt);
-			\draw[dashed] (0,1)node[left]{\small$1$}--(4,1)  (0.5,1)--(0.5,0)node[below]{\small$c$} (1.5,1)--(1.5,0)node[below]{\small$b$} (3,1)--(3,0)node[below]{\small$a$};
-			\node[above] at (1,3.7) {\small \fbox{So sánh $a,b,c$}};
-			\node[right] at (3,1.5) {\small$y=\log_ax$};
-			\node[right] at (3,2.7) {\small$y=\log_bx$};
-			\node[right] at (0.2,2.4) {\small$y=\log_cx$};
-			\node[above] at (1,0) {\small$1$};
-			\end{tikzpicture}"
+    Title = "Hình bình hành với trung điểm và trung tuyến",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với M, N là trung điểm AB và AD, đường chéo AC và BD cắt nhau tại O, các đường MO và NO.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_24.png",
+    Code = @"\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/0/A, 2/3/B, 7/3/C}
+\coordinate (D) at ($(A)+(C)-(B)$);
+\tkzInterLL(A,C)(B,D)
+\tkzGetPoint{O}
+\tkzDefMidPoint(A,B)
+\tkzGetPoint{M}
+\tkzDefMidPoint(A,D)
+\tkzGetPoint{N}
+\tkzDrawSegments(A,B B,C C,D D,A B,D M,N M,O N,O A,C)
+\tkzLabelPoints[above](O)
+\tkzLabelPoints[above left](A,M,B)
+\tkzLabelPoints[below](N)
+\tkzLabelPoints[below right](C,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 25,
-    Title = "Đồ thị y = 2^x và y = log₂ x đối xứng qua y = x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Hai đồ thị hàm mũ và logarit cùng cơ số đối xứng qua đường thẳng y = x.",
-    ImagePath = "Mu_logarit/mulogarit25.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw [color=gray!30,, xstep=1.0cm,ystep=1.0cm] (-2,-2.5) grid (4,3);
-	\draw[->] (-2,0)--(4,0) node[below]{$x$};
-	\draw[->] (0,-2.3)--(0,3) node[left]{$y$};
-	\draw (0,0) node[below right]{$O$};
-	\draw[line width=1.2pt,color=blue,domain=-2:1.5] plot(\x,{2^(\x)});
-	\draw[line width=1.2pt,color=violet,domain=0.2:3.2]plot(\x,{ln((\x))/ln(2)});
-	\draw[dashed,line width=0.7pt,color=orange] (-2,-2)--(3,3);
-	\node[below] at (2,-1.2) {\small\fbox{Hình I.3}};
-	\node[right] at (2.8,1) {\small\fbox{$y=\log_ax$}};
-	\node[right] at (1.5,3) {\small\fbox{$y=a^x$}};
-	\end{tikzpicture}"
+    Title = "Hình chữ nhật với đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_25.png",
+    Code = @"\begin{tikzpicture}[scale=1]
+\coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
+\coordinate (A) at (1,2); \coordinate (O) at (2.5,0.5);\coordinate (E) at (5.5,0.5);
+\coordinate (F) at (-0.5,3.5);
+\draw (B)--(C)--(D)--(A)--cycle; \draw (B)--(D) (C)--(A); 
+\draw (B) node[shift={(-0.25,-0.25)}] {$B$};
+\draw(A) node[shift={(-0.25,0.25)}] {$A$};
+\draw (C)node[shift={(0.25,-0.25)}] {$C$};
+\draw (D) node[shift={(0.25,0.25)}] {$D$};
+\draw (O) node[shift={(0,-0.35)}] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 26,
-    Title = "Đồ thị y = 2^x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm số mũ cơ số 2 qua (0,1) và (1,2).",
-    ImagePath = "Mu_logarit/mulogarit26.png",
-    Code = @"\begin{tikzpicture}[scale=0.7,>=stealth]
-		\tkzDefPoints{0/0/O}
-		\def \xmin{-3.1}
-		\def \xmax{2.5}
-		\def \ymin{-0.7}
-		\def \ymax{3.5}
-		\draw[->] (\xmin,0) -- (\xmax,0);
-		\draw[->,color=black] (0,\ymin) -- (0,\ymax);
-		\draw[color=black](\xmax-0.3,.2)node[right] {$x$};
-		\draw[color=black] (.1,\ymax) node[right] {\normalsize $y$};
-		\draw[color=black] (0pt,-8pt) node[left] {\small $O$};
-		\begin{scope}
-		\clip(\xmin ,\ymin) rectangle (\xmax-.3,\ymax-.3);
-		%Vẽ đồ thị
-		\draw[color=black,smooth,samples=100,domain=-4.08:4.06] 
-		plot(\x,{2^(\x)});
-		\end{scope}
-		%vẽ râu ria
-		\draw[dashed] (1,0)--(1,2)--(0,2);
-		\node at (1,-.4){\small $ 1 $};
-		\node at (-.3,2){\small $ 2 $};
-		\node at (-.3,1.2){\small $ 1 $};
-		\tkzDrawPoints[fill=black](O)
-		\end{tikzpicture}"
+    Title = "Hình chữ nhật với cung tròn và góc vuông",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với các điểm E, F, đường chéo, cung tròn nét đứt, góc vuông FBE.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_26.png",
+    Code = @"\begin{tikzpicture}[thick,scale=1]
+\coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
+\coordinate (A) at (1,2); \coordinate (O) at (2.5,0.5);\coordinate (E) at (5.5,0.5);
+\coordinate (F) at (-0.5,3.5);
+\draw (B)--(C)--(D)--(A)--cycle; \draw (B)--(D) (C)--(A) (E)--(B)--(F) (E)--(D) (E)--(C) (E)--(O); 
+\draw (B) node[shift={(-0.25,-0.25)}] {$B$};
+\draw(A) node[shift={(-0.25,0.25)}] {$A$};
+\draw (C)node[shift={(0.25,-0.25)}] {$C$};
+\draw (D) node[shift={(0.25,0.25)}] {$D$};
+\draw (O) node[shift={(0,-0.35)}] {$O$};
+\draw (E) node[below] {$E$};
+\draw (F) node[left] {$F$};
+\draw[dashed] (E) arc (18.43:108.43:4.74) ;
+\tkzMarkRightAngle[size=0.3](F,B,E);
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 27,
-    Title = "Đồ thị y = a^x và y = log_b x",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ với a > 1 và hàm logarit với 0 < b < 1.",
-    ImagePath = "Mu_logarit/mulogarit27.png",
-    Code = @"\begin{tikzpicture}[scale=0.7,>=stealth,x=1cm,y=1cm]
-		\draw[->,line width = 1pt] (-1.6,0)--(0,0)%
-		node[below right]{$O$}--(5,0) node[below]{$x$};
-		\draw[->,line width = 1pt] (0,-1.5) --(0,3.5) node[right]{$y$};
-		\draw [ line width = 1.2pt, domain=-1.6:3, samples=100]%
-		plot (\x, {1.5^(\x)})node[above]{\footnotesize $y=a^x$};
-		\draw[samples=100, smooth, domain=0.1:3] plot(\x,{ln((\x))/ln(0.5)})node[above right]{\footnotesize $y=\log_{b} x$};
-		%\draw[fill=none] (0,0) circle(3pt);
-		\end{tikzpicture}"
+    Title = "Hình bình hành ABCD (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD đơn giản, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_27.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/D,7/0/C,3/3/A}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints(D,C,A,B)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 28,
-    Title = "Đồ thị y = log_a x với 0 < a < 1",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị logarit nghịch biến, qua (1,0) và (1/a, -1).",
-    ImagePath = "Mu_logarit/mulogarit28.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-1,0)--(4,0) node[below]{$x$};
-	\draw[->] (0,-2)--(0,2.5) node[left]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[line width=0.8pt,color=violet,domain=0.2:3.2]plot(\x,{ln((\x))/ln(0.5)});
-	\draw[fill=black] (1,0) circle(1.5pt) (2,-1) circle(1.5pt);
-	\draw[dashed] (2,0)node[above]{\small$\dfrac{1}{a}$}--(2,-1)--(0,-1)node[left]{\small$-1$};
-	\node[below] at (1,-2.2) {\fbox{$0<a<1$}};
-	\node[above] at (1.1,0) {\small$1$};
-	\end{tikzpicture}"
+    Title = "Hình vuông MNPQ với đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông MNPQ với hai đường chéo MP và NQ cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_28.png",
+    Code = @"\begin{tikzpicture}[scale=1]
+\coordinate (M) at (0,0); \coordinate (N) at (2,0); \coordinate (P) at (2,2);
+\coordinate (Q) at (0,2); \coordinate (O) at (1,1);
+\draw (M)--(N)--(P)--(Q)--cycle; \draw (M)--(P) (N)--(Q); 
+\draw (M) node[shift={(-0.25,-0.25)}] {$M$};
+\draw(Q) node[shift={(-0.25,0.25)}] {$Q$};
+\draw (N)node[shift={(0.25,-0.25)}] {$N$};
+\draw (P) node[shift={(0.25,0.25)}] {$P$};
+\draw (O) node[shift={(0,-0.35)}] {$O$};
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 29,
-    Title = "Đồ thị y = log_a x với a > 1",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị logarit đồng biến, qua (1,0) và (a,1).",
-    ImagePath = "Mu_logarit/mulogarit29.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-1,0)--(4,0) node[below]{$x$};
-	\draw[->] (0,-2.5)--(0,2) node[right]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[line width=0.8pt,color=violet,domain=0.2:3.2]plot(\x,{ln((\x))/ln(2)});
-	\draw[fill=black] (1,0) circle(1.5pt) (2,1) circle(1.5pt);
-	\draw[dashed] (2,0)node[below]{\small$a$}--(2,1)--(0,1)node[left]{\small$1$};
-	\node[below] at (1,-2.6) {\fbox{$a>1$}};
-	\node[below] at (1.1,0) {\small$1$};
-	\end{tikzpicture}"
+    Title = "Hình vuông với đường chéo và trung điểm",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD, M và N là trung điểm AB và BC.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_29.png",
+    Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,4/4/C,0/4/D}
+\coordinate (M) at ($(A)!0.5!(B)$);
+\coordinate (N) at ($(C)!0.5!(B)$);
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,M,N)
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C B,D)
+\tkzLabelPoints[below](A,M,B)
+\tkzLabelPoints[above](C,D)
+\tkzLabelPoints[right](N)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 30,
-    Title = "So sánh a, b, c từ đồ thị hàm mũ",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 cơ số từ giao điểm với x = 1: c < 1 < b < a.",
-    ImagePath = "Mu_logarit/mulogarit30.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-		\draw[->] (-2,0)--(2,0) node[below]{$x$};
-		\draw[->] (0,-0.5)--(0,4) node[right]{$y$};
-		\draw (0,0) node[below left]{$O$};
-		\draw[line width=0.8pt,color=blue,domain=-2:1.5] plot(\x,{2.5^(\x)});
-		\draw[line width=0.8pt,color=violet,domain=-2:1.8] plot(\x,{1.7^(\x)});
-		\draw[line width=0.8pt,color=orange,domain=-1.4:1.8] plot(\x,{0.4^(\x)});
-		\draw[fill=black] (0,1) circle(1.5pt) (1,0.4) circle(1.5pt) (1,1.7) circle(1.5pt) (1,2.5) circle(1.5pt);
-		\draw[dashed] (1,0)node[below]{\small$1$}--(1,4)  (1,0.4)--(0,0.4)node[left]{\small$c$} (1,1.7)--(0,1.7)node[left]{\small$b$} (1,2.5)--(0,2.5)node[left]{\small$a$};
-		\node[below] at (0,-1) {\small \fbox{So sánh $a,b,c$}};
-		\node[right] at (1.4,0.5) {\small$y=c^x$};
-		\node[right] at (1.4,2) {\small$y=b^x$};
-		\node[right] at (1.4,3.4) {\small$y=a^x$};
-		\end{tikzpicture}"
+    Title = "Hình thang phức tạp với trung điểm",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCDEFG với các trung điểm M, N và đường nối, đường nét đứt BM, BN, MN.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_30.png",
+    Code = @"\begin{tikzpicture}[line cap=round,line join=round]
+\tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
+\tkzDefPoints{-4/0/A,0/0/B,2.5/0/E,-4/4/D,0/2.5/G}
+\tkzDefPointBy[translation = from A to B](D)
+\tkzGetPoint{C}
+\tkzDefPointBy[translation = from B to E](G)
+\tkzGetPoint{F}
+\tkzDefMidPoint(A,G)\tkzGetPoint{M}
+\tkzDefMidPoint(C,E)\tkzGetPoint{N}
+\tkzDrawPoints(A,B,C,D,E,F,G,M,N)
+\tkzLabelPoint[below](A){$A$}
+\tkzLabelPoint[below](B){$B$}
+\tkzLabelPoint[below](E){$E$}
+\tkzLabelPoint[above](D){$D$}
+\tkzLabelPoint[above](C){$C$}
+\tkzLabelPoint[above](F){$F$}
+\tkzLabelPoint[above](M){$M$}
+\tkzLabelPoint[above left](G){$G$}
+\tkzLabelPoint[right](N){$N$}
+\tkzDrawSegments(A,B B,E E,F F,G B,C C,D D,A A,G C,E) 
+\tkzDrawSegments[dashed](B,M B,N M,N)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 31,
-    Title = "Đồ thị y = 0.5^x với 0 < a < 1",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ nghịch biến, qua (0,1) và (-1, 1/a).",
-    ImagePath = "Mu_logarit/mulogarit31.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-2,0)--(2.2,0) node[below]{$x$};
-	\draw[->] (0,-0.5)--(0,4) node[right]{$y$};
-	\draw (0,0) node[below right]{$O$};
-	\draw[line width=1.2pt,color=orange,domain=-1.9:2] plot(\x,{0.5^(\x)});
-	\draw[fill=black] (0,1) circle(1.5pt) (-1,2) circle(1.5pt);
-	\draw[dashed] (-1,0)node[below]{\small$-1$}--(-1,2)--(0,2)node[right]{\small$\frac{1}{a}$};
-	\node[below] at (0,-0.7) {\fbox{$0<a<1$}};
-	\node[right] at (0,1.15) {$1$};
-	\end{tikzpicture}"
+    Title = "Hình thang với trung điểm (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCDEFG với trung điểm M, N và các đường nét đứt.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_31.png",
+    Code = @"\begin{tikzpicture}[line cap=round,line join=round]
+\tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
+\tkzDefPoints{-4/0/A,0/0/B,2.5/0/E,-4/4/D,0/2.5/G}
+\tkzDefPointBy[translation = from A to B](D)
+\tkzGetPoint{C}
+\tkzDefPointBy[translation = from B to E](G)
+\tkzGetPoint{F}
+\tkzDefMidPoint(A,G)\tkzGetPoint{M}
+\tkzDefMidPoint(C,E)\tkzGetPoint{N}
+\tkzDrawPoints(A,B,C,D,E,F,G,M,N)
+\tkzLabelPoint[below](A){$A$}
+\tkzLabelPoint[below](B){$B$}
+\tkzLabelPoint[below](E){$E$}
+\tkzLabelPoint[above](D){$D$}
+\tkzLabelPoint[above](C){$C$}
+\tkzLabelPoint[above](F){$F$}
+\tkzLabelPoint[above](M){$M$}
+\tkzLabelPoint[above left](G){$G$}
+\tkzLabelPoint[right](N){$N$}
+\tkzDrawSegments(A,B B,E E,F F,G B,C C,D D,A A,G C,E) 
+\tkzDrawSegments[dashed](B,M B,N M,N)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 32,
-    Title = "Đồ thị y = x^α với các α khác nhau",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh các hàm lũy thừa: α = 0, α = 1, α > 1, 0 < α < 1, và α < 0.",
-    ImagePath = "Mu_logarit/mulogarit32.png",
-    Code = @"\begin{tikzpicture}[thick,>=stealth,scale=0.7] 
-		\draw[->,color=black] (0,0) -- (6.5,0);
-		\draw[->,color=black] (0,0) -- (0.,5.5);
-		\draw[color=black] (6.5,0) node[right] {\small $x$};
-		\draw[color=black] (0,5.5) node[above] {\small $y$};
-		\draw[color=black] (0,0) node[left] {\footnotesize $0$};
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:5] plot(\x,{(\x)^0}) node[above]{\scriptsize $\alpha =0$};
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:2.2] plot(\x,{(\x)^2})node[above right]{\scriptsize $\alpha >1$};
-		\draw[line width=1.2pt,smooth,samples=100,domain=0.2:5] plot(\x,{(\x)^(-1)})node[above]{\scriptsize $\alpha <0$};
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:4] plot(\x,{(\x)^1})node[below right]{\scriptsize $\alpha =1$};
-		\draw[line width=1.2pt,smooth,samples=100,domain=0:5] plot(\x,{(\x)^0.5})node[above]{\scriptsize $0<\alpha <1$};
-	\end{tikzpicture}"
+    Title = "Hình thang vuông với đường cao",
+    Category = "Hình tứ giác",
+    Description = "Hình thang vuông ABCD với đường cao DH vuông góc với AB, góc vuông tại H và D.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_32.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,6/0/B,3/1.5/C,1/1.5/D, 1/0/H}
+\tkzDrawSegments(A,B B,C C,D D,A D,H)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,H)
+\tkzMarkRightAngle[size=0.2](D,H,B)
+\tkzMarkRightAngle[size=0.2](H,D,C)
+\tkzLabelPoints[below](A,B,H)
+\tkzLabelPoints[above](C,D)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 33,
-    Title = "Đồ thị y = x³, y = x² và y = x^(1/2)",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị lũy thừa: (1) y = x³, (2) y = x², (3) y = x^(1/2).",
-    ImagePath = "Mu_logarit/mulogarit33.png",
-    Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join=round, line cap=round]
-		\def\xmax{3.5} \def\ymax{5}
-		\draw[->] (-0.1,0)--(\xmax,0) node [below]{$x$};
-		\draw[->] (0,-0.1)--(0,\ymax) node [left]{$y$};
-		\node at (0,0) [below left]{$O$};
-		\clip (-0.9,-0.9) rectangle (\xmax-0.1,\ymax);
-		\draw[smooth,samples=300,domain=0:\xmax] plot(\x,{(\x)^3});
-		\draw[smooth,samples=300,domain=0:\xmax] plot(\x,{(\x)^2});
-		\draw[smooth,samples=300,domain=0:\xmax] plot(\x,{(\x)^(0.5)});
-		\draw[dashed] (1,0) node[below]{$1$}--(1,1)--(0,1)node[left]{$1$};
-		\draw (2,1.42)node[below right]{$(3)$};
-		\draw (2,4)node[above right]{$(2)$};
-		\draw (1.7,4.9)node[below left]{$(1)$};
-		\draw[fill=black] (1,1) circle(1.5pt);
-		\end{tikzpicture}"
+    Title = "Hình thoi với đường chéo vuông góc",
+    Category = "Hình tứ giác",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD vuông góc tại I, đường chéo nét đứt.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_33.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{-2.2/0/A,0/-1/B,2.2/0/C,0/1/D, 0/0/I}
+\tkzDrawSegments(A,B B,C C,D D,A)
+\tkzDrawSegments[dashed](A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,I)
+\tkzMarkRightAngle[size=0.2](D,I,C)
+\tkzLabelPoints[below](B)
+\tkzLabelPoints[above](D)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](C)
+\tkzLabelPoints[below right](I)
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 34,
-    Title = "Đồ thị y = x^a, y = x^b và y = x^c",
-    Category = "Đồ thị mũ logarit",
-    Description = "So sánh 3 đồ thị lũy thừa: a < 0 < c < 1 < b.",
-    ImagePath = "Mu_logarit/mulogarit34.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-0.8,0)--(3.7,0) node[below]{$x$};
-	\draw[->] (0,-0.5)--(0,4) node[right]{$y$};
-	\draw (0,0) node[above left]{$O$};
-	%\draw[domain=0:2.2] plot(\x,{(\x)^2});
-	%\draw[domain=0:3] plot(\x,{(\x)});
-	\draw[line width=1pt,color=red,smooth,samples=100,domain=0:3] plot(\x,{(\x)});
-	\draw[line width=1pt,color=cyan,smooth,samples=100,domain=0:2] plot(\x,{(\x)^2});
-	\draw[line width=1pt,color=violet,smooth,samples=100,domain=0.3:3] plot(\x,{(\x)^(-1)});
-	\draw[fill=black] (1,1) circle(1.5pt);
-	\draw[dashed] (1,0)node[below]{\small$1$}--(1,1)--(0,1)node[left]{\small$1$};
-	\draw (2.7,0.6)node[right]{\small$y=x^a$};
-	\draw (1.8,3.7)node[right]{\small$y=x^b$};
-	\draw (2.5,2.5)node[right]{\small$y=x^c$};
-	\end{tikzpicture}"
+    Title = "Hình thoi với góc 60° và cạnh bằng nhau",
+    Category = "Hình tứ giác",
+    Description = "Hình thoi ABCD với góc ABC = 60°, đường chéo AC, tất cả các cạnh bằng nhau (AB=BC=CD=DA).",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_34.png",
+    Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
+\tkzDefPoints{0/0/A, 0/-4/C};
+\tkzDefPointBy[rotation = center A angle -60](C)\tkzGetPoint{B};
+\tkzDefPointBy[rotation = center A angle 60](C)\tkzGetPoint{D};
+\tkzDrawPolygon(A,B,C,D);
+\tkzDrawSegments(A,C);
+\tkzDrawPoints[fill=black](A,B,C,D);
+\tkzLabelPoints[above](A);
+\tkzLabelPoints[left](B);
+\tkzLabelPoints[below](C);
+\tkzLabelPoints[right](D);
+\tkzMarkAngles[size=0.7cm,arc=l](C,B,A);
+\tkzLabelAngles[pos=1.2](C,B,A){$60^\circ$};
+\tkzMarkSegments[mark=||](A,B B,C C,D D,A);
+\end{tikzpicture}"
 },
 
 new TikzItem2
 {
     Id = 35,
-    Title = "Đồ thị y = 2^x với a > 1",
-    Category = "Đồ thị mũ logarit",
-    Description = "Đồ thị hàm mũ đồng biến, qua (0,1) và (1,a).",
-    ImagePath = "Mu_logarit/mulogarit35.png",
-    Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth]
-	\draw[->] (-2,0)--(2,0) node[below]{$x$};
-	\draw[->] (0,-0.5)--(0,4) node[right]{$y$};
-	\draw (0,0) node[below left]{$O$};
-	\draw[line width=1.2pt,color=blue,domain=-2:1.8] plot(\x,{2^(\x)});
-	\draw[fill=black] (0,1) circle(1.5pt) (1,2) circle(1.5pt);
-	\draw[dashed] (1,0)node[below]{\small$1$}--(1,2)--(0,2)node[left]{\small$a$};
-	\node[below] at (0,-0.7) {\fbox{$a>1$}};
-	\node[left] at (0,1.15) {$1$};
-	\end{tikzpicture}"
+    Title = "Hình vuông với trung điểm và tam giác tô màu",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác OND tô xám.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_35.png",
+    Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
+\tkzDefPoints{0/0/A, 4/0/B};
+\tkzDefSquare(A,B)\tkzGetPoints{C}{D};
+\coordinate (M) at ($(A)!0.5!(D)$);
+\coordinate (N) at ($(D)!0.5!(C)$);
+\coordinate (P) at ($(C)!0.5!(B)$);
+\coordinate (Q) at ($(B)!0.5!(A)$);
+\tkzInterLL(A,C)(B,D) \tkzGetPoint{O};
+\tkzDrawPolygon(A,B,C,D);
+\tkzDrawSegments(A,C B,D);
+\tkzDrawPolygon[fill=gray](O,N,D);
+\tkzDrawPoints[fill=black](A,B,C,D,M,N,P,Q,O);
+\tkzLabelPoints[above](C,D,N);
+\tkzLabelPoints[below](A,B,O,Q);
+\tkzLabelPoints[right](P);
+\tkzLabelPoints[left](M);
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 36,
+    Title = "Hình thang với đường cao nét đứt",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với đường cao AM và BN (nét đứt) từ A và B xuống đáy CD.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_36.png",
+    Code = @"\begin{tikzpicture}
+\path 
+(-3,0) coordinate (D)
+(3,0) coordinate (C)
+($(D)+(65:3)$) coordinate (A)
+($(C)+(115:3)$) coordinate (B)
+($(C)!(A)!(D)$) coordinate (M)
+($(C)!(B)!(D)$) coordinate (N)
+;
+\draw[thick] (A)--(B)--(C)--(D)-- cycle;
+\draw[dashed] (A)--(M) (B)--(N);
+\foreach \x/\g in {A/120,B/60,C/-60,D/-120,M/-90,N/-90} \fill[black] (\x) circle (1pt)
+($(\g:3mm)+(\x)$) node {$\x$};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 37,
+    Title = "Hình bình hành với đường chéo và góc vuông",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành OABC với đường chéo OC, AB, I là trung điểm OC, góc vuông OIB.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_37.png",
+    Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
+\tkzDefPoints{0/0/O,4/0/A,2/3.5/B};
+\coordinate (C) at ($(A)+(B)$);
+\coordinate (I) at ($(O)!.5!(C)$);
+\tkzDrawSegments(O,A O,B A,C B,C O,C A,B);
+\tkzLabelPoints[below](A,O,I);
+\tkzLabelPoints[above](B,C);
+\tkzDrawPoints[fill=black,size=4](A,B,C,O,I);
+\tkzMarkRightAngle(O,I,B);
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 38,
+    Title = "Hình vuông với trung điểm và đường nét đứt",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông ABCD với đường chéo AC và BD cắt nhau tại I với góc vuông, M và N là trung điểm AB và BC, đường nét đứt AN và DM.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_38.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,3/0/B}
+\tkzDefSquare(A,B)\tkzGetPoints{C}{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{I}
+\coordinate (M) at ($(A)!0.5!(B)$);
+\coordinate (N) at ($(B)!0.5!(C)$);
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawSegments[dashed](A,N D,M)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,I,M,N)
+\tkzLabelPoints[below](A,B,M)
+\tkzLabelPoints[above](C,D,I)
+\tkzLabelPoints[right](N)
+\tkzMarkRightAngle[size=0.25](C,I,B)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 39,
+    Title = "Hình chữ nhật với đường chéo nét đứt",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD (nét đứt) cắt nhau tại I.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_39.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,4/2/C,0/2/D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{I}
+\tkzDrawSegments(A,B B,C C,D D,A)
+\tkzDrawSegments[dashed](A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,I)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C,D,I)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 40,
+    Title = "Hình thang cân với nền nước",
+    Category = "Hình tứ giác",
+    Description = "Hình thang cân ABCD với ba cạnh bằng nhau có độ dài a (m), nền tô màu xanh cyan biểu thị mặt nước, có chú thích Hình 36.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_40.png",
+    Code = @"\begin{tikzpicture}
+\path 
+(-3,0) coordinate (D)
+(3,0) coordinate (C)
+($(D)+(65:3)$) coordinate (A)
+($(C)+(115:3)$) coordinate (B)
+;
+\fill[cyan!50] (-4.5,-1) rectangle (4,0);
+\draw[thick] (A)--node[above]{$a \text{(m)}$}(B)--node[right]{$a \text{(m)}$}(C)--(D)--node[left]{$a \text{(m)}$} cycle;
+\node at (0,-1.5) {\it Hình 36};
+\foreach \x/\g in {A/120,B/60,C/-60,D/-120} \fill[black] (\x) circle (1pt)
+($(\g:3mm)+(\x)$) node {$\x$};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 41,
+    Title = "Hình chữ nhật với viền cắt góc",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD 30cm×80cm với viền bên trong cắt bỏ bốn góc, mỗi góc có kích thước x cm, có chú thích a).",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_41.png",
+    Code = @"\begin{tikzpicture}[line join=round, line cap=round,scale=0.9]
+\coordinate (A) at (0,3);
+\coordinate (B) at (5,3);
+\coordinate (D) at (0,0);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\draw(A)--(B)--(C)--(D)--cycle;
+\draw (0,0) rectangle (1,1) (A) rectangle (1,2) (B) rectangle (4,2) (4,1) rectangle (C);
+\draw[dashed] (1,1) rectangle (4,2);
+% \foreach \i/\g in {A/90,B/90,C/-90,D/-90}{\draw[fill=black](\i) circle (1pt) ($(\i)+(\g:3mm)$) node[scale=1]{$\i$};}
+\draw (0,.5) node [left] {$x$};
+\draw (.5,0) node [below] {$x$};
+\draw (0,2.5) node [left] {$x$};
+\draw (0.5,3) node [above] {$x$};
+%%%%%%%%%
+\draw (4.5,0) node [below] {$x$};
+\draw (5,0.5) node [right] {$x$};
+\draw (5,2.5) node [right] {$x$};
+\draw (4.5,3) node [above] {$x$};
+%%%%%%%%
+\draw[<->] (-1,0)--(-1,3) node[above,midway,sloped] {$30$cm};
+\draw[<->] (0,-1)--(5,-1) node[above,midway] {$80$cm};
+\path (current bounding box.south) node[below, black]{a)}; %dưới
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 42,
+    Title = "Hình chữ nhật 10×16 với các điểm cắt",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD 10×16 với các điểm E, F, G, H, I, J, M, N chia các cạnh, đoạn cắt x từ các góc.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_42.png",
+    Code = @"\begin{tikzpicture}[scale=0.7]
+\tkzInit[xmin=-5,xmax=6,ymin=-3,ymax=6]
+\tkzDefPoints{0/0/A, 8/0/D, 8/6/C, 0/6/B, 0/1/E, 0/5/F, 1/6/G, 7/6/H, 8/5/I, 8/1/J, 1/0/M, 7/0/N}
+\tkzDrawPoints(A,B,C,D,M,N,E,F,G,H,I,J)
+\tkzLabelSegments[above](B,G H,C){$x$}
+\tkzLabelSegments[right](C,I J,D){$x$}
+\tkzLabelSegment[left](A,B){$10$}
+\tkzLabelSegment[below](A,D){$16$}
+\tkzDrawSegments[thin](A,B A,D B,C C,D F,I E,J G,M H,N)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 43,
+    Title = "Hình chữ nhật với đường vuông góc d",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với đường chéo AC và BD cắt nhau tại I, đường trung bình NE vuông góc tại N, đường thẳng d.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_43.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\clip (-3.5,-1.5) rectangle (3.5,4);
+%%%%%%%%%%%%%%%
+\tkzDefPoints{-3/0/D,3/0/C,3/3/B,-3/3/A,-2/-0.6/F}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{I}
+\coordinate (N) at ($(A)!0.5!(B)$);
+\coordinate (E) at ($(C)!0.5!(D)$);
+\coordinate (M) at ($(A)!0.8!(B)$);
+\tkzDrawSegments(A,C B,D N,E)
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,I,N,E,M)
+\tkzLabelPoints[above left](A)
+\tkzLabelPoints[above right](B)
+\tkzLabelPoints[below left](D)
+\tkzLabelPoints[below right](C)
+\tkzLabelPoints[below](E)
+\tkzLabelPoints[above](N,M)
+\tkzLabelPoints[above right](I)
+\tkzDrawLines[add=0.2 and 0.2](E,F)
+\tkzLabelLine[pos=1.2,below left](E,F){$d$}
+\tkzMarkRightAngle[size=0.2](I,N,B)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 44,
+    Title = "Hình chữ nhật với vector BD màu đỏ",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với vector màu đỏ từ B đến D.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_44.png",
+    Code = @"\begin{tikzpicture}[>=stealth,line cap=round,line join=round,scale=.7,font=\footnotesize]
+\tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints(A,B,C,D)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[above](D)
+\draw[->,red] (B)--(D);
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 45,
+    Title = "Hình chữ nhật với phép vị tự",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABC với góc vuông tại A, phép vị tự tâm A tỷ số 4 biến C thành D, phép tịnh tiến từ A đến B biến D thành E.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_45.png",
+    Code = @"\begin{tikzpicture}[scale=0.8,font=\footnotesize,line join=round,
+line cap=round,>=stealth]
+\tkzInit[xmin=-0.5,ymin=-0.5,xmax=8.5,ymax=3.0]\tkzClip
+%\pgfresetboundingbox
+\tkzDefPoints{0/0/A,2/0/C}
+\tkzDefPointBy[rotation = center A angle 90](C)\tkzGetPoint{B}
+\tkzDefPointBy[homothety = center A ratio 4](C)\tkzGetPoint{D}
+\tkzDefPointBy[translation = from A to B](D)\tkzGetPoint{E}
+\tkzDrawSegments[->](A,B A,D A,E A,C)
+\tkzDrawSegments(B,C)
+\tkzDrawSegments[dashed](E,B E,D)
+\tkzDrawPoints(A,B,C,D,E)
+\tkzLabelPoints[below](A,D,C)
+\tkzLabelPoints[above](B,E)
+\tkzMarkRightAngles(C,A,B)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 46,
+    Title = "Hình bình hành với đường chéo và tâm O",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_46.png",
+    Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzDefPoints{0/0/A,2/3/B,5/0/D}
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (O) at ($(A)!0.5!(C)$);
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints(A,B,C,D,O)
+\tkzLabelPoints[above left](B)
+\tkzLabelPoints[above right](C)
+\tkzLabelPoints[below left](A)
+\tkzLabelPoints[below right](D)
+\tkzLabelPoints[above](O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 47,
+    Title = "Hình thang với đường trung bình vuông góc",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với đường trung bình IJ, I và J là trung điểm AB và CD, IJ vuông góc CJ.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_47.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\clip (-3.5,-1) rectangle (3.5,4);
+%%%%%%%%%%%%%%%
+\tkzDefPoints{-3/0/D,3/0/C,2/3/B,-2/3/A}
+\coordinate (I) at ($(A)!0.5!(B)$);
+\coordinate (J) at ($(C)!0.5!(D)$);
+\tkzDrawSegments(I,J)
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D)
+\tkzLabelPoints[above left](A)
+\tkzLabelPoints[above right](B)
+\tkzLabelPoints[below left](D)
+\tkzLabelPoints[below right](C)
+\tkzMarkRightAngle[size=0.2](C,J,I)
+\tkzLabelPoints[below](J)
+\tkzLabelPoints[above](I)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 48,
+    Title = "Hình chữ nhật với vector từ A",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với ba vector từ A: AB, AD, AC.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_48.png",
+    Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
+\tkzDrawSegments(A,B B,C C,D D,A)
+\tkzDrawPoints(A,B,C,D)
+\tkzLabelPoints[above left](D)
+\tkzLabelPoints[above right](C)
+\tkzLabelPoints[below left](A)
+\tkzLabelPoints[below right](B)
+\draw[->](A)--(B);
+\draw[->](A)--(D);
+\draw[->](A)--(C);
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 49,
+    Title = "Hình vuông với đường chéo và tâm O",
+    Category = "Hình tứ giác",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD vuông góc cắt nhau tại tâm O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_49.png",
+    Code = @"\begin{tikzpicture}[scale=1.0,font=\footnotesize,line join=round,
+line cap=round,>=stealth]
+%\tkzInit[xmin=-0.5,ymin=-0.5,xmax=7.0,ymax=5.5]\tkzClip
+\pgfresetboundingbox
+\tkzDefPoints{0/0/A,4/0/D}
+\tkzDefPointBy[rotation = center A angle 90](D)\tkzGetPoint{B}
+\tkzDefPointBy[rotation = center B angle 90](A)\tkzGetPoint{C}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawPolygon[color=black,line width =1pt](A,B,C,D)
+\tkzDrawSegments(A,C B,D)
+\tkzDrawPoints(A,B,C,D,O)
+\tkzLabelPoints[right](O)
+\tkzLabelPoints[below](A,D)
+\tkzLabelPoints[above](C,B)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 50,
+    Title = "Hình thang với đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo BD và AC cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_50.png",
+    Code = @"\begin{tikzpicture}
+\tkzDefPoints{0/0/A,1/2/B,4/0/D,5/2/C}
+\tkzDrawPolygon(A,B,C,D)
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawPoints[fill=black](A,B,C,D,O)
+\tkzLabelPoints[above](B,C,O)
+\tkzLabelPoints[below](A,D)
+\tkzDrawSegments(B,D)
+\tkzDrawSegments(A,C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 51,
+    Title = "Hình thang với trọng tâm G",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với M là trung điểm DC, O là giao điểm AC và BD, G là giao điểm AC và BM.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_51.png",
+    Code = @"\begin{tikzpicture}[scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, -1/-2/D}
+\tkzDefPointBy[translation=from A to B](D) \tkzGetPoint{C}
+\tkzDefMidPoint(D,C) \tkzGetPoint{M}
+\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+\tkzInterLL(A,C)(B,M) \tkzGetPoint{G}
+\tkzDrawSegments(A,B B,C C,D A,D A,C B,D B,M)
+\tkzLabelPoints[above](A,B)
+\tkzLabelPoints[below](D,C,O,G)
+\tkzDrawPoints[fill=black](A,B,C,D,O,G)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 52,
+    Title = "Hình bình hành với điểm đối xứng",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với O là trung điểm AB, C đối xứng với A qua O, hai đường chéo AC và BD.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_52.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{-2/1.5/A,3/1.5/B,0/0/O}
+\coordinate (C) at ($(O)!-1!(A)$);
+\coordinate (D) at ($(A)+(C)-(B)$);
+\tkzDrawPoints[size=5,fill=black](A,B,O,C,D)
+\tkzLabelPoints[above](A,B,O)
+\tkzLabelPoints[below](C,D)
+\tkzDrawPolygon(A,B,C,D,A)
+\draw (A)--(C) (B)--(D);
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 53,
+    Title = "Hình thang với đường chéo cắt nhau",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_53.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 54,
+    Title = "Hình thang ABCD đơn giản",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_54.png",
+    Code = @"\begin{tikzpicture}[scale=.5, line join=round, line cap=round]
+%%%%%%%%%%%%%%%
+\tkzDefPoints{0/0/A,4/0/B,0.5/2/D}
+\tkzDefPointBy[translation = from A to B](D) \tkzGetPoint{C}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[above](C,D)
+\tkzLabelPoints[below](A,B)
+\tkzDrawPoints(A,B,C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 55,
+    Title = "Hình thang với giao điểm đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_55.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 56,
+    Title = "Hình thang với đường chéo (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_56.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 57,
+    Title = "Hình thang với đường chéo (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_57.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 58,
+    Title = "Hình thang với đường chéo (tỷ lệ 1)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_58.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 59,
+    Title = "Hình bình hành với đường trung tuyến",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với M là trung điểm CD, đường trung tuyến AM.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_59.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,3/0/B,3/3/C}
+\coordinate (D) at ($(A)+(C)-(B)$);
+\coordinate (M) at ($(C)!0.5!(D)$);
+\tkzDrawSegments(A,B B,C C,D D,A A,M)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,M)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C,D,M)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 60,
+    Title = "Hình thang từ tam giác đều",
+    Category = "Hình tứ giác",
+    Description = "Tam giác đều ABC với I là trung điểm BC (IB=IC), phép tịnh tiến từ A đến B biến C thành D tạo hình thang ABDC.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_60.png",
+    Code = @"\begin{tikzpicture}[scale=.6]
+\tkzDefPoints{0/0/B, 5/0/C}
+\tkzDefPointBy[rotation = center B angle 60](C)\tkzGetPoint{A}
+\tkzDefMidPoint(B,C)\tkzGetPoint{I}
+\tkzDefPointBy[translation = from A to B](C)\tkzGetPoint{D}
+\tkzDrawPoints(A,B,C,D,I)
+\tkzDrawSegments(A,B B,C C,A B,D C,D A,D)
+\tkzMarkSegments[mark=|](I,B I,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](C)
+\tkzLabelPoints[below](D)
+\node (I) at (2.3,-0.3) {$I$};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 61,
+    Title = "Hình thang với trọng tâm phức tạp",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với M trên AB (AM=AB/3), N là trung điểm DC, các đường MN, NB, z1, z2 (nét đứt), trọng tâm G.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_61.png",
+    Code = @"\begin{tikzpicture}[scale=1]
+\tkzDefPoints{0/0/A, -1.6/-2/D, 4/-2/C}
+\coordinate (B) at ($(A)+(C)-(D)$); 
+\coordinate (M) at ($(A)!1/3!(B)$); 
+\tkzDefMidPoint(D,C)\tkzGetPoint{N}
+\tkzDefMidPoint(M,N)\tkzGetPoint{z1}
+\tkzDefMidPoint(B,N)\tkzGetPoint{z2} 
+\coordinate (G) at ($(M)!2/3!(z2)$); 
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(M,N N,B)
+\tkzDrawSegments[dashed](M,z2 z1,B)
+\tkzLabelPoints[above](A,B,M,G)
+\tkzLabelPoints[below](D,C,N)
+\tkzDrawPoints(G,z1,z2)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 62,
+    Title = "Hình thang với đường chéo (tỷ lệ 0.5)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_62.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below](A,D,O)
+\tkzLabelPoints[above](B,C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 63,
+    Title = "Hình thang với phép tịnh tiến",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với phép tịnh tiến từ B đến A biến C thành D, đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_63.png",
+    Code = @"\begin{tikzpicture}[scale=1,font=
+\footnotesize,line join=round,line cap=round, >=stealth]
+\tkzDefPoints{0/0/A,4/0/B,5/1.5/C}
+\tkzDefPointBy[translation = from B to A](C) \tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D) \tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints(A,B,C,D,O)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](C,B)
+\tkzLabelPoints[above](O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 64,
+    Title = "Hình thang với giao điểm O (tỷ lệ 0.5)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_64.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below](A,D)
+\tkzLabelPoints[above](B,C,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 65,
+    Title = "Hình thang với đường chéo (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_65.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below](A,D)
+\tkzLabelPoints[above](B,C,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 66,
+    Title = "Hình thang với trung điểm H và K",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo cắt nhau tại O, H và K là trung điểm BC và AD.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_66.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\coordinate (H) at ($(B)!0.5!(C)$);
+\coordinate (K) at ($(A)!0.5!(D)$);
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O,H,K)
+\tkzLabelPoints[below](A,D,K)
+\tkzLabelPoints[above](B,C,O,H)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 67,
+    Title = "Hình thang ABCD không đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD đơn giản không có đường chéo, tỷ lệ 0.5.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_67.png",
+    Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
+\tkzDrawSegments(A,B B,C C,D D,A)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D)
+\tkzLabelPoints[below](A,D)
+\tkzLabelPoints[above](B,C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 68,
+    Title = "Hình lục giác từ các phép tịnh tiến",
+    Category = "Hình tứ giác",
+    Description = "Hình lục giác ABCDEF được tạo từ các phép tịnh tiến vector, với các đường AC, AE, BC, BE.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_68.png",
+    Code = @"\begin{tikzpicture}
+\tkzDefPoints{3/0/B,0/0/A,0/3/D}
+\coordinate (C) at ($(D)+(B)$);
+\coordinate (E) at ($(C)+(B)$);
+\coordinate (F) at ($2*(B)$);
+\tkzDefMidPoint(A,C)
+\tkzLabelPoints[above left](D)
+\tkzLabelPoints[above left](C,E)
+\tkzLabelPoints[below left](B,A)
+\tkzLabelPoints[below right](F)
+\tkzDrawPoints(A,B,C,D,E,F)
+\tkzDrawSegments(A,F A,D D,E E,F A,C A,E B,C B,E)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 69,
+    Title = "Hình thang với đường trung bình MN",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AD và BC.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_69.png",
+    Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=.7]
+\tkzDefPoints{0/0/A}
+\coordinate (B) at ($(A)+(6.2,0)$);
+\tkzDefShiftPoint[A](70:3){D}
+\coordinate (C) at ($(D)+(3,0)$);
+\coordinate[label = left:$M$] (M) at ($(A)!1/2!(D)$);
+\coordinate[label =right:$N$] (N) at ($(B)!1/2!(C)$);
+\pgfresetboundingbox
+\tkzDrawPolygon(A,B,C,D)
+\draw (M)--(N);
+\tkzDrawPoints[fill=black](A,B,C,D,M,N)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 70,
+    Title = "Hình bình hành với tâm O và đường chéo",
+    Category = "Hình tứ giác",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại tâm O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_70.png",
+    Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\coordinate (A) at (0,0);
+\coordinate (B) at (1,3);
+\coordinate (C) at (4,3);
+\coordinate (D) at ($(A)+(C)-(B)$);
+\coordinate (O) at ($(A)!1/2!(C)$);
+\tkzDrawSegments(A,B B,C C,D A,D A,C B,D)
+\tkzDrawPoints[fill=black](O,D,A,B,C)
+\tkzLabelPoints[above](B,C)
+\tkzLabelPoints[below](A,D,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 71,
+    Title = "Hình thang với các đường phụ",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với M, N là trung điểm AB và DC, O là trung điểm AC, P trên NC, đường nét đứt MN và BN.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_71.png",
+    Code = @"\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/0/A, -1/-2/D, 4/-2/C}
+\coordinate (B) at ($(A)+(C)-(D)$);
+\coordinate (O) at ($(A)!.5!(C)$);
+\coordinate (M) at ($(A)!.5!(B)$);
+\coordinate (N) at ($(D)!.5!(C)$);
+\coordinate (P) at ($(O)!.33!(C)$);
+\draw (2.2,-1) node[above left]{$O$} ;
+\tkzDrawSegments[dashed](M,N B,N)
+\tkzDrawPolygon(A,D,B)
+\tkzDrawSegments(A,C D,C C,B)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[above](M,B)
+\tkzLabelPoints[below](N,D,C,P)
+\tkzDrawPoints(A,B,C,D,M,N,P,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 72,
+    Title = "Tứ giác với hai đường chéo I và J",
+    Category = "Hình tứ giác",
+    Description = "Tứ giác ABCD với hai đường chéo DC và AB cắt nhau tại I và J.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_72.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
+\draw[smooth] (1,1)--(-2,-2)--(-5,-1)--(-5,3)--cycle;
+\draw[smooth] (-5,3)--(-2,-2);
+\draw[smooth] (1,1)--(-5,-1);
+\draw[fill=black] (-5,3) circle (1pt) node[above] {$D$};
+\draw[fill=black] (1,1) circle (1pt) node[above] {$C$};
+\draw[fill=black] (-2,-2)circle (1pt) node[below] {$B$};
+\draw[fill=black] (-5,-1) circle (1pt) node[below] {$A$};
+\draw[fill=black] (-3.5,0.5) circle (1pt) node[above] {$J$};
+\draw[fill=black] (-2,0) circle (1pt) node[above] {$I$};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 73,
+    Title = "Hình thang với nhiều điểm phụ",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, N và P là các điểm trên cạnh và đường chéo.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_73.png",
+    Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
+\draw[smooth] (-4,0)--(1,0)--(3,2)--(-2,2)--cycle;
+\draw[smooth] (-4,0)--(3,2);
+\draw[smooth] (1,0)--(-2,2);
+\draw[fill=black] (-4,0) circle (1pt) node[below] {$A$};
+\draw[fill=black] (1,0) circle (1pt) node[below] {$B$};
+\draw[fill=black] (-0.5,1) circle (1pt) node[below] {$O$};
+\draw[fill=black] (0.67,1.33) circle (1pt) node[below] {$P$};
+\draw[fill=black] (0.5,2) circle (1pt) node[above] {$N$};
+\draw[fill=black] (-2,2) circle (1pt) node[above] {$D$};
+\draw[fill=black] (3,2) circle (1pt) node[above] {$C$};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 74,
+    Title = "Hình chữ nhật với nhiều góc vuông",
+    Category = "Hình tứ giác",
+    Description = "Hình chữ nhật ABCD với đường chéo BD và AH, M, N, O là các điểm phụ, E và K là chân góc vuông, nhiều đường và góc vuông.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_74.png",
+    Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
+\tikzset{label style/.style={font=\footnotesize}}
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,3);
+\coordinate (C) at (4,3);
+\coordinate (D) at ($(A)+(C)-(B)$);
+\coordinate (H) at ($(B)!(A)!(D)$);
+\coordinate (M) at ($(D)!1/2!(H)$);
+\coordinate (N) at ($(C)!1/2!(B)$);
+\coordinate (O) at ($(C)!1/2!(A)$);
+\coordinate (K) at ($(A)!(B)!(M)$);
+\tkzInterLL(B,K)(A,H) \tkzGetPoint{E}
+\tkzDrawSegments(A,B B,C C,D A,D B,D A,H A,M B,K M,N M,E)
+\tkzDrawPoints[fill=black](M,N,D,A,B,C,O,H,K,E)
+\tkzLabelPoints[above](B,C,N)
+\tkzLabelPoints[below](A,D,O,K,M)
+\tkzLabelPoints[left](E,H)
+\tkzMarkRightAngles[size=0.2](A,B,C A,H,D B,K,M)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 75,
+    Title = "Tứ giác với hai đường chéo AC và BD",
+    Category = "Hình tứ giác",
+    Description = "Tứ giác ABCD với hai đường chéo AC và BD cắt nhau tại O.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_75.png",
+    Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,fill=black, >=stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-2,-2);
+\coordinate (D) at (4,0);
+\coordinate (C) at (2,-2);
+\coordinate (O) at (1,-1);
+\tkzLabelPoints[below](B,C,O)
+\tkzLabelPoints[above](A,D)
+\tkzDrawSegments(A,B B,C C,D D,A B,D A,C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 76,
+    Title = "Hình thang với giao điểm O (Hình 1)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, có chú thích Hình 1.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_76.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\node[below] at (2,0) {Hình 1.};
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 77,
+    Title = "Hình thang ABCD đơn giản (tỷ lệ 0.6)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.6.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_77.png",
+    Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
+\tkzDrawSegments(A,B B,C C,D D,A)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D)
+\tkzLabelPoints[below](A,D)
+\tkzLabelPoints[above](B,C)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 78,
+    Title = "Hình thang với giao điểm O (tỷ lệ 1)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_78.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below, font=\footnotesize](A,D)
+\tkzLabelPoints[above, font=\footnotesize](B,C,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 79,
+    Title = "Hình thang với đường trung bình MN (0.7)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm BC và AD, tỷ lệ 0.7.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_79.png",
+    Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
+\coordinate (M) at ($(C)!0.5!(B)$);
+\coordinate (N) at ($(A)!0.5!(D)$);
+\tkzDrawSegments(A,B B,C C,D D,A M,N)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,M,N)
+\tkzLabelPoints[below, font=\footnotesize](A,D,N)
+\tkzLabelPoints[above, font=\footnotesize](B,C,M)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 80,
+    Title = "Hình thang với giao điểm O (lặp lại)",
+    Category = "Hình tứ giác",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_80.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
+\tkzDefPoints{0/0/A,4/0/B,5/2/C}
+\tkzDefPointBy[translation=from B to C](A)\tkzGetPoint{D}
+\tkzInterLL(A,C)(B,D)\tkzGetPoint{O}
+\tkzDrawSegments(A,B B,C C,D D,A A,C B,D)
+\tkzDrawPoints[size=5,fill=black](A,B,C,D,O)
+\tkzLabelPoints[below,font=\footnotesize](A, B, O)
+\tkzLabelPoints[above,font=\footnotesize](C,D)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 81,
+    Title = "Hình thang cân với các góc và đoạn bằng nhau",
+    Category = "Hình tứ giác",
+    Description = "Hình thang cân ABCD với BI song song AD (AD=AB=BI=DI), góc vuông IOB, đánh dấu góc và cạnh bằng nhau.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_81.png",
+    Code = @"\begin{tikzpicture}
+\tkzDefPoints{0/0/D, 1/3/A, 4/3/B, 5/0/C}
+\tkzDefLine[parallel=through B](A,D)\tkzGetPoint{I} 
+\tkzInterLL(A,I)(B,D)\tkzGetPoint{O}
+\tkzMarkRightAngle(I,O,B)
+\tkzMarkSegments[mark=|](A,D A,B B,I D,I)
+\tkzMarkAngles(C,D,B D,A,I B,D,A)
+\tkzMarkAngles[mark=||](B,D,A C,D,B)
+\tkzDrawSegments(A,B B,C C,D D,A B,I A,I B,D)
+\tkzLabelPoints[above left](A)
+\tkzLabelPoints[above right](B)
+\tkzLabelPoints[below left](D)
+\tkzLabelPoints[below right](C)
+\tkzLabelPoints[below](I,O)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 82,
+    Title = "Hai hình vuông đồng tâm với pattern",
+    Category = "Hình tứ giác",
+    Description = "Hai hình vuông ABCD và EFGH đồng tâm O, hình lớn tô pattern chấm màu đỏ, hình nhỏ tô pattern chấm xanh lá, phép vị tự tâm A tỷ số 0.3, đoạn AE=x và ED=20-x.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_82.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/B,2/2/O}
+\tkzDefPointBy[rotation=center O angle -90](B)
+\tkzGetPoint{A}
+\tkzDefPointBy[rotation=center O angle 180](B)
+\tkzGetPoint{D}
+\tkzDefPointBy[rotation=center O angle 90](B)
+\tkzGetPoint{C}
+\tkzDefPointBy[homothety=center A ratio 0.3](D)
+\tkzGetPoint{E}
+\tkzDefPointBy[rotation=center O angle -90](E)
+\tkzGetPoint{F}
+\tkzDefPointBy[rotation=center O angle 180](E)
+\tkzGetPoint{G}
+\tkzDefPointBy[rotation=center O angle 90](E)
+\tkzGetPoint{H}
+\tkzDrawPolygon[color=magenta](A,B,C,D)
+\tkzDrawPolygon[color=magenta](E,F,G,H)
+\tkzDefPointBy[homothety=center B ratio 1.05](A)
+\tkzGetPoint{M}
+\tkzDefPointBy[homothety=center B ratio 1.05](C)
+\tkzGetPoint{P}
+\tkzDefPointBy[translation=from A to E](M)
+\tkzGetPoint{N}
+\tkzDefPointBy[translation=from C to D](P)
+\tkzGetPoint{Q}
+\tkzLabelPoints[left](A,B,H)
+\tkzLabelPoints[right](C,D,F)
+\tkzLabelPoints[above](E)
+\tkzLabelPoints[below](G)
+\tkzFillPolygon[pattern=dots,pattern color=magenta](A,B,C,D)
+\tkzFillPolygon[pattern=dots,pattern color=green](E,F,G,H)
+\tkzDrawPoints(A,B,C,D,E,F,G,H)
+\tkzLabelSegment[above](A,E){$x$}
+\tkzLabelSegment[above](E,D){$20-x$}
+%\tkzMarkAngle[mark=|](C,A,B)
+\end{tikzpicture}"
+},
+
+new TikzItem2
+{
+    Id = 83,
+    Title = "Hai hình vuông đồng tâm với kích thước",
+    Category = "Hình tứ giác",
+    Description = "Hai hình vuông ABCD (màu đen) và EFGH (màu đỏ) đồng tâm O, hình nhỏ tô pattern xanh lá, kích thước x cm và 20 cm được ghi trên các cạnh.",
+    ImagePath = "Hinh_tu_giac/hinhtugiac_83.png",
+    Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
+\tikzset{label style/.style={font=\footnotesize}}
+\tkzDefPoints{0/0/B,2/2/O}
+\tkzDefPointBy[rotation=center O angle -90](B)
+\tkzGetPoint{A}
+\tkzDefPointBy[rotation=center O angle 180](B)
+\tkzGetPoint{D}
+\tkzDefPointBy[rotation=center O angle 90](B)
+\tkzGetPoint{C}
+\tkzDefPointBy[homothety=center A ratio 0.3](D)
+\tkzGetPoint{E}
+\tkzDefPointBy[rotation=center O angle -90](E)
+\tkzGetPoint{F}
+\tkzDefPointBy[rotation=center O angle 180](E)
+\tkzGetPoint{G}
+\tkzDefPointBy[rotation=center O angle 90](E)
+\tkzGetPoint{H}
+\tkzDrawPolygon[color=black](A,B,C,D)
+\tkzDrawPolygon[color=magenta](E,F,G,H)
+\tkzDefPointBy[homothety=center B ratio 1.05](A)
+\tkzGetPoint{M}
+\tkzDefPointBy[homothety=center B ratio 1.05](C)
+\tkzGetPoint{P}
+\tkzDefPointBy[translation=from A to E](M)
+\tkzGetPoint{N}
+\tkzDefPointBy[translation=from C to D](P)
+\tkzGetPoint{Q}
+%\tkzLabelPoints[below](A,B,C,D,E,F,G,H)
+%\tkzFillPolygon[pattern=dots,pattern color=magenta](A,B,C,D)
+\tkzFillPolygon[pattern=dots,pattern color=green](E,F,G,H)
+\tkzDrawSegments[<->,above](M,N P,Q)
+\tkzLabelSegment[above](M,N){$x\;\mathrm{cm}$}
+\tkzLabelSegment[right](P,Q){$20\;\mathrm{cm}$}
+%\tkzMarkAngle[mark=|](C,A,B)
+\end{tikzpicture}"
 },
