@@ -2,9 +2,9 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với các đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo nối các đỉnh đối diện và các đường nối với tâm.",
     ImagePath = "Hinh_tu_giac/hinhtugiac1.png",
     Code = @"\begin{tikzpicture}[scale=1.5]
 \foreach \x in {0,60,...,300} {
@@ -21,9 +21,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều ABCDEF tâm O",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF với tâm O, các đỉnh được tạo bởi phép quay 60° liên tiếp quanh tâm O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac2.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){O}
@@ -42,9 +42,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với tâm O (bản thu nhỏ)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O, các điểm được tạo bằng phép quay 60°, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac3.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
 \tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
@@ -68,9 +68,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với đường chéo FC",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, các đỉnh tạo bởi phép quay 60° liên tiếp, tỷ lệ 0.6.",
     ImagePath = "Hinh_tu_giac/hinhtugiac4.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=0.6]
 \coordinate[label=below left:$O$](O) at (0,0);
@@ -91,9 +91,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều ABCDEF (chuẩn)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với đường chéo FC, tỷ lệ 1.",
     ImagePath = "Hinh_tu_giac/hinhtugiac5.png",
     Code = @"\begin{tikzpicture}[>=stealth,line join=round,line cap=round,font=\footnotesize,scale=1]
 \coordinate[label=below left:$O$](O) at (0,0);
@@ -114,9 +114,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với các đường chéo (nét dày)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ dày, tỷ lệ 1.7.",
     ImagePath = "Hinh_tu_giac/hinhtugiac6.png",
     Code = @"\begin{tikzpicture}[scale=1.7,thick]
 \foreach \x in {0,60,...,300} {
@@ -133,9 +133,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với các đường chéo (nét rất dày)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với tất cả các đường chéo, nét vẽ rất dày, tỷ lệ 2.",
     ImagePath = "Hinh_tu_giac/hinhtugiac7.png",
     Code = @"\begin{tikzpicture}[scale=2,very thick]
 \foreach \x in {0,60,...,300} {
@@ -152,9 +152,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với các đường chéo, nét dày, tỷ lệ 1.7.",
     ImagePath = "Hinh_tu_giac/hinhtugiac8.png",
     Code = @"\begin{tikzpicture}[scale=1.7,thick]
 \foreach \x in {0,60,...,300} {
@@ -171,9 +171,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Ngũ giác đều với điểm đối xứng",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Ngũ giác đều ABCDE tâm O với các đường nối tâm, điểm M đối xứng của O qua AB, điểm N đối xứng của O qua CE.",
     ImagePath = "Hinh_tu_giac/hinhtugiac9.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.2, xmax=4.2, ymin=-0.5, ymax=5.5]
@@ -199,9 +199,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều ABCDEF (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF với tâm O, các đỉnh phân bố đều quanh tâm với góc 60°.",
     ImagePath = "Hinh_tu_giac/hinhtugiac10.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){O}
@@ -220,9 +220,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với đường chéo (nét rất dày)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với các đường chéo nối đỉnh đối diện, nét vẽ rất dày, tỷ lệ 2.",
     ImagePath = "Hinh_tu_giac/hinhtugiac11.png",
     Code = @"\begin{tikzpicture}[scale=2,very thick]
 \foreach \x in {0,60,...,300} {
@@ -239,9 +239,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thoi với hai đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau.",
     ImagePath = "Hinh_tu_giac/hinhtugiac12.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
@@ -258,9 +258,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thoi ABCD với đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD cắt nhau (lặp lại).",
     ImagePath = "Hinh_tu_giac/hinhtugiac13.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/D,5/0/B,2.5/-1/A,2.5/1/C}
@@ -277,9 +277,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Tam giác với tam giác trung điểm",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Tam giác ABC với tam giác trung điểm MNP, trong đó M, N, P là trung điểm BC, AC, AB.",
     ImagePath = "Hinh_tu_giac/hinhtugiac14.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
 \tkzInit[xmin=-0.5,xmax=5.5,ymin=-1,ymax=4]
@@ -301,9 +301,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Lục giác đều với vector OA",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Lục giác đều ABCDEF tâm O với vector OA, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac15.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.5, line join = round, line cap = round]
 \tkzInit[xmin=-4,xmax=4,ymin=-3.5,ymax=3.5]
@@ -328,9 +328,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với hai đường chéo tô màu",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O, tam giác AOB tô xanh, tam giác AOD tô xám.",
     ImagePath = "Hinh_tu_giac/hinhtugiac16.png",
     Code = @"\begin{tikzpicture}[scale=0.6,line join=round, line cap=round,>=stealth]
 \tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
@@ -353,9 +353,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường trung bình",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AB và CD.",
     ImagePath = "Hinh_tu_giac/hinhtugiac17.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -376,9 +376,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông ABCD với đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD cắt nhau tại I.",
     ImagePath = "Hinh_tu_giac/hinhtugiac18.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
 \tkzInit[xmin=-1,xmax=4.5,ymin=-0.5,ymax=4.5]
@@ -400,9 +400,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang ABCD",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với AB song song CD.",
     ImagePath = "Hinh_tu_giac/hinhtugiac19.png",
     Code = @"\begin{tikzpicture}
 \def\a{3} \def\h{2} \def\b{4}
@@ -420,9 +420,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành ABCD đơn giản",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với bốn đỉnh A, B, C, D.",
     ImagePath = "Hinh_tu_giac/hinhtugiac20.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -438,9 +438,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với hai đường tròn",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABMN với hai đường tròn tâm O và I, phép tịnh tiến từ A đến B biến M thành N và O thành I.",
     ImagePath = "Hinh_tu_giac/hinhtugiac21.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzInit[xmin=-2,xmax=6, ymin=-1,ymax=4.5]\tkzClip
@@ -465,9 +465,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành ABCD (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD đơn giản với bốn đỉnh.",
     ImagePath = "Hinh_tu_giac/hinhtugiac22.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -483,9 +483,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với trung điểm và tam giác tô màu",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác AMO tô vàng.",
     ImagePath = "Hinh_tu_giac/hinhtugiac23.png",
     Code = @"\begin{tikzpicture}[scale=0.6,line join=round, font=\footnotesize,line cap=round,>=stealth]
 \tkzDefPoints{1/5/A, 5/5/B, 1/1/D}
@@ -508,9 +508,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 24,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với trung điểm và trung tuyến",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với M, N là trung điểm AB và AD, đường chéo AC và BD cắt nhau tại O, các đường MO và NO.",
     ImagePath = "Hinh_tu_giac/hinhtugiac24.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A, 2/3/B, 7/3/C}
@@ -532,9 +532,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 25,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac25.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
@@ -552,9 +552,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với cung tròn và góc vuông",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với các điểm E, F, đường chéo, cung tròn nét đứt, góc vuông FBE.",
     ImagePath = "Hinh_tu_giac/hinhtugiac26.png",
     Code = @"\begin{tikzpicture}[thick,scale=1]
 \coordinate (B) at (1,-1); \coordinate (C) at (4,-1); \coordinate (D) at (4,2);
@@ -576,9 +576,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành ABCD (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD đơn giản, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac27.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -594,9 +594,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông MNPQ với đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông MNPQ với hai đường chéo MP và NQ cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac28.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \coordinate (M) at (0,0); \coordinate (N) at (2,0); \coordinate (P) at (2,2);
@@ -613,9 +613,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông với đường chéo và trung điểm",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD, M và N là trung điểm AB và BC.",
     ImagePath = "Hinh_tu_giac/hinhtugiac29.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,4/4/C,0/4/D}
@@ -633,9 +633,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang phức tạp với trung điểm",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCDEFG với các trung điểm M, N và đường nối, đường nét đứt BM, BN, MN.",
     ImagePath = "Hinh_tu_giac/hinhtugiac30.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
@@ -664,9 +664,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với trung điểm (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCDEFG với trung điểm M, N và các đường nét đứt.",
     ImagePath = "Hinh_tu_giac/hinhtugiac31.png",
     Code = @"\begin{tikzpicture}[line cap=round,line join=round]
 \tkzInit[xmin=-4,xmax=8,ymin=-1,ymax=8]
@@ -695,9 +695,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 32,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang vuông với đường cao",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang vuông ABCD với đường cao DH vuông góc với AB, góc vuông tại H và D.",
     ImagePath = "Hinh_tu_giac/hinhtugiac32.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,6/0/B,3/1.5/C,1/1.5/D, 1/0/H}
@@ -713,9 +713,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 33,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thoi với đường chéo vuông góc",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thoi ABCD với hai đường chéo AC và BD vuông góc tại I, đường chéo nét đứt.",
     ImagePath = "Hinh_tu_giac/hinhtugiac33.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{-2.2/0/A,0/-1/B,2.2/0/C,0/1/D, 0/0/I}
@@ -734,9 +734,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 34,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thoi với góc 60° và cạnh bằng nhau",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thoi ABCD với góc ABC = 60°, đường chéo AC, tất cả các cạnh bằng nhau (AB=BC=CD=DA).",
     ImagePath = "Hinh_tu_giac/hinhtugiac34.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 0/-4/C};
@@ -758,9 +758,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 35,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông với trung điểm và tam giác tô màu",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông ABCD với các trung điểm M, N, P, Q, đường chéo AC và BD cắt nhau tại O, tam giác OND tô xám.",
     ImagePath = "Hinh_tu_giac/hinhtugiac35.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/A, 4/0/B};
@@ -784,9 +784,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 36,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường cao nét đứt",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với đường cao AM và BN (nét đứt) từ A và B xuống đáy CD.",
     ImagePath = "Hinh_tu_giac/hinhtugiac36.png",
     Code = @"\begin{tikzpicture}
 \path 
@@ -807,9 +807,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 37,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với đường chéo và góc vuông",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành OABC với đường chéo OC, AB, I là trung điểm OC, góc vuông OIB.",
     ImagePath = "Hinh_tu_giac/hinhtugiac37.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/O,4/0/A,2/3.5/B};
@@ -826,9 +826,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 38,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông với trung điểm và đường nét đứt",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông ABCD với đường chéo AC và BD cắt nhau tại I với góc vuông, M và N là trung điểm AB và BC, đường nét đứt AN và DM.",
     ImagePath = "Hinh_tu_giac/hinhtugiac38.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,3/0/B}
@@ -849,9 +849,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 39,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với đường chéo nét đứt",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với hai đường chéo AC và BD (nét đứt) cắt nhau tại I.",
     ImagePath = "Hinh_tu_giac/hinhtugiac39.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,4/2/C,0/2/D}
@@ -867,9 +867,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 40,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang cân với nền nước",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang cân ABCD với ba cạnh bằng nhau có độ dài a (m), nền tô màu xanh cyan biểu thị mặt nước, có chú thích Hình 36.",
     ImagePath = "Hinh_tu_giac/hinhtugiac40.png",
     Code = @"\begin{tikzpicture}
 \path 
@@ -889,9 +889,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 41,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với viền cắt góc",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD 30cm×80cm với viền bên trong cắt bỏ bốn góc, mỗi góc có kích thước x cm, có chú thích a).",
     ImagePath = "Hinh_tu_giac/hinhtugiac41.png",
     Code = @"\begin{tikzpicture}[line join=round, line cap=round,scale=0.9]
 \coordinate (A) at (0,3);
@@ -921,9 +921,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 42,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật 10×16 với các điểm cắt",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD 10×16 với các điểm E, F, G, H, I, J, M, N chia các cạnh, đoạn cắt x từ các góc.",
     ImagePath = "Hinh_tu_giac/hinhtugiac42.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tkzInit[xmin=-5,xmax=6,ymin=-3,ymax=6]
@@ -940,9 +940,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 43,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với đường vuông góc d",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với đường chéo AC và BD cắt nhau tại I, đường trung bình NE vuông góc tại N, đường thẳng d.",
     ImagePath = "Hinh_tu_giac/hinhtugiac43.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-3.5,-1.5) rectangle (3.5,4);
@@ -971,9 +971,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 44,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với vector BD màu đỏ",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với vector màu đỏ từ B đến D.",
     ImagePath = "Hinh_tu_giac/hinhtugiac44.png",
     Code = @"\begin{tikzpicture}[>=stealth,line cap=round,line join=round,scale=.7,font=\footnotesize]
 \tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
@@ -990,9 +990,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 45,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với phép vị tự",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABC với góc vuông tại A, phép vị tự tâm A tỷ số 4 biến C thành D, phép tịnh tiến từ A đến B biến D thành E.",
     ImagePath = "Hinh_tu_giac/hinhtugiac45.png",
     Code = @"\begin{tikzpicture}[scale=0.8,font=\footnotesize,line join=round,
 line cap=round,>=stealth]
@@ -1015,9 +1015,9 @@ line cap=round,>=stealth]
 new TikzItem2
 {
     Id = 46,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với đường chéo và tâm O",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac46.png",
     Code = @"\begin{tikzpicture}[scale=0.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/A,2/3/B,5/0/D}
@@ -1036,9 +1036,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 47,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường trung bình vuông góc",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với đường trung bình IJ, I và J là trung điểm AB và CD, IJ vuông góc CJ.",
     ImagePath = "Hinh_tu_giac/hinhtugiac47.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \clip (-3.5,-1) rectangle (3.5,4);
@@ -1062,9 +1062,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 48,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với vector từ A",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với ba vector từ A: AB, AD, AC.",
     ImagePath = "Hinh_tu_giac/hinhtugiac48.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tkzDefPoints{0/0/A,4/0/B,0/3/D,4/3/C}
@@ -1083,9 +1083,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 49,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình vuông với đường chéo và tâm O",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD vuông góc cắt nhau tại tâm O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac49.png",
     Code = @"\begin{tikzpicture}[scale=1.0,font=\footnotesize,line join=round,
 line cap=round,>=stealth]
@@ -1107,9 +1107,9 @@ line cap=round,>=stealth]
 new TikzItem2
 {
     Id = 50,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo BD và AC cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac50.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{0/0/A,1/2/B,4/0/D,5/2/C}
@@ -1126,9 +1126,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 51,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với trọng tâm G",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với M là trung điểm DC, O là giao điểm AC và BD, G là giao điểm AC và BM.",
     ImagePath = "Hinh_tu_giac/hinhtugiac51.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A, 4/0/B, -1/-2/D}
@@ -1146,9 +1146,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 52,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với điểm đối xứng",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với O là trung điểm AB, C đối xứng với A qua O, hai đường chéo AC và BD.",
     ImagePath = "Hinh_tu_giac/hinhtugiac52.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{-2/1.5/A,3/1.5/B,0/0/O}
@@ -1165,9 +1165,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 53,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo cắt nhau",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac53.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1183,9 +1183,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 54,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang ABCD đơn giản",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac54.png",
     Code = @"\begin{tikzpicture}[scale=.5, line join=round, line cap=round]
 %%%%%%%%%%%%%%%
@@ -1201,9 +1201,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 55,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với giao điểm đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
     ImagePath = "Hinh_tu_giac/hinhtugiac55.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1219,9 +1219,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 56,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.7.",
     ImagePath = "Hinh_tu_giac/hinhtugiac56.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1237,9 +1237,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 57,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac57.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1255,9 +1255,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 58,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo (tỷ lệ 1)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
     ImagePath = "Hinh_tu_giac/hinhtugiac58.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1273,9 +1273,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 59,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với đường trung tuyến",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với M là trung điểm CD, đường trung tuyến AM.",
     ImagePath = "Hinh_tu_giac/hinhtugiac59.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,3/0/B,3/3/C}
@@ -1291,9 +1291,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 60,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang từ tam giác đều",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Tam giác đều ABC với I là trung điểm BC (IB=IC), phép tịnh tiến từ A đến B biến C thành D tạo hình thang ABDC.",
     ImagePath = "Hinh_tu_giac/hinhtugiac60.png",
     Code = @"\begin{tikzpicture}[scale=.6]
 \tkzDefPoints{0/0/B, 5/0/C}
@@ -1314,9 +1314,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 61,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với trọng tâm phức tạp",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với M trên AB (AM=AB/3), N là trung điểm DC, các đường MN, NB, z1, z2 (nét đứt), trọng tâm G.",
     ImagePath = "Hinh_tu_giac/hinhtugiac61.png",
     Code = @"\begin{tikzpicture}[scale=1]
 \tkzDefPoints{0/0/A, -1.6/-2/D, 4/-2/C}
@@ -1338,9 +1338,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 62,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo (tỷ lệ 0.5)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac62.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
@@ -1355,9 +1355,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 63,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với phép tịnh tiến",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với phép tịnh tiến từ B đến A biến C thành D, đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac63.png",
     Code = @"\begin{tikzpicture}[scale=1,font=
 \footnotesize,line join=round,line cap=round, >=stealth]
@@ -1375,9 +1375,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 64,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với giao điểm O (tỷ lệ 0.5)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac64.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
@@ -1392,9 +1392,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 65,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường chéo (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac65.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
@@ -1409,9 +1409,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 66,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với trung điểm H và K",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo cắt nhau tại O, H và K là trung điểm BC và AD.",
     ImagePath = "Hinh_tu_giac/hinhtugiac66.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
@@ -1428,9 +1428,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 67,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang ABCD không đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD đơn giản không có đường chéo, tỷ lệ 0.5.",
     ImagePath = "Hinh_tu_giac/hinhtugiac67.png",
     Code = @"\begin{tikzpicture}[scale=0.5, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/3/B,8/3/C,6/0/D}
@@ -1444,9 +1444,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 68,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình lục giác từ các phép tịnh tiến",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình lục giác ABCDEF được tạo từ các phép tịnh tiến vector, với các đường AC, AE, BC, BE.",
     ImagePath = "Hinh_tu_giac/hinhtugiac68.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{3/0/B,0/0/A,0/3/D}
@@ -1466,9 +1466,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 69,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường trung bình MN",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm AD và BC.",
     ImagePath = "Hinh_tu_giac/hinhtugiac69.png",
     Code = @"\begin{tikzpicture}[line join = round, line cap = round,>=stealth,font=\footnotesize,scale=.7]
 \tkzDefPoints{0/0/A}
@@ -1491,9 +1491,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 70,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình bình hành với tâm O và đường chéo",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình bình hành ABCD với hai đường chéo AC và BD cắt nhau tại tâm O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac70.png",
     Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1512,9 +1512,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 71,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với các đường phụ",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với M, N là trung điểm AB và DC, O là trung điểm AC, P trên NC, đường nét đứt MN và BN.",
     ImagePath = "Hinh_tu_giac/hinhtugiac71.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{0/0/A, -1/-2/D, 4/-2/C}
@@ -1537,9 +1537,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 72,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Tứ giác với hai đường chéo I và J",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Tứ giác ABCD với hai đường chéo DC và AB cắt nhau tại I và J.",
     ImagePath = "Hinh_tu_giac/hinhtugiac72.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \draw[smooth] (1,1)--(-2,-2)--(-5,-1)--(-5,3)--cycle;
@@ -1557,9 +1557,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 73,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với nhiều điểm phụ",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, N và P là các điểm trên cạnh và đường chéo.",
     ImagePath = "Hinh_tu_giac/hinhtugiac73.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \draw[smooth] (-4,0)--(1,0)--(3,2)--(-2,2)--cycle;
@@ -1578,9 +1578,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 74,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình chữ nhật với nhiều góc vuông",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình chữ nhật ABCD với đường chéo BD và AH, M, N, O là các điểm phụ, E và K là chân góc vuông, nhiều đường và góc vuông.",
     ImagePath = "Hinh_tu_giac/hinhtugiac74.png",
     Code = @"\begin{tikzpicture}[scale=.8, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1606,9 +1606,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 75,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Tứ giác với hai đường chéo AC và BD",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Tứ giác ABCD với hai đường chéo AC và BD cắt nhau tại O.",
     ImagePath = "Hinh_tu_giac/hinhtugiac75.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,fill=black, >=stealth]
 \coordinate (A) at (0,0);
@@ -1625,9 +1625,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 76,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với giao điểm O (Hình 1)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, có chú thích Hình 1.",
     ImagePath = "Hinh_tu_giac/hinhtugiac76.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1644,9 +1644,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 77,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang ABCD đơn giản (tỷ lệ 0.6)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với AB song song CD, tỷ lệ 0.6.",
     ImagePath = "Hinh_tu_giac/hinhtugiac77.png",
     Code = @"\begin{tikzpicture}[scale=0.6, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
@@ -1660,9 +1660,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 78,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với giao điểm O (tỷ lệ 1)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
     ImagePath = "Hinh_tu_giac/hinhtugiac78.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
@@ -1677,9 +1677,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 79,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với đường trung bình MN (0.7)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với đường trung bình MN nối trung điểm BC và AD, tỷ lệ 0.7.",
     ImagePath = "Hinh_tu_giac/hinhtugiac79.png",
     Code = @"\begin{tikzpicture}[scale=0.7, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,1/2/B,5/2/C,4/0/D}
@@ -1695,9 +1695,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 80,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang với giao điểm O (lặp lại)",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang ABCD với hai đường chéo AC và BD cắt nhau tại O, tỷ lệ 1.",
     ImagePath = "Hinh_tu_giac/hinhtugiac80.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,4/0/B,5/2/C}
@@ -1713,9 +1713,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 81,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hình thang cân với các góc và đoạn bằng nhau",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hình thang cân ABCD với BI song song AD (AD=AB=BI=DI), góc vuông IOB, đánh dấu góc và cạnh bằng nhau.",
     ImagePath = "Hinh_tu_giac/hinhtugiac81.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoints{0/0/D, 1/3/A, 4/3/B, 5/0/C}
@@ -1737,9 +1737,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 82,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hai hình vuông đồng tâm với pattern",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hai hình vuông ABCD và EFGH đồng tâm O, hình lớn tô pattern chấm màu đỏ, hình nhỏ tô pattern chấm xanh lá, phép vị tự tâm A tỷ số 0.3, đoạn AE=x và ED=20-x.",
     ImagePath = "Hinh_tu_giac/hinhtugiac82.png",
     Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -1784,9 +1784,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 83,
-    Title = "Bảng biến thiên f(x)",
+    Title = "Hai hình vuông đồng tâm với kích thước",
     Category = "Hình tứ giác",
-    Description = "Bảng biến thiên của hàm số.",
+    Description = "Hai hình vuông ABCD (màu đen) và EFGH (màu đỏ) đồng tâm O, hình nhỏ tô pattern xanh lá, kích thước x cm và 20 cm được ghi trên các cạnh.",
     ImagePath = "Hinh_tu_giac/hinhtugiac83.png",
     Code = @"\begin{tikzpicture}[scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
