@@ -2,9 +2,9 @@
 new TikzItem2
 {
     Id = 1,
-    Title = "Hình minh họa Toán học",
+    Title = "Lưới 3×4 hình tròn với phép tịnh tiến",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới 3×4 gồm 12 hình tròn được đánh số từ 1 đến 12, minh họa phép tịnh tiến liên tiếp theo vector AM.",
     ImagePath = "Hinh_khac/hinhkhac_1.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.3, line join = round, line cap = round]
 \tkzInit[xmin=-1.5,xmax=5.5,ymin=-1.5,ymax=7]
@@ -33,9 +33,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 2,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép vị tự biến đường tròn thành đường tròn",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác ABC với trọng tâm G, phép vị tự tâm I tỷ số 1/3 biến đường tròn tâm O bán kính OA thành đường tròn tâm O' bán kính O'G.",
     ImagePath = "Hinh_khac/hinhkhac_2.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -57,9 +57,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 3,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình chữ nhật ABCD với các đoạn thẳng nối",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình chữ nhật ABCD với tâm O, các điểm E, F, H, K là trung điểm các cạnh, và các điểm I, J, I₁ tạo thành các đoạn thẳng nối.",
     ImagePath = "Hinh_khac/hinhkhac_3.png",
     Code = @"\begin{tikzpicture}
 \draw (0,0) node[left]{$D$} rectangle (4,2) node[right]{$B$};
@@ -79,9 +79,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 4,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép vị tự với hai đường tròn",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép vị tự tâm I tỷ số 3 biến đường tròn (O,R) thành đường tròn (O',R'), với R'=3R.",
     ImagePath = "Hinh_khac/hinhkhac_4.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.7, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -104,9 +104,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 5,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép vị tự biến tam giác ABC thành A'B'C'",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép vị tự tâm I tỷ số 3/2 biến tam giác ABC thành tam giác A'B'C'.",
     ImagePath = "Hinh_khac/hinhkhac_5.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.7, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -129,9 +129,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 6,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép quay tâm O với hai cung tròn",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép quay tâm O biến M thành M' và N thành N', với các cung tròn bán kính khác nhau.",
     ImagePath = "Hinh_khac/hinhkhac_6.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/O}
@@ -153,9 +153,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 7,
-    Title = "Hình minh họa Toán học",
+    Title = "Lục giác đều với các đường chéo và tô màu",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lục giác đều ABCDEF tâm O với I là trung điểm AB, J là trung điểm CD, các tam giác được tô màu khác nhau.",
     ImagePath = "Hinh_khac/hinhkhac_7.png",
     Code = @"\begin{tikzpicture}
 \tkzDefPoint(0,0){O}
@@ -179,9 +179,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 8,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép vị tự biến tam giác MNP thành M'N'P'",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép vị tự tâm O tỷ số 2 biến tam giác MNP thành tam giác M'N'P'.",
     ImagePath = "Hinh_khac/hinhkhac_8.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=0.6, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -204,9 +204,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 9,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép vị tự với ba điểm thẳng hàng",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Ba điểm A, B, C thẳng hàng, phép vị tự tâm I tỷ số 1/2 biến chúng thành A', B', C' cũng thẳng hàng.",
     ImagePath = "Hinh_khac/hinhkhac_9.png",
     Code = @"\begin{tikzpicture}[>=stealth,scale=1, line join = round, line cap = round]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -229,9 +229,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 10,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép quay tâm O góc α",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép quay tâm O góc α biến M thành M', với OM = OM' và góc MOM' = α.",
     ImagePath = "Hinh_khac/hinhkhac_10.png",
     Code = @"\begin{tikzpicture}[scale=0.6, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzDefPoints{0/0/O, 5/0/M};
@@ -251,9 +251,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 11,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông ABCD với đường chéo và trung điểm",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình vuông ABCD với hai đường chéo AC và BD cắt nhau tại I, M là trung điểm AD, N là trung điểm CD.",
     ImagePath = "Hinh_khac/hinhkhac_11.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tkzDefPoints{0/0/A,2/0/B,2/2/C, 0/2/D}
@@ -273,9 +273,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 12,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép chiếu vuông góc lên đường thẳng",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Phép chiếu vuông góc từ đường thẳng d lên đường thẳng d', biến M thành M' và N thành N'.",
     ImagePath = "Hinh_khac/hinhkhac_12.png",
     Code = @"\begin{tikzpicture}[smooth,samples=300,scale=0.8,>=stealth,font=\footnotesize]
 \draw[dashed] (1,0)--(6,0) node[below]{$d'$};
@@ -291,9 +291,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 13,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông lồng nhau xoay 45°",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Chuỗi các hình vuông ABCD thu nhỏ dần và xoay 45° liên tiếp, tạo thành họa tiết hình học fractal.",
     ImagePath = "Hinh_khac/hinhkhac_13.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \def\a{10}
@@ -310,9 +310,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 14,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông xoay với các tam giác tô màu",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Chuỗi hình vuông xoay 45° và thu nhỏ theo tỷ số √2, các tam giác được tô màu xanh và hồng xen kẽ (5 vòng).",
     ImagePath = "Hinh_khac/hinhkhac_14.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-2.5}\def\xmax{2.5}\def\ymin{-2.5}\def\ymax{2.5} 
@@ -345,9 +345,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 15,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác với các trung điểm liên tiếp",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác ABC với các trung điểm A₁, B₁, C₁ của các cạnh, rồi tiếp tục lấy trung điểm A₂, B₂, C₂ và A₃, B₃, C₃.",
     ImagePath = "Hinh_khac/hinhkhac_15.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{-2/2/A,-4/-2/B,1/-2/C}
@@ -381,9 +381,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 16,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác với các trung điểm liên tiếp (không tô)",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tương tự hình 15, tam giác ABC với các trung điểm A₁, B₁, C₁, A₂, B₂, C₂ và A₃, B₃, C₃, nhưng các điểm không được tô đen.",
     ImagePath = "Hinh_khac/hinhkhac_16.png",
     Code = @"\begin{tikzpicture}[scale=.8]
 \tkzDefPoints{-2/2/A,-4/-2/B,1/-2/C}
@@ -417,9 +417,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 17,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông lồng nhau với trung điểm",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình vuông ABCD với các hình vuông nhỏ hơn được tạo bởi các trung điểm, xen kẽ giữa hình vuông thẳng và hình vuông xoay 45°.",
     ImagePath = "Hinh_khac/hinhkhac_17.png",
     Code = @"\begin{tikzpicture}[scale=.7][>=stealth, line join=round, line cap = round]
 \draw[] (0,0) -- (6,0)--(6,6)--(0,6)--(0,0);
@@ -437,9 +437,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 18,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông xoay với tam giác tô màu (4 vòng)",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Chuỗi hình vuông xoay 45° và thu nhỏ, với các tam giác tô màu xanh và hồng (4 vòng).",
     ImagePath = "Hinh_khac/hinhkhac_18.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-2.5}\def\xmax{2.5}\def\ymin{-2.5}\def\ymax{2.5} 
@@ -472,9 +472,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 19,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông xoay với tam giác tô màu (3 vòng)",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Chuỗi hình vuông xoay 45° và thu nhỏ, với các tam giác tô màu xanh và hồng (3 vòng).",
     ImagePath = "Hinh_khac/hinhkhac_19.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-2.5}\def\xmax{2.5}\def\ymin{-2.5}\def\ymax{2.5} 
@@ -507,9 +507,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 20,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông xoay với tam giác tô màu (2 vòng)",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Chuỗi hình vuông xoay 45° và thu nhỏ, với các tam giác tô màu xanh và hồng (2 vòng).",
     ImagePath = "Hinh_khac/hinhkhac_20.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \def\xmin{-2.5}\def\xmax{2.5}\def\ymin{-2.5}\def\ymax{2.5} 
@@ -542,9 +542,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 21,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông lưới với các ô tô màu thu nhỏ",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới hình vuông 8×8 với các hình vuông tô kẻ ngang và dọc thu nhỏ dần theo tỷ số 1/2.",
     ImagePath = "Hinh_khac/hinhkhac_21.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \clip(-0.5,-0.5) rectangle (8.5,8.5);
@@ -568,9 +568,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 22,
-    Title = "Hình minh họa Toán học",
+    Title = "Hình vuông với các điểm chia đều và tam giác",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình vuông ABCD với các điểm chia đều trên mỗi cạnh (AB: 3 điểm, BC: 4 điểm, CA: 5 điểm, DA: 6 điểm), và tam giác nối các điểm.",
     ImagePath = "Hinh_khac/hinhkhac_22.png",
     Code = @"\begin{tikzpicture}[line cap=round, line join=round,font=\footnotesize,>=stealth, scale=0.5]
 \tikzset{label style/.style={font=\footnotesize}}
@@ -604,9 +604,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 23,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác ABC với các điểm chia theo tỷ lệ",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác ABC với các điểm C₁, C₂, C₃, C₄ chia đều AB thành 5 phần, A₁, A₂, A₃ chia đều BC thành 4 phần, B₁, B₂ chia đều CA thành 3 phần.",
     ImagePath = "Hinh_khac/hinhkhac_23.png",
     Code = @"\begin{tikzpicture}[>=stealth, line join=round, line cap = round,scale=0.7]
 \coordinate (A) at (0,0);
@@ -637,9 +637,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 24,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác với lưới đường thẳng",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác với lưới các đường thẳng từ đỉnh đến cạnh đáy và các đường ngang song song.",
     ImagePath = "Hinh_khac/hinhkhac_24.png",
     Code = @"\begin{tikzpicture}[scale=0.75, font=\footnotesize, line join=round, line cap=round, >=stealth]
 \clip (0,0)--(1.2,4)--(5,0)--cycle;
@@ -650,9 +650,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 25,
-    Title = "Hình minh họa Toán học",
+    Title = "Lưới điểm 5×4 từ A đến B",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới điểm hình chữ nhật 5×4 (20 điểm) từ điểm A ở góc trên trái đến điểm B ở góc dưới phải.",
     ImagePath = "Hinh_khac/hinhkhac_25.png",
     Code = @"\begin{tikzpicture}
 \draw (0,0) grid (4,-3);
@@ -669,9 +669,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 26,
-    Title = "Hình minh họa Toán học",
+    Title = "Bốn đường tròn được nối bằng đường cong",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Bốn đường tròn tâm A, B, C, D được nối với nhau bằng các đường cong Bezier, tạo thành sơ đồ liên kết.",
     ImagePath = "Hinh_khac/hinhkhac_26.png",
     Code = @"\begin{tikzpicture}[scale=0.7]
 \tkzDefPoints{0/0/A,5/0/B,10/0/C,15/0/D,.5/0/A',4.5/0/B',5.5/0/B'',9.5/0/C',10.5/0/C'',14.5/0/D'}
@@ -708,9 +708,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 27,
-    Title = "Hình minh họa Toán học",
+    Title = "Lưới điểm 7×5 từ A đến B",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới điểm hình chữ nhật 7×5 (35 điểm) từ điểm A ở góc trên trái đến điểm B ở góc dưới phải.",
     ImagePath = "Hinh_khac/hinhkhac_27.png",
     Code = @"\begin{tikzpicture}[scale=0.6]
 \draw (0,0) grid (6,-4);
@@ -727,9 +727,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 28,
-    Title = "Hình minh họa Toán học",
+    Title = "Lưới 3×2 với tam giác vuông ABC",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới 4×3 điểm với tam giác vuông ABC (góc vuông tại B) được vẽ bằng màu đỏ.",
     ImagePath = "Hinh_khac/hinhkhac_28.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
 \draw[color=violet,line width=0.07pt] (0,0) grid (3,2);
@@ -745,9 +745,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 29,
-    Title = "Hình minh họa Toán học",
+    Title = "Lưới điểm 4×3",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Lưới 4×3 điểm (12 điểm) được vẽ trên lưới ô vuông màu tím.",
     ImagePath = "Hinh_khac/hinhkhac_29.png",
     Code = @"\begin{tikzpicture}[scale=0.8, line join=round, line cap=round]
 \draw[color=violet,line width=0.07pt] (0,0) grid (3,2);
@@ -760,9 +760,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 30,
-    Title = "Hình minh họa Toán học",
+    Title = "Hai đường thẳng d và d' vuông góc",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hai đường thẳng d và d' vuông góc nhau tại H(a;b), điểm M nằm trên d'.",
     ImagePath = "Hinh_khac/hinhkhac_30.png",
     Code = @"\begin{tikzpicture}[scale=0.6,>=stealth, font=\footnotesize, line join=round, line cap=round]
 \draw (-1,0)--(3,0) node [above]{$d$};
@@ -777,9 +777,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 31,
-    Title = "Hình minh họa Toán học",
+    Title = "Đoạn thẳng với hai hình khác nhau",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đoạn thẳng với ba điểm, phía dưới có hai hình được nối bằng mũi tên: một tam giác và một hình vuông.",
     ImagePath = "Hinh_khac/hinhkhac_31.png",
     Code = @"\begin{tikzpicture}[scale=0.8,>=stealth]
 \draw(0,0)--(7,0);
@@ -794,9 +794,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 32,
-    Title = "Hình minh họa Toán học",
+    Title = "Bài toán đo chiều cao hai cột bên sông",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình 37: Hai cột A và A' cao 500m, B và B' cao 600m đứng hai bên bờ sông, cách nhau 2200m, với điểm M quan sát.",
     ImagePath = "Hinh_khac/hinhkhac_32.png",
     Code = @"\begin{tikzpicture}
 \path 
@@ -817,9 +817,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 33,
-    Title = "Hình minh họa Toán học",
+    Title = "Bài toán hai cột (không có sông)",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Hình 37: Tương tự hình 32 nhưng không có phần tô màu biểu diễn mặt sông, chỉ có hai cột và khoảng cách 2200m.",
     ImagePath = "Hinh_khac/hinhkhac_33.png",
     Code = @"\begin{tikzpicture}
 \path 
@@ -839,9 +839,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 34,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép đối xứng qua đường trung trực",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Điểm A và A' đối xứng nhau qua đường trung trực của đoạn AA', điểm M nằm trên đường trung trực, B ngoài đường.",
     ImagePath = "Hinh_khac/hinhkhac_34.png",
     Code = @"\begin{tikzpicture}[scale=0.8]
 \tkzDefPoints{0/0/A,3/2/B,0/-4/A'}
@@ -860,9 +860,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 35,
-    Title = "Hình minh họa Toán học",
+    Title = "Phép đối xứng qua trục Δ",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Điểm M(x₀;y₀) và M' đối xứng nhau qua trục Δ, H là hình chiếu vuông góc của M lên Δ.",
     ImagePath = "Hinh_khac/hinhkhac_35.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \draw (0,0)--(4,0) node [below]{$\Delta$};
@@ -875,9 +875,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 36,
-    Title = "Hình minh họa Toán học",
+    Title = "Tam giác ABC với các vector từ A",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Tam giác ABC với E là trung điểm BC, M và N đối xứng qua E, các vector từ A đến B, C, M, N, E.",
     ImagePath = "Hinh_khac/hinhkhac_36.png",
     Code = @"\begin{tikzpicture}[scale=1, font=\footnotesize, line join=round, line cap=round,>=stealth]
 \tkzInit[xmin=-0.5, xmax=4.5, ymin=-0.5, ymax=2.5]
@@ -896,9 +896,9 @@ new TikzItem2
 new TikzItem2
 {
     Id = 37,
-    Title = "Hình minh họa Toán học",
+    Title = "Đoạn thẳng AB với trung điểm M",
     Category = "Hình khác",
-    Description = "Hình vẽ minh họa nội dung Toán học.",
+    Description = "Đoạn thẳng AB với điểm M là trung điểm của AB.",
     ImagePath = "Hinh_khac/hinhkhac_37.png",
     Code = @"\begin{tikzpicture}[scale=1, line join=round, line cap=round]
 \tikzset{label style/.style={font=\footnotesize}}
